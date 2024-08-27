@@ -30,7 +30,7 @@ namespace S3
 namespace Model
 {
 
-DeleteMarkerEntry::DeleteMarkerEntry() : 
+DeleteMarkerEntry::DeleteMarkerEntry() :
     m_ownerHasBeenSet(false),
     m_keyHasBeenSet(false),
     m_versionIdHasBeenSet(false),
@@ -40,7 +40,7 @@ DeleteMarkerEntry::DeleteMarkerEntry() :
 {
 }
 
-DeleteMarkerEntry::DeleteMarkerEntry(const XmlNode& xmlNode) : 
+DeleteMarkerEntry::DeleteMarkerEntry(const XmlNode& xmlNode) :
     m_ownerHasBeenSet(false),
     m_keyHasBeenSet(false),
     m_versionIdHasBeenSet(false),

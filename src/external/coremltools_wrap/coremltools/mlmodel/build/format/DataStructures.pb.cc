@@ -2337,7 +2337,7 @@ void Int64Range::clear_minvalue() {
   return minvalue_;
 }
 void Int64Range::set_minvalue(::google::protobuf::int64 value) {
-  
+
   minvalue_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Int64Range.minValue)
 }
@@ -2351,7 +2351,7 @@ void Int64Range::clear_maxvalue() {
   return maxvalue_;
 }
 void Int64Range::set_maxvalue(::google::protobuf::int64 value) {
-  
+
   maxvalue_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Int64Range.maxValue)
 }
@@ -2804,7 +2804,7 @@ double DoubleRange::minvalue() const {
   return minvalue_;
 }
 void DoubleRange::set_minvalue(double value) {
-  
+
   minvalue_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.DoubleRange.minValue)
 }
@@ -2818,7 +2818,7 @@ double DoubleRange::maxvalue() const {
   return maxvalue_;
 }
 void DoubleRange::set_maxvalue(double value) {
-  
+
   maxvalue_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.DoubleRange.maxValue)
 }

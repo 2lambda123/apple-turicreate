@@ -923,4 +923,3 @@ BOOST_AUTO_TEST_CASE(test_storage_24nd_tc) {
 }
 
 BOOST_AUTO_TEST_SUITE_END()
-

@@ -501,4 +501,3 @@ static void nn_sinproc_handler (struct nn_fsm *self, int src, int type,
         nn_fsm_bad_state (sinproc->state, src, type);
     }
 }
-

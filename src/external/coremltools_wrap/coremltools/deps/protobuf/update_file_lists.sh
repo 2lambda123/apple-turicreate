@@ -188,4 +188,3 @@ if [ -f "$BAZEL_BUILD" ]; then
 else
   echo "Skipped BUILD file update."
 fi
-

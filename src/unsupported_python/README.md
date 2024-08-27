@@ -1,4 +1,4 @@
-An egg only needs to be uploaded to PyPI when we want to change the unsupported error message. If we're not changing what platforms or Python versions we support, we shouldn't upload an egg. 
+An egg only needs to be uploaded to PyPI when we want to change the unsupported error message. If we're not changing what platforms or Python versions we support, we shouldn't upload an egg.
 
 To generate the egg:
 

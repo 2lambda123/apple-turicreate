@@ -1,12 +1,12 @@
 /*
   * Copyright 2010-2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-  * 
+  *
   * Licensed under the Apache License, Version 2.0 (the "License").
   * You may not use this file except in compliance with the License.
   * A copy of the License is located at
-  * 
+  *
   *  http://aws.amazon.com/apache2.0
-  * 
+  *
   * or in the "license" file accompanying this file. This file is distributed
   * on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
   * express or implied. See the License for the specific language governing
@@ -24,9 +24,9 @@ using namespace Aws::Utils::Threading;
 
 bool DefaultExecutor::SubmitToThread(std::function<void()>&&  fx)
 {
-    auto main = [fx, this] { 
-        fx(); 
-        Detach(std::this_thread::get_id()); 
+    auto main = [fx, this] {
+        fx();
+        Detach(std::this_thread::get_id());
     };
 
     State expected;
@@ -61,7 +61,7 @@ void DefaultExecutor::Detach(std::thread::id id)
             m_state = State::Free;
             return;
         }
-    } 
+    }
     while(expected != State::Shutdown);
 }
 
@@ -72,7 +72,7 @@ DefaultExecutor::~DefaultExecutor()
     {
         //spin while currently detaching threads finish
         assert(expected == State::Locked);
-        expected = State::Free; 
+        expected = State::Free;
     }
 
     auto it = m_threads.begin();
@@ -149,7 +149,7 @@ std::function<void()>* PooledThreadExecutor::PopTask()
     {
         std::function<void()>* fn = m_tasks.front();
         if (fn)
-        {           
+        {
             m_tasks.pop();
             return fn;
         }

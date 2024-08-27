@@ -17,7 +17,7 @@ The Core ML open source community welcomes all contributions and ideas to grow t
 Expectations of the Community
 ---
 
-The contributing guidelines and code of conduct are similar to most open source communities. This includes participating in the community through developing, receiving help and answering questions as well as engaging in a highly motivate, positive environment. 
+The contributing guidelines and code of conduct are similar to most open source communities. This includes participating in the community through developing, receiving help and answering questions as well as engaging in a highly motivate, positive environment.
 
 Additionally, this includes but is not limited to:
 
@@ -30,28 +30,28 @@ Additionally, this includes but is not limited to:
 While participating in the Core ML community, to ensure that issues and pull requests are able to be addressed quickly, please ensure that the following is being done:
 
 * Checking to see if your issue already exists
-* Following pre-existing templates 
+* Following pre-existing templates
 * Promptly replying to any requests or questions posed by others within the community on your issue / PR
 
 ## What to expect as a Contributor to Core ML
 
 ### Lifecycle of Issues
 
-Once an issue has been submitted it will be triaged and appropriate labels will be added. The issue will then either be slotted in to an upcoming release, commented on for additional information or placed in the backlog for a future release. 
+Once an issue has been submitted it will be triaged and appropriate labels will be added. The issue will then either be slotted in to an upcoming release, commented on for additional information or placed in the backlog for a future release.
 
 #### Use of templates
-There will be a provided template when submitting your issue. Please ensure that this is used and filled in as much as possible to help others in the community in understanding the issue so that they are able to provide a response easily. 
+There will be a provided template when submitting your issue. Please ensure that this is used and filled in as much as possible to help others in the community in understanding the issue so that they are able to provide a response easily.
 
 If applicable, please provide the model that was being used when logging the issue, so that the issue is able to be reproduced.
 
 #### Labels
 Please check the labels page under each repository for a further description of each label. These labels will be added by Core ML team members depending on need. Typically an issue can be given any of the following labels:
 
-Status → What stage of the process the issue is in (turquoise) 
+Status → What stage of the process the issue is in (turquoise)
 
 * Triaged, awaiting response, duplicate, repro needed, investigation or needs discussion
 
-Type  → Issue is classified based on the category it belongs to (red) 
+Type  → Issue is classified based on the category it belongs to (red)
 
 * bug, clarification, docs, enhancement, feature request, perf, question
 

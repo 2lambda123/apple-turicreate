@@ -178,7 +178,7 @@ void nn_fsm_action (struct nn_fsm *self, int type)
     nn_fsm_feed (self, NN_FSM_ACTION, type, NULL);
 }
 
-void nn_fsm_raise_from_src (struct nn_fsm *self, struct nn_fsm_event *event, 
+void nn_fsm_raise_from_src (struct nn_fsm *self, struct nn_fsm_event *event,
     int src, int type)
 {
     event->fsm = self;
@@ -206,4 +206,3 @@ void nn_fsm_raiseto (struct nn_fsm *self, struct nn_fsm *dst,
     event->type = type;
     nn_ctx_raiseto (self->ctx, event);
 }
-

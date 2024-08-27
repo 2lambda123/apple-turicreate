@@ -30,7 +30,7 @@ namespace S3
 namespace Model
 {
 
-Error::Error() : 
+Error::Error() :
     m_keyHasBeenSet(false),
     m_versionIdHasBeenSet(false),
     m_codeHasBeenSet(false),
@@ -38,7 +38,7 @@ Error::Error() :
 {
 }
 
-Error::Error(const XmlNode& xmlNode) : 
+Error::Error(const XmlNode& xmlNode) :
     m_keyHasBeenSet(false),
     m_versionIdHasBeenSet(false),
     m_codeHasBeenSet(false),

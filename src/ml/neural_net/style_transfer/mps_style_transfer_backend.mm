@@ -54,31 +54,31 @@ using namespace turi::neural_net;
                                            std::multiplies<size_t>());
 
     ASSERT_EQ(dataLength, dataShapeSize);
-    
+
     float *dataBytes = (float *) (data.bytes);
-    
-    // TODO: This copy is inefficient. This should be a wrapper around NSData: 
+
+    // TODO: This copy is inefficient. This should be a wrapper around NSData:
     //       a custom subclass of float_array that preserves a strong reference
     //       to the NSData instance.
 
     shared_float_array array = shared_float_array::copy(dataBytes, dataShape);
-    
+
     map.emplace(key.UTF8String, array);
   }
   return map;
 }
 
 +(NSDictionary<NSString *, NSData *> *) toNSDictionary: (float_array_map) map {
-  NSMutableDictionary<NSString *, NSData *> * dictionary 
+  NSMutableDictionary<NSString *, NSData *> * dictionary
       = [[NSMutableDictionary alloc] init];
 
   for (const auto &element : map) {
     const float* elementData = element.second.data();
     const size_t elementSize = element.second.size() * sizeof(float);
 
-    // TODO: This copy is inefficient. We can construct an NSData that wraps a 
-    //       shared_float_array. 
-    // 
+    // TODO: This copy is inefficient. We can construct an NSData that wraps a
+    //       shared_float_array.
+    //
     // API: https://developer.apple.com/documentation/foundation/nsdata/1417337-initwithbytesnocopy?language=objc
 
     NSData *data = [NSData dataWithBytes:elementData length:elementSize];
@@ -112,7 +112,7 @@ float_array_map convert_weights_coreml_mps(const float_array_map &coreml_weights
       w_shape[1] = w_ptr[2];
       w_shape[2] = w_ptr[3];
       w_shape[3] = w_ptr[1];
-      
+
       mps_weights[w.first] = shared_float_array::wrap(std::move(init_w),
                                                       std::move(w_shape));
     } else {
@@ -140,7 +140,7 @@ float_array_map convert_weights_mps_coreml(const float_array_map &mps_weights) {
       w_shape[1] = w_ptr[3];
       w_shape[2] = w_ptr[1];
       w_shape[3] = w_ptr[2];
-      
+
       coreml_weights[w.first] = shared_float_array::wrap(std::move(init_w),
                                                       std::move(w_shape));
     } else {
@@ -162,7 +162,7 @@ struct mps_style_transfer::impl {
 
 mps_style_transfer::mps_style_transfer(
     const float_array_map &config,
-    const float_array_map &weights) 
+    const float_array_map &weights)
   : m_impl(new mps_style_transfer::impl())  {
   @autoreleasepool {
     if (@available(macOS 10.15, *)) {
@@ -170,7 +170,7 @@ mps_style_transfer::mps_style_transfer(
 
       id <MTLDevice> dev = [[TCMPSDeviceManager sharedInstance] preferredDevice];
       queue.impl = [dev newCommandQueue];
-      
+
       init(config, weights, queue);
     } else {
       log_and_throw("Can't construct GPU Style Transfer Network for MacOS \
@@ -182,7 +182,7 @@ mps_style_transfer::mps_style_transfer(
 mps_style_transfer::mps_style_transfer(
     const float_array_map &config,
     const float_array_map &weights,
-    const mps_command_queue& command_queue) 
+    const mps_command_queue& command_queue)
   : m_impl(new mps_style_transfer::impl()) {
   @autoreleasepool {
     if (@available(macOS 10.15, *)) {
@@ -225,7 +225,7 @@ float_array_map mps_style_transfer::export_weights() const {
   if (@available(macOS 10.15, *)) {
     NSDictionary<NSString *, TCMPSStyleTransferWeights *> *dictWeights
         = [m_impl->model exportWeights];
-    
+
     float_array_map weights
         = [TCMPSStyleTransferHelpers fromNSDictionary:dictWeights];
 

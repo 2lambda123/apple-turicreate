@@ -27,7 +27,7 @@ BOOST_AUTO_TEST_CASE(test_image_box_constructor) {
   TS_ASSERT_EQUALS(box.height, 0.f);
 
   // The constructor takes arguments in x,y,width,height order.
-  box = image_box(1.f, 2.f, 3.f, 4.f);  
+  box = image_box(1.f, 2.f, 3.f, 4.f);
   TS_ASSERT_EQUALS(box.x, 1.f);
   TS_ASSERT_EQUALS(box.y, 2.f);
   TS_ASSERT_EQUALS(box.width, 3.f);

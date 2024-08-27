@@ -17,4 +17,3 @@ if(TC_BUILD_PYTHON)
   message("Python library = ${PYTHON_LIBRARIES}")
 
 endif()
-

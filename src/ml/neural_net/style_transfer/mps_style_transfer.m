@@ -46,7 +46,7 @@
                   inputHeight:(NSUInteger) inputHeight
                    inputWidth:(NSUInteger) inputWidth
                  outputHeight:(NSUInteger) outputHeight
-                  outputWidth:(NSUInteger) outputWidth 
+                  outputWidth:(NSUInteger) outputWidth
                   numChannels:(NSUInteger) numChannels;
 
 @end
@@ -105,7 +105,7 @@
                                                                            inputNode:_model.forwardPass
                                                                            scaleNode:_contentScaleNode
                                                                             meanNode:_contenMeanNode];
-    
+
     _contentVgg = [[TCMPSVgg16Network alloc] initWithParameters:@"Content_VGG_16"
                                                       inputNode:_contentPreProcess.output
                                                          device:_dev
@@ -163,7 +163,7 @@
       = [MPSNNGramMatrixCalculationNode nodeWithSource:_contentVgg.reluOut1
                                                  alpha:(1.0/gramScaling1)];
 
-    MPSNNForwardLossNode *styleLossNode1 
+    MPSNNForwardLossNode *styleLossNode1
       = [MPSNNForwardLossNode nodeWithSource:gramMatrixContentVggFirstReLU.resultImage
                                       labels:gramMatrixStyleLossFirstReLU.resultImage
                               lossDescriptor:styleDesc];
@@ -202,7 +202,7 @@
       = [MPSNNGramMatrixCalculationNode nodeWithSource:_contentVgg.reluOut4
                                                  alpha:(1.0/gramScaling4)];
 
-    MPSNNForwardLossNode *styleLossNode4 
+    MPSNNForwardLossNode *styleLossNode4
       = [MPSNNForwardLossNode nodeWithSource:gramMatrixContentVggFourthReLU.resultImage
                                       labels:gramMatrixStyleLossFourthReLU.resultImage
                               lossDescriptor:styleDesc];
@@ -220,7 +220,7 @@
       = [MPSNNAdditionNode nodeWithSources:@[styleLossNode3.resultImage,
                                              styleLossNode4.resultImage]];
 
-    MPSNNAdditionNode* addTotalStyleLoss 
+    MPSNNAdditionNode* addTotalStyleLoss
       = [MPSNNAdditionNode nodeWithSources:@[addLossStyle1Style2.resultImage,
                                              addLossStyle3Style4.resultImage]];
 
@@ -238,7 +238,7 @@
 
     BOOL resultsAreNeeded[] = { YES, YES };
 
-    NSArray<MPSNNFilterNode*>* lastNodes 
+    NSArray<MPSNNFilterNode*>* lastNodes
       = [initialGradient trainingGraphWithSourceGradient:initialGradient.resultImage
                                              nodeHandler: nil];
 
@@ -263,7 +263,7 @@
                   inputHeight:(NSUInteger) inputHeight
                    inputWidth:(NSUInteger) inputWidth
                  outputHeight:(NSUInteger) outputHeight
-                  outputWidth:(NSUInteger) outputWidth 
+                  outputWidth:(NSUInteger) outputWidth
                   numChannels:(NSUInteger) numChannels {
   NSUInteger dataSize = sizeof(float) * numChannels * outputWidth * outputHeight;
   NSMutableData *mutableData = [NSMutableData dataWithLength:dataSize];
@@ -325,7 +325,7 @@
     [contentImageArray addObject:contentImage];
   }
 
-  MPSImageBatch *contentImageBatch = [contentImageArray copy];  
+  MPSImageBatch *contentImageBatch = [contentImageArray copy];
 
   id<MTLCommandBuffer> cb = [_commandQueue commandBuffer];
 
@@ -339,7 +339,7 @@
                                                   destinationStates:destinationStates];
 
   for (MPSImage *image in stylizedImages) {
-    [image synchronizeOnCommandBuffer:cb];  
+    [image synchronizeOnCommandBuffer:cb];
   }
 
   [cb commit];
@@ -402,7 +402,7 @@
 
   NSMutableData* mean = [NSMutableData dataWithLength:(NSUInteger)sizeof(float) * imageSize];
   NSMutableData* multiplication = [NSMutableData dataWithLength:(NSUInteger)sizeof(float) * imageSize];
-  
+
   MPSImageDescriptor *imgDesc = [MPSImageDescriptor
     imageDescriptorWithChannelFormat:MPSImageFeatureChannelFormatFloat32
                                width:_imgWidth
@@ -438,7 +438,7 @@
     [contentMeanArray addObject:contentMean];
 
     MPSImage *contentMultiplication = [[MPSImage alloc] initWithDevice:_dev imageDescriptor:imgDesc];
-    [contentMultiplication writeBytes:multiplication.bytes dataLayout:(MPSDataLayoutHeightxWidthxFeatureChannels)imageIndex:0]; 
+    [contentMultiplication writeBytes:multiplication.bytes dataLayout:(MPSDataLayoutHeightxWidthxFeatureChannels)imageIndex:0];
     [contentMultiplicationArray addObject:contentMultiplication];
 
     // TODO: add multiple batch sizes
@@ -454,15 +454,15 @@
     [styleMultiplication writeBytes:multiplication.bytes dataLayout:(MPSDataLayoutHeightxWidthxFeatureChannels)imageIndex:0];
     [styleMultiplicationArray addObject:styleMultiplication];
   }
-  
-  MPSImageBatch *contentImageBatch = [contentImageArray copy];  
-  MPSImageBatch *contentMeanBatch = [contentMeanArray copy];  
-  MPSImageBatch *contentMultiplicationBatch = [contentMultiplicationArray copy];  
 
-  MPSImageBatch *styleImageBatch = [styleImageArray copy];  
-  MPSImageBatch *styleMeanBatch = [styleMeanArray copy];  
-  MPSImageBatch *styleMultiplicationBatch = [styleMultiplicationArray copy];  
-  
+  MPSImageBatch *contentImageBatch = [contentImageArray copy];
+  MPSImageBatch *contentMeanBatch = [contentMeanArray copy];
+  MPSImageBatch *contentMultiplicationBatch = [contentMultiplicationArray copy];
+
+  MPSImageBatch *styleImageBatch = [styleImageArray copy];
+  MPSImageBatch *styleMeanBatch = [styleMeanArray copy];
+  MPSImageBatch *styleMultiplicationBatch = [styleMultiplicationArray copy];
+
 
   id<MTLCommandBuffer> cb = [_commandQueue commandBuffer];
 
@@ -476,7 +476,7 @@
                                                  destinationStates:destinationStates];
 
   for (MPSImage *image in ret) {
-    [image synchronizeOnCommandBuffer:cb];  
+    [image synchronizeOnCommandBuffer:cb];
   }
 
   // TODO: make train asynchronous
@@ -512,7 +512,7 @@
   _inferenceGraph = [MPSNNGraph graphWithDevice:_dev
                                     resultImage:_model.forwardPass
                             resultImageIsNeeded:YES];
-  
+
   _inferenceGraph.format = MPSImageFeatureChannelFormatFloat32;
 }
 

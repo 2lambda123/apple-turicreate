@@ -8,9 +8,9 @@
 #include <sstream>
 
 namespace CoreML {
-    
+
   static const char* m_prefix = "validator error: ";
-    
+
   Result::Result()
     : Result(ResultType::NO_ERROR, ResultReason::UNKNOWN, "not an error")
   { }
@@ -74,5 +74,5 @@ ResultType Result::type() const {
     out.m_type = ResultType::FEATURE_TYPE_INVARIANT_VIOLATION;
     return out;
   }
-  
+
 }

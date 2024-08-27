@@ -53,7 +53,7 @@
 
 @end
 
-@implementation VegaRenderer 
+@implementation VegaRenderer
 
 -(instancetype) initWithSpec:(NSString *)spec {
     return [self initWithSpec:spec context:[[NSGraphicsContext currentContext] CGContext]];
@@ -80,7 +80,7 @@
 
         VegaJSDocument* document = [[VegaJSDocument alloc] initWithCanvas:vegaCanvas];
         self.context[@"document"] = document;
-        
+
         // set up an element to contain Vega's canvas, referenced in vg2canvasJS
         self.context[@"container"] = [[VegaHTMLElement alloc] initWithTagName:@"div"];
 

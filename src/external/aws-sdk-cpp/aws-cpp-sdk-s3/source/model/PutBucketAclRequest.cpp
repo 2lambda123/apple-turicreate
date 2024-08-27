@@ -26,7 +26,7 @@ using namespace Aws::Utils::Xml;
 using namespace Aws::Utils;
 using namespace Aws::Http;
 
-PutBucketAclRequest::PutBucketAclRequest() : 
+PutBucketAclRequest::PutBucketAclRequest() :
     m_aCL(BucketCannedACL::NOT_SET),
     m_aCLHasBeenSet(false),
     m_accessControlPolicyHasBeenSet(false),

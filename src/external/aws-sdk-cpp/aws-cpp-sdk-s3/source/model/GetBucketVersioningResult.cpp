@@ -25,13 +25,13 @@ using namespace Aws::Utils::Xml;
 using namespace Aws::Utils;
 using namespace Aws;
 
-GetBucketVersioningResult::GetBucketVersioningResult() : 
+GetBucketVersioningResult::GetBucketVersioningResult() :
     m_status(BucketVersioningStatus::NOT_SET),
     m_mFADelete(MFADeleteStatus::NOT_SET)
 {
 }
 
-GetBucketVersioningResult::GetBucketVersioningResult(const Aws::AmazonWebServiceResult<XmlDocument>& result) : 
+GetBucketVersioningResult::GetBucketVersioningResult(const Aws::AmazonWebServiceResult<XmlDocument>& result) :
     m_status(BucketVersioningStatus::NOT_SET),
     m_mFADelete(MFADeleteStatus::NOT_SET)
 {

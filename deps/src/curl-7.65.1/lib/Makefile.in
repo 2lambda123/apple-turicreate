@@ -255,7 +255,7 @@ libcurl_la_OBJECTS = $(am_libcurl_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
 am__v_lt_0 = --silent
-am__v_lt_1 = 
+am__v_lt_1 =
 libcurl_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(libcurl_la_CFLAGS) \
 	$(CFLAGS) $(libcurl_la_LDFLAGS) $(LDFLAGS) -o $@
@@ -343,12 +343,12 @@ am__v_P_1 = :
 AM_V_GEN = $(am__v_GEN_@AM_V@)
 am__v_GEN_ = $(am__v_GEN_@AM_DEFAULT_V@)
 am__v_GEN_0 = @echo "  GEN     " $@;
-am__v_GEN_1 = 
+am__v_GEN_1 =
 AM_V_at = $(am__v_at_@AM_V@)
 am__v_at_ = $(am__v_at_@AM_DEFAULT_V@)
 am__v_at_0 = @
-am__v_at_1 = 
-DEFAULT_INCLUDES = 
+am__v_at_1 =
+DEFAULT_INCLUDES =
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__maybe_remake_depfiles = depfiles
 am__depfiles_remade = ./$(DEPDIR)/libcurl_la-altsvc.Plo \
@@ -631,7 +631,7 @@ LTCOMPILE = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 AM_V_CC = $(am__v_CC_@AM_V@)
 am__v_CC_ = $(am__v_CC_@AM_DEFAULT_V@)
 am__v_CC_0 = @echo "  CC      " $@;
-am__v_CC_1 = 
+am__v_CC_1 =
 CCLD = $(CC)
 LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
@@ -639,7 +639,7 @@ LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 AM_V_CCLD = $(am__v_CCLD_@AM_V@)
 am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
 am__v_CCLD_0 = @echo "  CCLD    " $@;
-am__v_CCLD_1 = 
+am__v_CCLD_1 =
 SOURCES = $(libcurl_la_SOURCES) $(libcurlu_la_SOURCES)
 DIST_SOURCES = $(libcurl_la_SOURCES) $(libcurlu_la_SOURCES)
 am__can_run_installinfo = \
@@ -907,7 +907,7 @@ EXTRA_DIST = Makefile.m32 config-win32.h                            \
  firefox-db2pem.sh config-vxworks.h Makefile.vxworks checksrc.pl
 
 lib_LTLIBRARIES = libcurl.la
-@BUILD_UNITTESTS_FALSE@noinst_LTLIBRARIES = 
+@BUILD_UNITTESTS_FALSE@noinst_LTLIBRARIES =
 @BUILD_UNITTESTS_TRUE@noinst_LTLIBRARIES = libcurlu.la
 
 # Specify our include paths here, and do it relative to $(top_srcdir) and
@@ -935,8 +935,8 @@ lib_LTLIBRARIES = libcurl.la
 AM_CPPFLAGS = -I$(top_srcdir)/include -I$(top_builddir)/lib \
 	-I$(top_srcdir)/lib $(am__append_1) -DBUILDING_LIBCURL
 VERSIONINFO = -version-info 9:0:5
-AM_LDFLAGS = 
-AM_CFLAGS = 
+AM_LDFLAGS =
+AM_CFLAGS =
 libcurl_la_CPPFLAGS_EXTRA = $(am__append_7) $(am__append_8)
 libcurl_la_LDFLAGS_EXTRA = $(am__append_2) $(am__append_3) \
 	$(am__append_4) $(am__append_5) $(am__append_6)
@@ -1013,7 +1013,7 @@ libcurl_la_SOURCES = $(CSOURCES) $(HHEADERS)
 libcurlu_la_SOURCES = $(CSOURCES) $(HHEADERS)
 CHECKSRC = $(CS_$(V))
 CS_0 = @echo "  RUN     " $@;
-CS_1 = 
+CS_1 =
 CS_ = $(CS_0)
 
 # disable the tests that are mostly causing false positives
@@ -1062,7 +1062,7 @@ curl_config.h: stamp-h1
 stamp-h1: $(srcdir)/curl_config.h.in $(top_builddir)/config.status
 	@rm -f stamp-h1
 	cd $(top_builddir) && $(SHELL) ./config.status lib/curl_config.h
-$(srcdir)/curl_config.h.in: @MAINTAINER_MODE_TRUE@ $(am__configure_deps) 
+$(srcdir)/curl_config.h.in: @MAINTAINER_MODE_TRUE@ $(am__configure_deps)
 	($(am__cd) $(top_srcdir) && $(AUTOHEADER))
 	rm -f stamp-h1
 	touch $@
@@ -1180,7 +1180,7 @@ vtls/libcurl_la-mbedtls.lo: vtls/$(am__dirstamp) \
 vtls/libcurl_la-mesalink.lo: vtls/$(am__dirstamp) \
 	vtls/$(DEPDIR)/$(am__dirstamp)
 
-libcurl.la: $(libcurl_la_OBJECTS) $(libcurl_la_DEPENDENCIES) $(EXTRA_libcurl_la_DEPENDENCIES) 
+libcurl.la: $(libcurl_la_OBJECTS) $(libcurl_la_DEPENDENCIES) $(EXTRA_libcurl_la_DEPENDENCIES)
 	$(AM_V_CCLD)$(libcurl_la_LINK) -rpath $(libdir) $(libcurl_la_OBJECTS) $(libcurl_la_LIBADD) $(LIBS)
 vauth/libcurlu_la-vauth.lo: vauth/$(am__dirstamp) \
 	vauth/$(DEPDIR)/$(am__dirstamp)
@@ -1233,7 +1233,7 @@ vtls/libcurlu_la-mbedtls.lo: vtls/$(am__dirstamp) \
 vtls/libcurlu_la-mesalink.lo: vtls/$(am__dirstamp) \
 	vtls/$(DEPDIR)/$(am__dirstamp)
 
-libcurlu.la: $(libcurlu_la_OBJECTS) $(libcurlu_la_DEPENDENCIES) $(EXTRA_libcurlu_la_DEPENDENCIES) 
+libcurlu.la: $(libcurlu_la_OBJECTS) $(libcurlu_la_DEPENDENCIES) $(EXTRA_libcurlu_la_DEPENDENCIES)
 	$(AM_V_CCLD)$(libcurlu_la_LINK) $(am_libcurlu_la_rpath) $(libcurlu_la_OBJECTS) $(libcurlu_la_LIBADD) $(LIBS)
 
 mostlyclean-compile:

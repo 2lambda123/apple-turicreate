@@ -26,7 +26,7 @@ BOOST_AUTO_TEST_CASE(test_initialization) {
   // Test image equality for decoded images only
   turi::gl_sarray style_sarray = random_image_sarray(8);
   turi::gl_sarray content_sarray = random_image_sarray(50);
-  
+
   data_iterator::parameters params;
 
   params.style = style_sarray;

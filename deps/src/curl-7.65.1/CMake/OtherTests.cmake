@@ -261,4 +261,3 @@ if(NOT DEFINED CMAKE_TOOLCHAIN_FILE)
         return 0;
     }" HAVE_POLL_FINE)
 endif()
-

@@ -27,11 +27,11 @@ int main(int argc, char **argv) {
 
     for(size_t i = 0; i < 100; ++i) {
 
-      make_testing_sarray(flex_type_enum::INTEGER, {1}); 
+      make_testing_sarray(flex_type_enum::INTEGER, {1});
     }
-    
+
     std::cerr << "Recommend time / 1000: " << tt.current_time_millis() << "ms." << std::endl;
   }
 
-  return 0; 
+  return 0;
 }

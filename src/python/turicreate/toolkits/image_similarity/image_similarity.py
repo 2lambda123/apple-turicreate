@@ -41,7 +41,7 @@ def create(
 
     feature : string
         Name of the column containing either the input images or extracted features.
-        'None' (the default) indicates that only feature column or the  only image 
+        'None' (the default) indicates that only feature column or the  only image
         column in `dataset` should be used as the feature.
 
     model: string, optional
@@ -335,7 +335,7 @@ class ImageSimilarityModel(_CustomModel):
         return ([model_fields, training_fields], section_titles)
 
     def _extract_features(self, dataset, verbose=False, batch_size=64):
-        if image_analysis._is_image_deep_feature_sarray(dataset[self.feature], self.model): 
+        if image_analysis._is_image_deep_feature_sarray(dataset[self.feature], self.model):
             return _tc.SFrame(
                 {
                     "__image_features__": dataset[self.feature]

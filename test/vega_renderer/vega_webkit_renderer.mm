@@ -11,7 +11,7 @@
 }
 
 - (void)userContentController:(nonnull WKUserContentController *)userContentController didReceiveScriptMessage:(nonnull WKScriptMessage *)message {
-    
+
     if ([message.name isEqualToString:@"sendCanvasData"]) {
         NSString *body = message.body;
         assert([[body substringToIndex:22] isEqualToString:@"data:image/png;base64,"]);

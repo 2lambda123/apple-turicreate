@@ -18,7 +18,7 @@ class SimilarImage extends Component {
              onClick={this.props.onClick.bind(this, this.props.src.index)}>
           <img src={this.props.src.src}
                className={style.SingleImageIndex}
-               style={this.resizeImage(this.props.src.width, this.props.src.height)} 
+               style={this.resizeImage(this.props.src.width, this.props.src.height)}
 	       alt="" />
         </div>
       );
@@ -28,7 +28,7 @@ class SimilarImage extends Component {
              onClick={this.props.onClick.bind(this, this.props.src.index)}>
           <img src={this.props.src.src}
                className={style.SingleImageIndex}
-               style={this.resizeImage(this.props.src.width, this.props.src.height)} 
+               style={this.resizeImage(this.props.src.width, this.props.src.height)}
 	       alt="" />
         </div>
       );

@@ -242,4 +242,3 @@ std::ostream& operator<< (std::ostream& out, const CoreML::ShapeRange& obj);
 std::ostream& operator<< (std::ostream& out, const CoreML::ShapeConstraint& obj);
 
 #endif /* LayerShapeConstraints_hpp */
-

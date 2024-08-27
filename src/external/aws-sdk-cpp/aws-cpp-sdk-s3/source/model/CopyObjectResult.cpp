@@ -26,13 +26,13 @@ using namespace Aws::Utils::Xml;
 using namespace Aws::Utils;
 using namespace Aws;
 
-CopyObjectResult::CopyObjectResult() : 
+CopyObjectResult::CopyObjectResult() :
     m_serverSideEncryption(ServerSideEncryption::NOT_SET),
     m_requestCharged(RequestCharged::NOT_SET)
 {
 }
 
-CopyObjectResult::CopyObjectResult(const Aws::AmazonWebServiceResult<XmlDocument>& result) : 
+CopyObjectResult::CopyObjectResult(const Aws::AmazonWebServiceResult<XmlDocument>& result) :
     m_serverSideEncryption(ServerSideEncryption::NOT_SET),
     m_requestCharged(RequestCharged::NOT_SET)
 {

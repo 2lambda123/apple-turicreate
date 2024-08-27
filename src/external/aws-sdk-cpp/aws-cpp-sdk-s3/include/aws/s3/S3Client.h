@@ -1928,7 +1928,7 @@ namespace Aws
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/analytics-storage-class.html">Amazon
          * S3 Analytics – Storage Class Analysis</a>. </p> <p>The following operations are
          * related to <code>DeleteBucketAnalyticsConfiguration</code>:</p> <ul> <li> <p>
-         * </p> </li> <li> <p> </p> </li> <li> <p> </p> </li> </ul><p><h3>See Also:</h3>  
+         * </p> </li> <li> <p> </p> </li> <li> <p> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketAnalyticsConfiguration">AWS
          * API Reference</a></p>
@@ -1949,7 +1949,7 @@ namespace Aws
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/analytics-storage-class.html">Amazon
          * S3 Analytics – Storage Class Analysis</a>. </p> <p>The following operations are
          * related to <code>DeleteBucketAnalyticsConfiguration</code>:</p> <ul> <li> <p>
-         * </p> </li> <li> <p> </p> </li> <li> <p> </p> </li> </ul><p><h3>See Also:</h3>  
+         * </p> </li> <li> <p> </p> </li> <li> <p> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketAnalyticsConfiguration">AWS
          * API Reference</a></p>
@@ -1972,7 +1972,7 @@ namespace Aws
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/analytics-storage-class.html">Amazon
          * S3 Analytics – Storage Class Analysis</a>. </p> <p>The following operations are
          * related to <code>DeleteBucketAnalyticsConfiguration</code>:</p> <ul> <li> <p>
-         * </p> </li> <li> <p> </p> </li> <li> <p> </p> </li> </ul><p><h3>See Also:</h3>  
+         * </p> </li> <li> <p> </p> </li> <li> <p> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketAnalyticsConfiguration">AWS
          * API Reference</a></p>
@@ -2119,7 +2119,7 @@ namespace Aws
          * <code>DeleteBucketInventoryConfiguration</code> include: </p> <ul> <li> <p>
          * <a>GetBucketInventoryConfiguration</a> </p> </li> <li> <p>
          * <a>PutBucketInventoryConfiguration</a> </p> </li> <li> <p>
-         * <a>ListBucketInventoryConfigurations</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>ListBucketInventoryConfigurations</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketInventoryConfiguration">AWS
          * API Reference</a></p>
@@ -2142,7 +2142,7 @@ namespace Aws
          * <code>DeleteBucketInventoryConfiguration</code> include: </p> <ul> <li> <p>
          * <a>GetBucketInventoryConfiguration</a> </p> </li> <li> <p>
          * <a>PutBucketInventoryConfiguration</a> </p> </li> <li> <p>
-         * <a>ListBucketInventoryConfigurations</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>ListBucketInventoryConfigurations</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketInventoryConfiguration">AWS
          * API Reference</a></p>
@@ -2167,7 +2167,7 @@ namespace Aws
          * <code>DeleteBucketInventoryConfiguration</code> include: </p> <ul> <li> <p>
          * <a>GetBucketInventoryConfiguration</a> </p> </li> <li> <p>
          * <a>PutBucketInventoryConfiguration</a> </p> </li> <li> <p>
-         * <a>ListBucketInventoryConfigurations</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>ListBucketInventoryConfigurations</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketInventoryConfiguration">AWS
          * API Reference</a></p>
@@ -2190,7 +2190,7 @@ namespace Aws
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/intro-lifecycle-rules.html#intro-lifecycle-rules-actions">Elements
          * to Describe Lifecycle Actions</a>.</p> <p>Related actions include:</p> <ul> <li>
          * <p> <a>PutBucketLifecycleConfiguration</a> </p> </li> <li> <p>
-         * <a>GetBucketLifecycleConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>GetBucketLifecycleConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketLifecycle">AWS
          * API Reference</a></p>
@@ -2211,7 +2211,7 @@ namespace Aws
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/intro-lifecycle-rules.html#intro-lifecycle-rules-actions">Elements
          * to Describe Lifecycle Actions</a>.</p> <p>Related actions include:</p> <ul> <li>
          * <p> <a>PutBucketLifecycleConfiguration</a> </p> </li> <li> <p>
-         * <a>GetBucketLifecycleConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>GetBucketLifecycleConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketLifecycle">AWS
          * API Reference</a></p>
@@ -2234,7 +2234,7 @@ namespace Aws
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/intro-lifecycle-rules.html#intro-lifecycle-rules-actions">Elements
          * to Describe Lifecycle Actions</a>.</p> <p>Related actions include:</p> <ul> <li>
          * <p> <a>PutBucketLifecycleConfiguration</a> </p> </li> <li> <p>
-         * <a>GetBucketLifecycleConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>GetBucketLifecycleConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketLifecycle">AWS
          * API Reference</a></p>
@@ -2474,7 +2474,7 @@ namespace Aws
          * the bucket owner has this permission and can grant this permission to others.
          * </p> <p>The following operations are related to
          * <code>DeleteBucketTagging</code>:</p> <ul> <li> <p> <a>GetBucketTagging</a> </p>
-         * </li> <li> <p> <a>PutBucketTagging</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * </li> <li> <p> <a>PutBucketTagging</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketTagging">AWS
          * API Reference</a></p>
@@ -2487,7 +2487,7 @@ namespace Aws
          * the bucket owner has this permission and can grant this permission to others.
          * </p> <p>The following operations are related to
          * <code>DeleteBucketTagging</code>:</p> <ul> <li> <p> <a>GetBucketTagging</a> </p>
-         * </li> <li> <p> <a>PutBucketTagging</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * </li> <li> <p> <a>PutBucketTagging</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketTagging">AWS
          * API Reference</a></p>
@@ -2502,7 +2502,7 @@ namespace Aws
          * the bucket owner has this permission and can grant this permission to others.
          * </p> <p>The following operations are related to
          * <code>DeleteBucketTagging</code>:</p> <ul> <li> <p> <a>GetBucketTagging</a> </p>
-         * </li> <li> <p> <a>PutBucketTagging</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * </li> <li> <p> <a>PutBucketTagging</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketTagging">AWS
          * API Reference</a></p>
@@ -2526,7 +2526,7 @@ namespace Aws
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html">Hosting
          * Websites on Amazon S3</a>. </p> <p>The following operations are related to
          * <code>DeleteBucketWebsite</code>:</p> <ul> <li> <p> <a>GetBucketWebsite</a> </p>
-         * </li> <li> <p> <a>PutBucketWebsite</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * </li> <li> <p> <a>PutBucketWebsite</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketWebsite">AWS
          * API Reference</a></p>
@@ -2548,7 +2548,7 @@ namespace Aws
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html">Hosting
          * Websites on Amazon S3</a>. </p> <p>The following operations are related to
          * <code>DeleteBucketWebsite</code>:</p> <ul> <li> <p> <a>GetBucketWebsite</a> </p>
-         * </li> <li> <p> <a>PutBucketWebsite</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * </li> <li> <p> <a>PutBucketWebsite</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketWebsite">AWS
          * API Reference</a></p>
@@ -2572,7 +2572,7 @@ namespace Aws
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html">Hosting
          * Websites on Amazon S3</a>. </p> <p>The following operations are related to
          * <code>DeleteBucketWebsite</code>:</p> <ul> <li> <p> <a>GetBucketWebsite</a> </p>
-         * </li> <li> <p> <a>PutBucketWebsite</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * </li> <li> <p> <a>PutBucketWebsite</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DeleteBucketWebsite">AWS
          * API Reference</a></p>
@@ -2929,7 +2929,7 @@ namespace Aws
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev//transfer-acceleration.html">Transfer
          * Acceleration</a> in the Amazon Simple Storage Service Developer Guide.</p> <p
          * class="title"> <b>Related Resources</b> </p> <ul> <li> <p>
-         * <a>PutBucketAccelerateConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>PutBucketAccelerateConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketAccelerateConfiguration">AWS
          * API Reference</a></p>
@@ -2959,7 +2959,7 @@ namespace Aws
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev//transfer-acceleration.html">Transfer
          * Acceleration</a> in the Amazon Simple Storage Service Developer Guide.</p> <p
          * class="title"> <b>Related Resources</b> </p> <ul> <li> <p>
-         * <a>PutBucketAccelerateConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>PutBucketAccelerateConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketAccelerateConfiguration">AWS
          * API Reference</a></p>
@@ -2991,7 +2991,7 @@ namespace Aws
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev//transfer-acceleration.html">Transfer
          * Acceleration</a> in the Amazon Simple Storage Service Developer Guide.</p> <p
          * class="title"> <b>Related Resources</b> </p> <ul> <li> <p>
-         * <a>PutBucketAccelerateConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>PutBucketAccelerateConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketAccelerateConfiguration">AWS
          * API Reference</a></p>
@@ -3242,7 +3242,7 @@ namespace Aws
          * <code>GetBucketInventoryConfiguration</code>:</p> <ul> <li> <p>
          * <a>DeleteBucketInventoryConfiguration</a> </p> </li> <li> <p>
          * <a>ListBucketInventoryConfigurations</a> </p> </li> <li> <p>
-         * <a>PutBucketInventoryConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>PutBucketInventoryConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketInventoryConfiguration">AWS
          * API Reference</a></p>
@@ -3265,7 +3265,7 @@ namespace Aws
          * <code>GetBucketInventoryConfiguration</code>:</p> <ul> <li> <p>
          * <a>DeleteBucketInventoryConfiguration</a> </p> </li> <li> <p>
          * <a>ListBucketInventoryConfigurations</a> </p> </li> <li> <p>
-         * <a>PutBucketInventoryConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>PutBucketInventoryConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketInventoryConfiguration">AWS
          * API Reference</a></p>
@@ -3290,7 +3290,7 @@ namespace Aws
          * <code>GetBucketInventoryConfiguration</code>:</p> <ul> <li> <p>
          * <a>DeleteBucketInventoryConfiguration</a> </p> </li> <li> <p>
          * <a>ListBucketInventoryConfigurations</a> </p> </li> <li> <p>
-         * <a>PutBucketInventoryConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>PutBucketInventoryConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketInventoryConfiguration">AWS
          * API Reference</a></p>
@@ -3893,7 +3893,7 @@ namespace Aws
          * <li> <p>Description: There is no tag set associated with the bucket.</p> </li>
          * </ul> </li> </ul> <p>The following operations are related to
          * <code>GetBucketTagging</code>:</p> <ul> <li> <p> <a>PutBucketTagging</a> </p>
-         * </li> <li> <p> <a>DeleteBucketTagging</a> </p> </li> </ul><p><h3>See Also:</h3> 
+         * </li> <li> <p> <a>DeleteBucketTagging</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketTagging">AWS
          * API Reference</a></p>
@@ -3909,7 +3909,7 @@ namespace Aws
          * <li> <p>Description: There is no tag set associated with the bucket.</p> </li>
          * </ul> </li> </ul> <p>The following operations are related to
          * <code>GetBucketTagging</code>:</p> <ul> <li> <p> <a>PutBucketTagging</a> </p>
-         * </li> <li> <p> <a>DeleteBucketTagging</a> </p> </li> </ul><p><h3>See Also:</h3> 
+         * </li> <li> <p> <a>DeleteBucketTagging</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketTagging">AWS
          * API Reference</a></p>
@@ -3927,7 +3927,7 @@ namespace Aws
          * <li> <p>Description: There is no tag set associated with the bucket.</p> </li>
          * </ul> </li> </ul> <p>The following operations are related to
          * <code>GetBucketTagging</code>:</p> <ul> <li> <p> <a>PutBucketTagging</a> </p>
-         * </li> <li> <p> <a>DeleteBucketTagging</a> </p> </li> </ul><p><h3>See Also:</h3> 
+         * </li> <li> <p> <a>DeleteBucketTagging</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/GetBucketTagging">AWS
          * API Reference</a></p>
@@ -4714,7 +4714,7 @@ namespace Aws
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions
          * Related to Bucket Subresource Operations</a> and <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing
-         * Access Permissions to Your Amazon S3 Resources</a>.</p><p><h3>See Also:</h3>  
+         * Access Permissions to Your Amazon S3 Resources</a>.</p><p><h3>See Also:</h3>
          * <a href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/HeadBucket">AWS
          * API Reference</a></p>
          */
@@ -4732,7 +4732,7 @@ namespace Aws
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions
          * Related to Bucket Subresource Operations</a> and <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing
-         * Access Permissions to Your Amazon S3 Resources</a>.</p><p><h3>See Also:</h3>  
+         * Access Permissions to Your Amazon S3 Resources</a>.</p><p><h3>See Also:</h3>
          * <a href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/HeadBucket">AWS
          * API Reference</a></p>
          *
@@ -4752,7 +4752,7 @@ namespace Aws
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions
          * Related to Bucket Subresource Operations</a> and <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing
-         * Access Permissions to Your Amazon S3 Resources</a>.</p><p><h3>See Also:</h3>  
+         * Access Permissions to Your Amazon S3 Resources</a>.</p><p><h3>See Also:</h3>
          * <a href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/HeadBucket">AWS
          * API Reference</a></p>
          *
@@ -4953,7 +4953,7 @@ namespace Aws
          * related to <code>ListBucketAnalyticsConfigurations</code>:</p> <ul> <li> <p>
          * <a>GetBucketAnalyticsConfiguration</a> </p> </li> <li> <p>
          * <a>DeleteBucketAnalyticsConfiguration</a> </p> </li> <li> <p>
-         * <a>PutBucketAnalyticsConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>PutBucketAnalyticsConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ListBucketAnalyticsConfigurations">AWS
          * API Reference</a></p>
@@ -4984,7 +4984,7 @@ namespace Aws
          * related to <code>ListBucketAnalyticsConfigurations</code>:</p> <ul> <li> <p>
          * <a>GetBucketAnalyticsConfiguration</a> </p> </li> <li> <p>
          * <a>DeleteBucketAnalyticsConfiguration</a> </p> </li> <li> <p>
-         * <a>PutBucketAnalyticsConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>PutBucketAnalyticsConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ListBucketAnalyticsConfigurations">AWS
          * API Reference</a></p>
@@ -5017,7 +5017,7 @@ namespace Aws
          * related to <code>ListBucketAnalyticsConfigurations</code>:</p> <ul> <li> <p>
          * <a>GetBucketAnalyticsConfiguration</a> </p> </li> <li> <p>
          * <a>DeleteBucketAnalyticsConfiguration</a> </p> </li> <li> <p>
-         * <a>PutBucketAnalyticsConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>PutBucketAnalyticsConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ListBucketAnalyticsConfigurations">AWS
          * API Reference</a></p>
@@ -5050,7 +5050,7 @@ namespace Aws
          * <code>ListBucketInventoryConfigurations</code>:</p> <ul> <li> <p>
          * <a>GetBucketInventoryConfiguration</a> </p> </li> <li> <p>
          * <a>DeleteBucketInventoryConfiguration</a> </p> </li> <li> <p>
-         * <a>PutBucketInventoryConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>PutBucketInventoryConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ListBucketInventoryConfigurations">AWS
          * API Reference</a></p>
@@ -5081,7 +5081,7 @@ namespace Aws
          * <code>ListBucketInventoryConfigurations</code>:</p> <ul> <li> <p>
          * <a>GetBucketInventoryConfiguration</a> </p> </li> <li> <p>
          * <a>DeleteBucketInventoryConfiguration</a> </p> </li> <li> <p>
-         * <a>PutBucketInventoryConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>PutBucketInventoryConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ListBucketInventoryConfigurations">AWS
          * API Reference</a></p>
@@ -5114,7 +5114,7 @@ namespace Aws
          * <code>ListBucketInventoryConfigurations</code>:</p> <ul> <li> <p>
          * <a>GetBucketInventoryConfiguration</a> </p> </li> <li> <p>
          * <a>DeleteBucketInventoryConfiguration</a> </p> </li> <li> <p>
-         * <a>PutBucketInventoryConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>PutBucketInventoryConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ListBucketInventoryConfigurations">AWS
          * API Reference</a></p>
@@ -5149,7 +5149,7 @@ namespace Aws
          * to <code>ListBucketMetricsConfigurations</code>:</p> <ul> <li> <p>
          * <a>PutBucketMetricsConfiguration</a> </p> </li> <li> <p>
          * <a>GetBucketMetricsConfiguration</a> </p> </li> <li> <p>
-         * <a>DeleteBucketMetricsConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>DeleteBucketMetricsConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ListBucketMetricsConfigurations">AWS
          * API Reference</a></p>
@@ -5182,7 +5182,7 @@ namespace Aws
          * to <code>ListBucketMetricsConfigurations</code>:</p> <ul> <li> <p>
          * <a>PutBucketMetricsConfiguration</a> </p> </li> <li> <p>
          * <a>GetBucketMetricsConfiguration</a> </p> </li> <li> <p>
-         * <a>DeleteBucketMetricsConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>DeleteBucketMetricsConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ListBucketMetricsConfigurations">AWS
          * API Reference</a></p>
@@ -5217,7 +5217,7 @@ namespace Aws
          * to <code>ListBucketMetricsConfigurations</code>:</p> <ul> <li> <p>
          * <a>PutBucketMetricsConfiguration</a> </p> </li> <li> <p>
          * <a>GetBucketMetricsConfiguration</a> </p> </li> <li> <p>
-         * <a>DeleteBucketMetricsConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>DeleteBucketMetricsConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ListBucketMetricsConfigurations">AWS
          * API Reference</a></p>
@@ -6099,7 +6099,7 @@ namespace Aws
          * Cross-Origin Resource Sharing</a> in the <i>Amazon Simple Storage Service
          * Developer Guide</i>.</p> <p class="title"> <b>Related Resources</b> </p> <ul>
          * <li> <p> <a>GetBucketCors</a> </p> </li> <li> <p> <a>DeleteBucketCors</a> </p>
-         * </li> <li> <p> <a>RESTOPTIONSobject</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * </li> <li> <p> <a>RESTOPTIONSobject</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketCors">AWS
          * API Reference</a></p>
          */
@@ -6136,7 +6136,7 @@ namespace Aws
          * Cross-Origin Resource Sharing</a> in the <i>Amazon Simple Storage Service
          * Developer Guide</i>.</p> <p class="title"> <b>Related Resources</b> </p> <ul>
          * <li> <p> <a>GetBucketCors</a> </p> </li> <li> <p> <a>DeleteBucketCors</a> </p>
-         * </li> <li> <p> <a>RESTOPTIONSobject</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * </li> <li> <p> <a>RESTOPTIONSobject</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketCors">AWS
          * API Reference</a></p>
          *
@@ -6175,7 +6175,7 @@ namespace Aws
          * Cross-Origin Resource Sharing</a> in the <i>Amazon Simple Storage Service
          * Developer Guide</i>.</p> <p class="title"> <b>Related Resources</b> </p> <ul>
          * <li> <p> <a>GetBucketCors</a> </p> </li> <li> <p> <a>DeleteBucketCors</a> </p>
-         * </li> <li> <p> <a>RESTOPTIONSobject</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * </li> <li> <p> <a>RESTOPTIONSobject</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketCors">AWS
          * API Reference</a></p>
          *
@@ -6306,7 +6306,7 @@ namespace Aws
          * <b>Related Resources</b> </p> <ul> <li> <p>
          * <a>GetBucketInventoryConfiguration</a> </p> </li> <li> <p>
          * <a>DeleteBucketInventoryConfiguration</a> </p> </li> <li> <p>
-         * <a>ListBucketInventoryConfigurations</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>ListBucketInventoryConfigurations</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketInventoryConfiguration">AWS
          * API Reference</a></p>
@@ -6357,7 +6357,7 @@ namespace Aws
          * <b>Related Resources</b> </p> <ul> <li> <p>
          * <a>GetBucketInventoryConfiguration</a> </p> </li> <li> <p>
          * <a>DeleteBucketInventoryConfiguration</a> </p> </li> <li> <p>
-         * <a>ListBucketInventoryConfigurations</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>ListBucketInventoryConfigurations</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketInventoryConfiguration">AWS
          * API Reference</a></p>
@@ -6410,7 +6410,7 @@ namespace Aws
          * <b>Related Resources</b> </p> <ul> <li> <p>
          * <a>GetBucketInventoryConfiguration</a> </p> </li> <li> <p>
          * <a>DeleteBucketInventoryConfiguration</a> </p> </li> <li> <p>
-         * <a>ListBucketInventoryConfigurations</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>ListBucketInventoryConfigurations</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketInventoryConfiguration">AWS
          * API Reference</a></p>
@@ -6829,7 +6829,7 @@ namespace Aws
          * include the <code>x-amz-sns-test-message-id</code> header containing the message
          * ID of the test notification sent to the topic.</p> <p>The following operation is
          * related to <code>PutBucketNotificationConfiguration</code>:</p> <ul> <li> <p>
-         * <a>GetBucketNotificationConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3> 
+         * <a>GetBucketNotificationConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketNotificationConfiguration">AWS
          * API Reference</a></p>
@@ -6874,7 +6874,7 @@ namespace Aws
          * include the <code>x-amz-sns-test-message-id</code> header containing the message
          * ID of the test notification sent to the topic.</p> <p>The following operation is
          * related to <code>PutBucketNotificationConfiguration</code>:</p> <ul> <li> <p>
-         * <a>GetBucketNotificationConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3> 
+         * <a>GetBucketNotificationConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketNotificationConfiguration">AWS
          * API Reference</a></p>
@@ -6921,7 +6921,7 @@ namespace Aws
          * include the <code>x-amz-sns-test-message-id</code> header containing the message
          * ID of the test notification sent to the topic.</p> <p>The following operation is
          * related to <code>PutBucketNotificationConfiguration</code>:</p> <ul> <li> <p>
-         * <a>GetBucketNotificationConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3> 
+         * <a>GetBucketNotificationConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketNotificationConfiguration">AWS
          * API Reference</a></p>
@@ -6946,7 +6946,7 @@ namespace Aws
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html">Using
          * Bucket Policies and User Policies</a>.</p> <p>The following operations are
          * related to <code>PutBucketPolicy</code>:</p> <ul> <li> <p> <a>CreateBucket</a>
-         * </p> </li> <li> <p> <a>DeleteBucket</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * </p> </li> <li> <p> <a>DeleteBucket</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketPolicy">AWS
          * API Reference</a></p>
@@ -6969,7 +6969,7 @@ namespace Aws
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html">Using
          * Bucket Policies and User Policies</a>.</p> <p>The following operations are
          * related to <code>PutBucketPolicy</code>:</p> <ul> <li> <p> <a>CreateBucket</a>
-         * </p> </li> <li> <p> <a>DeleteBucket</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * </p> </li> <li> <p> <a>DeleteBucket</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketPolicy">AWS
          * API Reference</a></p>
@@ -6994,7 +6994,7 @@ namespace Aws
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html">Using
          * Bucket Policies and User Policies</a>.</p> <p>The following operations are
          * related to <code>PutBucketPolicy</code>:</p> <ul> <li> <p> <a>CreateBucket</a>
-         * </p> </li> <li> <p> <a>DeleteBucket</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * </p> </li> <li> <p> <a>DeleteBucket</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketPolicy">AWS
          * API Reference</a></p>
@@ -7247,7 +7247,7 @@ namespace Aws
          * <ul> <li> <p>Description: The service was unable to apply the provided tag to
          * the bucket.</p> </li> </ul> </li> </ul> <p>The following operations are related
          * to <code>PutBucketTagging</code>:</p> <ul> <li> <p> <a>GetBucketTagging</a> </p>
-         * </li> <li> <p> <a>DeleteBucketTagging</a> </p> </li> </ul><p><h3>See Also:</h3> 
+         * </li> <li> <p> <a>DeleteBucketTagging</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketTagging">AWS
          * API Reference</a></p>
@@ -7292,7 +7292,7 @@ namespace Aws
          * <ul> <li> <p>Description: The service was unable to apply the provided tag to
          * the bucket.</p> </li> </ul> </li> </ul> <p>The following operations are related
          * to <code>PutBucketTagging</code>:</p> <ul> <li> <p> <a>GetBucketTagging</a> </p>
-         * </li> <li> <p> <a>DeleteBucketTagging</a> </p> </li> </ul><p><h3>See Also:</h3> 
+         * </li> <li> <p> <a>DeleteBucketTagging</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketTagging">AWS
          * API Reference</a></p>
@@ -7339,7 +7339,7 @@ namespace Aws
          * <ul> <li> <p>Description: The service was unable to apply the provided tag to
          * the bucket.</p> </li> </ul> </li> </ul> <p>The following operations are related
          * to <code>PutBucketTagging</code>:</p> <ul> <li> <p> <a>GetBucketTagging</a> </p>
-         * </li> <li> <p> <a>DeleteBucketTagging</a> </p> </li> </ul><p><h3>See Also:</h3> 
+         * </li> <li> <p> <a>DeleteBucketTagging</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/PutBucketTagging">AWS
          * API Reference</a></p>
@@ -9141,7 +9141,7 @@ namespace Aws
          * of error codes, see <a>ErrorResponses</a> </p> <p class="title"> <b>Related
          * Resources</b> </p> <ul> <li> <p> <a>GetObject</a> </p> </li> <li> <p>
          * <a>GetBucketLifecycleConfiguration</a> </p> </li> <li> <p>
-         * <a>PutBucketLifecycleConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>PutBucketLifecycleConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/SelectObjectContent">AWS
          * API Reference</a></p>
@@ -9212,7 +9212,7 @@ namespace Aws
          * of error codes, see <a>ErrorResponses</a> </p> <p class="title"> <b>Related
          * Resources</b> </p> <ul> <li> <p> <a>GetObject</a> </p> </li> <li> <p>
          * <a>GetBucketLifecycleConfiguration</a> </p> </li> <li> <p>
-         * <a>PutBucketLifecycleConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>PutBucketLifecycleConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/SelectObjectContent">AWS
          * API Reference</a></p>
@@ -9285,7 +9285,7 @@ namespace Aws
          * of error codes, see <a>ErrorResponses</a> </p> <p class="title"> <b>Related
          * Resources</b> </p> <ul> <li> <p> <a>GetObject</a> </p> </li> <li> <p>
          * <a>GetBucketLifecycleConfiguration</a> </p> </li> <li> <p>
-         * <a>PutBucketLifecycleConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>  
+         * <a>PutBucketLifecycleConfiguration</a> </p> </li> </ul><p><h3>See Also:</h3>
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/SelectObjectContent">AWS
          * API Reference</a></p>

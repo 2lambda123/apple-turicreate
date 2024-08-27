@@ -45,4 +45,3 @@ int main (NN_UNUSED int argc, const NN_UNUSED char *argv[])
     test_recv (sb, "THERE");
     return 0;
 }
-

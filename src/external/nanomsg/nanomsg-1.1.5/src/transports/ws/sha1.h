@@ -54,4 +54,3 @@ void nn_sha1_hashbyte (struct nn_sha1 *self, uint8_t data);
 uint8_t* nn_sha1_result (struct nn_sha1 *self);
 
 #endif
-

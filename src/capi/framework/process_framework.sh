@@ -1,6 +1,6 @@
 #!/bin/bash -ex
 
-echo 
+echo
 echo "PostProcessing framework"
 
 name=""
@@ -37,7 +37,7 @@ done
 if [[ -z ${name} ]] ; then
  echo "Name empty."
  exit 1
-fi 
+fi
 
 if [[ -z ${install_location} ]] ; then
  echo "--install-location not given."
@@ -50,17 +50,17 @@ src_library_file=${fmwrk_dir}/${name}
 if [[ ! -e ${src_library_file} ]] ; then
  echo "Source library '${src_library_file}' does not exist."
  exit 1
-fi 
+fi
 
-if [[ ! -d ${src_header_dir} ]] ; then 
+if [[ ! -d ${src_header_dir} ]] ; then
  echo "Header src directory '${src_header_dir}' does not exist."
  exit 1
-fi 
+fi
 
-if [[ ! -e ${src_header_dir}/${name}.h ]] ; then 
+if [[ ! -e ${src_header_dir}/${name}.h ]] ; then
  echo "Expected umbrella header '${src_header_dir}/${name}.h' does not exist."
  exit 1
-fi 
+fi
 
 
 
@@ -70,7 +70,7 @@ fi
 #
 ##########################################################
 
-function generate_tbd_file { 
+function generate_tbd_file {
 
   lib_file=${src_library_file}
   out_file=$1
@@ -93,7 +93,7 @@ compatibility-version: 0.0.0
 objc-constraint: none
 exports:
   - archs:           [ ${archs} ]
-    symbols:         [ ${symbol_list} ]    
+    symbols:         [ ${symbol_list} ]
 " > ${out_file}
 
 }
@@ -104,7 +104,7 @@ exports:
 #
 ##########################################################
 
-function write_module_map { 
+function write_module_map {
   out_file=$1
 
   echo "framework module TuriCreate [extern_c] {
@@ -142,7 +142,7 @@ if [[ $install_tbd_file == 1 ]] ; then
   cd ${fmwrk_dir} && ln -sF Versions/Current/${name}.tbd
 fi
 
-# Create the module map 
+# Create the module map
 write_module_map ${fmwrk_dir}/Versions/Current/Modules/module.modulemap
 
 # and we're done.

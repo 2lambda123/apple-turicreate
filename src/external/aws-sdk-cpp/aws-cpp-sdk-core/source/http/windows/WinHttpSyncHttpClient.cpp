@@ -1,12 +1,12 @@
 /*
   * Copyright 2010-2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-  * 
+  *
   * Licensed under the Apache License, Version 2.0 (the "License").
   * You may not use this file except in compliance with the License.
   * A copy of the License is located at
-  * 
+  *
   *  http://aws.amazon.com/apache2.0
-  * 
+  *
   * or in the "license" file accompanying this file. This file is distributed
   * on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
   * express or implied. See the License for the specific language governing
@@ -44,7 +44,7 @@ static void WinHttpEnableHttp2(void* handle)
 {
 #ifdef WINHTTP_HAS_H2
     DWORD http2 = WINHTTP_PROTOCOL_FLAG_HTTP2;
-    if (!WinHttpSetOption(handle, WINHTTP_OPTION_ENABLE_HTTP_PROTOCOL, &http2, sizeof(http2))) 
+    if (!WinHttpSetOption(handle, WINHTTP_OPTION_ENABLE_HTTP_PROTOCOL, &http2, sizeof(http2)))
     {
         AWS_LOGSTREAM_ERROR("WinHttpHttp2", "Failed to enable HTTP/2 on WinHttp handle: " << handle << ". Falling back to HTTP/1.1.");
     }
@@ -60,7 +60,7 @@ static void WinHttpEnableHttp2(void* handle)
 WinHttpSyncHttpClient::WinHttpSyncHttpClient(const ClientConfiguration& config) :
     Base()
 {
-    AWS_LOGSTREAM_INFO(GetLogTag(), "Creating http client with user agent " << config.userAgent << " with max connections " << config.maxConnections 
+    AWS_LOGSTREAM_INFO(GetLogTag(), "Creating http client with user agent " << config.userAgent << " with max connections " << config.maxConnections
         << " request timeout " << config.requestTimeoutMs << ",and connect timeout " << config.connectTimeoutMs);
 
     DWORD winhttpFlags = WINHTTP_ACCESS_TYPE_NO_PROXY;
@@ -146,9 +146,9 @@ void* WinHttpSyncHttpClient::OpenRequest(const Aws::Http::HttpRequest& request, 
 
     Aws::WString acceptHeader(L"*/*");
 
-    if (request.HasHeader(Aws::Http::ACCEPT_HEADER)) 
+    if (request.HasHeader(Aws::Http::ACCEPT_HEADER))
     {
-        acceptHeader = Aws::Utils::StringUtils::ToWString(request.GetHeaderValue(Aws::Http::ACCEPT_HEADER).c_str());  
+        acceptHeader = Aws::Utils::StringUtils::ToWString(request.GetHeaderValue(Aws::Http::ACCEPT_HEADER).c_str());
     }
 
     accept[0] = acceptHeader.c_str();
@@ -242,7 +242,7 @@ uint64_t WinHttpSyncHttpClient::FinalizeWriteData(void* hHttpRequest) const
     {
         return 0;
     }
-        
+
     return bytesWritten;
 }
 
@@ -265,7 +265,7 @@ bool WinHttpSyncHttpClient::DoQueryHeaders(void* hHttpRequest, std::shared_ptr<H
     wchar_t contentTypeStr[1024];
     dwSize = sizeof(contentTypeStr);
     wmemset(contentTypeStr, 0, static_cast<size_t>(dwSize / sizeof(wchar_t)));
-    
+
     WinHttpQueryHeaders(hHttpRequest, WINHTTP_QUERY_CONTENT_TYPE, nullptr, &contentTypeStr, &dwSize, 0);
     if (contentTypeStr[0] != NULL)
     {
@@ -273,11 +273,11 @@ bool WinHttpSyncHttpClient::DoQueryHeaders(void* hHttpRequest, std::shared_ptr<H
         response->SetContentType(contentStr);
         AWS_LOGSTREAM_DEBUG(GetLogTag(), "Received content type " << contentStr);
     }
-       
+
     BOOL queryResult = false;
     AWS_LOGSTREAM_DEBUG(GetLogTag(), "Received headers:");
     WinHttpQueryHeaders(hHttpRequest, WINHTTP_QUERY_RAW_HEADERS_CRLF, WINHTTP_HEADER_NAME_BY_INDEX, nullptr, &dwSize, WINHTTP_NO_HEADER_INDEX);
-    
+
     //I know it's ugly, but this is how MSFT says to do it so....
     if (GetLastError() == ERROR_INSUFFICIENT_BUFFER)
     {
@@ -291,7 +291,7 @@ bool WinHttpSyncHttpClient::DoQueryHeaders(void* hHttpRequest, std::shared_ptr<H
             ss << std::move(headers);
             read = dwSize;
         }
-    } 
+    }
 
     return queryResult == TRUE;
 }

@@ -54,4 +54,3 @@ struct nn_poller {
     /*  List of removed pollitems, linked by indices. -1 means empty list. */
     int removed;
 };
-

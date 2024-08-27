@@ -115,5 +115,3 @@ for ($i=0; $i <= $#primes; $i++)
 	printf(" %5d,",$primes[$i]);
 	}
 print "\n#endif\n};\n";
-
-

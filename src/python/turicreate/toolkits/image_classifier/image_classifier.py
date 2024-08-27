@@ -72,9 +72,9 @@ def create(
         the order in which the classes are mapped.
 
     feature : string, optional
-        indicates that the SFrame has either column of Image type or array type 
+        indicates that the SFrame has either column of Image type or array type
         (extracted features) and that will be the name of the column containing the input
-        images or features. 'None' (the default) indicates that only feature column or the 
+        images or features. 'None' (the default) indicates that only feature column or the
         only image column in `dataset` should be used as the feature.
 
     l2_penalty : float, optional

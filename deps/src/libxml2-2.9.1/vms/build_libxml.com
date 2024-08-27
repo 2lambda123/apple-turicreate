@@ -232,7 +232,7 @@ $ERROR_OUT:
 $ exit_status = $status
 $ write sys$output "''f$message(exit_status)'"
 $ goto EXIT_OUT
-$!
+$!
 $!- the BUILD subroutine.  Compile then insert into library or link as required
 $!
 $BUILD: subroutine

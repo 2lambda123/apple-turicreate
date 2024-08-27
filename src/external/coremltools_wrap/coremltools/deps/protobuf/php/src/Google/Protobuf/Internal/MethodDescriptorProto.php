@@ -234,4 +234,3 @@ class MethodDescriptorProto extends \Google\Protobuf\Internal\Message
     }
 
 }
-

@@ -38,7 +38,7 @@ namespace Aws
          */
         class AWS_CORE_API AWSErrorMarshaller
         {
-        public:            
+        public:
             virtual ~AWSErrorMarshaller() {}
 
             /**

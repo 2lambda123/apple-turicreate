@@ -422,7 +422,7 @@ void Gazetteer::clear_revision() {
   return revision_;
 }
 void Gazetteer::set_revision(::google::protobuf::uint32 value) {
-  
+
   revision_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.CoreMLModels.Gazetteer.revision)
 }
@@ -436,13 +436,13 @@ const ::std::string& Gazetteer::language() const {
   return language_.GetNoArena();
 }
 void Gazetteer::set_language(const ::std::string& value) {
-  
+
   language_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:CoreML.Specification.CoreMLModels.Gazetteer.language)
 }
 #if LANG_CXX11
 void Gazetteer::set_language(::std::string&& value) {
-  
+
   language_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:CoreML.Specification.CoreMLModels.Gazetteer.language)
@@ -450,31 +450,31 @@ void Gazetteer::set_language(::std::string&& value) {
 #endif
 void Gazetteer::set_language(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+
   language_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:CoreML.Specification.CoreMLModels.Gazetteer.language)
 }
 void Gazetteer::set_language(const char* value, size_t size) {
-  
+
   language_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:CoreML.Specification.CoreMLModels.Gazetteer.language)
 }
 ::std::string* Gazetteer::mutable_language() {
-  
+
   // @@protoc_insertion_point(field_mutable:CoreML.Specification.CoreMLModels.Gazetteer.language)
   return language_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 ::std::string* Gazetteer::release_language() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.CoreMLModels.Gazetteer.language)
-  
+
   return language_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 void Gazetteer::set_allocated_language(::std::string* language) {
   if (language != NULL) {
-    
+
   } else {
-    
+
   }
   language_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), language);
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.CoreMLModels.Gazetteer.language)
@@ -489,13 +489,13 @@ const ::std::string& Gazetteer::modelparameterdata() const {
   return modelparameterdata_.GetNoArena();
 }
 void Gazetteer::set_modelparameterdata(const ::std::string& value) {
-  
+
   modelparameterdata_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:CoreML.Specification.CoreMLModels.Gazetteer.modelParameterData)
 }
 #if LANG_CXX11
 void Gazetteer::set_modelparameterdata(::std::string&& value) {
-  
+
   modelparameterdata_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:CoreML.Specification.CoreMLModels.Gazetteer.modelParameterData)
@@ -503,31 +503,31 @@ void Gazetteer::set_modelparameterdata(::std::string&& value) {
 #endif
 void Gazetteer::set_modelparameterdata(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+
   modelparameterdata_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:CoreML.Specification.CoreMLModels.Gazetteer.modelParameterData)
 }
 void Gazetteer::set_modelparameterdata(const void* value, size_t size) {
-  
+
   modelparameterdata_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:CoreML.Specification.CoreMLModels.Gazetteer.modelParameterData)
 }
 ::std::string* Gazetteer::mutable_modelparameterdata() {
-  
+
   // @@protoc_insertion_point(field_mutable:CoreML.Specification.CoreMLModels.Gazetteer.modelParameterData)
   return modelparameterdata_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 ::std::string* Gazetteer::release_modelparameterdata() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.CoreMLModels.Gazetteer.modelParameterData)
-  
+
   return modelparameterdata_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 void Gazetteer::set_allocated_modelparameterdata(::std::string* modelparameterdata) {
   if (modelparameterdata != NULL) {
-    
+
   } else {
-    
+
   }
   modelparameterdata_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), modelparameterdata);
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.CoreMLModels.Gazetteer.modelParameterData)

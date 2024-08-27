@@ -116,4 +116,3 @@ int nn_trie_match (struct nn_trie *self, const uint8_t *data, size_t size);
 void nn_trie_dump (struct nn_trie *self);
 
 #endif
-

@@ -1631,4 +1631,3 @@ class TransposeOptimizationPass(unittest.TestCase):
             {"x": (1, 2, 5, 5)},
             expected_output_shapes={block.outputs[0].name: (1, 2, 5, 5)},
         )
-

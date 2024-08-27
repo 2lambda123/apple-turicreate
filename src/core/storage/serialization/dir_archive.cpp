@@ -5,25 +5,24 @@
  */
 #define BOOST_SPIRIT_THREADSAFE
 
-#include <set>
-#include <string>
-#include <core/logging/logger.hpp>
-#include <core/logging/assertions.hpp>
 #include <boost/algorithm/string.hpp>
-#include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/ini_parser.hpp>
-#include <core/util/boost_property_tree_utils.hpp>
-#include <core/storage/fileio/general_fstream.hpp>
+#include <boost/property_tree/ptree.hpp>
+#include <core/logging/assertions.hpp>
+#include <core/logging/logger.hpp>
+#include <core/parallel/lambda_omp.hpp>
+#include <core/random/random.hpp>
 #include <core/storage/fileio/fs_utils.hpp>
+#include <core/storage/fileio/general_fstream.hpp>
+#include <core/storage/fileio/s3_api.hpp>
 #include <core/storage/fileio/sanitize_url.hpp>
 #include <core/storage/fileio/temp_files.hpp>
-#include <core/storage/fileio/s3_api.hpp>
 #include <core/storage/serialization/dir_archive.hpp>
-#include <core/random/random.hpp>
-#include <core/parallel/lambda_omp.hpp>
+#include <core/util/boost_property_tree_utils.hpp>
+#include <set>
+#include <string>
 
 namespace turi {
-
 
 /**
  * This file is the human readable INI file in the directory containing
@@ -47,7 +46,8 @@ namespace {
 /**
  * Reads an index file into a struct. Throws an exception on failure.
  */
-dir_archive_impl::archive_index_information read_index_file(std::string index_file) {
+dir_archive_impl::archive_index_information read_index_file(std::string index_file)
+{
   general_ifstream fin(index_file);
   if (fin.fail()) {
     log_and_throw(std::string("Unable to open archive index file at ") + index_file);
@@ -57,7 +57,7 @@ dir_archive_impl::archive_index_information read_index_file(std::string index_fi
   boost::property_tree::ptree data;
   try {
     boost::property_tree::ini_parser::read_ini(fin, data);
-  } catch(boost::property_tree::ini_parser_error& e) {
+  } catch (boost::property_tree::ini_parser_error& e) {
     log_and_throw(std::string("Unable to parse archive index file ") + index_file);
   }
 
@@ -69,14 +69,16 @@ dir_archive_impl::archive_index_information read_index_file(std::string index_fi
   ret.prefixes = ini::read_sequence_section<std::string>(data, "prefixes", num_prefixes);
   // make prefixes absolute
   std::string index_dir = fileio::get_dirname(index_file);
-  for(auto& prefix: ret.prefixes) prefix = fileio::make_absolute_path(index_dir, prefix);
+  for (auto& prefix : ret.prefixes) prefix = fileio::make_absolute_path(index_dir, prefix);
   return ret;
 }
 
 /**
  * Writes an index file from a struct. Throws an exception on failure.
  */
-void write_index_file(std::string index_file, const dir_archive_impl::archive_index_information& info) {
+void write_index_file(std::string index_file,
+                      const dir_archive_impl::archive_index_information& info)
+{
   logstream(LOG_INFO) << "Writing to index file " << sanitize_url(index_file) << std::endl;
 
   boost::property_tree::ptree data;
@@ -86,7 +88,7 @@ void write_index_file(std::string index_file, const dir_archive_impl::archive_in
   // make prefixes relative
   std::vector<std::string> relative_paths;
   std::string index_dir = fileio::get_dirname(index_file);
-  for(auto prefix: info.prefixes) {
+  for (auto prefix : info.prefixes) {
     relative_paths.push_back(fileio::make_relative_path(index_dir, prefix));
   }
   ini::write_sequence_section(data, "prefixes", relative_paths);
@@ -104,8 +106,8 @@ void write_index_file(std::string index_file, const dir_archive_impl::archive_in
  * returns true if there is an element in the search set which is a prefix
  * of the value.
  */
-bool is_prefix_in(const std::string& value,
-                  const std::set<std::string>& search) {
+bool is_prefix_in(const std::string& value, const std::set<std::string>& search)
+{
   // I need to check lower_bound and lower_bound - 1
   auto iter = search.lower_bound(value);
   auto begin = search.begin();
@@ -125,25 +127,25 @@ bool is_prefix_in(const std::string& value,
   return false;
 }
 
-} // anonymous namespace
-
-
+}  // anonymous namespace
 
 /**************************************************************************/
 /*                                                                        */
 /*                       dir_archive implementation                       */
 /*                                                                        */
 /**************************************************************************/
-dir_archive::~dir_archive() {
+dir_archive::~dir_archive()
+{
   try {
     close();
   } catch (...) {
   }
 }
 
-void check_directory_writable(std::string directory, bool fail_on_existing_archive) {
+void check_directory_writable(std::string directory, bool fail_on_existing_archive)
+{
   if (!fileio::is_writable_protocol(fileio::get_protocol(directory))) {
-      log_and_throw_io_failure("Cannot write to " + sanitize_url(directory));
+    log_and_throw_io_failure("Cannot write to " + sanitize_url(directory));
   }
   // check for DIR_ARCHIVE_INI
   // now the mild annoyance is that the directory may be HDFS, or local disk
@@ -151,7 +153,7 @@ void check_directory_writable(std::string directory, bool fail_on_existing_archi
   if (stat == fileio::file_status::REGULAR_FILE) {
     // Always fail trying to overwrite existing file with directory
     log_and_throw_io_failure("Cannot create directory " + sanitize_url(directory) +
-                  ". It already exists as a file.");
+                             ". It already exists as a file.");
   } else if (stat == fileio::file_status::DIRECTORY) {
     // enumerate contents of directory
     auto dirlisting = fileio::get_directory_listing(directory);
@@ -160,11 +162,9 @@ void check_directory_writable(std::string directory, bool fail_on_existing_archi
     // a few failure cases
     if (dir_has_archive && fail_on_existing_archive) {
       log_and_throw_io_failure("Directory already contains a Turi archive.");
-    }
-    else if (!dir_has_archive && dirlisting.size() > 0) {
+    } else if (!dir_has_archive && dirlisting.size() > 0) {
       log_and_throw_io_failure("Directory already exists and does not contain a Turi archive.");
-    }
-    else if (dir_has_archive && !fail_on_existing_archive) {
+    } else if (dir_has_archive && !fail_on_existing_archive) {
       // there is an archive, and we are not supposed to fail on existing archive
       // so we delete the directory.
       dir_archive::delete_archive(directory);
@@ -172,7 +172,8 @@ void check_directory_writable(std::string directory, bool fail_on_existing_archi
   }
 }
 
-void dir_archive::init_for_write(const std::string& directory) {
+void dir_archive::init_for_write(const std::string& directory)
+{
   // ok if we get here, everything is good. begin from scratch and create the
   // archive
   m_directory = fileio::convert_to_generic(directory);
@@ -192,7 +193,8 @@ void dir_archive::init_for_write(const std::string& directory) {
   m_objects_out.reset(new general_ofstream(m_index_info.prefixes[1]));
 }
 
-void dir_archive::init_for_read(const std::string& directory) {
+void dir_archive::init_for_read(const std::string& directory)
+{
   m_directory = fileio::convert_to_generic(directory);
   m_directory = directory;
 
@@ -208,19 +210,19 @@ void dir_archive::init_for_read(const std::string& directory) {
   auto dirlisting = fileio::get_directory_listing(directory);
   parallel_for(0, dirlisting.size(), [&](size_t i) {
     const auto& entry = dirlisting[i];
-      if (boost::ends_with(entry.first, ".sidx") ||
-          boost::ends_with(entry.first, ".frame_idx")) {
-            try {
-              general_ifstream fin(entry.first);
-              char tmp;
-              fin.read(&tmp, 1);
-            } catch(...) { }
-          }
-    });
+    if (boost::ends_with(entry.first, ".sidx") || boost::ends_with(entry.first, ".frame_idx")) {
+      try {
+        general_ifstream fin(entry.first);
+        char tmp;
+        fin.read(&tmp, 1);
+      } catch (...) {
+      }
+    }
+  });
 }
 
-void dir_archive::open_directory_for_write(std::string directory,
-                                           bool fail_on_existing_archive) {
+void dir_archive::open_directory_for_write(std::string directory, bool fail_on_existing_archive)
+{
   ASSERT_TRUE(m_objects_in == nullptr);
   ASSERT_TRUE(m_objects_out == nullptr);
   directory = fileio::convert_to_generic(directory);
@@ -234,7 +236,8 @@ void dir_archive::open_directory_for_write(std::string directory,
   init_for_write(directory);
 }
 
-std::string dir_archive::get_directory_metadata(std::string directory, const std::string& key) {
+std::string dir_archive::get_directory_metadata(std::string directory, const std::string& key)
+{
   directory = fileio::convert_to_generic(directory);
   // if directory has a trailing "/" drop it
   if (boost::ends_with(directory, "/")) {
@@ -254,7 +257,8 @@ std::string dir_archive::get_directory_metadata(std::string directory, const std
   }
 }
 
-void dir_archive::open_directory_for_read(std::string directory) {
+void dir_archive::open_directory_for_read(std::string directory)
+{
   directory = fileio::convert_to_generic(directory);
 
   ASSERT_TRUE(m_objects_in == nullptr);
@@ -265,26 +269,23 @@ void dir_archive::open_directory_for_read(std::string directory) {
   init_for_read(directory);
 }
 
-
-std::string dir_archive::get_directory() const {
-  return m_directory;
-}
+std::string dir_archive::get_directory() const { return m_directory; }
 
 // helper for generating random prefixes
-size_t get_next_random_number() {
+size_t get_next_random_number()
+{
   static turi::random::generator gen;
   static bool initialized = false;
-  if (! initialized) {
+  if (!initialized) {
     gen.nondet_seed();
     initialized = true;
   }
   return gen.fast_uniform<size_t>(0, std::numeric_limits<size_t>::max());
 }
 
-
-std::string dir_archive::get_next_write_prefix() {
-  if (m_cache_archive)
-    return m_cache_archive->get_next_write_prefix();
+std::string dir_archive::get_next_write_prefix()
+{
+  if (m_cache_archive) return m_cache_archive->get_next_write_prefix();
 
   ASSERT_TRUE(m_objects_out != nullptr);
   // create a new prefix. It will be called m_xxxxx... etc where xxxxx is some
@@ -301,7 +302,7 @@ std::string dir_archive::get_next_write_prefix() {
     // otherwise, continue generating new prefix
     auto items = fileio::get_directory_listing(m_directory);
     bool prefix_exists = false;
-    for(auto& item : items) {
+    for (auto& item : items) {
       if (boost::starts_with(item.first, new_prefix)) {
         prefix_exists = true;
         break;
@@ -315,22 +316,21 @@ std::string dir_archive::get_next_write_prefix() {
   return new_prefix;
 }
 
-std::string dir_archive::get_next_read_prefix() {
-  if (m_cache_archive)
-    return m_cache_archive->get_next_read_prefix();
+std::string dir_archive::get_next_read_prefix()
+{
+  if (m_cache_archive) return m_cache_archive->get_next_read_prefix();
 
   ASSERT_TRUE(m_objects_in != nullptr);
   ASSERT_LT(m_read_prefix_index, m_index_info.prefixes.size());
   return m_index_info.prefixes[m_read_prefix_index++];
 }
 
-
-
 bool dir_archive::directory_has_existing_archive(
-    const std::vector<std::pair<std::string, fileio::file_status> >& dircontents) {
+    const std::vector<std::pair<std::string, fileio::file_status> >& dircontents)
+{
   // look in dircontents for a file terminating with DIR_ARCHIVE_INIT_FILE
-  for(auto direntry : dircontents) {
-    if(fileio::get_filename(direntry.first) == DIR_ARCHIVE_INI_FILE) {
+  for (auto direntry : dircontents) {
+    if (fileio::get_filename(direntry.first) == DIR_ARCHIVE_INI_FILE) {
       // our ini found!
       return true;
     }
@@ -338,23 +338,22 @@ bool dir_archive::directory_has_existing_archive(
   return false;
 }
 
-general_ifstream* dir_archive::get_input_stream() {
-  if (m_cache_archive)
-    return m_cache_archive->get_input_stream();
+general_ifstream* dir_archive::get_input_stream()
+{
+  if (m_cache_archive) return m_cache_archive->get_input_stream();
   return m_objects_in.get();
 }
 
-general_ofstream* dir_archive::get_output_stream() {
-  if (m_cache_archive)
-    return m_cache_archive->get_output_stream();
+general_ofstream* dir_archive::get_output_stream()
+{
+  if (m_cache_archive) return m_cache_archive->get_output_stream();
   return m_objects_out.get();
 }
 
-void dir_archive::set_close_callback(std::function<void()>& fn) {
-  m_close_callback = fn;
-};
+void dir_archive::set_close_callback(std::function<void()>& fn) { m_close_callback = fn; };
 
-void dir_archive::close() {
+void dir_archive::close()
+{
   if (m_objects_out) {
     // write out the index file
     write_index_file(m_directory + "/" + DIR_ARCHIVE_INI_FILE, m_index_info);
@@ -379,8 +378,8 @@ void dir_archive::close() {
   }
 }
 
-
-void dir_archive::set_metadata(std::string key, std::string val) {
+void dir_archive::set_metadata(std::string key, std::string val)
+{
   if (m_cache_archive) {
     m_cache_archive->set_metadata(key, val);
   } else {
@@ -388,8 +387,8 @@ void dir_archive::set_metadata(std::string key, std::string val) {
   }
 }
 
-
-bool dir_archive::get_metadata(std::string key, std::string &val) const {
+bool dir_archive::get_metadata(std::string key, std::string& val) const
+{
   if (m_cache_archive) {
     return m_cache_archive->get_metadata(key, val);
   }
@@ -402,8 +401,8 @@ bool dir_archive::get_metadata(std::string key, std::string &val) const {
   }
 }
 
-
-void dir_archive::delete_archive(std::string directory) {
+void dir_archive::delete_archive(std::string directory)
+{
   directory = fileio::convert_to_generic(directory);
 
   try {
@@ -425,7 +424,8 @@ void dir_archive::delete_archive(std::string directory) {
         // its ok if we fail to delete
         try {
           fileio::delete_path(direntry.first, direntry.second);
-        } catch (...) { }
+        } catch (...) {
+        }
       }
     });
 
@@ -433,11 +433,8 @@ void dir_archive::delete_archive(std::string directory) {
     dirlisting = fileio::get_directory_listing(directory);
     // if it is empty, we delete the directory
     if (dirlisting.empty()) fileio::delete_path(directory);
-  } catch(...) {
+  } catch (...) {
   }
 }
 
-
-
-
-} // namespace turi
+}  // namespace turi

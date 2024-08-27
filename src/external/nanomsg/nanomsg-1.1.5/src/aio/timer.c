@@ -175,4 +175,3 @@ static void nn_timer_handler (struct nn_fsm *self, int src, int type,
         nn_fsm_bad_state (timer->state, src, type);
     }
 }
-

@@ -145,4 +145,3 @@ if(${TC_BUILD_CAPI_FRAMEWORK})
 else()
   make_capi_library(TuriCreate)
 endif()
-

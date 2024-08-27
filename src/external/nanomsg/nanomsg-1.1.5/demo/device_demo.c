@@ -51,7 +51,7 @@
 /*  The server runs forever. */
 int server(const char *url)
 {
-    int fd; 
+    int fd;
 
     /*  Create the socket. */
     fd = nn_socket (AF_SP, NN_REP);
@@ -158,7 +158,7 @@ int client (const char *url, const char *username)
     if (nn_connect (fd, url) < 0) {
         fprintf (stderr, "nn_socket: %s\n", nn_strerror (nn_errno ()));
         nn_close (fd);
-        return (-1);        
+        return (-1);
     }
 
     usleep(1000);
@@ -188,7 +188,7 @@ int client (const char *url, const char *username)
     memcpy(greeting, msg, rc);
 
     nn_freemsg (msg);
-    printf ("%s\n", greeting); 
+    printf ("%s\n", greeting);
     free (greeting);
     return (0);
 }
@@ -238,6 +238,6 @@ int main (int argc, char **argv)
         fprintf (stderr, "Usage: %s -c <clienturl> <name>\n", argv[0]);
         exit (EXIT_FAILURE);
     }
-    
+
     exit (rc == 0 ? EXIT_SUCCESS : EXIT_FAILURE);
 }

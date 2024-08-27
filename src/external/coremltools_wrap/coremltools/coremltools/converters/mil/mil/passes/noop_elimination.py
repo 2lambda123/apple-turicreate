@@ -55,7 +55,7 @@ def match_pattern(op):
         return None
 
     if op.op_type in {'reshape', 'split', 'slice_by_index', 'slice_by_size'}:
-        
+
         input_shape = op.x.sym_type
         if len(op.outputs) != 1:
             return None
@@ -108,4 +108,3 @@ def noop_elimination(prog):
         block_changed = True
         while block_changed:
             block_changed = noop_elimination_block(f)
-

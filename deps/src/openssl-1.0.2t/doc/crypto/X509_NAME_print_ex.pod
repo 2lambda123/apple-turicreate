@@ -29,7 +29,7 @@ B<size> is ignored.
 Otherwise, at most B<size> bytes will be written, including the ending '\0',
 and B<buf> is returned.
 
-X509_NAME_print() prints out B<name> to B<bp> indenting each line by B<obase> 
+X509_NAME_print() prints out B<name> to B<bp> indenting each line by B<obase>
 characters. Multiple lines are used if the output (including indent) exceeds
 80 characters.
 
@@ -78,7 +78,7 @@ printed instead of the values.
 If B<XN_FLAG_FN_ALIGN> is set then field names are padded to 20 characters: this
 is only of use for multiline format.
 
-Additionally all the options supported by ASN1_STRING_print_ex() can be used to 
+Additionally all the options supported by ASN1_STRING_print_ex() can be used to
 control how each field value is displayed.
 
 In addition a number options can be set for commonly used formats.

@@ -58,4 +58,3 @@ uint32_t nn_atomic_inc (struct nn_atomic *self, uint32_t n);
 uint32_t nn_atomic_dec (struct nn_atomic *self, uint32_t n);
 
 #endif
-

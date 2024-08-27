@@ -72,4 +72,3 @@ class GeneratedCodeInfo extends \Google\Protobuf\Internal\Message
     }
 
 }
-

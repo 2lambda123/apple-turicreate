@@ -26,7 +26,7 @@ using namespace Aws::Utils::Xml;
 using namespace Aws::Utils;
 using namespace Aws::Http;
 
-GetBucketLoggingRequest::GetBucketLoggingRequest() : 
+GetBucketLoggingRequest::GetBucketLoggingRequest() :
     m_bucketHasBeenSet(false),
     m_customizedAccessLogTagHasBeenSet(false)
 {
@@ -58,4 +58,3 @@ void GetBucketLoggingRequest::AddQueryStringParameters(URI& uri) const
         }
     }
 }
-

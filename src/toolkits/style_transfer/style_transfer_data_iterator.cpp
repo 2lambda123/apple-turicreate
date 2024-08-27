@@ -24,7 +24,7 @@ flex_image get_image(const flexible_type& image_feature) {
   } else {
     image = image_feature;
   }
-  
+
   return image_util::resize_image(image, image.m_width, image.m_height, 3, true);
 }
 

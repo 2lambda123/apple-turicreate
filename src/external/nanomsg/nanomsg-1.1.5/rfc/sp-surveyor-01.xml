@@ -53,7 +53,7 @@
       <t>Another similar problem involves voting algorithms, where a survey
 	 of all connected peers is required to arrive to some solution to
 	 a problem.  This is common with distributed consensus algorithms.</t>
-	
+
       <t>One of the most common problems in distributed applications is how to
          delegate a work to another processing node and get the result back to
          the original node. In other words, the goal is to utilise the CPU
@@ -474,7 +474,7 @@
            receiving the responses.</t>
 
       </section>
-   
+
     </section>
 
     <section title = "End-to-end functionality">
@@ -644,4 +644,3 @@
   </back>
 
 </rfc>
-

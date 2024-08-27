@@ -105,4 +105,3 @@ message Double {
 service TestConflictingMethodNames {
   rpc Override(TestMessage) returns (TestMessage);
 }
-

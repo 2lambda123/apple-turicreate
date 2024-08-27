@@ -104,7 +104,7 @@ sub aesenc	{ aescommon(0xdc,@_); }
 sub aesenclast	{ aescommon(0xdd,@_); }
 sub aesdec	{ aescommon(0xde,@_); }
 sub aesdeclast	{ aescommon(0xdf,@_); }
-
+
 # Inline version of internal aesni_[en|de]crypt1
 { my $sn;
 sub aesni_inline_generate1
@@ -171,7 +171,7 @@ sub aesni_generate1	# fully unrolled loop
     &ret();
     &function_end_B("_aesni_${p}rypt1");
 }
-
+
 # void $PREFIX_encrypt (const void *inp,void *out,const AES_KEY *key);
 &aesni_generate1("enc") if (!$inline);
 &function_begin_B("${PREFIX}_encrypt");
@@ -405,7 +405,7 @@ sub aesni_generate6
 &aesni_generate4("dec");
 &aesni_generate6("enc") if ($PREFIX eq "aesni");
 &aesni_generate6("dec");
-
+
 if ($PREFIX eq "aesni") {
 ######################################################################
 # void aesni_ecb_encrypt (const void *in, void *out,
@@ -631,7 +631,7 @@ if ($PREFIX eq "aesni") {
 	&pxor	("xmm6","xmm6");
 	&pxor	("xmm7","xmm7");
 &function_end("aesni_ecb_encrypt");
-
+
 ######################################################################
 # void aesni_ccm64_[en|de]crypt_blocks (const void *in, void *out,
 #                         size_t blocks, const AES_KEY *key,
@@ -839,7 +839,7 @@ if ($PREFIX eq "aesni") {
 	&pxor	("xmm7","xmm7");
 &function_end("aesni_ccm64_decrypt_blocks");
 }
-
+
 ######################################################################
 # void aesni_ctr32_encrypt_blocks (const void *in, void *out,
 #                         size_t blocks, const AES_KEY *key,
@@ -1036,7 +1036,7 @@ if ($PREFIX eq "aesni") {
 &set_label("ctr32_one_shortcut",16);
 	&movups	($inout0,&QWP(0,$rounds_));	# load ivec
 	&mov	($rounds,&DWP(240,$key));
-	
+
 &set_label("ctr32_one");
 	if ($inline)
 	{   &aesni_inline_generate1("enc");	}
@@ -1099,7 +1099,7 @@ if ($PREFIX eq "aesni") {
 	&pxor	("xmm7","xmm7");
 	&mov	("esp",&DWP(80,"esp"));
 &function_end("aesni_ctr32_encrypt_blocks");
-
+
 ######################################################################
 # void aesni_xts_[en|de]crypt(const char *inp,char *out,size_t len,
 #	const AES_KEY *key1, const AES_KEY *key2
@@ -1832,7 +1832,7 @@ if ($PREFIX eq "aesni") {
 &function_end("aesni_xts_decrypt");
 }
 }
-
+
 ######################################################################
 # void $PREFIX_cbc_encrypt (const void *inp, void *out,
 #                           size_t length, const AES_KEY *key,
@@ -2081,7 +2081,7 @@ if ($PREFIX eq "aesni") {
 	&pxor	($ivec,$ivec);
 &set_label("cbc_abort");
 &function_end("${PREFIX}_cbc_encrypt");
-
+
 ######################################################################
 # Mechanical port from aesni-x86_64.pl.
 #

@@ -28,13 +28,13 @@ API_AVAILABLE(macos(10.14))
   @property (nonatomic) MPSCNNNormalizationGammaAndBetaState *state;
 @end
 
-@implementation TCMPSInstanceNormDataLoaderProps 
+@implementation TCMPSInstanceNormDataLoaderProps
 @end
 
 @interface TCMPSInstanceNormDataLoader () {
   NSMutableData *_gamma_weights;
   NSMutableData *_beta_weights;
-  
+
   NSString *_name;
   NSMutableArray<TCMPSInstanceNormDataLoaderProps *> *_style_props;
 
@@ -60,22 +60,22 @@ API_AVAILABLE(macos(10.14))
                     betaWeights:(float *)betaWeights
           numberFeatureChannels:(NSUInteger)numberFeatureChannels
                          styles:(NSUInteger)styles
-                         device:(id<MTLDevice>)dev 
+                         device:(id<MTLDevice>)dev
                       cmd_queue:(id<MTLCommandQueue>) cmd_q {
   self = [self init];
-    
+
   if (self) {
     _name = name;
     _numberOfFeatureChannels = numberFeatureChannels;
 
     _styles = styles;
-    
-    _styleIndex = 0;  
-    
+
+    _styleIndex = 0;
+
     _gammaPlaceHolder = [NSMutableData data];
     _betaPlaceHolder = [NSMutableData data];
 
-    
+
     _gamma_weights = [NSMutableData dataWithLength:numberFeatureChannels * styles * sizeof(float)];
     _beta_weights = [NSMutableData dataWithLength:numberFeatureChannels * styles * sizeof(float)];
 
@@ -91,7 +91,7 @@ API_AVAILABLE(macos(10.14))
 
     _adamGamma = [[MPSNNOptimizerAdam alloc] initWithDevice:dev
                                               learningRate:0.001f];
-        
+
     _adamBeta = [[MPSNNOptimizerAdam alloc] initWithDevice:dev
                                              learningRate:0.001f];
 
@@ -160,7 +160,7 @@ API_AVAILABLE(macos(10.14))
 
       [_style_props addObject:style_property];
     }
-    
+
     free(zeros_ptr);
     free(ones_ptr);
   }
@@ -211,8 +211,8 @@ API_AVAILABLE(macos(10.14))
 - (float *) gammaWeights {
   NSUInteger previousStyle = _styleIndex;
   _gammaPlaceHolder.length = 0;
-  for (NSUInteger index = 0; index < _styles; index++) { 
-    _styleIndex = index; 
+  for (NSUInteger index = 0; index < _styles; index++) {
+    _styleIndex = index;
     [self checkpointWithCommandQueue:_cq];
     float* gammaWeights = (float *) [_style_props[_styleIndex].gammaBuffer contents];
     [_gammaPlaceHolder appendBytes:gammaWeights length:sizeof(float)*_numberOfFeatureChannels];
@@ -222,7 +222,7 @@ API_AVAILABLE(macos(10.14))
   return (float *) (_gammaPlaceHolder.bytes);
 }
 
-- (MPSCNNNormalizationGammaAndBetaState *)updateGammaAndBetaWithCommandBuffer:(id<MTLCommandBuffer>)commandBuffer 
+- (MPSCNNNormalizationGammaAndBetaState *)updateGammaAndBetaWithCommandBuffer:(id<MTLCommandBuffer>)commandBuffer
                                               instanceNormalizationStateBatch:(MPSCNNInstanceNormalizationGradientStateBatch *)instanceNormalizationStateBatch {
   NSUInteger t1 = [_adamGamma timeStep];
   NSUInteger t2 = [_adamBeta timeStep];
@@ -247,7 +247,7 @@ API_AVAILABLE(macos(10.14))
     [_adamBeta encodeToCommandBuffer:commandBuffer
                  inputGradientVector:gradientBiasesVector
                    inputValuesVector:[[_style_props objectAtIndex: _styleIndex] betaVector]
-                 inputMomentumVector:[[_style_props objectAtIndex: _styleIndex] betaMomentumVector] 
+                 inputMomentumVector:[[_style_props objectAtIndex: _styleIndex] betaMomentumVector]
                  inputVelocityVector:[[_style_props objectAtIndex: _styleIndex] betaVelocityVector]
                   resultValuesVector:[[_style_props objectAtIndex: _styleIndex] betaVector]];
 

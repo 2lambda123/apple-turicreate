@@ -13,12 +13,12 @@ if(NOT APPLE)
 
   # It doesn't seem that all Osx sdks compile correctly with GetAddrinfo_a
   set(NN_ENABLE_GETADDRINFO_A 0 CACHE BOOL "Disable Getaddrinfo_a.")
-  
+
   set(NN_PACKAGE_VERSION 1.1.5)
- 
+
   if (DEFINED ENV{TRAVIS_TAG})
-    # Needed workaround for building this in our travis system. 
-    unset(ENV{TRAVIS_TAG}) 
+    # Needed workaround for building this in our travis system.
+    unset(ENV{TRAVIS_TAG})
   endif()
 
   set(CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH};${CMAKE_CURRENT_SOURCE_DIR}/${_nanomsg_dir}/cmake")
@@ -26,7 +26,7 @@ if(NOT APPLE)
   add_subdirectory(${_nanomsg_dir})
 
 else()
-  
+
   message("Building nanomsg using predefined cross-compilation.")
 
   add_definitions(-DHAVE_USLEEP)
@@ -50,4 +50,3 @@ else()
 
   make_library(nanomsg SOURCES ${_nanomsg_src_files})
 endif()
-

@@ -51,28 +51,28 @@ namespace Model
     void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
-    
+
     inline const Aws::String& GetId() const{ return m_id; }
 
-    
+
     inline bool IdHasBeenSet() const { return m_idHasBeenSet; }
 
-    
+
     inline void SetId(const Aws::String& value) { m_idHasBeenSet = true; m_id = value; }
 
-    
+
     inline void SetId(Aws::String&& value) { m_idHasBeenSet = true; m_id = std::move(value); }
 
-    
+
     inline void SetId(const char* value) { m_idHasBeenSet = true; m_id.assign(value); }
 
-    
+
     inline LambdaFunctionConfiguration& WithId(const Aws::String& value) { SetId(value); return *this;}
 
-    
+
     inline LambdaFunctionConfiguration& WithId(Aws::String&& value) { SetId(std::move(value)); return *this;}
 
-    
+
     inline LambdaFunctionConfiguration& WithId(const char* value) { SetId(value); return *this;}
 
 
@@ -190,22 +190,22 @@ namespace Model
     inline LambdaFunctionConfiguration& AddEvents(Event&& value) { m_eventsHasBeenSet = true; m_events.push_back(std::move(value)); return *this; }
 
 
-    
+
     inline const NotificationConfigurationFilter& GetFilter() const{ return m_filter; }
 
-    
+
     inline bool FilterHasBeenSet() const { return m_filterHasBeenSet; }
 
-    
+
     inline void SetFilter(const NotificationConfigurationFilter& value) { m_filterHasBeenSet = true; m_filter = value; }
 
-    
+
     inline void SetFilter(NotificationConfigurationFilter&& value) { m_filterHasBeenSet = true; m_filter = std::move(value); }
 
-    
+
     inline LambdaFunctionConfiguration& WithFilter(const NotificationConfigurationFilter& value) { SetFilter(value); return *this;}
 
-    
+
     inline LambdaFunctionConfiguration& WithFilter(NotificationConfigurationFilter&& value) { SetFilter(std::move(value)); return *this;}
 
   private:

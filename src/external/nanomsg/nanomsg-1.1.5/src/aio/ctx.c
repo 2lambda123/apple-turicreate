@@ -109,4 +109,3 @@ void nn_ctx_raiseto (struct nn_ctx *self, struct nn_fsm_event *event)
 {
     nn_queue_push (&self->eventsto, &event->item);
 }
-

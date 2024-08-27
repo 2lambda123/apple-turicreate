@@ -100,7 +100,7 @@ my @R=map("%f".2*$_,(0..11,30,31,12..29));
 my @N=(map("%l$_",(0..7)),map("%o$_",(0..5))); @N=(@N,@N,@N[0..3]);
 my @A=(@N[0..13],@R[14..31]);
 my @B=(map("%i$_",(0..5)),map("%l$_",(0..7))); @B=(@B,@B,map("%o$_",(0..3)));
-
+
 ########################################################################
 # int bn_mul_mont_t4_$NUM(u64 *rp,const u64 *ap,const u64 *bp,
 #			  const u64 *np,const BN_ULONG *n0);
@@ -157,7 +157,7 @@ bn_mul_mont_t4_$NUM:
 	ld	[%i4+4],%f0
 	fsrc2	%f0,%f60
 ___
-
+
 # load ap[$NUM] ########################################################
 $code.=<<___;
 	save	%sp,-128,%sp;		or	$sentinel,%fp,%fp
@@ -221,7 +221,7 @@ $code.=<<___;
 	be	SIZE_T_CC,.Lmsquare_$NUM
 	nop
 ___
-
+
 # load bp[$NUM] ########################################################
 $code.=<<___;
 	save	%sp,-128,%sp;		or	$sentinel,%fp,%fp
@@ -272,7 +272,7 @@ $code.=<<___;
 	restore
 #endif
 ___
-
+
 # save tp[$NUM] ########################################################
 for($i=0; $i<14 && $i<$NUM; $i++) {
 $code.=<<___;
@@ -343,7 +343,7 @@ ___
 for ($i=8;$i<=32;$i+=8) {
 	&generate_bn_mul_mont_t4($i);
 }
-
+
 ########################################################################
 #
 sub load_ccr {
@@ -420,7 +420,7 @@ $code.=<<___;
 	movneg	%xcc,	%o4,	$Bi
 ___
 }
-
+
 ########################################################################
 # int bn_pwr5_mont_t4_$NUM(u64 *tp,const u64 *np,const BN_ULONG *n0,
 #			   const u64 *pwrtbl,int pwr,int stride);
@@ -479,7 +479,7 @@ bn_pwr5_mont_t4_$NUM:
 	or	%i4,$pwr,$pwr
 	fsrc2	%f0,%f60
 ___
-
+
 # load tp[$NUM] ########################################################
 $code.=<<___;
 	save	%sp,-128,%sp;		or	$sentinel,%fp,%fp
@@ -557,7 +557,7 @@ $code.=<<___;
 	srl	%o5,	%o4,	%o5
 ___
 	&load_ccr("%i7","%o5","%o4",1);
-
+
 # magic ################################################################
 for($i=0; $i<5; $i++) {
 $code.=<<___;
@@ -597,7 +597,7 @@ $code.=<<___;
 	restore
 #endif
 ___
-
+
 # save tp[$NUM] ########################################################
 for($i=0; $i<14 && $i<$NUM; $i++) {
 $code.=<<___;
@@ -649,7 +649,7 @@ ___
 for ($i=8;$i<=32;$i+=8) {
 	&generate_bn_pwr5_mont_t4($i);
 }
-
+
 {
 ########################################################################
 # Fall-back subroutines
@@ -701,7 +701,7 @@ $code.=<<___;
 	sllx	$t1,	32,	$n0
 	add	$bp,	8,	$bp
 	or	$t0,	$n0,	$n0
-
+
 	ldx	[$ap+0],	$aj	! ap[0]
 
 	mulx	$aj,	$m0,	$lo0	! ap[0]*bp[0]
@@ -727,7 +727,7 @@ $code.=<<___;
 
 	mulx	$nj,	$m1,	$nlo	! np[1]*m1
 	umulxhi	$nj,	$m1,	$nj	! nhi=nj
-
+
 	ba	.L1st
 	sub	$num,	24,	$cnt	! cnt=num-3
 
@@ -770,7 +770,7 @@ $code.=<<___;
 	addxc	%g0,	%g0,	$ovf	! upmost overflow bit
 	stxa	$hi1,	[$tp]0xe2
 	add	$tp,	8,	$tp
-
+
 	ba	.Louter
 	sub	$num,	16,	$i	! i=num-2
 
@@ -804,7 +804,7 @@ $code.=<<___;
 	mulx	$nj,	$m1,	$nlo	! np[1]*m1
 	addxc	%g0,	$hi1,	$hi1
 	umulxhi	$nj,	$m1,	$nj	! nhi=nj
-
+
 	ba	.Linner
 	sub	$num,	24,	$cnt	! cnt=num-3
 .align	16
@@ -851,7 +851,7 @@ $code.=<<___;
 
 	brnz,pt	$i,	.Louter
 	sub	$i,	8,	$i
-
+
 	sub	$ap,	$num,	$ap	! rewind
 	sub	$np,	$num,	$np
 	sub	$tp,	$num,	$tp
@@ -900,7 +900,7 @@ $code.=<<___;
 .type	bn_mul_mont_t4, #function
 .size	bn_mul_mont_t4, .-bn_mul_mont_t4
 ___
-
+
 # int bn_mul_mont_gather5(
 $rp="%o0";	# u64 *rp,
 $ap="%o1";	# const u64 *ap,
@@ -946,7 +946,7 @@ $code.=<<___;
 	add	%sp, STACK_BIAS+STACK_FRAME, $tp
 	sllx	$t1,	32,	$n0
 	or	$t0,	$n0,	$n0
-
+
 	ldx	[$ap+0],	$aj	! ap[0]
 
 	mulx	$aj,	$m0,	$lo0	! ap[0]*bp[0]
@@ -972,7 +972,7 @@ $code.=<<___;
 
 	mulx	$nj,	$m1,	$nlo	! np[1]*m1
 	umulxhi	$nj,	$m1,	$nj	! nhi=nj
-
+
 	ba	.L1st_g5
 	sub	$num,	24,	$cnt	! cnt=num-3
 
@@ -1015,7 +1015,7 @@ $code.=<<___;
 	addxc	%g0,	%g0,	$ovf	! upmost overflow bit
 	stxa	$hi1,	[$tp]0xe2
 	add	$tp,	8,	$tp
-
+
 	ba	.Louter_g5
 	sub	$num,	16,	$i	! i=num-2
 
@@ -1050,7 +1050,7 @@ $code.=<<___;
 	mulx	$nj,	$m1,	$nlo	! np[1]*m1
 	addxc	%g0,	$hi1,	$hi1
 	umulxhi	$nj,	$m1,	$nj	! nhi=nj
-
+
 	ba	.Linner_g5
 	sub	$num,	24,	$cnt	! cnt=num-3
 .align	16
@@ -1097,7 +1097,7 @@ $code.=<<___;
 
 	brnz,pt	$i,	.Louter_g5
 	sub	$i,	8,	$i
-
+
 	sub	$ap,	$num,	$ap	! rewind
 	sub	$np,	$num,	$np
 	sub	$tp,	$num,	$tp
@@ -1147,7 +1147,7 @@ $code.=<<___;
 .size	bn_mul_mont_gather5_t4, .-bn_mul_mont_gather5_t4
 ___
 }
-
+
 $code.=<<___;
 .globl	bn_flip_t4
 .align	32

@@ -19,7 +19,7 @@ $ curl https://lear.inrialpes.fr/people/marszalek/data/ig02/ig02-v1.0-cars.zip >
 $ unzip bikes.zip
 $ mv readme.txt readme-bikes.txt
 $ unzip cars.zip
-$ rm bikes.zip cars.zip 
+$ rm bikes.zip cars.zip
 ```
 
 Now, you should have the following file structure:
@@ -140,10 +140,10 @@ After you have run this script, you should have `ig02.sframe` in your current
 directory. This SFrame can be used as described in the [Object detection user
 guide](README.md).
 
-Alternately, if you don't have access to bitmasks and you're using an image 
-annotation tool like the one 
+Alternately, if you don't have access to bitmasks and you're using an image
+annotation tool like the one
 [here](https://github.com/sgp715/simple_image_annotator), here is a code snippet
-(thanks to [@Kurry](https://github.com/Kurry)) 
+(thanks to [@Kurry](https://github.com/Kurry))
 that would convert the CSV you get out of the annotator into an SFrame.
 
 ```python
@@ -159,9 +159,9 @@ def row_to_bbox_coordinates(row):
     Takes a row and returns a dictionary representing bounding
     box coordinates:  (center_x, center_y, width, height)  e.g. {'x': 100, 'y': 120, 'width': 80, 'height': 120}
     """
-    return {'x': row['xMin'] + (row['xMax'] - row['xMin'])/2, 
+    return {'x': row['xMin'] + (row['xMax'] - row['xMin'])/2,
             'width': (row['xMax'] - row['xMin']),
-            'y': row['yMin'] + (row['yMax'] - row['yMin'])/2, 
+            'y': row['yMin'] + (row['yMax'] - row['yMin'])/2,
             'height': (row['yMax'] - row['yMin'])}
 
 csv_sf['coordinates'] = csv_sf.apply(row_to_bbox_coordinates)
@@ -190,7 +190,7 @@ del sf_images['path']
 csv_sf = csv_sf.pack_columns(['label', 'coordinates'], new_column_name='bbox', dtype=dict)
 
 # Combine bounding boxes of the same 'name' into lists
-sf_annotations = csv_sf.groupby('name', 
+sf_annotations = csv_sf.groupby('name',
     {'annotations': tc.aggregate.CONCAT('bbox')})
 
 # Join annotations with the images. Note, some images do not have annotations,
@@ -214,4 +214,3 @@ further in:
 [^1]: Marcin Marszałek and Cordelia Schmid. [Accurate Object Localization with Shape Masks.](http://lear.inrialpes.fr/pubs/2007/MS07a/) IEEE Conference on Computer Vision & Pattern Recognition, 2007.
 
 [^2]: A. Opelt, A. Pinz, M. Fussenegger, P. Auer. [Generic Object Recognition with Boosting.](http://www.emt.tugraz.at/~opelt/download_data/Generic_object_recognition_with_boosting.pdf) IEEE Transactions on Pattern Recognition and Machine Intelligence (PAMI), Vol.28, No. 3, March 2006.
-

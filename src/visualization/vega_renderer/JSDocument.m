@@ -5,7 +5,7 @@
  */
 #import "JSDocument.h"
 
-@implementation VegaJSDocument 
+@implementation VegaJSDocument
 
 @synthesize body;
 

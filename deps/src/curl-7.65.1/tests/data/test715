@@ -48,7 +48,7 @@ http
 FTP fetch with --preproxy, --proxy and --connect-to
  </name>
  <command>
-ftp://ftp.example.com.715/715 --connect-to ::connect.example.com.715:%FTPPORT --proxytunnel --proxy %HOSTIP:%PROXYPORT --preproxy socks5://%HOSTIP:%SOCKSPORT 
+ftp://ftp.example.com.715/715 --connect-to ::connect.example.com.715:%FTPPORT --proxytunnel --proxy %HOSTIP:%PROXYPORT --preproxy socks5://%HOSTIP:%SOCKSPORT
 </command>
 </client>
 

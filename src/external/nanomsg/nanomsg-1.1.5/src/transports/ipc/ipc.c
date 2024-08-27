@@ -44,7 +44,7 @@
 /*  IPC-specific socket options. */
 struct nn_ipc_optset {
     struct nn_optset base;
-    
+
     /* Win32 Security Attribute */
     void* sec_attr;
 
@@ -101,7 +101,7 @@ static struct nn_optset *nn_ipc_optset ()
     optset->outbuffersz = 4096;
     optset->inbuffersz = 4096;
 
-    return &optset->base;   
+    return &optset->base;
 }
 
 static void nn_ipc_optset_destroy (struct nn_optset *self)
@@ -123,7 +123,7 @@ static int nn_ipc_optset_setopt (struct nn_optset *self, int option,
     }
 
     switch (option) {
-    case NN_IPC_SEC_ATTR: 
+    case NN_IPC_SEC_ATTR:
         optset->sec_attr = (void *)optval;
         return 0;
     case NN_IPC_OUTBUFSZ:
@@ -145,7 +145,7 @@ static int nn_ipc_optset_getopt (struct nn_optset *self, int option,
     optset = nn_cont (self, struct nn_ipc_optset, base);
 
     switch (option) {
-    case NN_IPC_SEC_ATTR: 
+    case NN_IPC_SEC_ATTR:
         memcpy(optval, &optset->sec_attr, sizeof(optset->sec_attr));
         *optvallen = sizeof(optset->sec_attr);
         return 0;

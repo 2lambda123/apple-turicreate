@@ -195,4 +195,3 @@ BOOST_AUTO_TEST_CASE(test_tc_datetime_equal) {
   TS_ASSERT(!tc_datetime_equal(dt1, dt2, &error));
   TS_ASSERT_EQUALS(error, nullptr);
 }
-

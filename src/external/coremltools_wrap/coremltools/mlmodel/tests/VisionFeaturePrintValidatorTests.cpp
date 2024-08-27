@@ -51,7 +51,7 @@ int testVisionFeatureScenePrintBasic() {
     preprocessing->mutable_scene()->set_version(Specification::CoreMLModels::VisionFeaturePrint_Scene_SceneVersion_SCENE_VERSION_1);
     result = validate<MLModelType_visionFeaturePrint>(model);
     ML_ASSERT_GOOD(result);
-    
+
     return 0;
 }
 
@@ -64,11 +64,11 @@ int testVisionFeatureObjectPrintBasic() {
     Specification::ArrayFeatureType* output1ArrayFeatureType = new Specification::ArrayFeatureType();
     Specification::FeatureType* output1FeatureType = new Specification::FeatureType();
     output1FeatureType->set_allocated_multiarraytype(output1ArrayFeatureType);
-    
+
     Specification::ArrayFeatureType* output2ArrayFeatureType = new Specification::ArrayFeatureType();
     Specification::FeatureType* output2FeatureType = new Specification::FeatureType();
     output2FeatureType->set_allocated_multiarraytype(output2ArrayFeatureType);
-    
+
     Specification::ModelDescription* description = new Specification::ModelDescription();
     Specification::FeatureDescription* input = description->add_input();
     Specification::FeatureDescription* output1 = description->add_output();
@@ -107,4 +107,3 @@ int testVisionFeatureObjectPrintBasic() {
 
     return 0;
 }
-

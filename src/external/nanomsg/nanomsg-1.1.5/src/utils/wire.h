@@ -33,4 +33,3 @@ uint64_t nn_getll (const uint8_t *buf);
 void nn_putll (uint8_t *buf, uint64_t val);
 
 #endif
-

@@ -1438,8 +1438,8 @@ BOOST_AUTO_TEST_CASE(test_sframe_row_test) {
 
   tc_flex_list* fl = tc_sframe_extract_row(sf, 1, &error);
   CAPI_CHECK_ERROR(error);
-  
-  TS_ASSERT(fl->value == sf->value[1]); 
+
+  TS_ASSERT(fl->value == sf->value[1]);
 
   tc_release(sf);
   tc_release(fl);
@@ -1506,7 +1506,7 @@ BOOST_AUTO_TEST_CASE(test_sframe_read_json) {
   CAPI_CHECK_ERROR(error);
 
   TS_ASSERT(nc == 2);
-  
+
   size_t nr = tc_sframe_num_rows(sf, &error);
   CAPI_CHECK_ERROR(error);
 

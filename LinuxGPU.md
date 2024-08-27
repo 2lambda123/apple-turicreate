@@ -1,4 +1,4 @@
-Turi Create **does not require a GPU**, but certain models can be accelerated by the use of a GPU. 
+Turi Create **does not require a GPU**, but certain models can be accelerated by the use of a GPU.
 To enable GPU support in Linux after installation of the `turicreate` package, first make sure both
 [CUDA](http://docs.nvidia.com/cuda/cuda-installation-guide-linux/) and [cuDNN](https://developer.nvidia.com/cudnn) are installed.
 
@@ -23,4 +23,3 @@ CUDA-enabled `tensorflow-gpu` package:
 If you have trouble setting up the GPU, the [TensorFlow
 installation instructions](https://www.tensorflow.org/install/gpu) may
 offer additional help.
-

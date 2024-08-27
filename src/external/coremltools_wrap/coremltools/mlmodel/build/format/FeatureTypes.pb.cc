@@ -866,7 +866,7 @@ void SizeRange::clear_lowerbound() {
   return lowerbound_;
 }
 void SizeRange::set_lowerbound(::google::protobuf::uint64 value) {
-  
+
   lowerbound_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SizeRange.lowerBound)
 }
@@ -880,7 +880,7 @@ void SizeRange::clear_upperbound() {
   return upperbound_;
 }
 void SizeRange::set_upperbound(::google::protobuf::int64 value) {
-  
+
   upperbound_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SizeRange.upperBound)
 }
@@ -1111,7 +1111,7 @@ void ImageFeatureType_ImageSize::clear_width() {
   return width_;
 }
 void ImageFeatureType_ImageSize::set_width(::google::protobuf::uint64 value) {
-  
+
   width_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ImageFeatureType.ImageSize.width)
 }
@@ -1125,7 +1125,7 @@ void ImageFeatureType_ImageSize::clear_height() {
   return height_;
 }
 void ImageFeatureType_ImageSize::set_height(::google::protobuf::uint64 value) {
-  
+
   height_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ImageFeatureType.ImageSize.height)
 }
@@ -1590,7 +1590,7 @@ const ::CoreML::Specification::SizeRange& ImageFeatureType_ImageSizeRange::width
                          : *::CoreML::Specification::SizeRange::internal_default_instance();
 }
 ::CoreML::Specification::SizeRange* ImageFeatureType_ImageSizeRange::mutable_widthrange() {
-  
+
   if (widthrange_ == NULL) {
     widthrange_ = new ::CoreML::Specification::SizeRange;
   }
@@ -1599,7 +1599,7 @@ const ::CoreML::Specification::SizeRange& ImageFeatureType_ImageSizeRange::width
 }
 ::CoreML::Specification::SizeRange* ImageFeatureType_ImageSizeRange::release_widthrange() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.ImageFeatureType.ImageSizeRange.widthRange)
-  
+
   ::CoreML::Specification::SizeRange* temp = widthrange_;
   widthrange_ = NULL;
   return temp;
@@ -1608,9 +1608,9 @@ void ImageFeatureType_ImageSizeRange::set_allocated_widthrange(::CoreML::Specifi
   delete widthrange_;
   widthrange_ = widthrange;
   if (widthrange) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.ImageFeatureType.ImageSizeRange.widthRange)
 }
@@ -1629,7 +1629,7 @@ const ::CoreML::Specification::SizeRange& ImageFeatureType_ImageSizeRange::heigh
                          : *::CoreML::Specification::SizeRange::internal_default_instance();
 }
 ::CoreML::Specification::SizeRange* ImageFeatureType_ImageSizeRange::mutable_heightrange() {
-  
+
   if (heightrange_ == NULL) {
     heightrange_ = new ::CoreML::Specification::SizeRange;
   }
@@ -1638,7 +1638,7 @@ const ::CoreML::Specification::SizeRange& ImageFeatureType_ImageSizeRange::heigh
 }
 ::CoreML::Specification::SizeRange* ImageFeatureType_ImageSizeRange::release_heightrange() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.ImageFeatureType.ImageSizeRange.heightRange)
-  
+
   ::CoreML::Specification::SizeRange* temp = heightrange_;
   heightrange_ = NULL;
   return temp;
@@ -1647,9 +1647,9 @@ void ImageFeatureType_ImageSizeRange::set_allocated_heightrange(::CoreML::Specif
   delete heightrange_;
   heightrange_ = heightrange;
   if (heightrange) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.ImageFeatureType.ImageSizeRange.heightRange)
 }
@@ -2022,7 +2022,7 @@ void ImageFeatureType::clear_width() {
   return width_;
 }
 void ImageFeatureType::set_width(::google::protobuf::int64 value) {
-  
+
   width_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ImageFeatureType.width)
 }
@@ -2036,7 +2036,7 @@ void ImageFeatureType::clear_height() {
   return height_;
 }
 void ImageFeatureType::set_height(::google::protobuf::int64 value) {
-  
+
   height_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ImageFeatureType.height)
 }
@@ -2146,7 +2146,7 @@ void ImageFeatureType::clear_colorspace() {
   return static_cast< ::CoreML::Specification::ImageFeatureType_ColorSpace >(colorspace_);
 }
 void ImageFeatureType::set_colorspace(::CoreML::Specification::ImageFeatureType_ColorSpace value) {
-  
+
   colorspace_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ImageFeatureType.colorSpace)
 }
@@ -3339,7 +3339,7 @@ void ArrayFeatureType::clear_datatype() {
   return static_cast< ::CoreML::Specification::ArrayFeatureType_ArrayDataType >(datatype_);
 }
 void ArrayFeatureType::set_datatype(::CoreML::Specification::ArrayFeatureType_ArrayDataType value) {
-  
+
   datatype_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ArrayFeatureType.dataType)
 }
@@ -4319,7 +4319,7 @@ const ::CoreML::Specification::SizeRange& SequenceFeatureType::sizerange() const
                          : *::CoreML::Specification::SizeRange::internal_default_instance();
 }
 ::CoreML::Specification::SizeRange* SequenceFeatureType::mutable_sizerange() {
-  
+
   if (sizerange_ == NULL) {
     sizerange_ = new ::CoreML::Specification::SizeRange;
   }
@@ -4328,7 +4328,7 @@ const ::CoreML::Specification::SizeRange& SequenceFeatureType::sizerange() const
 }
 ::CoreML::Specification::SizeRange* SequenceFeatureType::release_sizerange() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.SequenceFeatureType.sizeRange)
-  
+
   ::CoreML::Specification::SizeRange* temp = sizerange_;
   sizerange_ = NULL;
   return temp;
@@ -4337,9 +4337,9 @@ void SequenceFeatureType::set_allocated_sizerange(::CoreML::Specification::SizeR
   delete sizerange_;
   sizerange_ = sizerange;
   if (sizerange) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.SequenceFeatureType.sizeRange)
 }
@@ -5178,7 +5178,7 @@ bool FeatureType::isoptional() const {
   return isoptional_;
 }
 void FeatureType::set_isoptional(bool value) {
-  
+
   isoptional_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.FeatureType.isOptional)
 }

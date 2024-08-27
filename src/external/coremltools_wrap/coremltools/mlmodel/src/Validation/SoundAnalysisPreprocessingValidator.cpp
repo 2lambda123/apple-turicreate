@@ -12,7 +12,7 @@
 #include "../../build/format/Model.pb.h"
 
 namespace CoreML {
-    
+
     constexpr int FRONTEND_PROCESSING_INPUT_LENGTH = 15600;
     constexpr int FRONTEND_PROCESSING_OUTPUT_NUM_FRAMES = 96;
     constexpr int FRONTEND_PROCESSING_OUTPUT_NUM_BANDS = 64;
@@ -33,14 +33,14 @@ namespace CoreML {
     template <>
     Result validate<MLModelType_soundAnalysisPreprocessing>(const Specification::Model &format) {
         const auto &interface = format.description();
-        
+
         // make sure model is a sound analysis preprocessing
         if (!format.has_soundanalysispreprocessing()) {
             return Result(ResultType::INVALID_MODEL_PARAMETERS, "Model not a sound analysis preprocessing.");
         }
-        
+
         Result result;
-        
+
         // validate the inputs: only one input with multiarray type is allowed
         result = validateDescriptionsContainFeatureWithTypes(interface.input(), 1, {Specification::FeatureType::kMultiArrayType});
         if (!result.good()) {
@@ -103,8 +103,8 @@ namespace CoreML {
             case Specification::CoreMLModels::SoundAnalysisPreprocessing::SOUNDANALYSISPREPROCESSINGTYPE_NOT_SET:
                 return Result(ResultType::INVALID_MODEL_PARAMETERS, "Type for sound analysis preprocessing not set");
         }
-        
+
         return result;
     }
-    
+
 }

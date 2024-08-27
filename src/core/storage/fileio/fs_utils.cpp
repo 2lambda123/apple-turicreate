@@ -32,7 +32,8 @@ namespace fs = boost::filesystem;
 /**
  * Return canonical absolute path, eliminating dots, and symlinks
  */
-EXPORT std::string make_canonical_path(const std::string& path) {
+EXPORT std::string make_canonical_path(const std::string& path)
+{
   namespace fs = boost::filesystem;
   auto p = fs::path(path);
   try {
@@ -50,15 +51,14 @@ EXPORT std::string make_canonical_path(const std::string& path) {
  * A helper function to parse the hdfs url.
  * Return a tuple of host, port, and path.
  */
-std::tuple<std::string, std::string, std::string> parse_hdfs_url(
-    std::string url) {
+std::tuple<std::string, std::string, std::string> parse_hdfs_url(std::string url)
+{
   const std::string default_host = "default";
   const std::string default_port = "0";
   const std::string default_path = "";
 
   auto warn_and_return_default = [=](const std::string& reason = "") {
-    logstream(LOG_WARNING) << "Cannot parse hdfs url: " << url << ". " << reason
-                           << std::endl;
+    logstream(LOG_WARNING) << "Cannot parse hdfs url: " << url << ". " << reason << std::endl;
     return std::make_tuple(default_host, default_port, default_path);
   };
 
@@ -132,8 +132,8 @@ std::tuple<std::string, std::string, std::string> parse_hdfs_url(
   return std::make_tuple(host, port, path);
 }
 
-EXPORT std::pair<file_status, std::string> get_file_status(
-    const std::string& path) {
+EXPORT std::pair<file_status, std::string> get_file_status(const std::string& path)
+{
   std::string err_msg;
   if (boost::istarts_with(path, fileio::get_cache_prefix())) {
     // this is a cache file. it is only REGULAR or MISSING
@@ -187,8 +187,8 @@ EXPORT std::pair<file_status, std::string> get_file_status(
   return {file_status::MISSING, "file not exist in " + path};
 }
 
-std::vector<std::pair<std::string, file_status>> get_directory_listing(
-    const std::string& path) {
+std::vector<std::pair<std::string, file_status>> get_directory_listing(const std::string& path)
+{
   std::vector<std::pair<std::string, file_status>> ret;
   if (boost::istarts_with(path, fileio::get_cache_prefix())) {
     // this is a cache file. There is no filesystem.
@@ -232,11 +232,9 @@ std::vector<std::pair<std::string, file_status>> get_directory_listing(
       while (diriter != enditer) {
         bool is_directory = fs::is_directory(diriter->path());
         if (is_directory) {
-          ret.push_back({convert_to_generic(diriter->path().string()),
-                         file_status::DIRECTORY});
+          ret.push_back({convert_to_generic(diriter->path().string()), file_status::DIRECTORY});
         } else {
-          ret.push_back({convert_to_generic(diriter->path().string()),
-                         file_status::REGULAR_FILE});
+          ret.push_back({convert_to_generic(diriter->path().string()), file_status::REGULAR_FILE});
         }
         ++diriter;
       }
@@ -247,7 +245,8 @@ std::vector<std::pair<std::string, file_status>> get_directory_listing(
   return ret;
 }
 
-EXPORT bool create_directory(const std::string& path) {
+EXPORT bool create_directory(const std::string& path)
+{
   auto stat = get_file_status(path);
   if (stat.first != file_status::MISSING) {
     return false;
@@ -284,7 +283,8 @@ EXPORT bool create_directory(const std::string& path) {
   return false;
 }
 
-EXPORT bool create_directory_or_throw(const std::string& path) {
+EXPORT bool create_directory_or_throw(const std::string& path)
+{
   bool result = create_directory(path);
 
   // this function throws if the directory still doesn't exist
@@ -297,18 +297,16 @@ EXPORT bool create_directory_or_throw(const std::string& path) {
     switch (status.first) {
       case file_status::MISSING:
         log_and_throw_io_failure(
-            "Unable to find parent directory structure: " +
-            sanitize_url(ppath) +
+            "Unable to find parent directory structure: " + sanitize_url(ppath) +
             ". Ensure that you have created this s3 prefix. This behavior "
             "intends to avoid accidental creation S3 keys. or try "
             "again with a different path. Error message: " +
             status.second);
       case file_status::REGULAR_FILE:
-        log_and_throw_io_failure(
-            "Parent directory (prefix) " + sanitize_url(path) +
-            " is a regular file. Use prefix as both file and directory is "
-            "discouraged in order to prevent further ambiguity. Delete that "
-            "file, or try again with a different path.");
+        log_and_throw_io_failure("Parent directory (prefix) " + sanitize_url(path) +
+                                 " is a regular file. Use prefix as both file and directory is "
+                                 "discouraged in order to prevent further ambiguity. Delete that "
+                                 "file, or try again with a different path.");
       case file_status::DIRECTORY:
         // happy path, return below
         break;
@@ -323,7 +321,8 @@ EXPORT bool create_directory_or_throw(const std::string& path) {
   return result;
 }
 
-EXPORT bool delete_path(const std::string& path, file_status stat) {
+EXPORT bool delete_path(const std::string& path, file_status stat)
+{
   if (stat == file_status::FS_UNAVAILABLE) stat = get_file_status(path).first;
 
   if (stat == file_status::MISSING) {
@@ -336,15 +335,15 @@ EXPORT bool delete_path(const std::string& path, file_status stat) {
       fileio::file_handle_pool::get_instance().mark_file_for_delete(path)) {
     logstream(LOG_INFO) << "Attempting to delete " << sanitize_url(path)
                         << " but it is still in use. It will be deleted"
-                        << " when all references to the file are closed"
-                        << std::endl;
+                        << " when all references to the file are closed" << std::endl;
     return true;
   } else {
     return delete_path_impl(path, stat);
   }
 }
 
-bool delete_path_impl(const std::string& path, file_status stat) {
+bool delete_path_impl(const std::string& path, file_status stat)
+{
   if (stat == file_status::FS_UNAVAILABLE) stat = get_file_status(path).first;
   if (stat == file_status::MISSING) {
     return false;
@@ -353,8 +352,7 @@ bool delete_path_impl(const std::string& path, file_status stat) {
   if (boost::istarts_with(path, fileio::get_cache_prefix())) {
     try {
       // we ignore recursive here. since the cache can't hold directories
-      auto cache_entry =
-          fixed_size_cache_manager::get_instance().get_cache(path);
+      auto cache_entry = fixed_size_cache_manager::get_instance().get_cache(path);
       fixed_size_cache_manager::get_instance().free(cache_entry);
       return true;
     } catch (...) {
@@ -395,7 +393,8 @@ bool delete_path_impl(const std::string& path, file_status stat) {
   return true;
 }
 
-EXPORT bool delete_path_recursive(const std::string& path) {
+EXPORT bool delete_path_recursive(const std::string& path)
+{
   auto stat = get_file_status(path);
   if (stat.first == file_status::REGULAR_FILE) {
     delete_path(path);
@@ -434,20 +433,20 @@ EXPORT bool delete_path_recursive(const std::string& path) {
   }
 }
 
-bool is_writable_protocol(std::string protocol) {
+bool is_writable_protocol(std::string protocol)
+{
 #ifndef TC_DISABLE_REMOTEFS
-  return protocol == "hdfs" || protocol == "s3" || protocol == "" ||
-         protocol == "file" || protocol == "cache";
+  return protocol == "hdfs" || protocol == "s3" || protocol == "" || protocol == "file" ||
+         protocol == "cache";
 #else
   return protocol == "" || protocol == "file" || protocol == "cache";
 #endif
 }
 
-bool is_web_protocol(std::string protocol) {
-  return !is_writable_protocol(protocol);
-}
+bool is_web_protocol(std::string protocol) { return !is_writable_protocol(protocol); }
 
-EXPORT std::string get_protocol(std::string path) {
+EXPORT std::string get_protocol(std::string path)
+{
   size_t proto = path.find("://");
   if (proto != std::string::npos) {
     std::string ret = boost::algorithm::to_lower_copy(path.substr(0, proto));
@@ -459,7 +458,8 @@ EXPORT std::string get_protocol(std::string path) {
   }
 }
 
-std::string remove_protocol(std::string path) {
+std::string remove_protocol(std::string path)
+{
   size_t proto = path.find("://");
   if (proto != std::string::npos) {
     return path.substr(proto + 3);  // 3 is the "://"
@@ -468,11 +468,10 @@ std::string remove_protocol(std::string path) {
   }
 }
 
-std::string get_filename(std::string path) {
-  return fs::path(path).filename().string();
-}
+std::string get_filename(std::string path) { return fs::path(path).filename().string(); }
 
-std::string get_dirname(std::string path) {
+std::string get_dirname(std::string path)
+{
   std::string ret_path;
   auto proto = get_protocol(path);
   auto proto_removed = remove_protocol(path);
@@ -486,24 +485,21 @@ std::string get_dirname(std::string path) {
 
   // S3 is sensitive to trailing slashes, double slashes, etc.
 
-  if ((ret_path.size() > 0) && (ret_path.at(ret_path.size() - 1) == '/'))
-    ret_path.pop_back();
+  if ((ret_path.size() > 0) && (ret_path.at(ret_path.size() - 1) == '/')) ret_path.pop_back();
   return ret_path;
 }
 
-std::string convert_to_generic(const std::string& path) {
-  return fs::path(path).generic_string();
-}
+std::string convert_to_generic(const std::string& path) { return fs::path(path).generic_string(); }
 
-std::string make_relative_path(std::string root_directory, std::string path) {
+std::string make_relative_path(std::string root_directory, std::string path)
+{
   // If backslashes, convert them to slashes
   root_directory = convert_to_generic(root_directory);
   path = convert_to_generic(path);
   auto original_absolute_path = path;
 
   // if different protocols, it is not possible to relativize
-  if (get_protocol(root_directory) != get_protocol(path))
-    return original_absolute_path;
+  if (get_protocol(root_directory) != get_protocol(path)) return original_absolute_path;
 
   root_directory = remove_protocol(root_directory);
   path = remove_protocol(path);
@@ -546,16 +542,14 @@ std::string make_relative_path(std::string root_directory, std::string path) {
     new_relative_path_elements.push_back("..");
   }
   // then all the rest of the regular path elements
-  std::copy(path_elements.begin() + num_root_elements_match,
-            path_elements.end(),
-            std::inserter(new_relative_path_elements,
-                          new_relative_path_elements.end()));
+  std::copy(path_elements.begin() + num_root_elements_match, path_elements.end(),
+            std::inserter(new_relative_path_elements, new_relative_path_elements.end()));
   std::string retpath = boost::algorithm::join(new_relative_path_elements, "/");
   return retpath;
 }
 
-EXPORT std::string make_absolute_path(std::string root_directory,
-                                      std::string path) {
+EXPORT std::string make_absolute_path(std::string root_directory, std::string path)
+{
   // If backslashes, convert them to slashes
   root_directory = convert_to_generic(root_directory);
   path = convert_to_generic(path);
@@ -583,7 +577,8 @@ EXPORT std::string make_absolute_path(std::string root_directory,
   }
 }
 
-std::regex glob_to_regex(const std::string& glob) {
+std::regex glob_to_regex(const std::string& glob)
+{
   // this is horribly incomplete. But works sufficiently
   std::string glob_pattern(glob);
   boost::replace_all(glob_pattern, "/", "\\/");
@@ -598,8 +593,8 @@ std::regex glob_to_regex(const std::string& glob) {
  * - if url is a file, return (directory path, filename)
  * - if url is a glob pattern, split into (directory, pattern)
  */
-std::pair<std::string, std::string> split_path_elements(const std::string& url,
-                                                        file_status& status) {
+std::pair<std::string, std::string> split_path_elements(const std::string& url, file_status& status)
+{
   std::pair<std::string, std::string> res;
   if (status == file_status::DIRECTORY) {
     res = std::make_pair(url, "");
@@ -613,8 +608,8 @@ std::pair<std::string, std::string> split_path_elements(const std::string& url,
  * Collects contents of "url" path, testing the rest against the glob
  * return matching file(s) as (url, status) pairs
  */
-EXPORT std::vector<std::pair<std::string, file_status>> get_glob_files(
-    const std::string& url) {
+EXPORT std::vector<std::pair<std::string, file_status>> get_glob_files(const std::string& url)
+{
   auto trimmed_url = url;
   boost::algorithm::trim(trimmed_url);
   auto status = get_file_status(trimmed_url);
@@ -622,9 +617,8 @@ EXPORT std::vector<std::pair<std::string, file_status>> get_glob_files(
     // its a regular file. Ignore the glob and load it
     return {{url, file_status::REGULAR_FILE}};
   } else if (status.first == file_status::FS_UNAVAILABLE) {
-    log_and_throw_io_failure(
-        "Filesystem unavailable. Check server log for details. err: " +
-        status.second);
+    log_and_throw_io_failure("Filesystem unavailable. Check server log for details. err: " +
+                             status.second);
   }
   std::pair<std::string, std::string> path_elements =
       split_path_elements(trimmed_url, status.first);
@@ -648,7 +642,8 @@ EXPORT std::vector<std::pair<std::string, file_status>> get_glob_files(
   return files;
 }
 
-size_t get_io_parallelism_id(const std::string url) {
+size_t get_io_parallelism_id(const std::string url)
+{
   std::string protocol = get_protocol(url);
 
   if (is_web_protocol(protocol) || protocol == "s3" || protocol == "hdfs") {
@@ -657,8 +652,7 @@ size_t get_io_parallelism_id(const std::string url) {
     return (size_t)(-1);
   } else if (protocol == "cache") {
     try {
-      auto cache_entry =
-          fixed_size_cache_manager::get_instance().get_cache(url);
+      auto cache_entry = fixed_size_cache_manager::get_instance().get_cache(url);
       if (cache_entry) {
         if (cache_entry->is_pointer()) {
           // if its a cached pointer, we can read in parallel always
@@ -685,7 +679,8 @@ size_t get_io_parallelism_id(const std::string url) {
   return 0;
 }
 
-bool try_to_open_file(const std::string url) {
+bool try_to_open_file(const std::string url)
+{
   // if file doesn't exist, we fail immediately
   if (get_file_status(url).first != file_status::REGULAR_FILE) {
     return false;
@@ -700,7 +695,8 @@ bool try_to_open_file(const std::string url) {
   return success;
 }
 
-void copy(const std::string src, const std::string dest) {
+void copy(const std::string src, const std::string dest)
+{
   general_ifstream fin(src.c_str());
   general_ofstream fout(dest.c_str());
   std::vector<char> buffer(1024 * 1024);  // 1MB
@@ -710,7 +706,8 @@ void copy(const std::string src, const std::string dest) {
   }
 }
 
-bool change_file_mode(const std::string path, short mode) {
+bool change_file_mode(const std::string path, short mode)
+{
   auto stat = get_file_status(path);
   if (stat.first == file_status::MISSING) {
     return false;

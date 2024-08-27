@@ -44,7 +44,7 @@ public:
     TS_ASSERT(feature_sarray.dtype() == turi::flex_type_enum::VECTOR);
 
     size_t first_vec_size = feature_sarray[0].get<turi::flex_vec>().size();
-    
+
     for (const auto& i: feature_sarray.range_iterator()) {
       size_t vec_size = i.get<turi::flex_vec>().size();
       TS_ASSERT(first_vec_size == vec_size);

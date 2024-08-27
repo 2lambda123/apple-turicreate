@@ -6,7 +6,7 @@ Quick Links: [Installation](#supported-platforms) | [Documentation](#documentati
 
 [<img align="right" src="https://docs-assets.developer.apple.com/turicreate/turi-dog.svg" alt="Turi Create" width="100">](#)
 
-# Turi Create 
+# Turi Create
 
 Check out our talks at [WWDC 2019](https://developer.apple.com/videos/play/wwdc2019/420/) and at [WWDC 2018](https://developer.apple.com/videos/play/wwdc2018/712/)!
 
@@ -48,7 +48,7 @@ If you want your app to recognize specific objects in images, you can build your
 ```python
 import turicreate as tc
 
-# Load data 
+# Load data
 data = tc.SFrame('photoLabel.sframe')
 
 # Create a model
@@ -60,7 +60,7 @@ predictions = model.predict(data)
 # Export to Core ML
 model.export_coreml('MyClassifier.mlmodel')
 ```
- 
+
 It's easy to use the resulting model in an [iOS application](https://developer.apple.com/documentation/vision/classifying_images_with_vision_and_core_ml):
 
 <p align="center"><img src="https://docs-assets.developer.apple.com/published/a2c37bce1f/689f61a6-1087-4112-99d9-bbfb326e3138.png" alt="Turi Create" width="600"></p>
@@ -89,7 +89,7 @@ Installation
 For detailed instructions for different varieties of Linux see [LINUX\_INSTALL.md](LINUX_INSTALL.md).
 For common installation issues see [INSTALL\_ISSUES.md](INSTALL_ISSUES.md).
 
-We recommend using virtualenv to use, install, or build Turi Create. 
+We recommend using virtualenv to use, install, or build Turi Create.
 
 ```shell
 pip install virtualenv

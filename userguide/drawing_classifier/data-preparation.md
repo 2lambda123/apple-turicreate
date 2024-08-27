@@ -1,7 +1,7 @@
 # Quick, Draw! Data Preparation
 
 In this section, we will setup a subset of [Quick, Draw!](https://quickdraw.withgoogle.com/data)<sup>1</sup>. Our goal is to
-make a drawing classifier for squares and triangles. 
+make a drawing classifier for squares and triangles.
 
 *Note: Requires Turi Create 5.4 or above*
 
@@ -16,7 +16,7 @@ mkdir bitmaps strokes sframes
 cd bitmaps
 
 # Bitmap data (around 90 MB each)
-curl https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/square.npy > square.npy 
+curl https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/square.npy > square.npy
 curl https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/triangle.npy > triangle.npy
 
 cd ../strokes
@@ -42,7 +42,7 @@ quickdraw/
 
 ```
 
-For both bitmap and stroke-based drawing input formats, we will sample 100 examples from each of the classes and turn it into an SFrame. 
+For both bitmap and stroke-based drawing input formats, we will sample 100 examples from each of the classes and turn it into an SFrame.
 
 #### Using Bitmap Data
 
@@ -85,7 +85,7 @@ def build_bitmap_sframe():
 
     sf = tc.SFrame({"drawing": bitmaps_list, "label": labels_list})
     sf.save(os.path.join(sframes_dir, "bitmap_square_triangle.sframe"))
-    return sf 
+    return sf
 
 sf = build_bitmap_sframe()
 ```
@@ -107,13 +107,13 @@ quickdraw/
 
 #### Using Stroke-Based Drawing Data
 
-For stroke-based drawing data to be given as the feature in the input SFrame 
-to `turicreate.drawing_classifier.create`, the stroke-based drawing data 
+For stroke-based drawing data to be given as the feature in the input SFrame
+to `turicreate.drawing_classifier.create`, the stroke-based drawing data
 must adhere to the following format:
 
-Each drawing must be represented as a list of strokes, where each stroke must 
-be represented as a list of points in the order that they were drawn. 
-Each point must be represented as a dictionary with exactly two keys, 
+Each drawing must be represented as a list of strokes, where each stroke must
+be represented as a list of points in the order that they were drawn.
+Each point must be represented as a dictionary with exactly two keys,
 "x" and "y", the values of which must be numerical, i.e. integer or float.
 Here is an example of a drawing with two strokes that have five points each:
 
@@ -136,8 +136,8 @@ example_drawing = [
 ]
 ```
 
-Our first task at hand is to build an SFrame that adheres to this format from 
-the "Quick, Draw!" data that we have downloaded. 
+Our first task at hand is to build an SFrame that adheres to this format from
+the "Quick, Draw!" data that we have downloaded.
 Here is a snippet to accomplish that:
 ```python
 import turicreate as tc
@@ -168,10 +168,10 @@ def build_strokes_sframe():
             return [
                 [
                     {
-                        "x": raw_drawing[stroke_id][0][i], 
+                        "x": raw_drawing[stroke_id][0][i],
                         "y": raw_drawing[stroke_id][1][i]
                     } for i in range(len(raw_drawing[stroke_id][0]))
-                ] 
+                ]
                 for stroke_id in range(len(raw_drawing))
             ]
 
@@ -180,18 +180,18 @@ def build_strokes_sframe():
         labels_list.extend([class_name] * num_examples_per_class)
     sf = tc.SFrame({"drawing": drawings_list, "label": labels_list})
     sf.save(os.path.join(sframes_dir, "stroke_square_triangle.sframe"))
-    return sf 
+    return sf
 
 sf = build_strokes_sframe()
 ```
 
-When stroke-based drawing data is given as input to the Drawing Classifier 
-Toolkit either at train or inference time, the toolkit converts the 
-stroke-based drawings into bitmaps as part of preprocessing so the 
+When stroke-based drawing data is given as input to the Drawing Classifier
+Toolkit either at train or inference time, the toolkit converts the
+stroke-based drawings into bitmaps as part of preprocessing so the
 Neural Network can consume them. See [How it works!](how-it-works.md) for
 more information about the preprocessing done under the hood.
 
-To visualize what your stroke-based drawings look like when rendered as a 
+To visualize what your stroke-based drawings look like when rendered as a
 bitmap, you can run the following utility function:
 ```python
 sf = build_strokes_sframe()

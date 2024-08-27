@@ -467,30 +467,30 @@ class column_statistics {
       v.resize(idx + 1);
     }
   }
-  
+
   /**  Check global array size. Possibly resize them.
    */
   template <typename... V>
   inline void check_global_array_sizes(size_t idx, V&... vv) {
 
     // If needed, increase the value of global_size.
-    if(UNLIKELY(idx >= global_size)) { 
+    if(UNLIKELY(idx >= global_size)) {
       atomic_set_max(global_size, idx + 1);
     }
 
-    if(UNLIKELY(idx >= global_array_buffer_size)) { 
+    if(UNLIKELY(idx >= global_array_buffer_size)) {
       resize_global_arrays(idx, vv...);
     }
-  } 
+  }
 
 
   template <typename T>
   inline void __resize_global_array(size_t new_size, std::vector<T>& v) {
-    // This condition should always be true as the 
+    // This condition should always be true as the
     DASSERT_EQ(v.size(), global_array_buffer_size);
     v.resize(new_size);
   }
-  
+
   template <typename V1, typename... VV>
   inline void __resize_global_array(size_t new_size, V1& v, VV&... other_v) {
     __resize_global_array(new_size, v);
@@ -500,14 +500,14 @@ class column_statistics {
 
   template <typename... V>
   void resize_global_arrays(size_t idx, V&... vv) {
-   
+
     // Grow aggressively, since a resize is really expensive.
     size_t new_size = 2 * (parallel_threshhold + idx + 1);
 
-    // First, lock a global lock while the resize is happening, as many threads are likely to 
-    // hit this at once.  This prevents multiple threads from locking all the locks in the full 
-    // array when there is contention. 
-    std::lock_guard<std::mutex> lg(_array_resize_lock); 
+    // First, lock a global lock while the resize is happening, as many threads are likely to
+    // hit this at once.  This prevents multiple threads from locking all the locks in the full
+    // array when there is contention.
+    std::lock_guard<std::mutex> lg(_array_resize_lock);
 
     // Do we still need to resize it, or has another array hit this already?
     if(global_array_buffer_size <= idx) {

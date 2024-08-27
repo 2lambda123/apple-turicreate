@@ -101,7 +101,7 @@ void *nn_realloc (void *ptr, size_t size)
 void nn_free (void *ptr)
 {
     struct nn_alloc_hdr *chunk;
-    
+
     if (!ptr)
         return;
     chunk = ((struct nn_alloc_hdr*) ptr) - 1;
@@ -145,4 +145,3 @@ void nn_free (void *ptr)
 }
 
 #endif
-

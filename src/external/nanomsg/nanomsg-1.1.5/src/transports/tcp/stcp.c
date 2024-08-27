@@ -428,4 +428,3 @@ static void nn_stcp_handler (struct nn_fsm *self, int src, int type,
         nn_fsm_bad_state (stcp->state, src, type);
     }
 }
-

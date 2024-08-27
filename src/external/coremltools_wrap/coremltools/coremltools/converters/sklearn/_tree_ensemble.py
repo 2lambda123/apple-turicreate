@@ -171,10 +171,10 @@ def convert_tree_ensemble(
 
     class_labels: list[int]
         List of classes
-        
+
     post_evaluation_transform: list[int]
         Post evaluation transform
-        
+
     Returns
     -------
     model_spec: An object of type Model_pb.

@@ -41,4 +41,3 @@ if(${TC_BUILD_CAPI})
 else()
   message("Skipping build of C APIs Tests.")
 endif()
-

@@ -257,4 +257,3 @@ static void nn_dns_handler (struct nn_fsm *self, int src, int type,
         nn_fsm_bad_state (dns->state, src, type);
     }
 }
-

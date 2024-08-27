@@ -59,7 +59,7 @@ bn_mul_mont_vis3:
 
 	save	%sp,	%g1,	%sp
 ___
-
+
 #	+-------------------------------+<-----	%sp
 #	.				.
 #	+-------------------------------+<-----	aligned at 64 bytes
@@ -89,7 +89,7 @@ $code.=<<___;
 	ld	[$bp+4],	$t3
 	or	$t0,	$n0,	$n0
 	add	$bp,	8,	$bp
-
+
 	ld	[$ap+0],	$t0	! ap[0]
 	sllx	$t3,	32,	$m0
 	ld	[$ap+4],	$t1
@@ -136,7 +136,7 @@ $code.=<<___;
 
 	mulx	$nj,	$m1,	$nlo	! np[1]*m1
 	umulxhi	$nj,	$m1,	$nj	! nhi=nj
-
+
 	ba	.L1st
 	sub	$num,	24,	$cnt	! cnt=num-3
 
@@ -189,7 +189,7 @@ $code.=<<___;
 	addxc	%g0,	%g0,	$ovf	! upmost overflow bit
 	stx	$hi1,	[$tp]
 	add	$tp,	8,	$tp
-
+
 	ba	.Louter
 	sub	$num,	16,	$i	! i=num-2
 
@@ -225,7 +225,7 @@ $code.=<<___;
 	mulx	$nj,	$m1,	$nlo	! np[1]*m1
 	addxc	%g0,	$hi1,	$hi1
 	umulxhi	$nj,	$m1,	$nj	! nhi=nj
-
+
 	ba	.Linner
 	sub	$num,	24,	$cnt	! cnt=num-3
 .align	16
@@ -271,7 +271,7 @@ $code.=<<___;
 
 	brnz,pt	$i,	.Louter
 	sub	$i,	8,	$i
-
+
 	sub	$anp,	$num,	$anp	! rewind
 	sub	$tp,	$num,	$tp
 	sub	$anp,	$num,	$anp
@@ -330,7 +330,7 @@ $code.=<<___;
 .asciz  "Montgomery Multiplication for SPARCv9 VIS3, CRYPTOGAMS by <appro\@openssl.org>"
 .align	4
 ___
-
+
 # Purpose of these subroutines is to explicitly encode VIS instructions,
 # so that one can compile the module without having to specify VIS
 # extentions on compiler command line, e.g. -xarch=v9 vs. -xarch=v9a.

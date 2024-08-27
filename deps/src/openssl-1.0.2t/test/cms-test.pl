@@ -120,7 +120,7 @@ else
 	{
 	die "Error checking for EC support\n";
 	}
-    
+
 system ("$ossl_path no-ec2m > $null_path");
 if ($? == 0)
 	{
@@ -148,7 +148,7 @@ else
 	{
 	die "Error checking for ECDH support\n";
 	}
-    
+
 my @smime_pkcs7_tests = (
 
     [
@@ -538,11 +538,11 @@ sub run_smime_tests {
         my ( $tnam, $rscmd, $rvcmd ) = @$smtst;
 	if ($ossl8)
 		{
-		# Skip smime resign: 0.9.8 smime doesn't support -resign	
+		# Skip smime resign: 0.9.8 smime doesn't support -resign
 		next if ($scmd =~ /smime/ && $rscmd =~ /-resign/);
 		# Disable streaming: option not supported in 0.9.8
-		$tnam =~ s/streaming//;	
-		$rscmd =~ s/-stream//;	
+		$tnam =~ s/streaming//;
+		$rscmd =~ s/-stream//;
 		$rvcmd =~ s/-stream//;
 		}
 	if ($no_ec && $tnam =~ /ECDH/)
@@ -626,4 +626,3 @@ sub cmp_files {
     return $ret;
 
 }
-

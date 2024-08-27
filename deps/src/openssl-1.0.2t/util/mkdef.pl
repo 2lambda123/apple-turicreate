@@ -33,7 +33,7 @@
 #	existence:platform:kind:algorithms
 #
 # - "existence" can be "EXIST" or "NOEXIST" depending on if the symbol is
-#   found somewhere in the source, 
+#   found somewhere in the source,
 # - "platforms" is empty if it exists on all platforms, otherwise it contains
 #   comma-separated list of the platform, just as they are if the symbol exists
 #   for those platforms, or prepended with a "!" if not.  This helps resolve
@@ -145,7 +145,7 @@ my $no_rsa; my $no_dsa; my $no_dh; my $no_hmac=0; my $no_aes; my $no_krb5;
 my $no_ec; my $no_ecdsa; my $no_ecdh; my $no_engine; my $no_hw;
 my $no_fp_api; my $no_static_engine=1; my $no_gmp; my $no_deprecated;
 my $no_rfc3779; my $no_psk; my $no_tlsext; my $no_cms; my $no_capieng;
-my $no_jpake; my $no_srp; my $no_ssl2; my $no_ec2m; my $no_nistp_gcc; 
+my $no_jpake; my $no_srp; my $no_ssl2; my $no_ec2m; my $no_nistp_gcc;
 my $no_nextprotoneg; my $no_sctp; my $no_srtp; my $no_ssl_trace;
 my $no_unit_test; my $no_ssl3_method; my $no_ssl2_method;
 
@@ -181,7 +181,7 @@ foreach (@ARGV, split(/ /, $options))
 
 	$do_ssl=1 if $_ eq "ssleay";
 	if ($_ eq "ssl") {
-		$do_ssl=1; 
+		$do_ssl=1;
 		$libname=$_
 	}
 	$do_crypto=1 if $_ eq "libeay";
@@ -254,7 +254,7 @@ foreach (@ARGV, split(/ /, $options))
 	}
 
 
-if (!$libname) { 
+if (!$libname) {
 	if ($do_ssl) {
 		$libname="SSLEAY";
 	}
@@ -388,7 +388,7 @@ if($do_crypto == 1) {
 	}
 	&update_numbers(*OUT,"LIBEAY",*crypto_list,$max_crypto,@crypto_symbols);
 	close OUT;
-} 
+}
 
 } elsif ($do_checkexist) {
 	&check_existing(*ssl_list, @ssl_symbols)
@@ -1558,4 +1558,3 @@ sub check_existing
 		}
 	}
 }
-

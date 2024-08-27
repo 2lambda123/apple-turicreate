@@ -38,4 +38,3 @@ void nn_thread_init (struct nn_thread *self,
 void nn_thread_term (struct nn_thread *self);
 
 #endif
-

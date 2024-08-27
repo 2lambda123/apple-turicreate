@@ -40,4 +40,3 @@ struct nn_dns {
     struct nn_dns_result *result;
     struct nn_fsm_event done;
 };
-

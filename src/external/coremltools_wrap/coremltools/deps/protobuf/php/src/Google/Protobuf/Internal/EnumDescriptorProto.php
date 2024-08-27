@@ -111,4 +111,3 @@ class EnumDescriptorProto extends \Google\Protobuf\Internal\Message
     }
 
 }
-

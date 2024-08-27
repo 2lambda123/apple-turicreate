@@ -112,4 +112,3 @@ class EnumValueOptions extends \Google\Protobuf\Internal\Message
     }
 
 }
-

@@ -21,6 +21,6 @@ io_error::io_error(const std::string &message)
 #endif
 
 
-const char *io_error::what() const COMPILER_MODIFIER_ON_EXCEPTION_WHAT {  
+const char *io_error::what() const COMPILER_MODIFIER_ON_EXCEPTION_WHAT {
   return m_message.c_str();
 }

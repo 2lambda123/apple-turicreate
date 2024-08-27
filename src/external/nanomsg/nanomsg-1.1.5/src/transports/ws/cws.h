@@ -32,4 +32,3 @@
 int nn_cws_create (struct nn_ep *);
 
 #endif
-

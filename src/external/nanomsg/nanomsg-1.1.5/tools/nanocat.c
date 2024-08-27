@@ -449,7 +449,7 @@ void nn_print_message (nn_options_t *options, char *buf, int buflen)
         }
         fprintf (stdout, "\"\n");
         break;
-    
+
     }
     fflush (stdout);
 }

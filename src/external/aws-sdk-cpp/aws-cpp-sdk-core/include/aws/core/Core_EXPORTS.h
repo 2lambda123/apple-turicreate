@@ -109,4 +109,3 @@
         #define AWS_DEPRECATED(msg)
     #endif
 #endif
-

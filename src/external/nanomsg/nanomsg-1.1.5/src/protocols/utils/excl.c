@@ -115,4 +115,3 @@ int nn_excl_can_recv (struct nn_excl *self)
 {
     return self->inpipe ? 1 : 0;
 }
-

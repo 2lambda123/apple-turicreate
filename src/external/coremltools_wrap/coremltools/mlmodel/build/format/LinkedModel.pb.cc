@@ -608,7 +608,7 @@ const ::CoreML::Specification::StringParameter& LinkedModelFile::linkedmodelfile
                          : *::CoreML::Specification::StringParameter::internal_default_instance();
 }
 ::CoreML::Specification::StringParameter* LinkedModelFile::mutable_linkedmodelfilename() {
-  
+
   if (linkedmodelfilename_ == NULL) {
     linkedmodelfilename_ = new ::CoreML::Specification::StringParameter;
   }
@@ -617,7 +617,7 @@ const ::CoreML::Specification::StringParameter& LinkedModelFile::linkedmodelfile
 }
 ::CoreML::Specification::StringParameter* LinkedModelFile::release_linkedmodelfilename() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LinkedModelFile.linkedModelFileName)
-  
+
   ::CoreML::Specification::StringParameter* temp = linkedmodelfilename_;
   linkedmodelfilename_ = NULL;
   return temp;
@@ -626,9 +626,9 @@ void LinkedModelFile::set_allocated_linkedmodelfilename(::CoreML::Specification:
   delete linkedmodelfilename_;
   linkedmodelfilename_ = linkedmodelfilename;
   if (linkedmodelfilename) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LinkedModelFile.linkedModelFileName)
 }
@@ -647,7 +647,7 @@ const ::CoreML::Specification::StringParameter& LinkedModelFile::linkedmodelsear
                          : *::CoreML::Specification::StringParameter::internal_default_instance();
 }
 ::CoreML::Specification::StringParameter* LinkedModelFile::mutable_linkedmodelsearchpath() {
-  
+
   if (linkedmodelsearchpath_ == NULL) {
     linkedmodelsearchpath_ = new ::CoreML::Specification::StringParameter;
   }
@@ -656,7 +656,7 @@ const ::CoreML::Specification::StringParameter& LinkedModelFile::linkedmodelsear
 }
 ::CoreML::Specification::StringParameter* LinkedModelFile::release_linkedmodelsearchpath() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LinkedModelFile.linkedModelSearchPath)
-  
+
   ::CoreML::Specification::StringParameter* temp = linkedmodelsearchpath_;
   linkedmodelsearchpath_ = NULL;
   return temp;
@@ -665,9 +665,9 @@ void LinkedModelFile::set_allocated_linkedmodelsearchpath(::CoreML::Specificatio
   delete linkedmodelsearchpath_;
   linkedmodelsearchpath_ = linkedmodelsearchpath;
   if (linkedmodelsearchpath) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LinkedModelFile.linkedModelSearchPath)
 }

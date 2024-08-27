@@ -30,7 +30,7 @@ namespace S3
 namespace Model
 {
 
-CORSRule::CORSRule() : 
+CORSRule::CORSRule() :
     m_allowedHeadersHasBeenSet(false),
     m_allowedMethodsHasBeenSet(false),
     m_allowedOriginsHasBeenSet(false),
@@ -40,7 +40,7 @@ CORSRule::CORSRule() :
 {
 }
 
-CORSRule::CORSRule(const XmlNode& xmlNode) : 
+CORSRule::CORSRule(const XmlNode& xmlNode) :
     m_allowedHeadersHasBeenSet(false),
     m_allowedMethodsHasBeenSet(false),
     m_allowedOriginsHasBeenSet(false),

@@ -37,7 +37,7 @@ neural_net::image_augmenter::options DarknetYOLOInferenceAugmentationOptions(
 neural_net::image_augmenter::options DarknetYOLOTrainingAugmentationOptions(
     int batch_size, int output_height, int output_width);
 
-/** 
+/**
  * Encodes the annotations of an input batch into the format expected by the
  * darknet-yolo network.
  */

@@ -48,4 +48,3 @@ struct nn_poller {
     /*  Cached events. */
     struct kevent events [NN_POLLER_MAX_EVENTS];
 };
-

@@ -52,4 +52,3 @@ void nn_timerset_hndl_term (struct nn_timerset_hndl *self);
 int nn_timerset_hndl_isactive (struct nn_timerset_hndl *self);
 
 #endif
-

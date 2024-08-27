@@ -65,4 +65,3 @@ int nn_xsurveyor_getopt (struct nn_sockbase *self, int level, int option,
 int nn_xsurveyor_ispeer (int socktype);
 
 #endif
-

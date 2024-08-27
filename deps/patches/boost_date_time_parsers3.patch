@@ -1,7 +1,7 @@
 --- a/boost/date_time/time_facet.hpp
 +++ b/boost/date_time/time_facet.hpp
 @@ -972,6 +972,8 @@ namespace date_time {
- 
+
          // time elements
          hour_type hour = 0;
 +        hour_type base_hour = 0; // used for AM/PM
@@ -92,7 +92,7 @@
 @@ -1238,6 +1302,16 @@ namespace date_time {
            d = date_type(t_year, t_month, t_day);
          }
- 
+
 +        // handle the case where 12:15am really means 0015
 +        // and 12:15pm really means 12:15
 +        // Also 12pm is noon, 12am is midnight

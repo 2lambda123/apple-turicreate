@@ -124,7 +124,7 @@ int nn_poller_wait (struct nn_poller *self, int timeout)
 
         /*  Replace the removed fd by the one at the end of the pollset. */
         --self->size;
-        if (i != self->size) { 
+        if (i != self->size) {
             self->pollset [i] = self->pollset [self->size];
             if (self->hndls [i].next != -1)
                 self->hndls [self->hndls [i].next].prev = -1;
@@ -197,4 +197,3 @@ int nn_poller_event (struct nn_poller *self, int *event,
         return 0;
     }
 }
-

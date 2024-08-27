@@ -5,13 +5,13 @@ include(CMakeParseArguments)
 
 # check_and_set_compiler_flag
 #
-# This macro checks optional compiler flags and adds them to the global 
-# CMAKE_<LANG>_FLAGS_<MODE> variables as appropriate.  The arguments 
-# determine how the flags apply. 
+# This macro checks optional compiler flags and adds them to the global
+# CMAKE_<LANG>_FLAGS_<MODE> variables as appropriate.  The arguments
+# determine how the flags apply.
 #
-# Language (If neither C nor CXX is specified, both are assumed): 
+# Language (If neither C nor CXX is specified, both are assumed):
 #
-# C:   This flag applies to the C compiler.  
+# C:   This flag applies to the C compiler.
 # CXX: This flag applies to the C++ compiler.
 #
 # Mode (If neither DEBUG nor RELEASE are specified, both are assumed):
@@ -29,12 +29,12 @@ macro(check_and_set_compiler_flag FLAG)
  string(REPLACE "-" "_" flag_name_1 ${FLAG})
  string(REPLACE "=" "_" flag_name ${flag_name_1})
 
- if(NOT ${_acf_C} AND NOT ${_acf_CXX}) 
+ if(NOT ${_acf_C} AND NOT ${_acf_CXX})
    set(_acf_C 1)
    set(_acf_CXX 1)
  endif()
 
- if(NOT ${_acf_DEBUG} AND NOT ${_acf_RELEASE}) 
+ if(NOT ${_acf_DEBUG} AND NOT ${_acf_RELEASE})
    set(_acf_DEBUG 1)
    set(_acf_RELEASE 1)
  endif()
@@ -45,20 +45,20 @@ macro(check_and_set_compiler_flag FLAG)
    message("Skipping Testing of clang specific flag ${FLAG}.")
    set(__add_flag 0)
  endif()
- 
+
  if(_acf_RESTRICT_GCC AND NOT "${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
    message("Skipping Testing of gcc specific flag ${FLAG}.")
    set(__add_flag 0)
  endif()
-    
- if(${__add_flag}) 
+
+ if(${__add_flag})
 
    set(__flag_added "")
 
    if(${_acf_C})
-         
+
      check_c_compiler_flag(${FLAG} TEST_C_FLAG_${flag_name})
-     
+
      if(${TEST_C_FLAG_${flag_name}})
        if(${_acf_DEBUG} AND ${_acf_RELEASE})
          set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${FLAG}")
@@ -71,7 +71,7 @@ macro(check_and_set_compiler_flag FLAG)
          set(__flag_added "${__flag_added} C_RELEASE")
        endif()
      endif()
-   endif() 
+   endif()
 
    if(${_acf_CXX})
      check_cxx_compiler_flag(${FLAG} TEST_CXX_FLAG_${flag_name})
@@ -89,10 +89,9 @@ macro(check_and_set_compiler_flag FLAG)
        endif()
      endif()
 
-   endif() 
+   endif()
 
    message("Added flag ${FLAG} to configurations: ${__flag_added}.")
  endif()
 
-endmacro() 
-
+endmacro()

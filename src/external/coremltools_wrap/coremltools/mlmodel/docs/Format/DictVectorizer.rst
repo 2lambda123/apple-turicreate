@@ -20,7 +20,7 @@ then an input of ``{"a": 4, "c": 8}`` will produce an output of ``[4, 8, 0, 0]``
 	message DictVectorizer {
 	    oneof Map {
 	        StringVector stringToIndex = 1;
-	
+
 	        Int64Vector int64ToIndex = 2;
 	    }
 	}

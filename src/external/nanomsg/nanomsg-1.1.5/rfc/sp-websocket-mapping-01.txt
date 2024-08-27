@@ -54,7 +54,7 @@ Copyright Notice
 
 
 Sustrik & D'Amore        Expires August 7, 2015                 [Page 1]
-
+
 Internet-Draft          WebSocket mapping for SPs          February 2015
 
 
@@ -110,7 +110,7 @@ Internet-Draft          WebSocket mapping for SPs          February 2015
 
 
 Sustrik & D'Amore        Expires August 7, 2015                 [Page 2]
-
+
 Internet-Draft          WebSocket mapping for SPs          February 2015
 
 
