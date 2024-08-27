@@ -8,15 +8,14 @@
 
 #else
 
-
 #ifndef TURI_IARCHIVE_HPP
 #define TURI_IARCHIVE_HPP
 
-#include <iostream>
 #include <core/logging/assertions.hpp>
-#include <core/storage/serialization/is_pod.hpp>
-#include <core/storage/serialization/has_load.hpp>
 #include <core/storage/serialization/dir_archive.hpp>
+#include <core/storage/serialization/has_load.hpp>
+#include <core/storage/serialization/is_pod.hpp>
+#include <iostream>
 namespace turi {
 
 /**
@@ -58,83 +57,90 @@ namespace turi {
  * core/storage/serialization/serialization_includes.hpp
  */
 class iarchive {
-public:
-    std::istream* in = NULL;
-    dir_archive* dir = NULL;
-    const char* buf = NULL;
-    size_t off = 0;
-    size_t len = 0;
+ public:
+  std::istream* in = NULL;
+  dir_archive* dir = NULL;
+  const char* buf = NULL;
+  size_t off = 0;
+  size_t len = 0;
 
+  /**
+   * Constructs an iarchive object.
+   * Takes a reference to a generic std::istream object and associates
+   * the archive with it. Reads from the archive will read from the
+   * assiciated input stream.
+   */
+  inline iarchive(std::istream& instream)
+    : in(&instream)
+  {
+  }
 
-    /**
-     * Constructs an iarchive object.
-     * Takes a reference to a generic std::istream object and associates
-     * the archive with it. Reads from the archive will read from the
-     * assiciated input stream.
-     */
-    inline iarchive(std::istream& instream)
-        : in(&instream) { }
+  inline iarchive(const char* buf, size_t len)
+    : buf(buf)
+    , off(0)
+    , len(len)
+  {
+  }
 
-    inline iarchive(const char* buf, size_t len)
-        : buf(buf), off(0), len(len) { }
+  inline iarchive(dir_archive& dirarc)
+    : in(dirarc.get_input_stream())
+    , dir(&dirarc)
+  {
+  }
 
+  ~iarchive() {}
 
-    inline iarchive(dir_archive& dirarc)
-        : in(dirarc.get_input_stream()),dir(&dirarc) {}
-
-    ~iarchive() {}
-
-    /// Directly reads a single character from the input stream
-    inline char read_char() {
-        char c;
-        if (buf) {
-            c = buf[off];
-            ++off;
-        } else {
-            in->get(c);
-        }
-        return c;
+  /// Directly reads a single character from the input stream
+  inline char read_char()
+  {
+    char c;
+    if (buf) {
+      c = buf[off];
+      ++off;
+    } else {
+      in->get(c);
     }
+    return c;
+  }
 
-    /**
-     *  Directly reads a sequence of "len" bytes from the
-     *  input stream into the location pointed to by "c"
-     */
-    inline void read(char* c, size_t l) {
-        if (buf) {
-            memcpy(c, buf + off, l);
-            off += l;
-        } else {
-            in->read(c, l);
-        }
+  /**
+   *  Directly reads a sequence of "len" bytes from the
+   *  input stream into the location pointed to by "c"
+   */
+  inline void read(char* c, size_t l)
+  {
+    if (buf) {
+      memcpy(c, buf + off, l);
+      off += l;
+    } else {
+      in->read(c, l);
     }
+  }
 
-
-    /**
-     *  Directly reads a sequence of "len" bytes from the
-     *  input stream into the location pointed to by "c"
-     */
-    template <typename T>
-    inline void read_into(T& c) {
-        if (buf) {
-            memcpy(reinterpret_cast<void*>(&c), buf + off, sizeof(T));
-            off += sizeof(T);
-        } else {
-            in->read(reinterpret_cast<char*>(&c), sizeof(T));
-        }
+  /**
+   *  Directly reads a sequence of "len" bytes from the
+   *  input stream into the location pointed to by "c"
+   */
+  template <typename T>
+  inline void read_into(T& c)
+  {
+    if (buf) {
+      memcpy(reinterpret_cast<void*>(&c), buf + off, sizeof(T));
+      off += sizeof(T);
+    } else {
+      in->read(reinterpret_cast<char*>(&c), sizeof(T));
     }
+  }
 
-    /// Returns true if the underlying stream is in a failure state
-    inline bool fail() {
-        return in == NULL ? off > len : in->fail();
-    }
+  /// Returns true if the underlying stream is in a failure state
+  inline bool fail() { return in == NULL ? off > len : in->fail(); }
 
-    std::string get_prefix() {
-        ASSERT_NE(dir, NULL);
-        return dir->get_next_read_prefix();
-    }
+  std::string get_prefix()
+  {
+    ASSERT_NE(dir, NULL);
+    return dir->get_next_read_prefix();
+  }
 };
-
 
 /**
  * \ingroup group_serialization
@@ -145,84 +151,75 @@ public:
  * turi::iarchive.
  */
 class iarchive_soft_fail {
-public:
+ public:
+  iarchive* iarc;
+  bool mine;
 
-    iarchive *iarc;
-    bool mine;
+  /// Directly reads a single character from the input stream
+  inline char read_char() { return iarc->read_char(); }
 
-    /// Directly reads a single character from the input stream
-    inline char read_char() {
-        return iarc->read_char();
-    }
+  /**
+   *  Directly reads a sequence of "len" bytes from the
+   *  input stream into the location pointed to by "c"
+   */
+  inline void read(char* c, size_t len) { iarc->read(c, len); }
 
-    /**
-     *  Directly reads a sequence of "len" bytes from the
-     *  input stream into the location pointed to by "c"
-     */
-    inline void read(char* c, size_t len) {
-        iarc->read(c, len);
-    }
+  /**
+   *  Directly reads a sequence of "len" bytes from the
+   *  input stream into the location pointed to by "c"
+   */
+  template <typename T>
+  inline void read_into(T& c)
+  {
+    iarc->read_into(c);
+  }
 
-    /**
-     *  Directly reads a sequence of "len" bytes from the
-     *  input stream into the location pointed to by "c"
-     */
-    template <typename T>
-    inline void read_into(T& c) {
-        iarc->read_into(c);
-    }
+  /// Returns true if the underlying stream is in a failure state
+  inline bool fail() { return iarc->fail(); }
 
+  std::string get_prefix() { return iarc->get_prefix(); }
 
-    /// Returns true if the underlying stream is in a failure state
-    inline bool fail() {
-        return iarc->fail();
-    }
+  /**
+   * Constructs an iarchive_soft_fail object.
+   * Takes a reference to a generic std::istream object and associates
+   * the archive with it. Reads from the archive will read from the
+   * assiciated input stream.
+   */
+  inline iarchive_soft_fail(std::istream& instream)
+    : iarc(new iarchive(instream))
+    , mine(true)
+  {
+  }
 
+  /**
+   * Constructs an iarchive_soft_fail object from an iarchive.
+   * Both will share the same input stream
+   */
+  inline iarchive_soft_fail(iarchive& iarc)
+    : iarc(&iarc)
+    , mine(false)
+  {
+  }
 
-    std::string get_prefix() {
-        return iarc->get_prefix();
-    }
-
-    /**
-     * Constructs an iarchive_soft_fail object.
-     * Takes a reference to a generic std::istream object and associates
-     * the archive with it. Reads from the archive will read from the
-     * assiciated input stream.
-     */
-    inline iarchive_soft_fail(std::istream &instream)
-        : iarc(new iarchive(instream)), mine(true) {}
-
-    /**
-     * Constructs an iarchive_soft_fail object from an iarchive.
-     * Both will share the same input stream
-     */
-    inline iarchive_soft_fail(iarchive &iarc)
-        : iarc(&iarc), mine(false) {}
-
-    inline ~iarchive_soft_fail() {
-        if (mine) delete iarc;
-    }
+  inline ~iarchive_soft_fail()
+  {
+    if (mine) delete iarc;
+  }
 };
-
 
 namespace archive_detail {
 
 /// called by the regular archive The regular archive will do a hard fail
 template <typename InArcType, typename T>
 struct deserialize_hard_or_soft_fail {
-    inline static void exec(InArcType& iarc, T& t) {
-        t.load(iarc);
-    }
+  inline static void exec(InArcType& iarc, T& t) { t.load(iarc); }
 };
 
 /// called by the soft fail archive
 template <typename T>
 struct deserialize_hard_or_soft_fail<iarchive_soft_fail, T> {
-    inline static void exec(iarchive_soft_fail& iarc, T& t) {
-        load_or_fail(*(iarc.iarc), t);
-    }
+  inline static void exec(iarchive_soft_fail& iarc, T& t) { load_or_fail(*(iarc.iarc), t); }
 };
-
 
 /**
    Implementation of the deserializer for different types.  This is the
@@ -232,20 +229,19 @@ struct deserialize_hard_or_soft_fail<iarchive_soft_fail, T> {
 */
 template <typename InArcType, typename T, bool IsPOD, typename Enable = void>
 struct deserialize_impl {
-    inline static void exec(InArcType& iarc, T& t) {
-        deserialize_hard_or_soft_fail<InArcType, T>::exec(iarc, t);
-    }
+  inline static void exec(InArcType& iarc, T& t)
+  {
+    deserialize_hard_or_soft_fail<InArcType, T>::exec(iarc, t);
+  }
 };
 
 // catch if type is a POD
 template <typename InArcType, typename T>
 struct deserialize_impl<InArcType, T, true> {
-    inline static void exec(InArcType& iarc, T &t) {
-        iarc.read_into(t);
-    }
+  inline static void exec(InArcType& iarc, T& t) { iarc.read_into(t); }
 };
 
-} //namespace archive_detail
+}  // namespace archive_detail
 
 /// \cond TURI_INTERNAL
 
@@ -253,49 +249,40 @@ struct deserialize_impl<InArcType, T, true> {
    Allows Use of the "stream" syntax for serialization
 */
 template <typename T>
-inline iarchive& operator>>(iarchive& iarc, T &t) {
-    archive_detail::deserialize_impl<iarchive,
-                   T,
-                   gl_is_pod<T>::value >::exec(iarc, t);
-    return iarc;
+inline iarchive& operator>>(iarchive& iarc, T& t)
+{
+  archive_detail::deserialize_impl<iarchive, T, gl_is_pod<T>::value>::exec(iarc, t);
+  return iarc;
 }
-
-
 
 /**
    Allows Use of the "stream" syntax for serialization
 */
 template <typename T>
-inline iarchive_soft_fail& operator>>(iarchive_soft_fail& iarc, T &t) {
-    archive_detail::deserialize_impl<iarchive_soft_fail,
-                   T,
-                   gl_is_pod<T>::value >::exec(iarc, t);
-    return iarc;
+inline iarchive_soft_fail& operator>>(iarchive_soft_fail& iarc, T& t)
+{
+  archive_detail::deserialize_impl<iarchive_soft_fail, T, gl_is_pod<T>::value>::exec(iarc, t);
+  return iarc;
 }
-
 
 /**
    deserializes an arbitrary pointer + length from an archive
 */
-inline iarchive& deserialize(iarchive& iarc,
-                             void* str,
-                             const size_t length) {
-    iarc.read(reinterpret_cast<char*>(str), (std::streamsize)length);
-    assert(!iarc.fail());
-    return iarc;
+inline iarchive& deserialize(iarchive& iarc, void* str, const size_t length)
+{
+  iarc.read(reinterpret_cast<char*>(str), (std::streamsize)length);
+  assert(!iarc.fail());
+  return iarc;
 }
-
-
 
 /**
    deserializes an arbitrary pointer + length from an archive
 */
-inline iarchive_soft_fail& deserialize(iarchive_soft_fail& iarc,
-                                       void* str,
-                                       const size_t length) {
-    iarc.read(reinterpret_cast<char*>(str), (std::streamsize)length);
-    assert(!iarc.fail());
-    return iarc;
+inline iarchive_soft_fail& deserialize(iarchive_soft_fail& iarc, void* str, const size_t length)
+{
+  iarc.read(reinterpret_cast<char*>(str), (std::streamsize)length);
+  assert(!iarc.fail());
+  return iarc;
 }
 
 /// \endcond TURI_INTERNAL
@@ -313,19 +300,21 @@ inline iarchive_soft_fail& deserialize(iarchive_soft_fail& iarc,
 
    \note important! this must be defined in the global namespace!
 */
-#define BEGIN_OUT_OF_PLACE_LOAD(arc, tname, tval)       \
-  namespace turi{ namespace archive_detail {        \
-  template <typename InArcType>                           \
-  struct deserialize_impl<InArcType, tname, false>{       \
-  static void exec(InArcType& arc, tname & tval) {
+#define BEGIN_OUT_OF_PLACE_LOAD(arc, tname, tval)    \
+  namespace turi {                                   \
+  namespace archive_detail {                         \
+  template <typename InArcType>                      \
+  struct deserialize_impl<InArcType, tname, false> { \
+    static void exec(InArcType& arc, tname& tval)    \
+    {
+#define END_OUT_OF_PLACE_LOAD() \
+  }                             \
+  }                             \
+  ;                             \
+  }                             \
+  }
 
-#define END_OUT_OF_PLACE_LOAD() } }; } }
-
-
-
-
-} // namespace turi
-
+}  // namespace turi
 
 #endif
 
