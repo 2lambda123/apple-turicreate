@@ -20,7 +20,7 @@ message WordEmbedding {
     * iOS, tvOS 13.0+, macOS 10.15+
     */
     uint32 revision = 1;
-    
+
     /*
     * Stores the language of the model, as specified in BCP-47 format,
     * e.g. "en-US". See https://tools.ietf.org/html/bcp47
@@ -31,5 +31,5 @@ message WordEmbedding {
     * Stores efficient representation of emebedding as encoded by the Natural Language Framework
     */
     bytes modelParameterData = 100;
-    
+
 }

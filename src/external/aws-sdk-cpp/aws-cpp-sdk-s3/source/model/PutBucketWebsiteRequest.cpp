@@ -26,7 +26,7 @@ using namespace Aws::Utils::Xml;
 using namespace Aws::Utils;
 using namespace Aws::Http;
 
-PutBucketWebsiteRequest::PutBucketWebsiteRequest() : 
+PutBucketWebsiteRequest::PutBucketWebsiteRequest() :
     m_bucketHasBeenSet(false),
     m_contentMD5HasBeenSet(false),
     m_websiteConfigurationHasBeenSet(false),

@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega/v4.json",
     "width": 200,
     "height": 200,
-    
+
     "data": [
         {
             "name": "table",
@@ -10,7 +10,7 @@
             "transform": [{"type": "pie", "field": "data"}]
         }
     ],
-    
+
     "scales": [
         {
             "name": "r",
@@ -20,7 +20,7 @@
             "range": [20, 100]
         }
     ],
-    
+
     "marks": [
         {
             "type": "arc",
@@ -43,7 +43,7 @@
                 }
             }
         },
-        
+
         {
             "type": "text",
             "from": {"data": "table"},
@@ -62,4 +62,3 @@
         }
     ]
 }
-

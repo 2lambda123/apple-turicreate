@@ -225,7 +225,7 @@ data_iterator::batch simple_data_iterator::next_batch(size_t batch_size) {
      result.predictions = shared_float_array::wrap(std::move(batch_predictions),
                                                    {real_batch_size, 1});
   }
-  
+
 
   return result;
 }

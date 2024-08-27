@@ -81,4 +81,3 @@ int nn_fq_recv (struct nn_fq *self, struct nn_msg *msg, struct nn_pipe **pipe)
 
     return rc & ~NN_PIPE_RELEASE;
 }
-

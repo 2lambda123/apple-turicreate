@@ -426,4 +426,3 @@ class FieldOptions extends \Google\Protobuf\Internal\Message
     }
 
 }
-

@@ -156,7 +156,7 @@ check_and_set_compiler_flag(-ftracer RELEASE)
 if(TC_BUILD_METRICS)
   # TC_BUILD_METRICS enables -ftime-trace in supported compilers, which will
   # produce a timings json file for each compiled object.
-  
+
   check_and_set_compiler_flag(-ftime-trace)
 endif()
 

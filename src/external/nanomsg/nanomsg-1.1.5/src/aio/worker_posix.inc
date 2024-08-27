@@ -250,4 +250,3 @@ static void nn_worker_routine (void *arg)
         }
     }
 }
-

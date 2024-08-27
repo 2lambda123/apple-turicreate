@@ -47,4 +47,3 @@ typedef union nn_req_handle {
 #endif
 
 #endif
-

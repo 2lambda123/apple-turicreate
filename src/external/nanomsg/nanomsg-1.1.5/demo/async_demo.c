@@ -74,11 +74,11 @@ uint64_t milliseconds (void)
     gettimeofday (&tv, NULL);
     return (((uint64_t)tv.tv_sec * 1000) + ((uint64_t)tv.tv_usec / 1000));
 }
-    
+
 /*  The server runs forever. */
 int server(const char *url)
 {
-    int fd; 
+    int fd;
     struct work *worklist = NULL;
     int npending = 0;
 
@@ -239,7 +239,7 @@ int client (const char *url, const char *msecstr)
     if (nn_connect (fd, url) < 0) {
         fprintf (stderr, "nn_socket: %s\n", nn_strerror (nn_errno ()));
         nn_close (fd);
-        return (-1);        
+        return (-1);
     }
 
     msec = htonl(msec);

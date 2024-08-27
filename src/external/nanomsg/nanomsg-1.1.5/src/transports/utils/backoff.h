@@ -49,4 +49,3 @@ void nn_backoff_stop (struct nn_backoff *self);
 void nn_backoff_reset (struct nn_backoff *self);
 
 #endif
-

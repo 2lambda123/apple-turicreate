@@ -54,7 +54,7 @@ Copyright Notice
 
 
 Sustrik                 Expires December 7, 2014                [Page 1]
-
+
 Internet-Draft           List of SP protocol IDs               June 2014
 
 
@@ -112,7 +112,7 @@ Internet-Draft           List of SP protocol IDs               June 2014
 
 
 Sustrik                 Expires December 7, 2014                [Page 2]
-
+
 Internet-Draft           List of SP protocol IDs               June 2014
 
 
@@ -168,4 +168,3 @@ Author's Address
 
 
 Sustrik                 Expires December 7, 2014                [Page 3]
-

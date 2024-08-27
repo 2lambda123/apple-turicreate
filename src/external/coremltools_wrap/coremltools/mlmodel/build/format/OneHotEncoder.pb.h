@@ -408,7 +408,7 @@ inline bool OneHotEncoder::outputsparse() const {
   return outputsparse_;
 }
 inline void OneHotEncoder::set_outputsparse(bool value) {
-  
+
   outputsparse_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.OneHotEncoder.outputSparse)
 }
@@ -422,7 +422,7 @@ inline ::CoreML::Specification::OneHotEncoder_HandleUnknown OneHotEncoder::handl
   return static_cast< ::CoreML::Specification::OneHotEncoder_HandleUnknown >(handleunknown_);
 }
 inline void OneHotEncoder::set_handleunknown(::CoreML::Specification::OneHotEncoder_HandleUnknown value) {
-  
+
   handleunknown_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.OneHotEncoder.handleUnknown)
 }

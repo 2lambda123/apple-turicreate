@@ -97,7 +97,7 @@ struct nn_worker *nn_fsm_choose_worker (struct nn_fsm *self);
 void nn_fsm_action (struct nn_fsm *self, int type);
 
 /*  Send event from the state machine to its owner. */
-void nn_fsm_raise_from_src (struct nn_fsm *self, struct nn_fsm_event *event, 
+void nn_fsm_raise_from_src (struct nn_fsm *self, struct nn_fsm_event *event,
     int src, int type);
 
 /*  Send event from the state machine to its owner. */
@@ -118,4 +118,3 @@ void nn_fsm_raiseto (struct nn_fsm *self, struct nn_fsm *dst,
 void nn_fsm_feed (struct nn_fsm *self, int src, int type, void *srcptr);
 
 #endif
-

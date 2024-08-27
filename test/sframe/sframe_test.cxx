@@ -401,8 +401,8 @@ struct sframe_test  {
       TS_ASSERT_EQUALS(sf2->num_rows(), exp_num_rows);
       TS_ASSERT_EQUALS(sf2->num_columns(), exp_num_cols);
 
-      // 3rd cikynb 
-      TS_ASSERT_DIFFERS(parse_v2_segment_filename(sf2->get_index_info().column_files[2]).first, 
+      // 3rd cikynb
+      TS_ASSERT_DIFFERS(parse_v2_segment_filename(sf2->get_index_info().column_files[2]).first,
                        parse_v2_segment_filename(bsf.get_index_info().column_files[1]).first);
 
       std::vector<std::vector<flexible_type> > new_frame;
@@ -1332,7 +1332,7 @@ struct sframe_test  {
        group_results[0][key] += i;
        group_results[1][key] += (double)i / 2.0;
        group_results[2][key] += i + 1;
-       group_results[3][key] += flex[5]; 
+       group_results[3][key] += flex[5];
      }
      input.close();
      std::cout << "Starting groupby: " << std::endl;
@@ -1467,7 +1467,7 @@ struct sframe_test  {
      TS_ASSERT_EQUALS(output.column_type(4), flex_type_enum::FLOAT);
      TS_ASSERT_EQUALS(output.column_type(5), flex_type_enum::FLOAT);
      TS_ASSERT_EQUALS(output.column_type(6), flex_type_enum::VECTOR);
-     
+
      std::vector<std::vector<flexible_type> > ret;
      int rows_read = output.get_reader()->read_rows(0, output.num_rows(), ret);
      TS_ASSERT_EQUALS(rows_read, NUM_GROUPS);
@@ -1508,7 +1508,7 @@ struct sframe_test  {
      //very very small buffer
      run_groupby_aggregate_sum_test(100000, 100000, 2);
      run_groupby_aggregate_average_test(100000, 100000, 2);
-   
+
    }
 
    void test_sframe_multikey_groupby_aggregate() {
@@ -1527,7 +1527,7 @@ struct sframe_test  {
      //very very small buffer
      run_multikey_groupby_aggregate_sum_test(100000, 100000, 2);
      run_multikey_groupby_aggregate_average_test(100000, 100000, 2);
-  
+
    }
 
    void test_sframe_groupby_aggregate_negative_tests() {
@@ -1778,7 +1778,7 @@ struct sframe_test  {
                              {1,0});
      flex_nd_vec d4({0,2,4,1,3,5},
                      {3,1,1,2},
-                     {1,0,0,3}); 
+                     {1,0,0,3});
 
      std::vector<flexible_type> values{fortran,c,subarray,subarray2,zero_stride,d4};
      std::string fname = get_temp_name() + ".sidx";

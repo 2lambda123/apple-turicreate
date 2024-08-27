@@ -3,7 +3,7 @@
     "width": 400,
     "height": 200,
     "padding": 5,
-    
+
     "data": [
         {
             "name": "table",
@@ -19,7 +19,7 @@
             ]
         }
     ],
-    
+
     "signals": [
         {
             "name": "tooltip",
@@ -30,7 +30,7 @@
             ]
         }
     ],
-    
+
     "scales": [
         {
             "name": "xscale",
@@ -47,12 +47,12 @@
             "range": "height"
         }
     ],
-    
+
     "axes": [
         { "orient": "bottom", "scale": "xscale" },
         { "orient": "left", "scale": "yscale" }
     ],
-    
+
     "marks": [
         {
             "type": "rect",

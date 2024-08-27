@@ -34,9 +34,9 @@
     double y0 = [(NSNumber*) values[@"y1"] doubleValue];
     double x1 = [(NSNumber*) values[@"x2"] doubleValue];
     double y1 = [(NSNumber*) values[@"y2"] doubleValue];
-    
+
     self = [self initWithX0:x0 y0:y0 x1:x1 y1:y1];
-    
+
     for(NSDictionary* stop in values[@"stops"]) {
         double offset = [(NSNumber*) stop[@"offset"] doubleValue];
         [self addColorStopWithOffset:offset color:stop[@"color"]];
@@ -199,13 +199,13 @@
     // instance properties so they are in the right state.
     assert(self != nil);
     _currentTransform = CGAffineTransformIdentity;
-    
+
     const size_t BITS_PER_COMPONENT = 8;
     const size_t BYTES_PER_ROW = 0; // setting to zero results in automatic calculation
     CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
-    
+
     _bitmapContext = CGBitmapContextCreate(nil, (size_t)width, (size_t)height, BITS_PER_COMPONENT, BYTES_PER_ROW, colorspace, kCGImageAlphaPremultipliedLast);
-    
+
     CGColorSpaceRelease(colorspace);
 #if TARGET_OS_OSX
     CGContextConcatCTM(self.context, [self.class flipYAxisWithHeight:height]);
@@ -665,7 +665,7 @@
     CGAffineTransform flipYAxis = [self.class flipYAxisWithHeight:self.height];
     CGContextConcatCTM(self.context, CGAffineTransformInvert(flipYAxis));
 #endif
-    
+
     // Reapply the transformations, but only on the coordinates,
     // so we don't flip the text upside down
 #if TARGET_OS_OSX
@@ -677,7 +677,7 @@
     CTLineRef line = CTLineCreateWithAttributedString((__bridge CFAttributedStringRef)attrStr);
     assert(line != nil);
     double width = attrStr.size.width;
-    
+
     if ([_textAlign isEqualToString:@"right"]) {
         coords.x -= width;
     } else if ([_textAlign isEqualToString:@"center"]) {
@@ -686,13 +686,13 @@
         // TODO implement other alignments
         assert(_textAlign == nil || [_textAlign isEqualToString:@"left"]);
     }
-    
+
     CGContextSetTextPosition(self.context, coords.x, coords.y);
     CGContextSetTextDrawingMode(self.context, mode);
-    
+
     CTLineDraw(line, self.context);
     CGContextRestoreGState(self.context);
-    
+
     CFRelease(line);
 }
 

@@ -82,8 +82,8 @@ EXPORT tc_sarray* tc_sarray_create_from_list(
 }
 
 
-EXPORT tc_sarray* tc_sarray_load(const char* url, tc_error** error) { 
-  
+EXPORT tc_sarray* tc_sarray_load(const char* url, tc_error** error) {
+
   ERROR_HANDLE_START();
   turi::ensure_server_initialized();
 
@@ -97,25 +97,25 @@ EXPORT void tc_sarray_save(const tc_sarray* sa, const char* url, tc_error** erro
 
   ERROR_HANDLE_START();
   turi::ensure_server_initialized();
-  
+
   CHECK_NOT_NULL(error, sa, "sarray");
 
-  sa->value.save(url, "binary"); 
+  sa->value.save(url, "binary");
 
   ERROR_HANDLE_END(error);
-} 
+}
 
 EXPORT void tc_sarray_save_as_text(const tc_sarray* sa, const char* url, tc_error** error) {
 
   ERROR_HANDLE_START();
   turi::ensure_server_initialized();
-  
+
   CHECK_NOT_NULL(error, sa, "sarray");
 
-  sa->value.save(url, "text"); 
+  sa->value.save(url, "text");
 
   ERROR_HANDLE_END(error);
-} 
+}
 
 
 EXPORT tc_flexible_type* tc_sarray_extract_element(

@@ -324,7 +324,7 @@ $ test_ss:
 $	write sys$output "Generate and certify a test certificate"
 $	@testss.com 'pointer_size'
 $	return
-$ test_engine: 
+$ test_engine:
 $	write sys$output "Manipulate the ENGINE structures"
 $	mcr 'texe_dir''enginetest'
 $	return
@@ -347,7 +347,7 @@ $	    write sys$output "Generate and certify a test certificate via the 'ca' pro
 $	    @testca.com 'pointer_size'
 $	endif
 $	return
-$ test_aes: 
+$ test_aes:
 $!	write sys$output "test AES"
 $!	!mcr 'texe_dir''aestest'
 $	return
@@ -364,11 +364,11 @@ $	else
 $	    @testtsa.com "" "" "" 'pointer_size'
 $	endif
 $	return
-$ test_ige: 
+$ test_ige:
 $	write sys$output "Test IGE mode"
 $	mcr 'texe_dir''igetest'
 $	return
-$ test_jpake: 
+$ test_jpake:
 $	write sys$output "Test JPAKE"
 $	mcr 'texe_dir''jpaketest'
 $	return
@@ -378,7 +378,7 @@ $	! Define the logical name used to find openssl.exe in the perl script.
 $	define /user_mode osslx 'exe_dir'
 $	perl CMS-TEST.PL
 $	return
-$ test_srp: 
+$ test_srp:
 $	write sys$output "Test SRP"
 $	mcr 'texe_dir''srptest'
 $	return
@@ -433,7 +433,7 @@ $
 $ exit:
 $	on error then goto exit2 ! In case openssl.exe didn't build.
 $	mcr 'exe_dir'openssl version -a
-$ exit2: 
+$ exit2:
 $	set default '__save_default'
 $	deassign sslroot
 $	exit

@@ -29,4 +29,3 @@ int nn_xpush_create (void *hint, struct nn_sockbase **sockbase);
 int nn_xpush_ispeer (int socktype);
 
 #endif
-

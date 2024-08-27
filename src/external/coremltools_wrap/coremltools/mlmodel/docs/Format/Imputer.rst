@@ -27,7 +27,7 @@ value in ``imputedDoubleArray``.
 	        StringToDoubleMap imputedStringDictionary = 6;
 	        Int64ToDoubleMap imputedInt64Dictionary = 7;
 	    }
-	
+
 	    oneof ReplaceValue {
 	        double replaceDoubleValue = 11;
 	        int64 replaceInt64Value = 12;

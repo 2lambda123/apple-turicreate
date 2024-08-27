@@ -95,7 +95,7 @@ for i in 0..<frameLength {
     audioData[audioDataIndex] = NSNumber.init(value: bufferData[0][i])
     if audioDataIndex >= windowSize {
         let modelInput = my_sound_classifierInput(audio: audioData)
-        
+
         guard let modelOutput = try? model.prediction(input: modelInput) else {
             fatalError("Error calling predict")
         }
@@ -112,7 +112,7 @@ if audioDataIndex > 0 {
         audioData[audioDataIndex] = 0
     }
     let modelInput = my_sound_classifierInput(audio: audioData)
-    
+
     guard let modelOutput = try? model.prediction(input: modelInput) else {
         fatalError("Error calling predict")
     }

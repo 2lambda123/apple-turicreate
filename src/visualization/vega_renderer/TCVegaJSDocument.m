@@ -6,7 +6,7 @@
 
 #import "TCVegaJSDocument.h"
 
-@implementation TCVegaJSDocument 
+@implementation TCVegaJSDocument
 
 @synthesize body;
 @synthesize canvas;

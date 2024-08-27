@@ -111,4 +111,3 @@ class ServiceDescriptorProto extends \Google\Protobuf\Internal\Message
     }
 
 }
-

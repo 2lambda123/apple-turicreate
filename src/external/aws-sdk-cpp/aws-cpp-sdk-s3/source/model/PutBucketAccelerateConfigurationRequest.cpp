@@ -26,7 +26,7 @@ using namespace Aws::Utils::Xml;
 using namespace Aws::Utils;
 using namespace Aws::Http;
 
-PutBucketAccelerateConfigurationRequest::PutBucketAccelerateConfigurationRequest() : 
+PutBucketAccelerateConfigurationRequest::PutBucketAccelerateConfigurationRequest() :
     m_bucketHasBeenSet(false),
     m_accelerateConfigurationHasBeenSet(false),
     m_customizedAccessLogTagHasBeenSet(false)
@@ -70,4 +70,3 @@ void PutBucketAccelerateConfigurationRequest::AddQueryStringParameters(URI& uri)
         }
     }
 }
-

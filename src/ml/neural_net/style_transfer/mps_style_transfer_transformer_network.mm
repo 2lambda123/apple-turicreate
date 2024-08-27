@@ -42,7 +42,7 @@
                          descriptor:(TCMPSTransformerDescriptor *)descriptor
                         initWeights:(NSDictionary<NSString *, NSData *> *) weights {
   self = [super init];
-  
+
   if (self) {
     _encoding1 = [[TCMPSStyleTransferEncodingNode alloc] initWithParameters:@"transformer_encode_1_"
                                                                   inputNode:inputNode
@@ -50,7 +50,7 @@
                                                                    cmdQueue:cmdQ
                                                                  descriptor:descriptor.encode1
                                                                 initWeights:weights];
-    
+
     _encoding2 = [[TCMPSStyleTransferEncodingNode alloc] initWithParameters:@"transformer_encode_2_"
                                                                   inputNode:[_encoding1 output]
                                                                      device:dev
@@ -166,7 +166,7 @@
   MPSNNImageNode* encoding3Grad = [_encoding3 backwardPass:residual1Img];
   MPSNNImageNode* encoding2Grad = [_encoding2 backwardPass:encoding3Grad];
   MPSNNImageNode* encoding1Grad = [_encoding1 backwardPass:encoding2Grad];
-  
+
   return encoding1Grad;
 }
 
@@ -214,7 +214,7 @@
   NSString* encoding3Prefix = [NSString stringWithFormat:@"%@%@", prefix, @"encode_3_"];
   NSDictionary<NSString *, TCMPSStyleTransferWeights *> * encode3Weights = [_encoding3 exportWeights:encoding3Prefix];
   [weights addEntriesFromDictionary: encode3Weights];
-  
+
   NSString* residual1Prefix = [NSString stringWithFormat:@"%@%@", prefix, @"residual_1_"];
   NSDictionary<NSString *, TCMPSStyleTransferWeights *> * residual1Weights = [_residual1 exportWeights:residual1Prefix];
   [weights addEntriesFromDictionary: residual1Weights];
@@ -226,7 +226,7 @@
   NSString* residual3Prefix = [NSString stringWithFormat:@"%@%@", prefix, @"residual_3_"];
   NSDictionary<NSString *, TCMPSStyleTransferWeights *> * residual3Weights = [_residual3 exportWeights:residual3Prefix];
   [weights addEntriesFromDictionary: residual3Weights];
-  
+
   NSString* residual4Prefix = [NSString stringWithFormat:@"%@%@", prefix, @"residual_4_"];
   NSDictionary<NSString *, TCMPSStyleTransferWeights *> * residual4Weights = [_residual4 exportWeights:residual4Prefix];
   [weights addEntriesFromDictionary: residual4Weights];
@@ -245,7 +245,7 @@
 
   NSUInteger convWeightSize = (NSUInteger)([_conv.tc_weightsData weightSize] * sizeof(float));
   NSMutableData* convDataWeight = [NSMutableData dataWithLength:convWeightSize];
-  
+
   memcpy(convDataWeight.mutableBytes, [_conv.tc_weightsData weights], convWeightSize);
   NSString* conv5Weight = [NSString stringWithFormat:@"%@%@", prefix, @"conv5_weight"];
 

@@ -123,4 +123,3 @@ CURLcode Curl_auth_create_xoauth_bearer_message(struct Curl_easy *data,
   return result;
 }
 #endif /* disabled, no users */
-

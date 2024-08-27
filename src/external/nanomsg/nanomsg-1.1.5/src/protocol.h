@@ -190,4 +190,3 @@ struct nn_socktype {
 };
 
 #endif
-

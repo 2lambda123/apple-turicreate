@@ -26,7 +26,7 @@ using namespace Aws::Utils::Xml;
 using namespace Aws::Utils;
 using namespace Aws::Http;
 
-ListObjectsRequest::ListObjectsRequest() : 
+ListObjectsRequest::ListObjectsRequest() :
     m_bucketHasBeenSet(false),
     m_delimiterHasBeenSet(false),
     m_encodingType(EncodingType::NOT_SET),

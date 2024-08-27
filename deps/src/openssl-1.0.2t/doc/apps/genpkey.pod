@@ -30,7 +30,7 @@ The B<genpkey> command generates a private key.
 =item B<-out filename>
 
 the output filename. If this argument is not specified then standard output is
-used.  
+used.
 
 =item B<-outform DER|PEM>
 
@@ -246,7 +246,7 @@ can be used.
 
 Generate an RSA private key using default parameters:
 
- openssl genpkey -algorithm RSA -out key.pem 
+ openssl genpkey -algorithm RSA -out key.pem
 
 Encrypt output private key using 128 bit AES and the passphrase "hello":
 
@@ -264,7 +264,7 @@ Generate 2048 bit DSA parameters:
 
 Generate DSA key from parameters:
 
- openssl genpkey -paramfile dsap.pem -out dsakey.pem 
+ openssl genpkey -paramfile dsap.pem -out dsakey.pem
 
 Generate 2048 bit DH parameters:
 
@@ -283,7 +283,7 @@ Output RFC5114 2048 bit DH parameters with 224 bit subgroup:
 
 Generate DH key from parameters:
 
- openssl genpkey -paramfile dhp.pem -out dhkey.pem 
+ openssl genpkey -paramfile dhp.pem -out dhkey.pem
 
 Generate EC key directly:
 
@@ -297,4 +297,3 @@ The ability to use NIST curve names, and to generate an EC key directly,
 were added in OpenSSL 1.0.2.
 
 =cut
-

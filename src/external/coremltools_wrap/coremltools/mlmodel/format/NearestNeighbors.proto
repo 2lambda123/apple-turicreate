@@ -44,7 +44,7 @@ message KNearestNeighborsClassifier {
     }
 
     /**
-     * Weighting scheme to be used when computing the majority label of a 
+     * Weighting scheme to be used when computing the majority label of a
      * new data point.
      */
     oneof WeightingScheme {
@@ -58,7 +58,7 @@ message KNearestNeighborsClassifier {
  */
 message NearestNeighborsIndex {
 
-    /** 
+    /**
      * Number of dimensions of the input data.
      */
     int32 numberOfDimensions = 1;
@@ -69,8 +69,8 @@ message NearestNeighborsIndex {
      */
     repeated FloatVector floatSamples = 2;
 
-    /** 
-     * Backing data structure for the Nearest Neighbors Index. Currently supports 
+    /**
+     * Backing data structure for the Nearest Neighbors Index. Currently supports
      * a linear index or a kd-tree index.
      */
     oneof IndexType {
@@ -78,7 +78,7 @@ message NearestNeighborsIndex {
         SingleKdTreeIndex singleKdTreeIndex = 110;
     }
 
-    /** 
+    /**
      * Distance function to be used to find neighbors. Currently only Squared Euclidean
      * Distance is supported.
      */
@@ -129,4 +129,3 @@ message SingleKdTreeIndex {
  */
 message SquaredEuclideanDistance {
 }
-

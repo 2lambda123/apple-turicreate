@@ -29,7 +29,7 @@ Tree ensemble parameters.
 	    message TreeNode {
 	        uint64 treeId = 1;
 	        uint64 nodeId = 2;
-	
+
 	        enum TreeNodeBehavior {
 	            BranchOnValueLessThanEqual = 0;
 	            BranchOnValueLessThan = 1;
@@ -39,29 +39,29 @@ Tree ensemble parameters.
 	            BranchOnValueNotEqual = 5;
 	            LeafNode = 6;
 	        }
-	
+
 	        TreeNodeBehavior nodeBehavior = 3;
-	
+
 	        uint64 branchFeatureIndex = 10;
 	        double branchFeatureValue = 11;
 	        uint64 trueChildNodeId = 12;
 	        uint64 falseChildNodeId = 13;
 	        bool missingValueTracksTrueChild = 14;
-	
+
 	        message EvaluationInfo {
 	           uint64 evaluationIndex = 1;
 	           double evaluationValue = 2;
 	        }
-	
+
 	        repeated EvaluationInfo evaluationInfo = 20;
-	
+
 	        double relativeHitRate = 30;
 	    }
-	
+
 	    repeated TreeNode nodes = 1;
-	
+
 	    uint64 numPredictionDimensions = 2;
-	
+
 	    repeated double basePredictionValue = 3;
 	}
 
@@ -81,7 +81,7 @@ TreeEnsembleParameters.TreeNode
 	    message TreeNode {
 	        uint64 treeId = 1;
 	        uint64 nodeId = 2;
-	
+
 	        enum TreeNodeBehavior {
 	            BranchOnValueLessThanEqual = 0;
 	            BranchOnValueLessThan = 1;
@@ -91,22 +91,22 @@ TreeEnsembleParameters.TreeNode
 	            BranchOnValueNotEqual = 5;
 	            LeafNode = 6;
 	        }
-	
+
 	        TreeNodeBehavior nodeBehavior = 3;
-	
+
 	        uint64 branchFeatureIndex = 10;
 	        double branchFeatureValue = 11;
 	        uint64 trueChildNodeId = 12;
 	        uint64 falseChildNodeId = 13;
 	        bool missingValueTracksTrueChild = 14;
-	
+
 	        message EvaluationInfo {
 	           uint64 evaluationIndex = 1;
 	           double evaluationValue = 2;
 	        }
-	
+
 	        repeated EvaluationInfo evaluationInfo = 20;
-	
+
 	        double relativeHitRate = 30;
 	    }
 
@@ -155,7 +155,7 @@ A tree ensemble classifier.
 	message TreeEnsembleClassifier {
 	    TreeEnsembleParameters treeEnsemble = 1;
 	    TreeEnsemblePostEvaluationTransform postEvaluationTransform = 2;
-	
+
 	    // Required class label mapping
 	    oneof ClassLabels {
 	        StringVector stringClassLabels = 100;

@@ -85,7 +85,7 @@ public:
 
         while(invalidEntry && !m_lastError)
         {
-            //due to the way the FindFirstFile api works, 
+            //due to the way the FindFirstFile api works,
             //the first entry will already be loaded by the time we get here.
             entry = ParseFileInfo(m_ffd, true);
 
@@ -106,9 +106,9 @@ public:
                 m_lastError = GetLastError();
                 AWS_LOGSTREAM_ERROR(FILE_SYSTEM_UTILS_LOG_TAG, "Could not fetch next entry from " << m_directoryEntry.path << " with error code " << m_lastError);
                 break;
-            }            
+            }
         }
-       
+
         return entry;
     }
 
@@ -160,17 +160,17 @@ Aws::String GetHomeDirectory()
     {
         AWS_LOGSTREAM_WARN(FILE_SYSTEM_UTILS_LOG_TAG, "Home dir not stored in environment, trying to fetch manually from the OS.");
         HANDLE hToken;
-    
+
         if (OpenProcessToken(GetCurrentProcess(), TOKEN_READ, &hToken))
         {
             DWORD len = MAX_PATH;
             WCHAR path[MAX_PATH];
             if (GetUserProfileDirectoryW(hToken, path, &len))
-            {                
+            {
                 homeDir = Aws::Utils::StringUtils::FromWString(path);
             }
             CloseHandle(hToken);
-        }        
+        }
 
         AWS_LOGSTREAM_INFO(FILE_SYSTEM_UTILS_LOG_TAG, "Pulled " << homeDir << " as home directory from the OS.");
     }
@@ -184,7 +184,7 @@ Aws::String GetHomeDirectory()
             retVal += Aws::FileSystem::PATH_DELIM;
         }
     }
-    
+
     return retVal;
 }
 
@@ -222,7 +222,7 @@ bool CreateDirectoryIfNotExists(const char* path, bool createParentDirs)
         if (i != 0 && (directoryName[i] == FileSystem::PATH_DELIM || i == directoryName.size() - 1))
         {
             // the last delimeter can be removed safely.
-            if (directoryName[i] == FileSystem::PATH_DELIM) 
+            if (directoryName[i] == FileSystem::PATH_DELIM)
             {
                 directoryName[i] = '\0';
             }

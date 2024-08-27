@@ -37,7 +37,7 @@ func processQuery(for request: VNRequest, error: Error?, k: Int = 5) {
 
         let queryResults = results as! [VNCoreMLFeatureValueObservation]
         let distances = queryResults.first!.featureValue.multiArrayValue!
-        
+
         // Create an array of distances to sort
         let numReferenceImages = distances.shape[0].intValue
         var distanceArray = [Double]()

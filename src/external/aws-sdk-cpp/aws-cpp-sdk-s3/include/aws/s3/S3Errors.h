@@ -52,7 +52,7 @@ enum class S3Errors
   INVALID_ACCESS_KEY_ID = 23,
   REQUEST_TIMEOUT = 24,
   NETWORK_CONNECTION = 99,
-  
+
   UNKNOWN = 100,
   ///////////////////////////////////////////////////////////////////////////////////////////
 

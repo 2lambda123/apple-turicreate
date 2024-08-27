@@ -30,7 +30,7 @@ namespace S3
 namespace Model
 {
 
-Part::Part() : 
+Part::Part() :
     m_partNumber(0),
     m_partNumberHasBeenSet(false),
     m_lastModifiedHasBeenSet(false),
@@ -40,7 +40,7 @@ Part::Part() :
 {
 }
 
-Part::Part(const XmlNode& xmlNode) : 
+Part::Part(const XmlNode& xmlNode) :
     m_partNumber(0),
     m_partNumberHasBeenSet(false),
     m_lastModifiedHasBeenSet(false),

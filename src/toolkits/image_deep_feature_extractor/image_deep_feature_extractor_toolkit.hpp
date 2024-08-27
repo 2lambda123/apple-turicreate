@@ -17,7 +17,7 @@
 namespace turi {
 namespace image_deep_feature_extractor {
 
-  
+
 class EXPORT image_deep_feature_extractor_toolkit : public ml_model_base {
 public:
 
@@ -41,7 +41,7 @@ public:
   BEGIN_CLASS_MEMBER_REGISTRATION("image_deep_feature_extractor")
 
   REGISTER_CLASS_MEMBER_FUNCTION(image_deep_feature_extractor_toolkit::init_options, "options");
-    
+
   REGISTER_CLASS_MEMBER_FUNCTION(image_deep_feature_extractor_toolkit::extract_features, "data", "column_name", "verbose", "batch_size");
   REGISTER_CLASS_MEMBER_FUNCTION(image_deep_feature_extractor_toolkit::sarray_extract_features, "data", "verbose", "batch_size");
 

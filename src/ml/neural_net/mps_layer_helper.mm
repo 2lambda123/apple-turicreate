@@ -35,7 +35,7 @@ static char kWeightsKey;
                                       updateWeights:(BOOL)updateWeights
                                              device:(id<MTLDevice>)dev
                                            cmdQueue:(id<MTLCommandQueue>)cmdQ {
-  
+
   turi::neural_net::OptimizerOptions optimizerOptions;
 
   TCMPSConvolutionWeights *fullyConnectedDataLoad =
@@ -55,13 +55,13 @@ static char kWeightsKey;
                                          init_weight_ptr:(float *)weights.bytes
                                            init_bias_ptr:(float *)biases.bytes
                                         optimizerOptions:optimizerOptions];
-        
-  MPSCNNFullyConnectedNode* fullyConnectedNode = 
+
+  MPSCNNFullyConnectedNode* fullyConnectedNode =
     [MPSCNNFullyConnectedNode nodeWithSource:inputNode
                                      weights:fullyConnectedDataLoad];
 
   fullyConnectedNode.tc_weightsData = fullyConnectedDataLoad;
-  
+
   return fullyConnectedNode;
 }
 @end
@@ -92,7 +92,7 @@ static char kWeightsKey;
                                   updateWeights:(BOOL)updateWeights
                                          device:(id<MTLDevice>)dev
                                        cmdQueue:(id<MTLCommandQueue>)cmdQ {
-  
+
   turi::neural_net::OptimizerOptions optimizerOptions;
 
   TCMPSConvolutionWeights *convDataLoad =
@@ -117,7 +117,7 @@ static char kWeightsKey;
     [MPSCNNConvolutionNode nodeWithSource:inputNode
                                   weights:convDataLoad];
 
-  TCMPSConvolutionPadding* padding = 
+  TCMPSConvolutionPadding* padding =
     [[TCMPSConvolutionPadding alloc] initWithParams:paddingWidth
                                       paddingHeight:paddingHeight
                                         strideWidth:strideWidth
@@ -126,7 +126,7 @@ static char kWeightsKey;
   convNode.paddingPolicy = padding;
 
   convNode.tc_weightsData = convDataLoad;
-  
+
   return convNode;
 }
 @end
@@ -158,7 +158,7 @@ static char kWeightsKey;
                                                                                                styles:styles
                                                                                                device:dev
                                                                                             cmd_queue:cmdQ];
-                                      
+
   MPSCNNInstanceNormalizationNode *instNormNode =  [MPSCNNInstanceNormalizationNode nodeWithSource:inputNode
                                                                                         dataSource:instNormDataLoad];
 

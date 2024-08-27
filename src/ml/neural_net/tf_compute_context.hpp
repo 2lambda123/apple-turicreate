@@ -50,7 +50,7 @@ public:
 
   std::unique_ptr<image_augmenter> create_image_augmenter(
       const image_augmenter::options &opts) override;
-  
+
 };
 
 }  // namespace neural_net

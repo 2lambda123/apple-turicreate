@@ -26,7 +26,7 @@ using namespace Aws::Utils::Xml;
 using namespace Aws::Utils;
 using namespace Aws::Http;
 
-DeleteObjectsRequest::DeleteObjectsRequest() : 
+DeleteObjectsRequest::DeleteObjectsRequest() :
     m_bucketHasBeenSet(false),
     m_deleteHasBeenSet(false),
     m_mFAHasBeenSet(false),

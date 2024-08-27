@@ -74,9 +74,9 @@ class ODTensorFlowModel(TensorFlowModel):
             self.init_object_detector_graph(input_h, input_w, init_weights)
 
     def init_object_detector_graph(self, input_h, input_w, init_weights):
-      
+
         _tf = _lazy_import_tensorflow()
-        
+
         def ClipIfNotNone(grad, clip_value):
             """
             Function to check if grad value is None. If not, continue with clipping.

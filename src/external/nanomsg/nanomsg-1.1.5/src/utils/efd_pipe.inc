@@ -124,4 +124,3 @@ void nn_efd_unsignal (struct nn_efd *self)
             break;
     }
 }
-

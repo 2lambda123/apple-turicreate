@@ -39,7 +39,7 @@ Now, you can stylize your images using:
 
 // Assumes that you have a `ciImage` variable
 
-// initialize model 
+// initialize model
 let model = MyStyleTransferModel()
 
 // set input size of the model

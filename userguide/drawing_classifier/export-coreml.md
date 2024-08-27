@@ -27,7 +27,7 @@ time.
 At inference time, if you have access to a bitmap and/or image that represents
 the drawing you want to classify, you can use the Vision framework to consume
 the exported Core ML model. Note that the image you provide to the Vision API
-must be a Grayscale Image. 
+must be a Grayscale Image.
 
 ```swift
 let model = try VNCoreMLModel(for: MySquareTriangleClassifier().model)
@@ -51,12 +51,12 @@ func processClassifications(for request: VNRequest, error: error) {
 ```
 #### Using Stroke-Based Drawing Input
 
-On the other hand, if you have access to raw stroke-based drawing data at 
+On the other hand, if you have access to raw stroke-based drawing data at
 inference time, you will first have to convert it to a Grayscale Bitmap and then
-use the Vision framework so the Core ML model can consume images at inference 
+use the Vision framework so the Core ML model can consume images at inference
 time.
 
-First, convert your stroke-based drawing into a member of the following Drawing 
+First, convert your stroke-based drawing into a member of the following Drawing
 class using the methods that the following Drawing class exposes.
 
 ```swift
@@ -70,7 +70,7 @@ class Drawing {
     var min_y: CGFloat
     var max_x: CGFloat
     var max_y: CGFloat
-    
+
     init() {
         drawing = NSMutableArray()
         stroke = NSMutableArray()
@@ -79,26 +79,26 @@ class Drawing {
         min_y = CGFloat.greatestFiniteMagnitude
         max_y = 0.0
     }
-    
+
     func pointCount(stroke i:Int) -> Int {
         let corresponding_stroke = drawing.object(at:i) as! NSArray
         return corresponding_stroke.count
     }
-    
+
     func strokeCount() -> Int {
         return drawing.count
     }
-    
+
     func point(stroke i:Int, point j:Int) -> CGPoint {
         let corresponding_stroke = drawing.object(at:i) as! NSArray
         let answer = corresponding_stroke.object(at:j) as! CGPoint
         return answer
     }
-    
+
     func stroke(index i:Int) -> NSMutableArray {
         return drawing.object(at: i) as! NSMutableArray
     }
-    
+
     func add(point P:CGPoint) {
         let x = P.x
         let y = P.y
@@ -108,7 +108,7 @@ class Drawing {
         max_y = max(y, max_y)
         stroke.add(P)
     }
-    
+
     func endStroke() {
         let new_stroke = NSMutableArray()
         new_stroke.addObjects(from: stroke as! [Any])
@@ -149,11 +149,11 @@ for stroke in example_drawing {
 
 Each drawing is a set of strokes and each stroke is a set of points. Here, example_drawing is a drawing with two strokes and each stroke with different number of points. The drawing data can also be collected as streaming points using touch events, mouse events etc using the Drawing class.
 
-Once your stroke-based drawing is a member of the above Drawing class, call the 
-`rasterize` function on it to build a 28x28 grayscale bitmap. 
- 
+Once your stroke-based drawing is a member of the above Drawing class, call the
+`rasterize` function on it to build a 28x28 grayscale bitmap.
 
-The code snippet containing `rasterize` and its helper, 
+
+The code snippet containing `rasterize` and its helper,
 `normalize` are provided below.
 
 
@@ -185,7 +185,7 @@ func rasterize(drawing stroke_based_drawing:Drawing) -> CGImage {
     let D = normalize(drawing: stroke_based_drawing)
     let grayscale = CGColorSpaceCreateDeviceGray()
     let intermediate_bitmap_context = CGContext(
-        data:nil, width:256, height:256, bitsPerComponent:8, bytesPerRow:0, 
+        data:nil, width:256, height:256, bitsPerComponent:8, bytesPerRow:0,
         space:grayscale, bitmapInfo:CGImageAlphaInfo.none.rawValue)
     intermediate_bitmap_context?.setStrokeColor(
         red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
@@ -204,9 +204,9 @@ func rasterize(drawing stroke_based_drawing:Drawing) -> CGImage {
     intermediate_bitmap_context?.addPath(path)
     intermediate_bitmap_context?.strokePath()
     let intermediate_image = intermediate_bitmap_context?.makeImage()
-    
+
     let final_bitmap_context = CGContext(
-        data:nil, width:28, height:28, bitsPerComponent:8, bytesPerRow:0, 
+        data:nil, width:28, height:28, bitsPerComponent:8, bytesPerRow:0,
         space:grayscale, bitmapInfo:CGImageAlphaInfo.none.rawValue)
     let final_rect = CGRect(x: 0.0, y: 0.0, width: 28.0, height: 28.0)
     final_bitmap_context?.draw(intermediate_image!, in: final_rect)
@@ -224,7 +224,7 @@ let request = VNCoreMLRequest(model: model!, completionHandler: { [] request, er
     })
 
 let main_image: CGImage = rasterize(drawing: myDrawing)
-let handler = VNImageRequestHandler(cgImage: main_image)        
+let handler = VNImageRequestHandler(cgImage: main_image)
 
 try? handler.perform([request])
 

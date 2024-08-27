@@ -265,7 +265,7 @@ bn_mul_mont:
 	addu	$i,8
 	sltu	s7,$i,$num
 	bnez	s7,.Louter
-
+
 	.set	noreorder
 	PTR_ADD	$tj,sp,$num	# &tp[num]
 	move	$tp,sp

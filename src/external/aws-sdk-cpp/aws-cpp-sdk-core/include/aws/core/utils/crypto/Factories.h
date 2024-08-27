@@ -108,13 +108,13 @@ namespace Aws
             /**
              * Create AES in Key Wrap mode off of a 256 bit key.
              */
-            AWS_CORE_API std::shared_ptr<SymmetricCipher> CreateAES_KeyWrapImplementation(const CryptoBuffer& key);   
+            AWS_CORE_API std::shared_ptr<SymmetricCipher> CreateAES_KeyWrapImplementation(const CryptoBuffer& key);
 
             /**
              * Create SecureRandomBytes instance
              */
             AWS_CORE_API std::shared_ptr<SecureRandomBytes> CreateSecureRandomBytesImplementation();
-          
+
             /**
              * Set the global factory for MD5 Hash providers
              */
@@ -151,4 +151,3 @@ namespace Aws
         } // namespace Crypto
     } // namespace Utils
 } // namespace Aws
-

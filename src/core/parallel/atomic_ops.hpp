@@ -288,7 +288,7 @@ namespace turi {
    *     value += increment;
    *     return value;
    */
-  template<typename T, typename U = int> 
+  template<typename T, typename U = int>
   static inline T atomic_increment(T& value, const U& increment = 1,
       typename std::enable_if<std::is_integral<T>::value && std::is_integral<U>::value>::type* = 0) {
     return __sync_fetch_and_add(&value, increment);

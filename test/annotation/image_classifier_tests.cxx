@@ -392,4 +392,3 @@ BOOST_AUTO_TEST_CASE(test_annotation_registry) {
   image_classification_test::test_annotation_registry();
 }
 BOOST_AUTO_TEST_SUITE_END()
-

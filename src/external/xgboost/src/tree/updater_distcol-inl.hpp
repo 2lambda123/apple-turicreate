@@ -16,7 +16,7 @@
 #include "./updater_colmaker-inl.hpp"
 #include "./updater_prune-inl.hpp"
 
-// GLC parallel lambda premitive 
+// GLC parallel lambda premitive
 #include <core/parallel/lambda_omp.hpp>
 #include <core/parallel/pthread_tools.hpp>
 

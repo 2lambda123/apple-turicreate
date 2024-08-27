@@ -35,4 +35,3 @@ REQUIRES
   )
 
 target_include_directories(libpng SYSTEM PUBLIC ${libpng_src_dir})
-

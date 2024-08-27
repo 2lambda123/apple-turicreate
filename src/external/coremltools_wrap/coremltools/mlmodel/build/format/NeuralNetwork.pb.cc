@@ -2256,7 +2256,7 @@ void NeuralNetwork::clear_arrayinputshapemapping() {
   return static_cast< ::CoreML::Specification::NeuralNetworkMultiArrayShapeMapping >(arrayinputshapemapping_);
 }
 void NeuralNetwork::set_arrayinputshapemapping(::CoreML::Specification::NeuralNetworkMultiArrayShapeMapping value) {
-  
+
   arrayinputshapemapping_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.NeuralNetwork.arrayInputShapeMapping)
 }
@@ -2270,7 +2270,7 @@ void NeuralNetwork::clear_imageinputshapemapping() {
   return static_cast< ::CoreML::Specification::NeuralNetworkImageShapeMapping >(imageinputshapemapping_);
 }
 void NeuralNetwork::set_imageinputshapemapping(::CoreML::Specification::NeuralNetworkImageShapeMapping value) {
-  
+
   imageinputshapemapping_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.NeuralNetwork.imageInputShapeMapping)
 }
@@ -2289,7 +2289,7 @@ const ::CoreML::Specification::NetworkUpdateParameters& NeuralNetwork::updatepar
                          : *::CoreML::Specification::NetworkUpdateParameters::internal_default_instance();
 }
 ::CoreML::Specification::NetworkUpdateParameters* NeuralNetwork::mutable_updateparams() {
-  
+
   if (updateparams_ == NULL) {
     updateparams_ = new ::CoreML::Specification::NetworkUpdateParameters;
   }
@@ -2298,7 +2298,7 @@ const ::CoreML::Specification::NetworkUpdateParameters& NeuralNetwork::updatepar
 }
 ::CoreML::Specification::NetworkUpdateParameters* NeuralNetwork::release_updateparams() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.NeuralNetwork.updateParams)
-  
+
   ::CoreML::Specification::NetworkUpdateParameters* temp = updateparams_;
   updateparams_ = NULL;
   return temp;
@@ -2307,9 +2307,9 @@ void NeuralNetwork::set_allocated_updateparams(::CoreML::Specification::NetworkU
   delete updateparams_;
   updateparams_ = updateparams;
   if (updateparams) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.NeuralNetwork.updateParams)
 }
@@ -2623,7 +2623,7 @@ float NeuralNetworkImageScaler::channelscale() const {
   return channelscale_;
 }
 void NeuralNetworkImageScaler::set_channelscale(float value) {
-  
+
   channelscale_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.NeuralNetworkImageScaler.channelScale)
 }
@@ -2637,7 +2637,7 @@ float NeuralNetworkImageScaler::bluebias() const {
   return bluebias_;
 }
 void NeuralNetworkImageScaler::set_bluebias(float value) {
-  
+
   bluebias_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.NeuralNetworkImageScaler.blueBias)
 }
@@ -2651,7 +2651,7 @@ float NeuralNetworkImageScaler::greenbias() const {
   return greenbias_;
 }
 void NeuralNetworkImageScaler::set_greenbias(float value) {
-  
+
   greenbias_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.NeuralNetworkImageScaler.greenBias)
 }
@@ -2665,7 +2665,7 @@ float NeuralNetworkImageScaler::redbias() const {
   return redbias_;
 }
 void NeuralNetworkImageScaler::set_redbias(float value) {
-  
+
   redbias_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.NeuralNetworkImageScaler.redBias)
 }
@@ -2679,7 +2679,7 @@ float NeuralNetworkImageScaler::graybias() const {
   return graybias_;
 }
 void NeuralNetworkImageScaler::set_graybias(float value) {
-  
+
   graybias_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.NeuralNetworkImageScaler.grayBias)
 }
@@ -3221,13 +3221,13 @@ const ::std::string& NeuralNetworkPreprocessing::featurename() const {
   return featurename_.GetNoArena();
 }
 void NeuralNetworkPreprocessing::set_featurename(const ::std::string& value) {
-  
+
   featurename_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:CoreML.Specification.NeuralNetworkPreprocessing.featureName)
 }
 #if LANG_CXX11
 void NeuralNetworkPreprocessing::set_featurename(::std::string&& value) {
-  
+
   featurename_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:CoreML.Specification.NeuralNetworkPreprocessing.featureName)
@@ -3235,31 +3235,31 @@ void NeuralNetworkPreprocessing::set_featurename(::std::string&& value) {
 #endif
 void NeuralNetworkPreprocessing::set_featurename(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+
   featurename_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:CoreML.Specification.NeuralNetworkPreprocessing.featureName)
 }
 void NeuralNetworkPreprocessing::set_featurename(const char* value, size_t size) {
-  
+
   featurename_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:CoreML.Specification.NeuralNetworkPreprocessing.featureName)
 }
 ::std::string* NeuralNetworkPreprocessing::mutable_featurename() {
-  
+
   // @@protoc_insertion_point(field_mutable:CoreML.Specification.NeuralNetworkPreprocessing.featureName)
   return featurename_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 ::std::string* NeuralNetworkPreprocessing::release_featurename() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.NeuralNetworkPreprocessing.featureName)
-  
+
   return featurename_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 void NeuralNetworkPreprocessing::set_allocated_featurename(::std::string* featurename) {
   if (featurename != NULL) {
-    
+
   } else {
-    
+
   }
   featurename_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), featurename);
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.NeuralNetworkPreprocessing.featureName)
@@ -3702,7 +3702,7 @@ float ActivationLeakyReLU::alpha() const {
   return alpha_;
 }
 void ActivationLeakyReLU::set_alpha(float value) {
-  
+
   alpha_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ActivationLeakyReLU.alpha)
 }
@@ -4072,7 +4072,7 @@ float ActivationScaledTanh::alpha() const {
   return alpha_;
 }
 void ActivationScaledTanh::set_alpha(float value) {
-  
+
   alpha_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ActivationScaledTanh.alpha)
 }
@@ -4086,7 +4086,7 @@ float ActivationScaledTanh::beta() const {
   return beta_;
 }
 void ActivationScaledTanh::set_beta(float value) {
-  
+
   beta_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ActivationScaledTanh.beta)
 }
@@ -4456,7 +4456,7 @@ float ActivationLinear::alpha() const {
   return alpha_;
 }
 void ActivationLinear::set_alpha(float value) {
-  
+
   alpha_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ActivationLinear.alpha)
 }
@@ -4470,7 +4470,7 @@ float ActivationLinear::beta() const {
   return beta_;
 }
 void ActivationLinear::set_beta(float value) {
-  
+
   beta_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ActivationLinear.beta)
 }
@@ -4697,7 +4697,7 @@ float ActivationSigmoidHard::alpha() const {
   return alpha_;
 }
 void ActivationSigmoidHard::set_alpha(float value) {
-  
+
   alpha_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ActivationSigmoidHard.alpha)
 }
@@ -4711,7 +4711,7 @@ float ActivationSigmoidHard::beta() const {
   return beta_;
 }
 void ActivationSigmoidHard::set_beta(float value) {
-  
+
   beta_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ActivationSigmoidHard.beta)
 }
@@ -4921,7 +4921,7 @@ const ::CoreML::Specification::WeightParams& ActivationPReLU::alpha() const {
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* ActivationPReLU::mutable_alpha() {
-  
+
   if (alpha_ == NULL) {
     alpha_ = new ::CoreML::Specification::WeightParams;
   }
@@ -4930,7 +4930,7 @@ const ::CoreML::Specification::WeightParams& ActivationPReLU::alpha() const {
 }
 ::CoreML::Specification::WeightParams* ActivationPReLU::release_alpha() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.ActivationPReLU.alpha)
-  
+
   ::CoreML::Specification::WeightParams* temp = alpha_;
   alpha_ = NULL;
   return temp;
@@ -4939,9 +4939,9 @@ void ActivationPReLU::set_allocated_alpha(::CoreML::Specification::WeightParams*
   delete alpha_;
   alpha_ = alpha;
   if (alpha) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.ActivationPReLU.alpha)
 }
@@ -5135,7 +5135,7 @@ float ActivationELU::alpha() const {
   return alpha_;
 }
 void ActivationELU::set_alpha(float value) {
-  
+
   alpha_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ActivationELU.alpha)
 }
@@ -5329,7 +5329,7 @@ float ActivationThresholdedReLU::alpha() const {
   return alpha_;
 }
 void ActivationThresholdedReLU::set_alpha(float value) {
-  
+
   alpha_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ActivationThresholdedReLU.alpha)
 }
@@ -5868,7 +5868,7 @@ const ::CoreML::Specification::WeightParams& ActivationParametricSoftplus::alpha
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* ActivationParametricSoftplus::mutable_alpha() {
-  
+
   if (alpha_ == NULL) {
     alpha_ = new ::CoreML::Specification::WeightParams;
   }
@@ -5877,7 +5877,7 @@ const ::CoreML::Specification::WeightParams& ActivationParametricSoftplus::alpha
 }
 ::CoreML::Specification::WeightParams* ActivationParametricSoftplus::release_alpha() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.ActivationParametricSoftplus.alpha)
-  
+
   ::CoreML::Specification::WeightParams* temp = alpha_;
   alpha_ = NULL;
   return temp;
@@ -5886,9 +5886,9 @@ void ActivationParametricSoftplus::set_allocated_alpha(::CoreML::Specification::
   delete alpha_;
   alpha_ = alpha;
   if (alpha) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.ActivationParametricSoftplus.alpha)
 }
@@ -5907,7 +5907,7 @@ const ::CoreML::Specification::WeightParams& ActivationParametricSoftplus::beta(
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* ActivationParametricSoftplus::mutable_beta() {
-  
+
   if (beta_ == NULL) {
     beta_ = new ::CoreML::Specification::WeightParams;
   }
@@ -5916,7 +5916,7 @@ const ::CoreML::Specification::WeightParams& ActivationParametricSoftplus::beta(
 }
 ::CoreML::Specification::WeightParams* ActivationParametricSoftplus::release_beta() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.ActivationParametricSoftplus.beta)
-  
+
   ::CoreML::Specification::WeightParams* temp = beta_;
   beta_ = NULL;
   return temp;
@@ -5925,9 +5925,9 @@ void ActivationParametricSoftplus::set_allocated_beta(::CoreML::Specification::W
   delete beta_;
   beta_ = beta;
   if (beta) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.ActivationParametricSoftplus.beta)
 }
@@ -7480,7 +7480,7 @@ void Tensor::clear_rank() {
   return rank_;
 }
 void Tensor::set_rank(::google::protobuf::uint32 value) {
-  
+
   rank_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Tensor.rank)
 }
@@ -13936,13 +13936,13 @@ const ::std::string& NeuralNetworkLayer::name() const {
   return name_.GetNoArena();
 }
 void NeuralNetworkLayer::set_name(const ::std::string& value) {
-  
+
   name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:CoreML.Specification.NeuralNetworkLayer.name)
 }
 #if LANG_CXX11
 void NeuralNetworkLayer::set_name(::std::string&& value) {
-  
+
   name_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:CoreML.Specification.NeuralNetworkLayer.name)
@@ -13950,31 +13950,31 @@ void NeuralNetworkLayer::set_name(::std::string&& value) {
 #endif
 void NeuralNetworkLayer::set_name(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+
   name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:CoreML.Specification.NeuralNetworkLayer.name)
 }
 void NeuralNetworkLayer::set_name(const char* value, size_t size) {
-  
+
   name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:CoreML.Specification.NeuralNetworkLayer.name)
 }
 ::std::string* NeuralNetworkLayer::mutable_name() {
-  
+
   // @@protoc_insertion_point(field_mutable:CoreML.Specification.NeuralNetworkLayer.name)
   return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 ::std::string* NeuralNetworkLayer::release_name() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.NeuralNetworkLayer.name)
-  
+
   return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 void NeuralNetworkLayer::set_allocated_name(::std::string* name) {
   if (name != NULL) {
-    
+
   } else {
-    
+
   }
   name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.NeuralNetworkLayer.name)
@@ -14187,7 +14187,7 @@ bool NeuralNetworkLayer::isupdatable() const {
   return isupdatable_;
 }
 void NeuralNetworkLayer::set_isupdatable(bool value) {
-  
+
   isupdatable_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.NeuralNetworkLayer.isUpdatable)
 }
@@ -22033,7 +22033,7 @@ const ::CoreML::Specification::NeuralNetwork& BranchLayerParams::ifbranch() cons
                          : *::CoreML::Specification::NeuralNetwork::internal_default_instance();
 }
 ::CoreML::Specification::NeuralNetwork* BranchLayerParams::mutable_ifbranch() {
-  
+
   if (ifbranch_ == NULL) {
     ifbranch_ = new ::CoreML::Specification::NeuralNetwork;
   }
@@ -22042,7 +22042,7 @@ const ::CoreML::Specification::NeuralNetwork& BranchLayerParams::ifbranch() cons
 }
 ::CoreML::Specification::NeuralNetwork* BranchLayerParams::release_ifbranch() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.BranchLayerParams.ifBranch)
-  
+
   ::CoreML::Specification::NeuralNetwork* temp = ifbranch_;
   ifbranch_ = NULL;
   return temp;
@@ -22051,9 +22051,9 @@ void BranchLayerParams::set_allocated_ifbranch(::CoreML::Specification::NeuralNe
   delete ifbranch_;
   ifbranch_ = ifbranch;
   if (ifbranch) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.BranchLayerParams.ifBranch)
 }
@@ -22072,7 +22072,7 @@ const ::CoreML::Specification::NeuralNetwork& BranchLayerParams::elsebranch() co
                          : *::CoreML::Specification::NeuralNetwork::internal_default_instance();
 }
 ::CoreML::Specification::NeuralNetwork* BranchLayerParams::mutable_elsebranch() {
-  
+
   if (elsebranch_ == NULL) {
     elsebranch_ = new ::CoreML::Specification::NeuralNetwork;
   }
@@ -22081,7 +22081,7 @@ const ::CoreML::Specification::NeuralNetwork& BranchLayerParams::elsebranch() co
 }
 ::CoreML::Specification::NeuralNetwork* BranchLayerParams::release_elsebranch() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.BranchLayerParams.elseBranch)
-  
+
   ::CoreML::Specification::NeuralNetwork* temp = elsebranch_;
   elsebranch_ = NULL;
   return temp;
@@ -22090,9 +22090,9 @@ void BranchLayerParams::set_allocated_elsebranch(::CoreML::Specification::Neural
   delete elsebranch_;
   elsebranch_ = elsebranch;
   if (elsebranch) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.BranchLayerParams.elseBranch)
 }
@@ -22419,7 +22419,7 @@ void LoopLayerParams::clear_maxloopiterations() {
   return maxloopiterations_;
 }
 void LoopLayerParams::set_maxloopiterations(::google::protobuf::uint64 value) {
-  
+
   maxloopiterations_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.LoopLayerParams.maxLoopIterations)
 }
@@ -22433,13 +22433,13 @@ const ::std::string& LoopLayerParams::conditionvar() const {
   return conditionvar_.GetNoArena();
 }
 void LoopLayerParams::set_conditionvar(const ::std::string& value) {
-  
+
   conditionvar_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:CoreML.Specification.LoopLayerParams.conditionVar)
 }
 #if LANG_CXX11
 void LoopLayerParams::set_conditionvar(::std::string&& value) {
-  
+
   conditionvar_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:CoreML.Specification.LoopLayerParams.conditionVar)
@@ -22447,31 +22447,31 @@ void LoopLayerParams::set_conditionvar(::std::string&& value) {
 #endif
 void LoopLayerParams::set_conditionvar(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+
   conditionvar_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:CoreML.Specification.LoopLayerParams.conditionVar)
 }
 void LoopLayerParams::set_conditionvar(const char* value, size_t size) {
-  
+
   conditionvar_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:CoreML.Specification.LoopLayerParams.conditionVar)
 }
 ::std::string* LoopLayerParams::mutable_conditionvar() {
-  
+
   // @@protoc_insertion_point(field_mutable:CoreML.Specification.LoopLayerParams.conditionVar)
   return conditionvar_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 ::std::string* LoopLayerParams::release_conditionvar() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LoopLayerParams.conditionVar)
-  
+
   return conditionvar_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 void LoopLayerParams::set_allocated_conditionvar(::std::string* conditionvar) {
   if (conditionvar != NULL) {
-    
+
   } else {
-    
+
   }
   conditionvar_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), conditionvar);
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LoopLayerParams.conditionVar)
@@ -22491,7 +22491,7 @@ const ::CoreML::Specification::NeuralNetwork& LoopLayerParams::conditionnetwork(
                          : *::CoreML::Specification::NeuralNetwork::internal_default_instance();
 }
 ::CoreML::Specification::NeuralNetwork* LoopLayerParams::mutable_conditionnetwork() {
-  
+
   if (conditionnetwork_ == NULL) {
     conditionnetwork_ = new ::CoreML::Specification::NeuralNetwork;
   }
@@ -22500,7 +22500,7 @@ const ::CoreML::Specification::NeuralNetwork& LoopLayerParams::conditionnetwork(
 }
 ::CoreML::Specification::NeuralNetwork* LoopLayerParams::release_conditionnetwork() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LoopLayerParams.conditionNetwork)
-  
+
   ::CoreML::Specification::NeuralNetwork* temp = conditionnetwork_;
   conditionnetwork_ = NULL;
   return temp;
@@ -22509,9 +22509,9 @@ void LoopLayerParams::set_allocated_conditionnetwork(::CoreML::Specification::Ne
   delete conditionnetwork_;
   conditionnetwork_ = conditionnetwork;
   if (conditionnetwork) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LoopLayerParams.conditionNetwork)
 }
@@ -22530,7 +22530,7 @@ const ::CoreML::Specification::NeuralNetwork& LoopLayerParams::bodynetwork() con
                          : *::CoreML::Specification::NeuralNetwork::internal_default_instance();
 }
 ::CoreML::Specification::NeuralNetwork* LoopLayerParams::mutable_bodynetwork() {
-  
+
   if (bodynetwork_ == NULL) {
     bodynetwork_ = new ::CoreML::Specification::NeuralNetwork;
   }
@@ -22539,7 +22539,7 @@ const ::CoreML::Specification::NeuralNetwork& LoopLayerParams::bodynetwork() con
 }
 ::CoreML::Specification::NeuralNetwork* LoopLayerParams::release_bodynetwork() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LoopLayerParams.bodyNetwork)
-  
+
   ::CoreML::Specification::NeuralNetwork* temp = bodynetwork_;
   bodynetwork_ = NULL;
   return temp;
@@ -22548,9 +22548,9 @@ void LoopLayerParams::set_allocated_bodynetwork(::CoreML::Specification::NeuralN
   delete bodynetwork_;
   bodynetwork_ = bodynetwork;
   if (bodynetwork) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LoopLayerParams.bodyNetwork)
 }
@@ -23173,7 +23173,7 @@ float GreaterThanLayerParams::alpha() const {
   return alpha_;
 }
 void GreaterThanLayerParams::set_alpha(float value) {
-  
+
   alpha_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.GreaterThanLayerParams.alpha)
 }
@@ -23367,7 +23367,7 @@ float GreaterEqualLayerParams::alpha() const {
   return alpha_;
 }
 void GreaterEqualLayerParams::set_alpha(float value) {
-  
+
   alpha_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.GreaterEqualLayerParams.alpha)
 }
@@ -23561,7 +23561,7 @@ float LessThanLayerParams::alpha() const {
   return alpha_;
 }
 void LessThanLayerParams::set_alpha(float value) {
-  
+
   alpha_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.LessThanLayerParams.alpha)
 }
@@ -23755,7 +23755,7 @@ float LessEqualLayerParams::alpha() const {
   return alpha_;
 }
 void LessEqualLayerParams::set_alpha(float value) {
-  
+
   alpha_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.LessEqualLayerParams.alpha)
 }
@@ -23949,7 +23949,7 @@ float EqualLayerParams::alpha() const {
   return alpha_;
 }
 void EqualLayerParams::set_alpha(float value) {
-  
+
   alpha_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.EqualLayerParams.alpha)
 }
@@ -24143,7 +24143,7 @@ float NotEqualLayerParams::alpha() const {
   return alpha_;
 }
 void NotEqualLayerParams::set_alpha(float value) {
-  
+
   alpha_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.NotEqualLayerParams.alpha)
 }
@@ -24946,7 +24946,7 @@ void BorderAmounts_EdgeSizes::clear_startedgesize() {
   return startedgesize_;
 }
 void BorderAmounts_EdgeSizes::set_startedgesize(::google::protobuf::uint64 value) {
-  
+
   startedgesize_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.BorderAmounts.EdgeSizes.startEdgeSize)
 }
@@ -24960,7 +24960,7 @@ void BorderAmounts_EdgeSizes::clear_endedgesize() {
   return endedgesize_;
 }
 void BorderAmounts_EdgeSizes::set_endedgesize(::google::protobuf::uint64 value) {
-  
+
   endedgesize_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.BorderAmounts.EdgeSizes.endEdgeSize)
 }
@@ -25382,7 +25382,7 @@ const ::CoreML::Specification::BorderAmounts& ValidPadding::paddingamounts() con
                          : *::CoreML::Specification::BorderAmounts::internal_default_instance();
 }
 ::CoreML::Specification::BorderAmounts* ValidPadding::mutable_paddingamounts() {
-  
+
   if (paddingamounts_ == NULL) {
     paddingamounts_ = new ::CoreML::Specification::BorderAmounts;
   }
@@ -25391,7 +25391,7 @@ const ::CoreML::Specification::BorderAmounts& ValidPadding::paddingamounts() con
 }
 ::CoreML::Specification::BorderAmounts* ValidPadding::release_paddingamounts() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.ValidPadding.paddingAmounts)
-  
+
   ::CoreML::Specification::BorderAmounts* temp = paddingamounts_;
   paddingamounts_ = NULL;
   return temp;
@@ -25400,9 +25400,9 @@ void ValidPadding::set_allocated_paddingamounts(::CoreML::Specification::BorderA
   delete paddingamounts_;
   paddingamounts_ = paddingamounts;
   if (paddingamounts) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.ValidPadding.paddingAmounts)
 }
@@ -25599,7 +25599,7 @@ void SamePadding::clear_asymmetrymode() {
   return static_cast< ::CoreML::Specification::SamePadding_SamePaddingMode >(asymmetrymode_);
 }
 void SamePadding::set_asymmetrymode(::CoreML::Specification::SamePadding_SamePaddingMode value) {
-  
+
   asymmetrymode_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SamePadding.asymmetryMode)
 }
@@ -25796,7 +25796,7 @@ void SamplingMode::clear_samplingmethod() {
   return static_cast< ::CoreML::Specification::SamplingMode_Method >(samplingmethod_);
 }
 void SamplingMode::set_samplingmethod(::CoreML::Specification::SamplingMode_Method value) {
-  
+
   samplingmethod_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SamplingMode.samplingMethod)
 }
@@ -25993,7 +25993,7 @@ void BoxCoordinatesMode::clear_boxmode() {
   return static_cast< ::CoreML::Specification::BoxCoordinatesMode_Coordinates >(boxmode_);
 }
 void BoxCoordinatesMode::set_boxmode(::CoreML::Specification::BoxCoordinatesMode_Coordinates value) {
-  
+
   boxmode_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.BoxCoordinatesMode.boxMode)
 }
@@ -26420,13 +26420,13 @@ const ::std::string& WeightParams::float16value() const {
   return float16value_.GetNoArena();
 }
 void WeightParams::set_float16value(const ::std::string& value) {
-  
+
   float16value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:CoreML.Specification.WeightParams.float16Value)
 }
 #if LANG_CXX11
 void WeightParams::set_float16value(::std::string&& value) {
-  
+
   float16value_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:CoreML.Specification.WeightParams.float16Value)
@@ -26434,31 +26434,31 @@ void WeightParams::set_float16value(::std::string&& value) {
 #endif
 void WeightParams::set_float16value(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+
   float16value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:CoreML.Specification.WeightParams.float16Value)
 }
 void WeightParams::set_float16value(const void* value, size_t size) {
-  
+
   float16value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:CoreML.Specification.WeightParams.float16Value)
 }
 ::std::string* WeightParams::mutable_float16value() {
-  
+
   // @@protoc_insertion_point(field_mutable:CoreML.Specification.WeightParams.float16Value)
   return float16value_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 ::std::string* WeightParams::release_float16value() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.WeightParams.float16Value)
-  
+
   return float16value_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 void WeightParams::set_allocated_float16value(::std::string* float16value) {
   if (float16value != NULL) {
-    
+
   } else {
-    
+
   }
   float16value_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), float16value);
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.WeightParams.float16Value)
@@ -26473,13 +26473,13 @@ const ::std::string& WeightParams::rawvalue() const {
   return rawvalue_.GetNoArena();
 }
 void WeightParams::set_rawvalue(const ::std::string& value) {
-  
+
   rawvalue_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:CoreML.Specification.WeightParams.rawValue)
 }
 #if LANG_CXX11
 void WeightParams::set_rawvalue(::std::string&& value) {
-  
+
   rawvalue_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:CoreML.Specification.WeightParams.rawValue)
@@ -26487,31 +26487,31 @@ void WeightParams::set_rawvalue(::std::string&& value) {
 #endif
 void WeightParams::set_rawvalue(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+
   rawvalue_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:CoreML.Specification.WeightParams.rawValue)
 }
 void WeightParams::set_rawvalue(const void* value, size_t size) {
-  
+
   rawvalue_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:CoreML.Specification.WeightParams.rawValue)
 }
 ::std::string* WeightParams::mutable_rawvalue() {
-  
+
   // @@protoc_insertion_point(field_mutable:CoreML.Specification.WeightParams.rawValue)
   return rawvalue_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 ::std::string* WeightParams::release_rawvalue() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.WeightParams.rawValue)
-  
+
   return rawvalue_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 void WeightParams::set_allocated_rawvalue(::std::string* rawvalue) {
   if (rawvalue != NULL) {
-    
+
   } else {
-    
+
   }
   rawvalue_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), rawvalue);
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.WeightParams.rawValue)
@@ -26526,13 +26526,13 @@ const ::std::string& WeightParams::int8rawvalue() const {
   return int8rawvalue_.GetNoArena();
 }
 void WeightParams::set_int8rawvalue(const ::std::string& value) {
-  
+
   int8rawvalue_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:CoreML.Specification.WeightParams.int8RawValue)
 }
 #if LANG_CXX11
 void WeightParams::set_int8rawvalue(::std::string&& value) {
-  
+
   int8rawvalue_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:CoreML.Specification.WeightParams.int8RawValue)
@@ -26540,31 +26540,31 @@ void WeightParams::set_int8rawvalue(::std::string&& value) {
 #endif
 void WeightParams::set_int8rawvalue(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+
   int8rawvalue_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:CoreML.Specification.WeightParams.int8RawValue)
 }
 void WeightParams::set_int8rawvalue(const void* value, size_t size) {
-  
+
   int8rawvalue_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:CoreML.Specification.WeightParams.int8RawValue)
 }
 ::std::string* WeightParams::mutable_int8rawvalue() {
-  
+
   // @@protoc_insertion_point(field_mutable:CoreML.Specification.WeightParams.int8RawValue)
   return int8rawvalue_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 ::std::string* WeightParams::release_int8rawvalue() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.WeightParams.int8RawValue)
-  
+
   return int8rawvalue_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 void WeightParams::set_allocated_int8rawvalue(::std::string* int8rawvalue) {
   if (int8rawvalue != NULL) {
-    
+
   } else {
-    
+
   }
   int8rawvalue_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), int8rawvalue);
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.WeightParams.int8RawValue)
@@ -26584,7 +26584,7 @@ const ::CoreML::Specification::QuantizationParams& WeightParams::quantization() 
                          : *::CoreML::Specification::QuantizationParams::internal_default_instance();
 }
 ::CoreML::Specification::QuantizationParams* WeightParams::mutable_quantization() {
-  
+
   if (quantization_ == NULL) {
     quantization_ = new ::CoreML::Specification::QuantizationParams;
   }
@@ -26593,7 +26593,7 @@ const ::CoreML::Specification::QuantizationParams& WeightParams::quantization() 
 }
 ::CoreML::Specification::QuantizationParams* WeightParams::release_quantization() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.WeightParams.quantization)
-  
+
   ::CoreML::Specification::QuantizationParams* temp = quantization_;
   quantization_ = NULL;
   return temp;
@@ -26602,9 +26602,9 @@ void WeightParams::set_allocated_quantization(::CoreML::Specification::Quantizat
   delete quantization_;
   quantization_ = quantization;
   if (quantization) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.WeightParams.quantization)
 }
@@ -26618,7 +26618,7 @@ bool WeightParams::isupdatable() const {
   return isupdatable_;
 }
 void WeightParams::set_isupdatable(bool value) {
-  
+
   isupdatable_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.WeightParams.isUpdatable)
 }
@@ -26924,7 +26924,7 @@ void QuantizationParams::clear_numberofbits() {
   return numberofbits_;
 }
 void QuantizationParams::set_numberofbits(::google::protobuf::uint64 value) {
-  
+
   numberofbits_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.QuantizationParams.numberOfBits)
 }
@@ -28259,7 +28259,7 @@ void ConvolutionLayerParams::clear_outputchannels() {
   return outputchannels_;
 }
 void ConvolutionLayerParams::set_outputchannels(::google::protobuf::uint64 value) {
-  
+
   outputchannels_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ConvolutionLayerParams.outputChannels)
 }
@@ -28273,7 +28273,7 @@ void ConvolutionLayerParams::clear_kernelchannels() {
   return kernelchannels_;
 }
 void ConvolutionLayerParams::set_kernelchannels(::google::protobuf::uint64 value) {
-  
+
   kernelchannels_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ConvolutionLayerParams.kernelChannels)
 }
@@ -28287,7 +28287,7 @@ void ConvolutionLayerParams::clear_ngroups() {
   return ngroups_;
 }
 void ConvolutionLayerParams::set_ngroups(::google::protobuf::uint64 value) {
-  
+
   ngroups_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ConvolutionLayerParams.nGroups)
 }
@@ -28487,7 +28487,7 @@ bool ConvolutionLayerParams::isdeconvolution() const {
   return isdeconvolution_;
 }
 void ConvolutionLayerParams::set_isdeconvolution(bool value) {
-  
+
   isdeconvolution_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ConvolutionLayerParams.isDeconvolution)
 }
@@ -28501,7 +28501,7 @@ bool ConvolutionLayerParams::hasbias() const {
   return hasbias_;
 }
 void ConvolutionLayerParams::set_hasbias(bool value) {
-  
+
   hasbias_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ConvolutionLayerParams.hasBias)
 }
@@ -28520,7 +28520,7 @@ const ::CoreML::Specification::WeightParams& ConvolutionLayerParams::weights() c
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* ConvolutionLayerParams::mutable_weights() {
-  
+
   if (weights_ == NULL) {
     weights_ = new ::CoreML::Specification::WeightParams;
   }
@@ -28529,7 +28529,7 @@ const ::CoreML::Specification::WeightParams& ConvolutionLayerParams::weights() c
 }
 ::CoreML::Specification::WeightParams* ConvolutionLayerParams::release_weights() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.ConvolutionLayerParams.weights)
-  
+
   ::CoreML::Specification::WeightParams* temp = weights_;
   weights_ = NULL;
   return temp;
@@ -28538,9 +28538,9 @@ void ConvolutionLayerParams::set_allocated_weights(::CoreML::Specification::Weig
   delete weights_;
   weights_ = weights;
   if (weights) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.ConvolutionLayerParams.weights)
 }
@@ -28559,7 +28559,7 @@ const ::CoreML::Specification::WeightParams& ConvolutionLayerParams::bias() cons
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* ConvolutionLayerParams::mutable_bias() {
-  
+
   if (bias_ == NULL) {
     bias_ = new ::CoreML::Specification::WeightParams;
   }
@@ -28568,7 +28568,7 @@ const ::CoreML::Specification::WeightParams& ConvolutionLayerParams::bias() cons
 }
 ::CoreML::Specification::WeightParams* ConvolutionLayerParams::release_bias() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.ConvolutionLayerParams.bias)
-  
+
   ::CoreML::Specification::WeightParams* temp = bias_;
   bias_ = NULL;
   return temp;
@@ -28577,9 +28577,9 @@ void ConvolutionLayerParams::set_allocated_bias(::CoreML::Specification::WeightP
   delete bias_;
   bias_ = bias;
   if (bias) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.ConvolutionLayerParams.bias)
 }
@@ -29567,7 +29567,7 @@ void Convolution3DLayerParams::clear_outputchannels() {
   return outputchannels_;
 }
 void Convolution3DLayerParams::set_outputchannels(::google::protobuf::int32 value) {
-  
+
   outputchannels_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Convolution3DLayerParams.outputChannels)
 }
@@ -29581,7 +29581,7 @@ void Convolution3DLayerParams::clear_inputchannels() {
   return inputchannels_;
 }
 void Convolution3DLayerParams::set_inputchannels(::google::protobuf::int32 value) {
-  
+
   inputchannels_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Convolution3DLayerParams.inputChannels)
 }
@@ -29595,7 +29595,7 @@ void Convolution3DLayerParams::clear_ngroups() {
   return ngroups_;
 }
 void Convolution3DLayerParams::set_ngroups(::google::protobuf::int32 value) {
-  
+
   ngroups_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Convolution3DLayerParams.nGroups)
 }
@@ -29609,7 +29609,7 @@ void Convolution3DLayerParams::clear_kerneldepth() {
   return kerneldepth_;
 }
 void Convolution3DLayerParams::set_kerneldepth(::google::protobuf::int32 value) {
-  
+
   kerneldepth_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Convolution3DLayerParams.kernelDepth)
 }
@@ -29623,7 +29623,7 @@ void Convolution3DLayerParams::clear_kernelheight() {
   return kernelheight_;
 }
 void Convolution3DLayerParams::set_kernelheight(::google::protobuf::int32 value) {
-  
+
   kernelheight_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Convolution3DLayerParams.kernelHeight)
 }
@@ -29637,7 +29637,7 @@ void Convolution3DLayerParams::clear_kernelwidth() {
   return kernelwidth_;
 }
 void Convolution3DLayerParams::set_kernelwidth(::google::protobuf::int32 value) {
-  
+
   kernelwidth_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Convolution3DLayerParams.kernelWidth)
 }
@@ -29651,7 +29651,7 @@ void Convolution3DLayerParams::clear_stridedepth() {
   return stridedepth_;
 }
 void Convolution3DLayerParams::set_stridedepth(::google::protobuf::int32 value) {
-  
+
   stridedepth_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Convolution3DLayerParams.strideDepth)
 }
@@ -29665,7 +29665,7 @@ void Convolution3DLayerParams::clear_strideheight() {
   return strideheight_;
 }
 void Convolution3DLayerParams::set_strideheight(::google::protobuf::int32 value) {
-  
+
   strideheight_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Convolution3DLayerParams.strideHeight)
 }
@@ -29679,7 +29679,7 @@ void Convolution3DLayerParams::clear_stridewidth() {
   return stridewidth_;
 }
 void Convolution3DLayerParams::set_stridewidth(::google::protobuf::int32 value) {
-  
+
   stridewidth_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Convolution3DLayerParams.strideWidth)
 }
@@ -29693,7 +29693,7 @@ void Convolution3DLayerParams::clear_dilationdepth() {
   return dilationdepth_;
 }
 void Convolution3DLayerParams::set_dilationdepth(::google::protobuf::int32 value) {
-  
+
   dilationdepth_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Convolution3DLayerParams.dilationDepth)
 }
@@ -29707,7 +29707,7 @@ void Convolution3DLayerParams::clear_dilationheight() {
   return dilationheight_;
 }
 void Convolution3DLayerParams::set_dilationheight(::google::protobuf::int32 value) {
-  
+
   dilationheight_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Convolution3DLayerParams.dilationHeight)
 }
@@ -29721,7 +29721,7 @@ void Convolution3DLayerParams::clear_dilationwidth() {
   return dilationwidth_;
 }
 void Convolution3DLayerParams::set_dilationwidth(::google::protobuf::int32 value) {
-  
+
   dilationwidth_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Convolution3DLayerParams.dilationWidth)
 }
@@ -29735,7 +29735,7 @@ bool Convolution3DLayerParams::hasbias() const {
   return hasbias_;
 }
 void Convolution3DLayerParams::set_hasbias(bool value) {
-  
+
   hasbias_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Convolution3DLayerParams.hasBias)
 }
@@ -29754,7 +29754,7 @@ const ::CoreML::Specification::WeightParams& Convolution3DLayerParams::weights()
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* Convolution3DLayerParams::mutable_weights() {
-  
+
   if (weights_ == NULL) {
     weights_ = new ::CoreML::Specification::WeightParams;
   }
@@ -29763,7 +29763,7 @@ const ::CoreML::Specification::WeightParams& Convolution3DLayerParams::weights()
 }
 ::CoreML::Specification::WeightParams* Convolution3DLayerParams::release_weights() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.Convolution3DLayerParams.weights)
-  
+
   ::CoreML::Specification::WeightParams* temp = weights_;
   weights_ = NULL;
   return temp;
@@ -29772,9 +29772,9 @@ void Convolution3DLayerParams::set_allocated_weights(::CoreML::Specification::We
   delete weights_;
   weights_ = weights;
   if (weights) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.Convolution3DLayerParams.weights)
 }
@@ -29793,7 +29793,7 @@ const ::CoreML::Specification::WeightParams& Convolution3DLayerParams::bias() co
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* Convolution3DLayerParams::mutable_bias() {
-  
+
   if (bias_ == NULL) {
     bias_ = new ::CoreML::Specification::WeightParams;
   }
@@ -29802,7 +29802,7 @@ const ::CoreML::Specification::WeightParams& Convolution3DLayerParams::bias() co
 }
 ::CoreML::Specification::WeightParams* Convolution3DLayerParams::release_bias() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.Convolution3DLayerParams.bias)
-  
+
   ::CoreML::Specification::WeightParams* temp = bias_;
   bias_ = NULL;
   return temp;
@@ -29811,9 +29811,9 @@ void Convolution3DLayerParams::set_allocated_bias(::CoreML::Specification::Weigh
   delete bias_;
   bias_ = bias;
   if (bias) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.Convolution3DLayerParams.bias)
 }
@@ -29827,7 +29827,7 @@ void Convolution3DLayerParams::clear_paddingtype() {
   return static_cast< ::CoreML::Specification::Convolution3DLayerParams_PaddingType >(paddingtype_);
 }
 void Convolution3DLayerParams::set_paddingtype(::CoreML::Specification::Convolution3DLayerParams_PaddingType value) {
-  
+
   paddingtype_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Convolution3DLayerParams.paddingType)
 }
@@ -29841,7 +29841,7 @@ void Convolution3DLayerParams::clear_custompaddingfront() {
   return custompaddingfront_;
 }
 void Convolution3DLayerParams::set_custompaddingfront(::google::protobuf::int32 value) {
-  
+
   custompaddingfront_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Convolution3DLayerParams.customPaddingFront)
 }
@@ -29855,7 +29855,7 @@ void Convolution3DLayerParams::clear_custompaddingback() {
   return custompaddingback_;
 }
 void Convolution3DLayerParams::set_custompaddingback(::google::protobuf::int32 value) {
-  
+
   custompaddingback_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Convolution3DLayerParams.customPaddingBack)
 }
@@ -29869,7 +29869,7 @@ void Convolution3DLayerParams::clear_custompaddingtop() {
   return custompaddingtop_;
 }
 void Convolution3DLayerParams::set_custompaddingtop(::google::protobuf::int32 value) {
-  
+
   custompaddingtop_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Convolution3DLayerParams.customPaddingTop)
 }
@@ -29883,7 +29883,7 @@ void Convolution3DLayerParams::clear_custompaddingbottom() {
   return custompaddingbottom_;
 }
 void Convolution3DLayerParams::set_custompaddingbottom(::google::protobuf::int32 value) {
-  
+
   custompaddingbottom_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Convolution3DLayerParams.customPaddingBottom)
 }
@@ -29897,7 +29897,7 @@ void Convolution3DLayerParams::clear_custompaddingleft() {
   return custompaddingleft_;
 }
 void Convolution3DLayerParams::set_custompaddingleft(::google::protobuf::int32 value) {
-  
+
   custompaddingleft_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Convolution3DLayerParams.customPaddingLeft)
 }
@@ -29911,7 +29911,7 @@ void Convolution3DLayerParams::clear_custompaddingright() {
   return custompaddingright_;
 }
 void Convolution3DLayerParams::set_custompaddingright(::google::protobuf::int32 value) {
-  
+
   custompaddingright_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Convolution3DLayerParams.customPaddingRight)
 }
@@ -29925,7 +29925,7 @@ bool Convolution3DLayerParams::isdeconvolution() const {
   return isdeconvolution_;
 }
 void Convolution3DLayerParams::set_isdeconvolution(bool value) {
-  
+
   isdeconvolution_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Convolution3DLayerParams.isDeconvolution)
 }
@@ -30328,7 +30328,7 @@ void InnerProductLayerParams::clear_inputchannels() {
   return inputchannels_;
 }
 void InnerProductLayerParams::set_inputchannels(::google::protobuf::uint64 value) {
-  
+
   inputchannels_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.InnerProductLayerParams.inputChannels)
 }
@@ -30342,7 +30342,7 @@ void InnerProductLayerParams::clear_outputchannels() {
   return outputchannels_;
 }
 void InnerProductLayerParams::set_outputchannels(::google::protobuf::uint64 value) {
-  
+
   outputchannels_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.InnerProductLayerParams.outputChannels)
 }
@@ -30356,7 +30356,7 @@ bool InnerProductLayerParams::hasbias() const {
   return hasbias_;
 }
 void InnerProductLayerParams::set_hasbias(bool value) {
-  
+
   hasbias_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.InnerProductLayerParams.hasBias)
 }
@@ -30375,7 +30375,7 @@ const ::CoreML::Specification::WeightParams& InnerProductLayerParams::weights() 
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* InnerProductLayerParams::mutable_weights() {
-  
+
   if (weights_ == NULL) {
     weights_ = new ::CoreML::Specification::WeightParams;
   }
@@ -30384,7 +30384,7 @@ const ::CoreML::Specification::WeightParams& InnerProductLayerParams::weights() 
 }
 ::CoreML::Specification::WeightParams* InnerProductLayerParams::release_weights() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.InnerProductLayerParams.weights)
-  
+
   ::CoreML::Specification::WeightParams* temp = weights_;
   weights_ = NULL;
   return temp;
@@ -30393,9 +30393,9 @@ void InnerProductLayerParams::set_allocated_weights(::CoreML::Specification::Wei
   delete weights_;
   weights_ = weights;
   if (weights) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.InnerProductLayerParams.weights)
 }
@@ -30414,7 +30414,7 @@ const ::CoreML::Specification::WeightParams& InnerProductLayerParams::bias() con
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* InnerProductLayerParams::mutable_bias() {
-  
+
   if (bias_ == NULL) {
     bias_ = new ::CoreML::Specification::WeightParams;
   }
@@ -30423,7 +30423,7 @@ const ::CoreML::Specification::WeightParams& InnerProductLayerParams::bias() con
 }
 ::CoreML::Specification::WeightParams* InnerProductLayerParams::release_bias() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.InnerProductLayerParams.bias)
-  
+
   ::CoreML::Specification::WeightParams* temp = bias_;
   bias_ = NULL;
   return temp;
@@ -30432,9 +30432,9 @@ void InnerProductLayerParams::set_allocated_bias(::CoreML::Specification::Weight
   delete bias_;
   bias_ = bias;
   if (bias) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.InnerProductLayerParams.bias)
 }
@@ -30448,7 +30448,7 @@ bool InnerProductLayerParams::int8dynamicquantize() const {
   return int8dynamicquantize_;
 }
 void InnerProductLayerParams::set_int8dynamicquantize(bool value) {
-  
+
   int8dynamicquantize_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.InnerProductLayerParams.int8DynamicQuantize)
 }
@@ -30792,7 +30792,7 @@ void EmbeddingLayerParams::clear_inputdim() {
   return inputdim_;
 }
 void EmbeddingLayerParams::set_inputdim(::google::protobuf::uint64 value) {
-  
+
   inputdim_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.EmbeddingLayerParams.inputDim)
 }
@@ -30806,7 +30806,7 @@ void EmbeddingLayerParams::clear_outputchannels() {
   return outputchannels_;
 }
 void EmbeddingLayerParams::set_outputchannels(::google::protobuf::uint64 value) {
-  
+
   outputchannels_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.EmbeddingLayerParams.outputChannels)
 }
@@ -30820,7 +30820,7 @@ bool EmbeddingLayerParams::hasbias() const {
   return hasbias_;
 }
 void EmbeddingLayerParams::set_hasbias(bool value) {
-  
+
   hasbias_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.EmbeddingLayerParams.hasBias)
 }
@@ -30839,7 +30839,7 @@ const ::CoreML::Specification::WeightParams& EmbeddingLayerParams::weights() con
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* EmbeddingLayerParams::mutable_weights() {
-  
+
   if (weights_ == NULL) {
     weights_ = new ::CoreML::Specification::WeightParams;
   }
@@ -30848,7 +30848,7 @@ const ::CoreML::Specification::WeightParams& EmbeddingLayerParams::weights() con
 }
 ::CoreML::Specification::WeightParams* EmbeddingLayerParams::release_weights() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.EmbeddingLayerParams.weights)
-  
+
   ::CoreML::Specification::WeightParams* temp = weights_;
   weights_ = NULL;
   return temp;
@@ -30857,9 +30857,9 @@ void EmbeddingLayerParams::set_allocated_weights(::CoreML::Specification::Weight
   delete weights_;
   weights_ = weights;
   if (weights) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.EmbeddingLayerParams.weights)
 }
@@ -30878,7 +30878,7 @@ const ::CoreML::Specification::WeightParams& EmbeddingLayerParams::bias() const 
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* EmbeddingLayerParams::mutable_bias() {
-  
+
   if (bias_ == NULL) {
     bias_ = new ::CoreML::Specification::WeightParams;
   }
@@ -30887,7 +30887,7 @@ const ::CoreML::Specification::WeightParams& EmbeddingLayerParams::bias() const 
 }
 ::CoreML::Specification::WeightParams* EmbeddingLayerParams::release_bias() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.EmbeddingLayerParams.bias)
-  
+
   ::CoreML::Specification::WeightParams* temp = bias_;
   bias_ = NULL;
   return temp;
@@ -30896,9 +30896,9 @@ void EmbeddingLayerParams::set_allocated_bias(::CoreML::Specification::WeightPar
   delete bias_;
   bias_ = bias;
   if (bias) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.EmbeddingLayerParams.bias)
 }
@@ -31242,7 +31242,7 @@ void EmbeddingNDLayerParams::clear_vocabsize() {
   return vocabsize_;
 }
 void EmbeddingNDLayerParams::set_vocabsize(::google::protobuf::uint64 value) {
-  
+
   vocabsize_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.EmbeddingNDLayerParams.vocabSize)
 }
@@ -31256,7 +31256,7 @@ void EmbeddingNDLayerParams::clear_embeddingsize() {
   return embeddingsize_;
 }
 void EmbeddingNDLayerParams::set_embeddingsize(::google::protobuf::uint64 value) {
-  
+
   embeddingsize_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.EmbeddingNDLayerParams.embeddingSize)
 }
@@ -31270,7 +31270,7 @@ bool EmbeddingNDLayerParams::hasbias() const {
   return hasbias_;
 }
 void EmbeddingNDLayerParams::set_hasbias(bool value) {
-  
+
   hasbias_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.EmbeddingNDLayerParams.hasBias)
 }
@@ -31289,7 +31289,7 @@ const ::CoreML::Specification::WeightParams& EmbeddingNDLayerParams::weights() c
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* EmbeddingNDLayerParams::mutable_weights() {
-  
+
   if (weights_ == NULL) {
     weights_ = new ::CoreML::Specification::WeightParams;
   }
@@ -31298,7 +31298,7 @@ const ::CoreML::Specification::WeightParams& EmbeddingNDLayerParams::weights() c
 }
 ::CoreML::Specification::WeightParams* EmbeddingNDLayerParams::release_weights() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.EmbeddingNDLayerParams.weights)
-  
+
   ::CoreML::Specification::WeightParams* temp = weights_;
   weights_ = NULL;
   return temp;
@@ -31307,9 +31307,9 @@ void EmbeddingNDLayerParams::set_allocated_weights(::CoreML::Specification::Weig
   delete weights_;
   weights_ = weights;
   if (weights) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.EmbeddingNDLayerParams.weights)
 }
@@ -31328,7 +31328,7 @@ const ::CoreML::Specification::WeightParams& EmbeddingNDLayerParams::bias() cons
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* EmbeddingNDLayerParams::mutable_bias() {
-  
+
   if (bias_ == NULL) {
     bias_ = new ::CoreML::Specification::WeightParams;
   }
@@ -31337,7 +31337,7 @@ const ::CoreML::Specification::WeightParams& EmbeddingNDLayerParams::bias() cons
 }
 ::CoreML::Specification::WeightParams* EmbeddingNDLayerParams::release_bias() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.EmbeddingNDLayerParams.bias)
-  
+
   ::CoreML::Specification::WeightParams* temp = bias_;
   bias_ = NULL;
   return temp;
@@ -31346,9 +31346,9 @@ void EmbeddingNDLayerParams::set_allocated_bias(::CoreML::Specification::WeightP
   delete bias_;
   bias_ = bias;
   if (bias) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.EmbeddingNDLayerParams.bias)
 }
@@ -31803,7 +31803,7 @@ void BatchnormLayerParams::clear_channels() {
   return channels_;
 }
 void BatchnormLayerParams::set_channels(::google::protobuf::uint64 value) {
-  
+
   channels_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.BatchnormLayerParams.channels)
 }
@@ -31817,7 +31817,7 @@ bool BatchnormLayerParams::computemeanvar() const {
   return computemeanvar_;
 }
 void BatchnormLayerParams::set_computemeanvar(bool value) {
-  
+
   computemeanvar_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.BatchnormLayerParams.computeMeanVar)
 }
@@ -31831,7 +31831,7 @@ bool BatchnormLayerParams::instancenormalization() const {
   return instancenormalization_;
 }
 void BatchnormLayerParams::set_instancenormalization(bool value) {
-  
+
   instancenormalization_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.BatchnormLayerParams.instanceNormalization)
 }
@@ -31845,7 +31845,7 @@ float BatchnormLayerParams::epsilon() const {
   return epsilon_;
 }
 void BatchnormLayerParams::set_epsilon(float value) {
-  
+
   epsilon_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.BatchnormLayerParams.epsilon)
 }
@@ -31864,7 +31864,7 @@ const ::CoreML::Specification::WeightParams& BatchnormLayerParams::gamma() const
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* BatchnormLayerParams::mutable_gamma() {
-  
+
   if (gamma_ == NULL) {
     gamma_ = new ::CoreML::Specification::WeightParams;
   }
@@ -31873,7 +31873,7 @@ const ::CoreML::Specification::WeightParams& BatchnormLayerParams::gamma() const
 }
 ::CoreML::Specification::WeightParams* BatchnormLayerParams::release_gamma() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.BatchnormLayerParams.gamma)
-  
+
   ::CoreML::Specification::WeightParams* temp = gamma_;
   gamma_ = NULL;
   return temp;
@@ -31882,9 +31882,9 @@ void BatchnormLayerParams::set_allocated_gamma(::CoreML::Specification::WeightPa
   delete gamma_;
   gamma_ = gamma;
   if (gamma) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.BatchnormLayerParams.gamma)
 }
@@ -31903,7 +31903,7 @@ const ::CoreML::Specification::WeightParams& BatchnormLayerParams::beta() const 
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* BatchnormLayerParams::mutable_beta() {
-  
+
   if (beta_ == NULL) {
     beta_ = new ::CoreML::Specification::WeightParams;
   }
@@ -31912,7 +31912,7 @@ const ::CoreML::Specification::WeightParams& BatchnormLayerParams::beta() const 
 }
 ::CoreML::Specification::WeightParams* BatchnormLayerParams::release_beta() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.BatchnormLayerParams.beta)
-  
+
   ::CoreML::Specification::WeightParams* temp = beta_;
   beta_ = NULL;
   return temp;
@@ -31921,9 +31921,9 @@ void BatchnormLayerParams::set_allocated_beta(::CoreML::Specification::WeightPar
   delete beta_;
   beta_ = beta;
   if (beta) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.BatchnormLayerParams.beta)
 }
@@ -31942,7 +31942,7 @@ const ::CoreML::Specification::WeightParams& BatchnormLayerParams::mean() const 
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* BatchnormLayerParams::mutable_mean() {
-  
+
   if (mean_ == NULL) {
     mean_ = new ::CoreML::Specification::WeightParams;
   }
@@ -31951,7 +31951,7 @@ const ::CoreML::Specification::WeightParams& BatchnormLayerParams::mean() const 
 }
 ::CoreML::Specification::WeightParams* BatchnormLayerParams::release_mean() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.BatchnormLayerParams.mean)
-  
+
   ::CoreML::Specification::WeightParams* temp = mean_;
   mean_ = NULL;
   return temp;
@@ -31960,9 +31960,9 @@ void BatchnormLayerParams::set_allocated_mean(::CoreML::Specification::WeightPar
   delete mean_;
   mean_ = mean;
   if (mean) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.BatchnormLayerParams.mean)
 }
@@ -31981,7 +31981,7 @@ const ::CoreML::Specification::WeightParams& BatchnormLayerParams::variance() co
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* BatchnormLayerParams::mutable_variance() {
-  
+
   if (variance_ == NULL) {
     variance_ = new ::CoreML::Specification::WeightParams;
   }
@@ -31990,7 +31990,7 @@ const ::CoreML::Specification::WeightParams& BatchnormLayerParams::variance() co
 }
 ::CoreML::Specification::WeightParams* BatchnormLayerParams::release_variance() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.BatchnormLayerParams.variance)
-  
+
   ::CoreML::Specification::WeightParams* temp = variance_;
   variance_ = NULL;
   return temp;
@@ -31999,9 +31999,9 @@ void BatchnormLayerParams::set_allocated_variance(::CoreML::Specification::Weigh
   delete variance_;
   variance_ = variance;
   if (variance) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.BatchnormLayerParams.variance)
 }
@@ -32730,7 +32730,7 @@ void PoolingLayerParams::clear_type() {
   return static_cast< ::CoreML::Specification::PoolingLayerParams_PoolingType >(type_);
 }
 void PoolingLayerParams::set_type(::CoreML::Specification::PoolingLayerParams_PoolingType value) {
-  
+
   type_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.PoolingLayerParams.type)
 }
@@ -32948,7 +32948,7 @@ bool PoolingLayerParams::avgpoolexcludepadding() const {
   return avgpoolexcludepadding_;
 }
 void PoolingLayerParams::set_avgpoolexcludepadding(bool value) {
-  
+
   avgpoolexcludepadding_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.PoolingLayerParams.avgPoolExcludePadding)
 }
@@ -32962,7 +32962,7 @@ bool PoolingLayerParams::globalpooling() const {
   return globalpooling_;
 }
 void PoolingLayerParams::set_globalpooling(bool value) {
-  
+
   globalpooling_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.PoolingLayerParams.globalPooling)
 }
@@ -33605,7 +33605,7 @@ void Pooling3DLayerParams::clear_type() {
   return static_cast< ::CoreML::Specification::Pooling3DLayerParams_PoolingType3D >(type_);
 }
 void Pooling3DLayerParams::set_type(::CoreML::Specification::Pooling3DLayerParams_PoolingType3D value) {
-  
+
   type_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Pooling3DLayerParams.type)
 }
@@ -33619,7 +33619,7 @@ void Pooling3DLayerParams::clear_kerneldepth() {
   return kerneldepth_;
 }
 void Pooling3DLayerParams::set_kerneldepth(::google::protobuf::int32 value) {
-  
+
   kerneldepth_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Pooling3DLayerParams.kernelDepth)
 }
@@ -33633,7 +33633,7 @@ void Pooling3DLayerParams::clear_kernelheight() {
   return kernelheight_;
 }
 void Pooling3DLayerParams::set_kernelheight(::google::protobuf::int32 value) {
-  
+
   kernelheight_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Pooling3DLayerParams.kernelHeight)
 }
@@ -33647,7 +33647,7 @@ void Pooling3DLayerParams::clear_kernelwidth() {
   return kernelwidth_;
 }
 void Pooling3DLayerParams::set_kernelwidth(::google::protobuf::int32 value) {
-  
+
   kernelwidth_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Pooling3DLayerParams.kernelWidth)
 }
@@ -33661,7 +33661,7 @@ void Pooling3DLayerParams::clear_stridedepth() {
   return stridedepth_;
 }
 void Pooling3DLayerParams::set_stridedepth(::google::protobuf::int32 value) {
-  
+
   stridedepth_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Pooling3DLayerParams.strideDepth)
 }
@@ -33675,7 +33675,7 @@ void Pooling3DLayerParams::clear_strideheight() {
   return strideheight_;
 }
 void Pooling3DLayerParams::set_strideheight(::google::protobuf::int32 value) {
-  
+
   strideheight_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Pooling3DLayerParams.strideHeight)
 }
@@ -33689,7 +33689,7 @@ void Pooling3DLayerParams::clear_stridewidth() {
   return stridewidth_;
 }
 void Pooling3DLayerParams::set_stridewidth(::google::protobuf::int32 value) {
-  
+
   stridewidth_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Pooling3DLayerParams.strideWidth)
 }
@@ -33703,7 +33703,7 @@ void Pooling3DLayerParams::clear_paddingtype() {
   return static_cast< ::CoreML::Specification::Pooling3DLayerParams_Pooling3DPaddingType >(paddingtype_);
 }
 void Pooling3DLayerParams::set_paddingtype(::CoreML::Specification::Pooling3DLayerParams_Pooling3DPaddingType value) {
-  
+
   paddingtype_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Pooling3DLayerParams.paddingType)
 }
@@ -33717,7 +33717,7 @@ void Pooling3DLayerParams::clear_custompaddingfront() {
   return custompaddingfront_;
 }
 void Pooling3DLayerParams::set_custompaddingfront(::google::protobuf::int32 value) {
-  
+
   custompaddingfront_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Pooling3DLayerParams.customPaddingFront)
 }
@@ -33731,7 +33731,7 @@ void Pooling3DLayerParams::clear_custompaddingback() {
   return custompaddingback_;
 }
 void Pooling3DLayerParams::set_custompaddingback(::google::protobuf::int32 value) {
-  
+
   custompaddingback_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Pooling3DLayerParams.customPaddingBack)
 }
@@ -33745,7 +33745,7 @@ void Pooling3DLayerParams::clear_custompaddingtop() {
   return custompaddingtop_;
 }
 void Pooling3DLayerParams::set_custompaddingtop(::google::protobuf::int32 value) {
-  
+
   custompaddingtop_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Pooling3DLayerParams.customPaddingTop)
 }
@@ -33759,7 +33759,7 @@ void Pooling3DLayerParams::clear_custompaddingbottom() {
   return custompaddingbottom_;
 }
 void Pooling3DLayerParams::set_custompaddingbottom(::google::protobuf::int32 value) {
-  
+
   custompaddingbottom_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Pooling3DLayerParams.customPaddingBottom)
 }
@@ -33773,7 +33773,7 @@ void Pooling3DLayerParams::clear_custompaddingleft() {
   return custompaddingleft_;
 }
 void Pooling3DLayerParams::set_custompaddingleft(::google::protobuf::int32 value) {
-  
+
   custompaddingleft_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Pooling3DLayerParams.customPaddingLeft)
 }
@@ -33787,7 +33787,7 @@ void Pooling3DLayerParams::clear_custompaddingright() {
   return custompaddingright_;
 }
 void Pooling3DLayerParams::set_custompaddingright(::google::protobuf::int32 value) {
-  
+
   custompaddingright_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Pooling3DLayerParams.customPaddingRight)
 }
@@ -33801,7 +33801,7 @@ bool Pooling3DLayerParams::countexcludepadding() const {
   return countexcludepadding_;
 }
 void Pooling3DLayerParams::set_countexcludepadding(bool value) {
-  
+
   countexcludepadding_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Pooling3DLayerParams.countExcludePadding)
 }
@@ -33998,7 +33998,7 @@ void GlobalPooling3DLayerParams::clear_type() {
   return static_cast< ::CoreML::Specification::GlobalPooling3DLayerParams_GlobalPoolingType3D >(type_);
 }
 void GlobalPooling3DLayerParams::set_type(::CoreML::Specification::GlobalPooling3DLayerParams_GlobalPoolingType3D value) {
-  
+
   type_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.GlobalPooling3DLayerParams.type)
 }
@@ -34192,7 +34192,7 @@ float PaddingLayerParams_PaddingConstant::value() const {
   return value_;
 }
 void PaddingLayerParams_PaddingConstant::set_value(float value) {
-  
+
   value_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.PaddingLayerParams.PaddingConstant.value)
 }
@@ -34980,7 +34980,7 @@ const ::CoreML::Specification::BorderAmounts& PaddingLayerParams::paddingamounts
                          : *::CoreML::Specification::BorderAmounts::internal_default_instance();
 }
 ::CoreML::Specification::BorderAmounts* PaddingLayerParams::mutable_paddingamounts() {
-  
+
   if (paddingamounts_ == NULL) {
     paddingamounts_ = new ::CoreML::Specification::BorderAmounts;
   }
@@ -34989,7 +34989,7 @@ const ::CoreML::Specification::BorderAmounts& PaddingLayerParams::paddingamounts
 }
 ::CoreML::Specification::BorderAmounts* PaddingLayerParams::release_paddingamounts() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.PaddingLayerParams.paddingAmounts)
-  
+
   ::CoreML::Specification::BorderAmounts* temp = paddingamounts_;
   paddingamounts_ = NULL;
   return temp;
@@ -34998,9 +34998,9 @@ void PaddingLayerParams::set_allocated_paddingamounts(::CoreML::Specification::B
   delete paddingamounts_;
   paddingamounts_ = paddingamounts;
   if (paddingamounts) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.PaddingLayerParams.paddingAmounts)
 }
@@ -35203,7 +35203,7 @@ bool ConcatLayerParams::sequenceconcat() const {
   return sequenceconcat_;
 }
 void ConcatLayerParams::set_sequenceconcat(bool value) {
-  
+
   sequenceconcat_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ConcatLayerParams.sequenceConcat)
 }
@@ -35490,7 +35490,7 @@ float LRNLayerParams::alpha() const {
   return alpha_;
 }
 void LRNLayerParams::set_alpha(float value) {
-  
+
   alpha_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.LRNLayerParams.alpha)
 }
@@ -35504,7 +35504,7 @@ float LRNLayerParams::beta() const {
   return beta_;
 }
 void LRNLayerParams::set_beta(float value) {
-  
+
   beta_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.LRNLayerParams.beta)
 }
@@ -35518,7 +35518,7 @@ void LRNLayerParams::clear_localsize() {
   return localsize_;
 }
 void LRNLayerParams::set_localsize(::google::protobuf::uint64 value) {
-  
+
   localsize_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.LRNLayerParams.localSize)
 }
@@ -35532,7 +35532,7 @@ float LRNLayerParams::k() const {
   return k_;
 }
 void LRNLayerParams::set_k(float value) {
-  
+
   k_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.LRNLayerParams.k)
 }
@@ -35871,7 +35871,7 @@ void SplitLayerParams::clear_noutputs() {
   return noutputs_;
 }
 void SplitLayerParams::set_noutputs(::google::protobuf::uint64 value) {
-  
+
   noutputs_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SplitLayerParams.nOutputs)
 }
@@ -36065,7 +36065,7 @@ float AddLayerParams::alpha() const {
   return alpha_;
 }
 void AddLayerParams::set_alpha(float value) {
-  
+
   alpha_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.AddLayerParams.alpha)
 }
@@ -36259,7 +36259,7 @@ float MultiplyLayerParams::alpha() const {
   return alpha_;
 }
 void MultiplyLayerParams::set_alpha(float value) {
-  
+
   alpha_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.MultiplyLayerParams.alpha)
 }
@@ -36576,7 +36576,7 @@ void UnaryFunctionLayerParams::clear_type() {
   return static_cast< ::CoreML::Specification::UnaryFunctionLayerParams_Operation >(type_);
 }
 void UnaryFunctionLayerParams::set_type(::CoreML::Specification::UnaryFunctionLayerParams_Operation value) {
-  
+
   type_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.UnaryFunctionLayerParams.type)
 }
@@ -36590,7 +36590,7 @@ float UnaryFunctionLayerParams::alpha() const {
   return alpha_;
 }
 void UnaryFunctionLayerParams::set_alpha(float value) {
-  
+
   alpha_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.UnaryFunctionLayerParams.alpha)
 }
@@ -36604,7 +36604,7 @@ float UnaryFunctionLayerParams::epsilon() const {
   return epsilon_;
 }
 void UnaryFunctionLayerParams::set_epsilon(float value) {
-  
+
   epsilon_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.UnaryFunctionLayerParams.epsilon)
 }
@@ -36618,7 +36618,7 @@ float UnaryFunctionLayerParams::shift() const {
   return shift_;
 }
 void UnaryFunctionLayerParams::set_shift(float value) {
-  
+
   shift_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.UnaryFunctionLayerParams.shift)
 }
@@ -36632,7 +36632,7 @@ float UnaryFunctionLayerParams::scale() const {
   return scale_;
 }
 void UnaryFunctionLayerParams::set_scale(float value) {
-  
+
   scale_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.UnaryFunctionLayerParams.scale)
 }
@@ -37019,7 +37019,7 @@ void UpsampleLayerParams::clear_mode() {
   return static_cast< ::CoreML::Specification::UpsampleLayerParams_InterpolationMode >(mode_);
 }
 void UpsampleLayerParams::set_mode(::CoreML::Specification::UpsampleLayerParams_InterpolationMode value) {
-  
+
   mode_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.UpsampleLayerParams.mode)
 }
@@ -37033,7 +37033,7 @@ void UpsampleLayerParams::clear_linearupsamplemode() {
   return static_cast< ::CoreML::Specification::UpsampleLayerParams_LinearUpsampleMode >(linearupsamplemode_);
 }
 void UpsampleLayerParams::set_linearupsamplemode(::CoreML::Specification::UpsampleLayerParams_LinearUpsampleMode value) {
-  
+
   linearupsamplemode_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.UpsampleLayerParams.linearUpsampleMode)
 }
@@ -37321,7 +37321,7 @@ const ::CoreML::Specification::SamplingMode& ResizeBilinearLayerParams::mode() c
                          : *::CoreML::Specification::SamplingMode::internal_default_instance();
 }
 ::CoreML::Specification::SamplingMode* ResizeBilinearLayerParams::mutable_mode() {
-  
+
   if (mode_ == NULL) {
     mode_ = new ::CoreML::Specification::SamplingMode;
   }
@@ -37330,7 +37330,7 @@ const ::CoreML::Specification::SamplingMode& ResizeBilinearLayerParams::mode() c
 }
 ::CoreML::Specification::SamplingMode* ResizeBilinearLayerParams::release_mode() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.ResizeBilinearLayerParams.mode)
-  
+
   ::CoreML::Specification::SamplingMode* temp = mode_;
   mode_ = NULL;
   return temp;
@@ -37339,9 +37339,9 @@ void ResizeBilinearLayerParams::set_allocated_mode(::CoreML::Specification::Samp
   delete mode_;
   mode_ = mode;
   if (mode) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.ResizeBilinearLayerParams.mode)
 }
@@ -37730,7 +37730,7 @@ bool CropResizeLayerParams::normalizedcoordinates() const {
   return normalizedcoordinates_;
 }
 void CropResizeLayerParams::set_normalizedcoordinates(bool value) {
-  
+
   normalizedcoordinates_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.CropResizeLayerParams.normalizedCoordinates)
 }
@@ -37749,7 +37749,7 @@ const ::CoreML::Specification::SamplingMode& CropResizeLayerParams::mode() const
                          : *::CoreML::Specification::SamplingMode::internal_default_instance();
 }
 ::CoreML::Specification::SamplingMode* CropResizeLayerParams::mutable_mode() {
-  
+
   if (mode_ == NULL) {
     mode_ = new ::CoreML::Specification::SamplingMode;
   }
@@ -37758,7 +37758,7 @@ const ::CoreML::Specification::SamplingMode& CropResizeLayerParams::mode() const
 }
 ::CoreML::Specification::SamplingMode* CropResizeLayerParams::release_mode() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.CropResizeLayerParams.mode)
-  
+
   ::CoreML::Specification::SamplingMode* temp = mode_;
   mode_ = NULL;
   return temp;
@@ -37767,9 +37767,9 @@ void CropResizeLayerParams::set_allocated_mode(::CoreML::Specification::Sampling
   delete mode_;
   mode_ = mode;
   if (mode) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.CropResizeLayerParams.mode)
 }
@@ -37788,7 +37788,7 @@ const ::CoreML::Specification::BoxCoordinatesMode& CropResizeLayerParams::boxind
                          : *::CoreML::Specification::BoxCoordinatesMode::internal_default_instance();
 }
 ::CoreML::Specification::BoxCoordinatesMode* CropResizeLayerParams::mutable_boxindicesmode() {
-  
+
   if (boxindicesmode_ == NULL) {
     boxindicesmode_ = new ::CoreML::Specification::BoxCoordinatesMode;
   }
@@ -37797,7 +37797,7 @@ const ::CoreML::Specification::BoxCoordinatesMode& CropResizeLayerParams::boxind
 }
 ::CoreML::Specification::BoxCoordinatesMode* CropResizeLayerParams::release_boxindicesmode() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.CropResizeLayerParams.boxIndicesMode)
-  
+
   ::CoreML::Specification::BoxCoordinatesMode* temp = boxindicesmode_;
   boxindicesmode_ = NULL;
   return temp;
@@ -37806,9 +37806,9 @@ void CropResizeLayerParams::set_allocated_boxindicesmode(::CoreML::Specification
   delete boxindicesmode_;
   boxindicesmode_ = boxindicesmode;
   if (boxindicesmode) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.CropResizeLayerParams.boxIndicesMode)
 }
@@ -37822,7 +37822,7 @@ float CropResizeLayerParams::spatialscale() const {
   return spatialscale_;
 }
 void CropResizeLayerParams::set_spatialscale(float value) {
-  
+
   spatialscale_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.CropResizeLayerParams.spatialScale)
 }
@@ -38110,7 +38110,7 @@ const ::CoreML::Specification::WeightParams& BiasLayerParams::bias() const {
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* BiasLayerParams::mutable_bias() {
-  
+
   if (bias_ == NULL) {
     bias_ = new ::CoreML::Specification::WeightParams;
   }
@@ -38119,7 +38119,7 @@ const ::CoreML::Specification::WeightParams& BiasLayerParams::bias() const {
 }
 ::CoreML::Specification::WeightParams* BiasLayerParams::release_bias() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.BiasLayerParams.bias)
-  
+
   ::CoreML::Specification::WeightParams* temp = bias_;
   bias_ = NULL;
   return temp;
@@ -38128,9 +38128,9 @@ void BiasLayerParams::set_allocated_bias(::CoreML::Specification::WeightParams* 
   delete bias_;
   bias_ = bias;
   if (bias) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.BiasLayerParams.bias)
 }
@@ -38540,7 +38540,7 @@ const ::CoreML::Specification::WeightParams& ScaleLayerParams::scale() const {
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* ScaleLayerParams::mutable_scale() {
-  
+
   if (scale_ == NULL) {
     scale_ = new ::CoreML::Specification::WeightParams;
   }
@@ -38549,7 +38549,7 @@ const ::CoreML::Specification::WeightParams& ScaleLayerParams::scale() const {
 }
 ::CoreML::Specification::WeightParams* ScaleLayerParams::release_scale() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.ScaleLayerParams.scale)
-  
+
   ::CoreML::Specification::WeightParams* temp = scale_;
   scale_ = NULL;
   return temp;
@@ -38558,9 +38558,9 @@ void ScaleLayerParams::set_allocated_scale(::CoreML::Specification::WeightParams
   delete scale_;
   scale_ = scale;
   if (scale) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.ScaleLayerParams.scale)
 }
@@ -38574,7 +38574,7 @@ bool ScaleLayerParams::hasbias() const {
   return hasbias_;
 }
 void ScaleLayerParams::set_hasbias(bool value) {
-  
+
   hasbias_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ScaleLayerParams.hasBias)
 }
@@ -38623,7 +38623,7 @@ const ::CoreML::Specification::WeightParams& ScaleLayerParams::bias() const {
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* ScaleLayerParams::mutable_bias() {
-  
+
   if (bias_ == NULL) {
     bias_ = new ::CoreML::Specification::WeightParams;
   }
@@ -38632,7 +38632,7 @@ const ::CoreML::Specification::WeightParams& ScaleLayerParams::bias() const {
 }
 ::CoreML::Specification::WeightParams* ScaleLayerParams::release_bias() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.ScaleLayerParams.bias)
-  
+
   ::CoreML::Specification::WeightParams* temp = bias_;
   bias_ = NULL;
   return temp;
@@ -38641,9 +38641,9 @@ void ScaleLayerParams::set_allocated_bias(::CoreML::Specification::WeightParams*
   delete bias_;
   bias_ = bias;
   if (bias) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.ScaleLayerParams.bias)
 }
@@ -38931,7 +38931,7 @@ const ::CoreML::Specification::WeightParams& LoadConstantLayerParams::data() con
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* LoadConstantLayerParams::mutable_data() {
-  
+
   if (data_ == NULL) {
     data_ = new ::CoreML::Specification::WeightParams;
   }
@@ -38940,7 +38940,7 @@ const ::CoreML::Specification::WeightParams& LoadConstantLayerParams::data() con
 }
 ::CoreML::Specification::WeightParams* LoadConstantLayerParams::release_data() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LoadConstantLayerParams.data)
-  
+
   ::CoreML::Specification::WeightParams* temp = data_;
   data_ = NULL;
   return temp;
@@ -38949,9 +38949,9 @@ void LoadConstantLayerParams::set_allocated_data(::CoreML::Specification::Weight
   delete data_;
   data_ = data;
   if (data) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LoadConstantLayerParams.data)
 }
@@ -39145,7 +39145,7 @@ float L2NormalizeLayerParams::epsilon() const {
   return epsilon_;
 }
 void L2NormalizeLayerParams::set_epsilon(float value) {
-  
+
   epsilon_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.L2NormalizeLayerParams.epsilon)
 }
@@ -39342,7 +39342,7 @@ void FlattenLayerParams::clear_mode() {
   return static_cast< ::CoreML::Specification::FlattenLayerParams_FlattenOrder >(mode_);
 }
 void FlattenLayerParams::set_mode(::CoreML::Specification::FlattenLayerParams_FlattenOrder value) {
-  
+
   mode_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.FlattenLayerParams.mode)
 }
@@ -39617,7 +39617,7 @@ void ReshapeLayerParams::clear_mode() {
   return static_cast< ::CoreML::Specification::ReshapeLayerParams_ReshapeOrder >(mode_);
 }
 void ReshapeLayerParams::set_mode(::CoreML::Specification::ReshapeLayerParams_ReshapeOrder value) {
-  
+
   mode_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReshapeLayerParams.mode)
 }
@@ -40075,7 +40075,7 @@ void ReorganizeDataLayerParams::clear_mode() {
   return static_cast< ::CoreML::Specification::ReorganizeDataLayerParams_ReorganizationType >(mode_);
 }
 void ReorganizeDataLayerParams::set_mode(::CoreML::Specification::ReorganizeDataLayerParams_ReorganizationType value) {
-  
+
   mode_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReorganizeDataLayerParams.mode)
 }
@@ -40089,7 +40089,7 @@ void ReorganizeDataLayerParams::clear_blocksize() {
   return blocksize_;
 }
 void ReorganizeDataLayerParams::set_blocksize(::google::protobuf::uint64 value) {
-  
+
   blocksize_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReorganizeDataLayerParams.blockSize)
 }
@@ -40383,7 +40383,7 @@ void SliceLayerParams::clear_startindex() {
   return startindex_;
 }
 void SliceLayerParams::set_startindex(::google::protobuf::int64 value) {
-  
+
   startindex_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SliceLayerParams.startIndex)
 }
@@ -40397,7 +40397,7 @@ void SliceLayerParams::clear_endindex() {
   return endindex_;
 }
 void SliceLayerParams::set_endindex(::google::protobuf::int64 value) {
-  
+
   endindex_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SliceLayerParams.endIndex)
 }
@@ -40411,7 +40411,7 @@ void SliceLayerParams::clear_stride() {
   return stride_;
 }
 void SliceLayerParams::set_stride(::google::protobuf::uint64 value) {
-  
+
   stride_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SliceLayerParams.stride)
 }
@@ -40425,7 +40425,7 @@ void SliceLayerParams::clear_axis() {
   return static_cast< ::CoreML::Specification::SliceLayerParams_SliceAxis >(axis_);
 }
 void SliceLayerParams::set_axis(::CoreML::Specification::SliceLayerParams_SliceAxis value) {
-  
+
   axis_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SliceLayerParams.axis)
 }
@@ -40687,7 +40687,7 @@ void ReduceLayerParams::clear_mode() {
   return static_cast< ::CoreML::Specification::ReduceLayerParams_ReduceOperation >(mode_);
 }
 void ReduceLayerParams::set_mode(::CoreML::Specification::ReduceLayerParams_ReduceOperation value) {
-  
+
   mode_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReduceLayerParams.mode)
 }
@@ -40701,7 +40701,7 @@ float ReduceLayerParams::epsilon() const {
   return epsilon_;
 }
 void ReduceLayerParams::set_epsilon(float value) {
-  
+
   epsilon_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReduceLayerParams.epsilon)
 }
@@ -40715,7 +40715,7 @@ void ReduceLayerParams::clear_axis() {
   return static_cast< ::CoreML::Specification::ReduceLayerParams_ReduceAxis >(axis_);
 }
 void ReduceLayerParams::set_axis(::CoreML::Specification::ReduceLayerParams_ReduceAxis value) {
-  
+
   axis_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReduceLayerParams.axis)
 }
@@ -40973,7 +40973,7 @@ const ::CoreML::Specification::BorderAmounts& CropLayerParams::cropamounts() con
                          : *::CoreML::Specification::BorderAmounts::internal_default_instance();
 }
 ::CoreML::Specification::BorderAmounts* CropLayerParams::mutable_cropamounts() {
-  
+
   if (cropamounts_ == NULL) {
     cropamounts_ = new ::CoreML::Specification::BorderAmounts;
   }
@@ -40982,7 +40982,7 @@ const ::CoreML::Specification::BorderAmounts& CropLayerParams::cropamounts() con
 }
 ::CoreML::Specification::BorderAmounts* CropLayerParams::release_cropamounts() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.CropLayerParams.cropAmounts)
-  
+
   ::CoreML::Specification::BorderAmounts* temp = cropamounts_;
   cropamounts_ = NULL;
   return temp;
@@ -40991,9 +40991,9 @@ void CropLayerParams::set_allocated_cropamounts(::CoreML::Specification::BorderA
   delete cropamounts_;
   cropamounts_ = cropamounts;
   if (cropamounts) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.CropLayerParams.cropAmounts)
 }
@@ -41646,7 +41646,7 @@ bool DotProductLayerParams::cosinesimilarity() const {
   return cosinesimilarity_;
 }
 void DotProductLayerParams::set_cosinesimilarity(bool value) {
-  
+
   cosinesimilarity_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.DotProductLayerParams.cosineSimilarity)
 }
@@ -41902,7 +41902,7 @@ bool MeanVarianceNormalizeLayerParams::acrosschannels() const {
   return acrosschannels_;
 }
 void MeanVarianceNormalizeLayerParams::set_acrosschannels(bool value) {
-  
+
   acrosschannels_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.MeanVarianceNormalizeLayerParams.acrossChannels)
 }
@@ -41916,7 +41916,7 @@ bool MeanVarianceNormalizeLayerParams::normalizevariance() const {
   return normalizevariance_;
 }
 void MeanVarianceNormalizeLayerParams::set_normalizevariance(bool value) {
-  
+
   normalizevariance_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.MeanVarianceNormalizeLayerParams.normalizeVariance)
 }
@@ -41930,7 +41930,7 @@ float MeanVarianceNormalizeLayerParams::epsilon() const {
   return epsilon_;
 }
 void MeanVarianceNormalizeLayerParams::set_epsilon(float value) {
-  
+
   epsilon_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.MeanVarianceNormalizeLayerParams.epsilon)
 }
@@ -42126,7 +42126,7 @@ void SequenceRepeatLayerParams::clear_nrepetitions() {
   return nrepetitions_;
 }
 void SequenceRepeatLayerParams::set_nrepetitions(::google::protobuf::uint64 value) {
-  
+
   nrepetitions_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SequenceRepeatLayerParams.nRepetitions)
 }
@@ -42612,7 +42612,7 @@ void SimpleRecurrentLayerParams::clear_inputvectorsize() {
   return inputvectorsize_;
 }
 void SimpleRecurrentLayerParams::set_inputvectorsize(::google::protobuf::uint64 value) {
-  
+
   inputvectorsize_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SimpleRecurrentLayerParams.inputVectorSize)
 }
@@ -42626,7 +42626,7 @@ void SimpleRecurrentLayerParams::clear_outputvectorsize() {
   return outputvectorsize_;
 }
 void SimpleRecurrentLayerParams::set_outputvectorsize(::google::protobuf::uint64 value) {
-  
+
   outputvectorsize_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SimpleRecurrentLayerParams.outputVectorSize)
 }
@@ -42645,7 +42645,7 @@ const ::CoreML::Specification::ActivationParams& SimpleRecurrentLayerParams::act
                          : *::CoreML::Specification::ActivationParams::internal_default_instance();
 }
 ::CoreML::Specification::ActivationParams* SimpleRecurrentLayerParams::mutable_activation() {
-  
+
   if (activation_ == NULL) {
     activation_ = new ::CoreML::Specification::ActivationParams;
   }
@@ -42654,7 +42654,7 @@ const ::CoreML::Specification::ActivationParams& SimpleRecurrentLayerParams::act
 }
 ::CoreML::Specification::ActivationParams* SimpleRecurrentLayerParams::release_activation() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.SimpleRecurrentLayerParams.activation)
-  
+
   ::CoreML::Specification::ActivationParams* temp = activation_;
   activation_ = NULL;
   return temp;
@@ -42663,9 +42663,9 @@ void SimpleRecurrentLayerParams::set_allocated_activation(::CoreML::Specificatio
   delete activation_;
   activation_ = activation;
   if (activation) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.SimpleRecurrentLayerParams.activation)
 }
@@ -42679,7 +42679,7 @@ bool SimpleRecurrentLayerParams::sequenceoutput() const {
   return sequenceoutput_;
 }
 void SimpleRecurrentLayerParams::set_sequenceoutput(bool value) {
-  
+
   sequenceoutput_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SimpleRecurrentLayerParams.sequenceOutput)
 }
@@ -42693,7 +42693,7 @@ bool SimpleRecurrentLayerParams::hasbiasvector() const {
   return hasbiasvector_;
 }
 void SimpleRecurrentLayerParams::set_hasbiasvector(bool value) {
-  
+
   hasbiasvector_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SimpleRecurrentLayerParams.hasBiasVector)
 }
@@ -42712,7 +42712,7 @@ const ::CoreML::Specification::WeightParams& SimpleRecurrentLayerParams::weightm
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* SimpleRecurrentLayerParams::mutable_weightmatrix() {
-  
+
   if (weightmatrix_ == NULL) {
     weightmatrix_ = new ::CoreML::Specification::WeightParams;
   }
@@ -42721,7 +42721,7 @@ const ::CoreML::Specification::WeightParams& SimpleRecurrentLayerParams::weightm
 }
 ::CoreML::Specification::WeightParams* SimpleRecurrentLayerParams::release_weightmatrix() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.SimpleRecurrentLayerParams.weightMatrix)
-  
+
   ::CoreML::Specification::WeightParams* temp = weightmatrix_;
   weightmatrix_ = NULL;
   return temp;
@@ -42730,9 +42730,9 @@ void SimpleRecurrentLayerParams::set_allocated_weightmatrix(::CoreML::Specificat
   delete weightmatrix_;
   weightmatrix_ = weightmatrix;
   if (weightmatrix) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.SimpleRecurrentLayerParams.weightMatrix)
 }
@@ -42751,7 +42751,7 @@ const ::CoreML::Specification::WeightParams& SimpleRecurrentLayerParams::recursi
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* SimpleRecurrentLayerParams::mutable_recursionmatrix() {
-  
+
   if (recursionmatrix_ == NULL) {
     recursionmatrix_ = new ::CoreML::Specification::WeightParams;
   }
@@ -42760,7 +42760,7 @@ const ::CoreML::Specification::WeightParams& SimpleRecurrentLayerParams::recursi
 }
 ::CoreML::Specification::WeightParams* SimpleRecurrentLayerParams::release_recursionmatrix() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.SimpleRecurrentLayerParams.recursionMatrix)
-  
+
   ::CoreML::Specification::WeightParams* temp = recursionmatrix_;
   recursionmatrix_ = NULL;
   return temp;
@@ -42769,9 +42769,9 @@ void SimpleRecurrentLayerParams::set_allocated_recursionmatrix(::CoreML::Specifi
   delete recursionmatrix_;
   recursionmatrix_ = recursionmatrix;
   if (recursionmatrix) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.SimpleRecurrentLayerParams.recursionMatrix)
 }
@@ -42790,7 +42790,7 @@ const ::CoreML::Specification::WeightParams& SimpleRecurrentLayerParams::biasvec
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* SimpleRecurrentLayerParams::mutable_biasvector() {
-  
+
   if (biasvector_ == NULL) {
     biasvector_ = new ::CoreML::Specification::WeightParams;
   }
@@ -42799,7 +42799,7 @@ const ::CoreML::Specification::WeightParams& SimpleRecurrentLayerParams::biasvec
 }
 ::CoreML::Specification::WeightParams* SimpleRecurrentLayerParams::release_biasvector() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.SimpleRecurrentLayerParams.biasVector)
-  
+
   ::CoreML::Specification::WeightParams* temp = biasvector_;
   biasvector_ = NULL;
   return temp;
@@ -42808,9 +42808,9 @@ void SimpleRecurrentLayerParams::set_allocated_biasvector(::CoreML::Specificatio
   delete biasvector_;
   biasvector_ = biasvector;
   if (biasvector) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.SimpleRecurrentLayerParams.biasVector)
 }
@@ -42824,7 +42824,7 @@ bool SimpleRecurrentLayerParams::reverseinput() const {
   return reverseinput_;
 }
 void SimpleRecurrentLayerParams::set_reverseinput(bool value) {
-  
+
   reverseinput_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SimpleRecurrentLayerParams.reverseInput)
 }
@@ -43554,7 +43554,7 @@ void GRULayerParams::clear_inputvectorsize() {
   return inputvectorsize_;
 }
 void GRULayerParams::set_inputvectorsize(::google::protobuf::uint64 value) {
-  
+
   inputvectorsize_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.GRULayerParams.inputVectorSize)
 }
@@ -43568,7 +43568,7 @@ void GRULayerParams::clear_outputvectorsize() {
   return outputvectorsize_;
 }
 void GRULayerParams::set_outputvectorsize(::google::protobuf::uint64 value) {
-  
+
   outputvectorsize_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.GRULayerParams.outputVectorSize)
 }
@@ -43612,7 +43612,7 @@ bool GRULayerParams::sequenceoutput() const {
   return sequenceoutput_;
 }
 void GRULayerParams::set_sequenceoutput(bool value) {
-  
+
   sequenceoutput_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.GRULayerParams.sequenceOutput)
 }
@@ -43626,7 +43626,7 @@ bool GRULayerParams::hasbiasvectors() const {
   return hasbiasvectors_;
 }
 void GRULayerParams::set_hasbiasvectors(bool value) {
-  
+
   hasbiasvectors_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.GRULayerParams.hasBiasVectors)
 }
@@ -43645,7 +43645,7 @@ const ::CoreML::Specification::WeightParams& GRULayerParams::updategateweightmat
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* GRULayerParams::mutable_updategateweightmatrix() {
-  
+
   if (updategateweightmatrix_ == NULL) {
     updategateweightmatrix_ = new ::CoreML::Specification::WeightParams;
   }
@@ -43654,7 +43654,7 @@ const ::CoreML::Specification::WeightParams& GRULayerParams::updategateweightmat
 }
 ::CoreML::Specification::WeightParams* GRULayerParams::release_updategateweightmatrix() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.GRULayerParams.updateGateWeightMatrix)
-  
+
   ::CoreML::Specification::WeightParams* temp = updategateweightmatrix_;
   updategateweightmatrix_ = NULL;
   return temp;
@@ -43663,9 +43663,9 @@ void GRULayerParams::set_allocated_updategateweightmatrix(::CoreML::Specificatio
   delete updategateweightmatrix_;
   updategateweightmatrix_ = updategateweightmatrix;
   if (updategateweightmatrix) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.GRULayerParams.updateGateWeightMatrix)
 }
@@ -43684,7 +43684,7 @@ const ::CoreML::Specification::WeightParams& GRULayerParams::resetgateweightmatr
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* GRULayerParams::mutable_resetgateweightmatrix() {
-  
+
   if (resetgateweightmatrix_ == NULL) {
     resetgateweightmatrix_ = new ::CoreML::Specification::WeightParams;
   }
@@ -43693,7 +43693,7 @@ const ::CoreML::Specification::WeightParams& GRULayerParams::resetgateweightmatr
 }
 ::CoreML::Specification::WeightParams* GRULayerParams::release_resetgateweightmatrix() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.GRULayerParams.resetGateWeightMatrix)
-  
+
   ::CoreML::Specification::WeightParams* temp = resetgateweightmatrix_;
   resetgateweightmatrix_ = NULL;
   return temp;
@@ -43702,9 +43702,9 @@ void GRULayerParams::set_allocated_resetgateweightmatrix(::CoreML::Specification
   delete resetgateweightmatrix_;
   resetgateweightmatrix_ = resetgateweightmatrix;
   if (resetgateweightmatrix) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.GRULayerParams.resetGateWeightMatrix)
 }
@@ -43723,7 +43723,7 @@ const ::CoreML::Specification::WeightParams& GRULayerParams::outputgateweightmat
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* GRULayerParams::mutable_outputgateweightmatrix() {
-  
+
   if (outputgateweightmatrix_ == NULL) {
     outputgateweightmatrix_ = new ::CoreML::Specification::WeightParams;
   }
@@ -43732,7 +43732,7 @@ const ::CoreML::Specification::WeightParams& GRULayerParams::outputgateweightmat
 }
 ::CoreML::Specification::WeightParams* GRULayerParams::release_outputgateweightmatrix() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.GRULayerParams.outputGateWeightMatrix)
-  
+
   ::CoreML::Specification::WeightParams* temp = outputgateweightmatrix_;
   outputgateweightmatrix_ = NULL;
   return temp;
@@ -43741,9 +43741,9 @@ void GRULayerParams::set_allocated_outputgateweightmatrix(::CoreML::Specificatio
   delete outputgateweightmatrix_;
   outputgateweightmatrix_ = outputgateweightmatrix;
   if (outputgateweightmatrix) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.GRULayerParams.outputGateWeightMatrix)
 }
@@ -43762,7 +43762,7 @@ const ::CoreML::Specification::WeightParams& GRULayerParams::updategaterecursion
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* GRULayerParams::mutable_updategaterecursionmatrix() {
-  
+
   if (updategaterecursionmatrix_ == NULL) {
     updategaterecursionmatrix_ = new ::CoreML::Specification::WeightParams;
   }
@@ -43771,7 +43771,7 @@ const ::CoreML::Specification::WeightParams& GRULayerParams::updategaterecursion
 }
 ::CoreML::Specification::WeightParams* GRULayerParams::release_updategaterecursionmatrix() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.GRULayerParams.updateGateRecursionMatrix)
-  
+
   ::CoreML::Specification::WeightParams* temp = updategaterecursionmatrix_;
   updategaterecursionmatrix_ = NULL;
   return temp;
@@ -43780,9 +43780,9 @@ void GRULayerParams::set_allocated_updategaterecursionmatrix(::CoreML::Specifica
   delete updategaterecursionmatrix_;
   updategaterecursionmatrix_ = updategaterecursionmatrix;
   if (updategaterecursionmatrix) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.GRULayerParams.updateGateRecursionMatrix)
 }
@@ -43801,7 +43801,7 @@ const ::CoreML::Specification::WeightParams& GRULayerParams::resetgaterecursionm
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* GRULayerParams::mutable_resetgaterecursionmatrix() {
-  
+
   if (resetgaterecursionmatrix_ == NULL) {
     resetgaterecursionmatrix_ = new ::CoreML::Specification::WeightParams;
   }
@@ -43810,7 +43810,7 @@ const ::CoreML::Specification::WeightParams& GRULayerParams::resetgaterecursionm
 }
 ::CoreML::Specification::WeightParams* GRULayerParams::release_resetgaterecursionmatrix() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.GRULayerParams.resetGateRecursionMatrix)
-  
+
   ::CoreML::Specification::WeightParams* temp = resetgaterecursionmatrix_;
   resetgaterecursionmatrix_ = NULL;
   return temp;
@@ -43819,9 +43819,9 @@ void GRULayerParams::set_allocated_resetgaterecursionmatrix(::CoreML::Specificat
   delete resetgaterecursionmatrix_;
   resetgaterecursionmatrix_ = resetgaterecursionmatrix;
   if (resetgaterecursionmatrix) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.GRULayerParams.resetGateRecursionMatrix)
 }
@@ -43840,7 +43840,7 @@ const ::CoreML::Specification::WeightParams& GRULayerParams::outputgaterecursion
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* GRULayerParams::mutable_outputgaterecursionmatrix() {
-  
+
   if (outputgaterecursionmatrix_ == NULL) {
     outputgaterecursionmatrix_ = new ::CoreML::Specification::WeightParams;
   }
@@ -43849,7 +43849,7 @@ const ::CoreML::Specification::WeightParams& GRULayerParams::outputgaterecursion
 }
 ::CoreML::Specification::WeightParams* GRULayerParams::release_outputgaterecursionmatrix() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.GRULayerParams.outputGateRecursionMatrix)
-  
+
   ::CoreML::Specification::WeightParams* temp = outputgaterecursionmatrix_;
   outputgaterecursionmatrix_ = NULL;
   return temp;
@@ -43858,9 +43858,9 @@ void GRULayerParams::set_allocated_outputgaterecursionmatrix(::CoreML::Specifica
   delete outputgaterecursionmatrix_;
   outputgaterecursionmatrix_ = outputgaterecursionmatrix;
   if (outputgaterecursionmatrix) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.GRULayerParams.outputGateRecursionMatrix)
 }
@@ -43879,7 +43879,7 @@ const ::CoreML::Specification::WeightParams& GRULayerParams::updategatebiasvecto
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* GRULayerParams::mutable_updategatebiasvector() {
-  
+
   if (updategatebiasvector_ == NULL) {
     updategatebiasvector_ = new ::CoreML::Specification::WeightParams;
   }
@@ -43888,7 +43888,7 @@ const ::CoreML::Specification::WeightParams& GRULayerParams::updategatebiasvecto
 }
 ::CoreML::Specification::WeightParams* GRULayerParams::release_updategatebiasvector() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.GRULayerParams.updateGateBiasVector)
-  
+
   ::CoreML::Specification::WeightParams* temp = updategatebiasvector_;
   updategatebiasvector_ = NULL;
   return temp;
@@ -43897,9 +43897,9 @@ void GRULayerParams::set_allocated_updategatebiasvector(::CoreML::Specification:
   delete updategatebiasvector_;
   updategatebiasvector_ = updategatebiasvector;
   if (updategatebiasvector) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.GRULayerParams.updateGateBiasVector)
 }
@@ -43918,7 +43918,7 @@ const ::CoreML::Specification::WeightParams& GRULayerParams::resetgatebiasvector
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* GRULayerParams::mutable_resetgatebiasvector() {
-  
+
   if (resetgatebiasvector_ == NULL) {
     resetgatebiasvector_ = new ::CoreML::Specification::WeightParams;
   }
@@ -43927,7 +43927,7 @@ const ::CoreML::Specification::WeightParams& GRULayerParams::resetgatebiasvector
 }
 ::CoreML::Specification::WeightParams* GRULayerParams::release_resetgatebiasvector() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.GRULayerParams.resetGateBiasVector)
-  
+
   ::CoreML::Specification::WeightParams* temp = resetgatebiasvector_;
   resetgatebiasvector_ = NULL;
   return temp;
@@ -43936,9 +43936,9 @@ void GRULayerParams::set_allocated_resetgatebiasvector(::CoreML::Specification::
   delete resetgatebiasvector_;
   resetgatebiasvector_ = resetgatebiasvector;
   if (resetgatebiasvector) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.GRULayerParams.resetGateBiasVector)
 }
@@ -43957,7 +43957,7 @@ const ::CoreML::Specification::WeightParams& GRULayerParams::outputgatebiasvecto
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* GRULayerParams::mutable_outputgatebiasvector() {
-  
+
   if (outputgatebiasvector_ == NULL) {
     outputgatebiasvector_ = new ::CoreML::Specification::WeightParams;
   }
@@ -43966,7 +43966,7 @@ const ::CoreML::Specification::WeightParams& GRULayerParams::outputgatebiasvecto
 }
 ::CoreML::Specification::WeightParams* GRULayerParams::release_outputgatebiasvector() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.GRULayerParams.outputGateBiasVector)
-  
+
   ::CoreML::Specification::WeightParams* temp = outputgatebiasvector_;
   outputgatebiasvector_ = NULL;
   return temp;
@@ -43975,9 +43975,9 @@ void GRULayerParams::set_allocated_outputgatebiasvector(::CoreML::Specification:
   delete outputgatebiasvector_;
   outputgatebiasvector_ = outputgatebiasvector;
   if (outputgatebiasvector) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.GRULayerParams.outputGateBiasVector)
 }
@@ -43991,7 +43991,7 @@ bool GRULayerParams::reverseinput() const {
   return reverseinput_;
 }
 void GRULayerParams::set_reverseinput(bool value) {
-  
+
   reverseinput_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.GRULayerParams.reverseInput)
 }
@@ -44334,7 +44334,7 @@ bool LSTMParams::sequenceoutput() const {
   return sequenceoutput_;
 }
 void LSTMParams::set_sequenceoutput(bool value) {
-  
+
   sequenceoutput_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.LSTMParams.sequenceOutput)
 }
@@ -44348,7 +44348,7 @@ bool LSTMParams::hasbiasvectors() const {
   return hasbiasvectors_;
 }
 void LSTMParams::set_hasbiasvectors(bool value) {
-  
+
   hasbiasvectors_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.LSTMParams.hasBiasVectors)
 }
@@ -44362,7 +44362,7 @@ bool LSTMParams::forgetbias() const {
   return forgetbias_;
 }
 void LSTMParams::set_forgetbias(bool value) {
-  
+
   forgetbias_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.LSTMParams.forgetBias)
 }
@@ -44376,7 +44376,7 @@ bool LSTMParams::haspeepholevectors() const {
   return haspeepholevectors_;
 }
 void LSTMParams::set_haspeepholevectors(bool value) {
-  
+
   haspeepholevectors_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.LSTMParams.hasPeepholeVectors)
 }
@@ -44390,7 +44390,7 @@ bool LSTMParams::coupledinputandforgetgate() const {
   return coupledinputandforgetgate_;
 }
 void LSTMParams::set_coupledinputandforgetgate(bool value) {
-  
+
   coupledinputandforgetgate_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.LSTMParams.coupledInputAndForgetGate)
 }
@@ -44404,7 +44404,7 @@ float LSTMParams::cellclipthreshold() const {
   return cellclipthreshold_;
 }
 void LSTMParams::set_cellclipthreshold(float value) {
-  
+
   cellclipthreshold_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.LSTMParams.cellClipThreshold)
 }
@@ -45203,7 +45203,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::inputgateweightma
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::mutable_inputgateweightmatrix() {
-  
+
   if (inputgateweightmatrix_ == NULL) {
     inputgateweightmatrix_ = new ::CoreML::Specification::WeightParams;
   }
@@ -45212,7 +45212,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::inputgateweightma
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::release_inputgateweightmatrix() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LSTMWeightParams.inputGateWeightMatrix)
-  
+
   ::CoreML::Specification::WeightParams* temp = inputgateweightmatrix_;
   inputgateweightmatrix_ = NULL;
   return temp;
@@ -45221,9 +45221,9 @@ void LSTMWeightParams::set_allocated_inputgateweightmatrix(::CoreML::Specificati
   delete inputgateweightmatrix_;
   inputgateweightmatrix_ = inputgateweightmatrix;
   if (inputgateweightmatrix) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LSTMWeightParams.inputGateWeightMatrix)
 }
@@ -45242,7 +45242,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::forgetgateweightm
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::mutable_forgetgateweightmatrix() {
-  
+
   if (forgetgateweightmatrix_ == NULL) {
     forgetgateweightmatrix_ = new ::CoreML::Specification::WeightParams;
   }
@@ -45251,7 +45251,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::forgetgateweightm
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::release_forgetgateweightmatrix() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LSTMWeightParams.forgetGateWeightMatrix)
-  
+
   ::CoreML::Specification::WeightParams* temp = forgetgateweightmatrix_;
   forgetgateweightmatrix_ = NULL;
   return temp;
@@ -45260,9 +45260,9 @@ void LSTMWeightParams::set_allocated_forgetgateweightmatrix(::CoreML::Specificat
   delete forgetgateweightmatrix_;
   forgetgateweightmatrix_ = forgetgateweightmatrix;
   if (forgetgateweightmatrix) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LSTMWeightParams.forgetGateWeightMatrix)
 }
@@ -45281,7 +45281,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::blockinputweightm
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::mutable_blockinputweightmatrix() {
-  
+
   if (blockinputweightmatrix_ == NULL) {
     blockinputweightmatrix_ = new ::CoreML::Specification::WeightParams;
   }
@@ -45290,7 +45290,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::blockinputweightm
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::release_blockinputweightmatrix() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LSTMWeightParams.blockInputWeightMatrix)
-  
+
   ::CoreML::Specification::WeightParams* temp = blockinputweightmatrix_;
   blockinputweightmatrix_ = NULL;
   return temp;
@@ -45299,9 +45299,9 @@ void LSTMWeightParams::set_allocated_blockinputweightmatrix(::CoreML::Specificat
   delete blockinputweightmatrix_;
   blockinputweightmatrix_ = blockinputweightmatrix;
   if (blockinputweightmatrix) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LSTMWeightParams.blockInputWeightMatrix)
 }
@@ -45320,7 +45320,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::outputgateweightm
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::mutable_outputgateweightmatrix() {
-  
+
   if (outputgateweightmatrix_ == NULL) {
     outputgateweightmatrix_ = new ::CoreML::Specification::WeightParams;
   }
@@ -45329,7 +45329,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::outputgateweightm
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::release_outputgateweightmatrix() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LSTMWeightParams.outputGateWeightMatrix)
-  
+
   ::CoreML::Specification::WeightParams* temp = outputgateweightmatrix_;
   outputgateweightmatrix_ = NULL;
   return temp;
@@ -45338,9 +45338,9 @@ void LSTMWeightParams::set_allocated_outputgateweightmatrix(::CoreML::Specificat
   delete outputgateweightmatrix_;
   outputgateweightmatrix_ = outputgateweightmatrix;
   if (outputgateweightmatrix) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LSTMWeightParams.outputGateWeightMatrix)
 }
@@ -45359,7 +45359,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::inputgaterecursio
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::mutable_inputgaterecursionmatrix() {
-  
+
   if (inputgaterecursionmatrix_ == NULL) {
     inputgaterecursionmatrix_ = new ::CoreML::Specification::WeightParams;
   }
@@ -45368,7 +45368,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::inputgaterecursio
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::release_inputgaterecursionmatrix() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LSTMWeightParams.inputGateRecursionMatrix)
-  
+
   ::CoreML::Specification::WeightParams* temp = inputgaterecursionmatrix_;
   inputgaterecursionmatrix_ = NULL;
   return temp;
@@ -45377,9 +45377,9 @@ void LSTMWeightParams::set_allocated_inputgaterecursionmatrix(::CoreML::Specific
   delete inputgaterecursionmatrix_;
   inputgaterecursionmatrix_ = inputgaterecursionmatrix;
   if (inputgaterecursionmatrix) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LSTMWeightParams.inputGateRecursionMatrix)
 }
@@ -45398,7 +45398,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::forgetgaterecursi
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::mutable_forgetgaterecursionmatrix() {
-  
+
   if (forgetgaterecursionmatrix_ == NULL) {
     forgetgaterecursionmatrix_ = new ::CoreML::Specification::WeightParams;
   }
@@ -45407,7 +45407,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::forgetgaterecursi
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::release_forgetgaterecursionmatrix() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LSTMWeightParams.forgetGateRecursionMatrix)
-  
+
   ::CoreML::Specification::WeightParams* temp = forgetgaterecursionmatrix_;
   forgetgaterecursionmatrix_ = NULL;
   return temp;
@@ -45416,9 +45416,9 @@ void LSTMWeightParams::set_allocated_forgetgaterecursionmatrix(::CoreML::Specifi
   delete forgetgaterecursionmatrix_;
   forgetgaterecursionmatrix_ = forgetgaterecursionmatrix;
   if (forgetgaterecursionmatrix) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LSTMWeightParams.forgetGateRecursionMatrix)
 }
@@ -45437,7 +45437,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::blockinputrecursi
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::mutable_blockinputrecursionmatrix() {
-  
+
   if (blockinputrecursionmatrix_ == NULL) {
     blockinputrecursionmatrix_ = new ::CoreML::Specification::WeightParams;
   }
@@ -45446,7 +45446,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::blockinputrecursi
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::release_blockinputrecursionmatrix() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LSTMWeightParams.blockInputRecursionMatrix)
-  
+
   ::CoreML::Specification::WeightParams* temp = blockinputrecursionmatrix_;
   blockinputrecursionmatrix_ = NULL;
   return temp;
@@ -45455,9 +45455,9 @@ void LSTMWeightParams::set_allocated_blockinputrecursionmatrix(::CoreML::Specifi
   delete blockinputrecursionmatrix_;
   blockinputrecursionmatrix_ = blockinputrecursionmatrix;
   if (blockinputrecursionmatrix) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LSTMWeightParams.blockInputRecursionMatrix)
 }
@@ -45476,7 +45476,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::outputgaterecursi
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::mutable_outputgaterecursionmatrix() {
-  
+
   if (outputgaterecursionmatrix_ == NULL) {
     outputgaterecursionmatrix_ = new ::CoreML::Specification::WeightParams;
   }
@@ -45485,7 +45485,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::outputgaterecursi
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::release_outputgaterecursionmatrix() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LSTMWeightParams.outputGateRecursionMatrix)
-  
+
   ::CoreML::Specification::WeightParams* temp = outputgaterecursionmatrix_;
   outputgaterecursionmatrix_ = NULL;
   return temp;
@@ -45494,9 +45494,9 @@ void LSTMWeightParams::set_allocated_outputgaterecursionmatrix(::CoreML::Specifi
   delete outputgaterecursionmatrix_;
   outputgaterecursionmatrix_ = outputgaterecursionmatrix;
   if (outputgaterecursionmatrix) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LSTMWeightParams.outputGateRecursionMatrix)
 }
@@ -45515,7 +45515,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::inputgatebiasvect
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::mutable_inputgatebiasvector() {
-  
+
   if (inputgatebiasvector_ == NULL) {
     inputgatebiasvector_ = new ::CoreML::Specification::WeightParams;
   }
@@ -45524,7 +45524,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::inputgatebiasvect
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::release_inputgatebiasvector() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LSTMWeightParams.inputGateBiasVector)
-  
+
   ::CoreML::Specification::WeightParams* temp = inputgatebiasvector_;
   inputgatebiasvector_ = NULL;
   return temp;
@@ -45533,9 +45533,9 @@ void LSTMWeightParams::set_allocated_inputgatebiasvector(::CoreML::Specification
   delete inputgatebiasvector_;
   inputgatebiasvector_ = inputgatebiasvector;
   if (inputgatebiasvector) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LSTMWeightParams.inputGateBiasVector)
 }
@@ -45554,7 +45554,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::forgetgatebiasvec
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::mutable_forgetgatebiasvector() {
-  
+
   if (forgetgatebiasvector_ == NULL) {
     forgetgatebiasvector_ = new ::CoreML::Specification::WeightParams;
   }
@@ -45563,7 +45563,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::forgetgatebiasvec
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::release_forgetgatebiasvector() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LSTMWeightParams.forgetGateBiasVector)
-  
+
   ::CoreML::Specification::WeightParams* temp = forgetgatebiasvector_;
   forgetgatebiasvector_ = NULL;
   return temp;
@@ -45572,9 +45572,9 @@ void LSTMWeightParams::set_allocated_forgetgatebiasvector(::CoreML::Specificatio
   delete forgetgatebiasvector_;
   forgetgatebiasvector_ = forgetgatebiasvector;
   if (forgetgatebiasvector) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LSTMWeightParams.forgetGateBiasVector)
 }
@@ -45593,7 +45593,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::blockinputbiasvec
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::mutable_blockinputbiasvector() {
-  
+
   if (blockinputbiasvector_ == NULL) {
     blockinputbiasvector_ = new ::CoreML::Specification::WeightParams;
   }
@@ -45602,7 +45602,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::blockinputbiasvec
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::release_blockinputbiasvector() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LSTMWeightParams.blockInputBiasVector)
-  
+
   ::CoreML::Specification::WeightParams* temp = blockinputbiasvector_;
   blockinputbiasvector_ = NULL;
   return temp;
@@ -45611,9 +45611,9 @@ void LSTMWeightParams::set_allocated_blockinputbiasvector(::CoreML::Specificatio
   delete blockinputbiasvector_;
   blockinputbiasvector_ = blockinputbiasvector;
   if (blockinputbiasvector) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LSTMWeightParams.blockInputBiasVector)
 }
@@ -45632,7 +45632,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::outputgatebiasvec
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::mutable_outputgatebiasvector() {
-  
+
   if (outputgatebiasvector_ == NULL) {
     outputgatebiasvector_ = new ::CoreML::Specification::WeightParams;
   }
@@ -45641,7 +45641,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::outputgatebiasvec
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::release_outputgatebiasvector() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LSTMWeightParams.outputGateBiasVector)
-  
+
   ::CoreML::Specification::WeightParams* temp = outputgatebiasvector_;
   outputgatebiasvector_ = NULL;
   return temp;
@@ -45650,9 +45650,9 @@ void LSTMWeightParams::set_allocated_outputgatebiasvector(::CoreML::Specificatio
   delete outputgatebiasvector_;
   outputgatebiasvector_ = outputgatebiasvector;
   if (outputgatebiasvector) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LSTMWeightParams.outputGateBiasVector)
 }
@@ -45671,7 +45671,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::inputgatepeephole
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::mutable_inputgatepeepholevector() {
-  
+
   if (inputgatepeepholevector_ == NULL) {
     inputgatepeepholevector_ = new ::CoreML::Specification::WeightParams;
   }
@@ -45680,7 +45680,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::inputgatepeephole
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::release_inputgatepeepholevector() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LSTMWeightParams.inputGatePeepholeVector)
-  
+
   ::CoreML::Specification::WeightParams* temp = inputgatepeepholevector_;
   inputgatepeepholevector_ = NULL;
   return temp;
@@ -45689,9 +45689,9 @@ void LSTMWeightParams::set_allocated_inputgatepeepholevector(::CoreML::Specifica
   delete inputgatepeepholevector_;
   inputgatepeepholevector_ = inputgatepeepholevector;
   if (inputgatepeepholevector) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LSTMWeightParams.inputGatePeepholeVector)
 }
@@ -45710,7 +45710,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::forgetgatepeephol
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::mutable_forgetgatepeepholevector() {
-  
+
   if (forgetgatepeepholevector_ == NULL) {
     forgetgatepeepholevector_ = new ::CoreML::Specification::WeightParams;
   }
@@ -45719,7 +45719,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::forgetgatepeephol
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::release_forgetgatepeepholevector() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LSTMWeightParams.forgetGatePeepholeVector)
-  
+
   ::CoreML::Specification::WeightParams* temp = forgetgatepeepholevector_;
   forgetgatepeepholevector_ = NULL;
   return temp;
@@ -45728,9 +45728,9 @@ void LSTMWeightParams::set_allocated_forgetgatepeepholevector(::CoreML::Specific
   delete forgetgatepeepholevector_;
   forgetgatepeepholevector_ = forgetgatepeepholevector;
   if (forgetgatepeepholevector) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LSTMWeightParams.forgetGatePeepholeVector)
 }
@@ -45749,7 +45749,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::outputgatepeephol
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::mutable_outputgatepeepholevector() {
-  
+
   if (outputgatepeepholevector_ == NULL) {
     outputgatepeepholevector_ = new ::CoreML::Specification::WeightParams;
   }
@@ -45758,7 +45758,7 @@ const ::CoreML::Specification::WeightParams& LSTMWeightParams::outputgatepeephol
 }
 ::CoreML::Specification::WeightParams* LSTMWeightParams::release_outputgatepeepholevector() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LSTMWeightParams.outputGatePeepholeVector)
-  
+
   ::CoreML::Specification::WeightParams* temp = outputgatepeepholevector_;
   outputgatepeepholevector_ = NULL;
   return temp;
@@ -45767,9 +45767,9 @@ void LSTMWeightParams::set_allocated_outputgatepeepholevector(::CoreML::Specific
   delete outputgatepeepholevector_;
   outputgatepeepholevector_ = outputgatepeepholevector;
   if (outputgatepeepholevector) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LSTMWeightParams.outputGatePeepholeVector)
 }
@@ -46147,7 +46147,7 @@ void UniDirectionalLSTMLayerParams::clear_inputvectorsize() {
   return inputvectorsize_;
 }
 void UniDirectionalLSTMLayerParams::set_inputvectorsize(::google::protobuf::uint64 value) {
-  
+
   inputvectorsize_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.UniDirectionalLSTMLayerParams.inputVectorSize)
 }
@@ -46161,7 +46161,7 @@ void UniDirectionalLSTMLayerParams::clear_outputvectorsize() {
   return outputvectorsize_;
 }
 void UniDirectionalLSTMLayerParams::set_outputvectorsize(::google::protobuf::uint64 value) {
-  
+
   outputvectorsize_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.UniDirectionalLSTMLayerParams.outputVectorSize)
 }
@@ -46210,7 +46210,7 @@ const ::CoreML::Specification::LSTMParams& UniDirectionalLSTMLayerParams::params
                          : *::CoreML::Specification::LSTMParams::internal_default_instance();
 }
 ::CoreML::Specification::LSTMParams* UniDirectionalLSTMLayerParams::mutable_params() {
-  
+
   if (params_ == NULL) {
     params_ = new ::CoreML::Specification::LSTMParams;
   }
@@ -46219,7 +46219,7 @@ const ::CoreML::Specification::LSTMParams& UniDirectionalLSTMLayerParams::params
 }
 ::CoreML::Specification::LSTMParams* UniDirectionalLSTMLayerParams::release_params() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.UniDirectionalLSTMLayerParams.params)
-  
+
   ::CoreML::Specification::LSTMParams* temp = params_;
   params_ = NULL;
   return temp;
@@ -46228,9 +46228,9 @@ void UniDirectionalLSTMLayerParams::set_allocated_params(::CoreML::Specification
   delete params_;
   params_ = params;
   if (params) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.UniDirectionalLSTMLayerParams.params)
 }
@@ -46249,7 +46249,7 @@ const ::CoreML::Specification::LSTMWeightParams& UniDirectionalLSTMLayerParams::
                          : *::CoreML::Specification::LSTMWeightParams::internal_default_instance();
 }
 ::CoreML::Specification::LSTMWeightParams* UniDirectionalLSTMLayerParams::mutable_weightparams() {
-  
+
   if (weightparams_ == NULL) {
     weightparams_ = new ::CoreML::Specification::LSTMWeightParams;
   }
@@ -46258,7 +46258,7 @@ const ::CoreML::Specification::LSTMWeightParams& UniDirectionalLSTMLayerParams::
 }
 ::CoreML::Specification::LSTMWeightParams* UniDirectionalLSTMLayerParams::release_weightparams() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.UniDirectionalLSTMLayerParams.weightParams)
-  
+
   ::CoreML::Specification::LSTMWeightParams* temp = weightparams_;
   weightparams_ = NULL;
   return temp;
@@ -46267,9 +46267,9 @@ void UniDirectionalLSTMLayerParams::set_allocated_weightparams(::CoreML::Specifi
   delete weightparams_;
   weightparams_ = weightparams;
   if (weightparams) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.UniDirectionalLSTMLayerParams.weightParams)
 }
@@ -46283,7 +46283,7 @@ bool UniDirectionalLSTMLayerParams::reverseinput() const {
   return reverseinput_;
 }
 void UniDirectionalLSTMLayerParams::set_reverseinput(bool value) {
-  
+
   reverseinput_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.UniDirectionalLSTMLayerParams.reverseInput)
 }
@@ -46658,7 +46658,7 @@ void BiDirectionalLSTMLayerParams::clear_inputvectorsize() {
   return inputvectorsize_;
 }
 void BiDirectionalLSTMLayerParams::set_inputvectorsize(::google::protobuf::uint64 value) {
-  
+
   inputvectorsize_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.BiDirectionalLSTMLayerParams.inputVectorSize)
 }
@@ -46672,7 +46672,7 @@ void BiDirectionalLSTMLayerParams::clear_outputvectorsize() {
   return outputvectorsize_;
 }
 void BiDirectionalLSTMLayerParams::set_outputvectorsize(::google::protobuf::uint64 value) {
-  
+
   outputvectorsize_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.BiDirectionalLSTMLayerParams.outputVectorSize)
 }
@@ -46751,7 +46751,7 @@ const ::CoreML::Specification::LSTMParams& BiDirectionalLSTMLayerParams::params(
                          : *::CoreML::Specification::LSTMParams::internal_default_instance();
 }
 ::CoreML::Specification::LSTMParams* BiDirectionalLSTMLayerParams::mutable_params() {
-  
+
   if (params_ == NULL) {
     params_ = new ::CoreML::Specification::LSTMParams;
   }
@@ -46760,7 +46760,7 @@ const ::CoreML::Specification::LSTMParams& BiDirectionalLSTMLayerParams::params(
 }
 ::CoreML::Specification::LSTMParams* BiDirectionalLSTMLayerParams::release_params() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.BiDirectionalLSTMLayerParams.params)
-  
+
   ::CoreML::Specification::LSTMParams* temp = params_;
   params_ = NULL;
   return temp;
@@ -46769,9 +46769,9 @@ void BiDirectionalLSTMLayerParams::set_allocated_params(::CoreML::Specification:
   delete params_;
   params_ = params;
   if (params) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.BiDirectionalLSTMLayerParams.params)
 }
@@ -47789,13 +47789,13 @@ const ::std::string& CustomLayerParams::classname() const {
   return classname_.GetNoArena();
 }
 void CustomLayerParams::set_classname(const ::std::string& value) {
-  
+
   classname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:CoreML.Specification.CustomLayerParams.className)
 }
 #if LANG_CXX11
 void CustomLayerParams::set_classname(::std::string&& value) {
-  
+
   classname_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:CoreML.Specification.CustomLayerParams.className)
@@ -47803,31 +47803,31 @@ void CustomLayerParams::set_classname(::std::string&& value) {
 #endif
 void CustomLayerParams::set_classname(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+
   classname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:CoreML.Specification.CustomLayerParams.className)
 }
 void CustomLayerParams::set_classname(const char* value, size_t size) {
-  
+
   classname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:CoreML.Specification.CustomLayerParams.className)
 }
 ::std::string* CustomLayerParams::mutable_classname() {
-  
+
   // @@protoc_insertion_point(field_mutable:CoreML.Specification.CustomLayerParams.className)
   return classname_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 ::std::string* CustomLayerParams::release_classname() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.CustomLayerParams.className)
-  
+
   return classname_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 void CustomLayerParams::set_allocated_classname(::std::string* classname) {
   if (classname != NULL) {
-    
+
   } else {
-    
+
   }
   classname_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), classname);
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.CustomLayerParams.className)
@@ -47890,13 +47890,13 @@ const ::std::string& CustomLayerParams::description() const {
   return description_.GetNoArena();
 }
 void CustomLayerParams::set_description(const ::std::string& value) {
-  
+
   description_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:CoreML.Specification.CustomLayerParams.description)
 }
 #if LANG_CXX11
 void CustomLayerParams::set_description(::std::string&& value) {
-  
+
   description_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:CoreML.Specification.CustomLayerParams.description)
@@ -47904,31 +47904,31 @@ void CustomLayerParams::set_description(::std::string&& value) {
 #endif
 void CustomLayerParams::set_description(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+
   description_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:CoreML.Specification.CustomLayerParams.description)
 }
 void CustomLayerParams::set_description(const char* value, size_t size) {
-  
+
   description_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:CoreML.Specification.CustomLayerParams.description)
 }
 ::std::string* CustomLayerParams::mutable_description() {
-  
+
   // @@protoc_insertion_point(field_mutable:CoreML.Specification.CustomLayerParams.description)
   return description_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 ::std::string* CustomLayerParams::release_description() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.CustomLayerParams.description)
-  
+
   return description_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 void CustomLayerParams::set_allocated_description(::std::string* description) {
   if (description != NULL) {
-    
+
   } else {
-    
+
   }
   description_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), description);
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.CustomLayerParams.description)
@@ -48586,7 +48586,7 @@ bool BatchedMatMulLayerParams::transposea() const {
   return transposea_;
 }
 void BatchedMatMulLayerParams::set_transposea(bool value) {
-  
+
   transposea_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.BatchedMatMulLayerParams.transposeA)
 }
@@ -48600,7 +48600,7 @@ bool BatchedMatMulLayerParams::transposeb() const {
   return transposeb_;
 }
 void BatchedMatMulLayerParams::set_transposeb(bool value) {
-  
+
   transposeb_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.BatchedMatMulLayerParams.transposeB)
 }
@@ -48614,7 +48614,7 @@ void BatchedMatMulLayerParams::clear_weightmatrixfirstdimension() {
   return weightmatrixfirstdimension_;
 }
 void BatchedMatMulLayerParams::set_weightmatrixfirstdimension(::google::protobuf::uint64 value) {
-  
+
   weightmatrixfirstdimension_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.BatchedMatMulLayerParams.weightMatrixFirstDimension)
 }
@@ -48628,7 +48628,7 @@ void BatchedMatMulLayerParams::clear_weightmatrixseconddimension() {
   return weightmatrixseconddimension_;
 }
 void BatchedMatMulLayerParams::set_weightmatrixseconddimension(::google::protobuf::uint64 value) {
-  
+
   weightmatrixseconddimension_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.BatchedMatMulLayerParams.weightMatrixSecondDimension)
 }
@@ -48642,7 +48642,7 @@ bool BatchedMatMulLayerParams::hasbias() const {
   return hasbias_;
 }
 void BatchedMatMulLayerParams::set_hasbias(bool value) {
-  
+
   hasbias_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.BatchedMatMulLayerParams.hasBias)
 }
@@ -48661,7 +48661,7 @@ const ::CoreML::Specification::WeightParams& BatchedMatMulLayerParams::weights()
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* BatchedMatMulLayerParams::mutable_weights() {
-  
+
   if (weights_ == NULL) {
     weights_ = new ::CoreML::Specification::WeightParams;
   }
@@ -48670,7 +48670,7 @@ const ::CoreML::Specification::WeightParams& BatchedMatMulLayerParams::weights()
 }
 ::CoreML::Specification::WeightParams* BatchedMatMulLayerParams::release_weights() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.BatchedMatMulLayerParams.weights)
-  
+
   ::CoreML::Specification::WeightParams* temp = weights_;
   weights_ = NULL;
   return temp;
@@ -48679,9 +48679,9 @@ void BatchedMatMulLayerParams::set_allocated_weights(::CoreML::Specification::We
   delete weights_;
   weights_ = weights;
   if (weights) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.BatchedMatMulLayerParams.weights)
 }
@@ -48700,7 +48700,7 @@ const ::CoreML::Specification::WeightParams& BatchedMatMulLayerParams::bias() co
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* BatchedMatMulLayerParams::mutable_bias() {
-  
+
   if (bias_ == NULL) {
     bias_ = new ::CoreML::Specification::WeightParams;
   }
@@ -48709,7 +48709,7 @@ const ::CoreML::Specification::WeightParams& BatchedMatMulLayerParams::bias() co
 }
 ::CoreML::Specification::WeightParams* BatchedMatMulLayerParams::release_bias() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.BatchedMatMulLayerParams.bias)
-  
+
   ::CoreML::Specification::WeightParams* temp = bias_;
   bias_ = NULL;
   return temp;
@@ -48718,9 +48718,9 @@ void BatchedMatMulLayerParams::set_allocated_bias(::CoreML::Specification::Weigh
   delete bias_;
   bias_ = bias;
   if (bias) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.BatchedMatMulLayerParams.bias)
 }
@@ -48734,7 +48734,7 @@ bool BatchedMatMulLayerParams::int8dynamicquantize() const {
   return int8dynamicquantize_;
 }
 void BatchedMatMulLayerParams::set_int8dynamicquantize(bool value) {
-  
+
   int8dynamicquantize_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.BatchedMatMulLayerParams.int8DynamicQuantize)
 }
@@ -48930,7 +48930,7 @@ void ConcatNDLayerParams::clear_axis() {
   return axis_;
 }
 void ConcatNDLayerParams::set_axis(::google::protobuf::int64 value) {
-  
+
   axis_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ConcatNDLayerParams.axis)
 }
@@ -49126,7 +49126,7 @@ void SoftmaxNDLayerParams::clear_axis() {
   return axis_;
 }
 void SoftmaxNDLayerParams::set_axis(::google::protobuf::int64 value) {
-  
+
   axis_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SoftmaxNDLayerParams.axis)
 }
@@ -49581,7 +49581,7 @@ void ReverseSeqLayerParams::clear_batchaxis() {
   return batchaxis_;
 }
 void ReverseSeqLayerParams::set_batchaxis(::google::protobuf::int64 value) {
-  
+
   batchaxis_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReverseSeqLayerParams.batchAxis)
 }
@@ -49595,7 +49595,7 @@ void ReverseSeqLayerParams::clear_sequenceaxis() {
   return sequenceaxis_;
 }
 void ReverseSeqLayerParams::set_sequenceaxis(::google::protobuf::int64 value) {
-  
+
   sequenceaxis_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReverseSeqLayerParams.sequenceAxis)
 }
@@ -49883,7 +49883,7 @@ const ::CoreML::Specification::WeightParams& LoadConstantNDLayerParams::data() c
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* LoadConstantNDLayerParams::mutable_data() {
-  
+
   if (data_ == NULL) {
     data_ = new ::CoreML::Specification::WeightParams;
   }
@@ -49892,7 +49892,7 @@ const ::CoreML::Specification::WeightParams& LoadConstantNDLayerParams::data() c
 }
 ::CoreML::Specification::WeightParams* LoadConstantNDLayerParams::release_data() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LoadConstantNDLayerParams.data)
-  
+
   ::CoreML::Specification::WeightParams* temp = data_;
   data_ = NULL;
   return temp;
@@ -49901,9 +49901,9 @@ void LoadConstantNDLayerParams::set_allocated_data(::CoreML::Specification::Weig
   delete data_;
   data_ = data;
   if (data) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LoadConstantNDLayerParams.data)
 }
@@ -50097,7 +50097,7 @@ float FillLikeLayerParams::value() const {
   return value_;
 }
 void FillLikeLayerParams::set_value(float value) {
-  
+
   value_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.FillLikeLayerParams.value)
 }
@@ -50339,7 +50339,7 @@ float FillStaticLayerParams::value() const {
   return value_;
 }
 void FillStaticLayerParams::set_value(float value) {
-  
+
   value_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.FillStaticLayerParams.value)
 }
@@ -50563,7 +50563,7 @@ float FillDynamicLayerParams::value() const {
   return value_;
 }
 void FillDynamicLayerParams::set_value(float value) {
-  
+
   value_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.FillDynamicLayerParams.value)
 }
@@ -53082,7 +53082,7 @@ void MatrixBandPartLayerParams::clear_numlower() {
   return numlower_;
 }
 void MatrixBandPartLayerParams::set_numlower(::google::protobuf::int64 value) {
-  
+
   numlower_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.MatrixBandPartLayerParams.numLower)
 }
@@ -53096,7 +53096,7 @@ void MatrixBandPartLayerParams::clear_numupper() {
   return numupper_;
 }
 void MatrixBandPartLayerParams::set_numupper(::google::protobuf::int64 value) {
-  
+
   numupper_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.MatrixBandPartLayerParams.numUpper)
 }
@@ -53292,7 +53292,7 @@ void UpperTriangularLayerParams::clear_k() {
   return k_;
 }
 void UpperTriangularLayerParams::set_k(::google::protobuf::int64 value) {
-  
+
   k_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.UpperTriangularLayerParams.k)
 }
@@ -53488,7 +53488,7 @@ void LowerTriangularLayerParams::clear_k() {
   return k_;
 }
 void LowerTriangularLayerParams::set_k(::google::protobuf::int64 value) {
-  
+
   k_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.LowerTriangularLayerParams.k)
 }
@@ -55340,7 +55340,7 @@ void GatherLayerParams::clear_axis() {
   return axis_;
 }
 void GatherLayerParams::set_axis(::google::protobuf::int64 value) {
-  
+
   axis_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.GatherLayerParams.axis)
 }
@@ -55572,7 +55572,7 @@ void ScatterLayerParams::clear_axis() {
   return axis_;
 }
 void ScatterLayerParams::set_axis(::google::protobuf::int64 value) {
-  
+
   axis_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ScatterLayerParams.axis)
 }
@@ -55586,7 +55586,7 @@ void ScatterLayerParams::clear_mode() {
   return static_cast< ::CoreML::Specification::ScatterMode >(mode_);
 }
 void ScatterLayerParams::set_mode(::CoreML::Specification::ScatterMode value) {
-  
+
   mode_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ScatterLayerParams.mode)
 }
@@ -55926,7 +55926,7 @@ void ScatterNDLayerParams::clear_mode() {
   return static_cast< ::CoreML::Specification::ScatterMode >(mode_);
 }
 void ScatterNDLayerParams::set_mode(::CoreML::Specification::ScatterMode value) {
-  
+
   mode_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ScatterNDLayerParams.mode)
 }
@@ -56122,7 +56122,7 @@ void GatherAlongAxisLayerParams::clear_axis() {
   return axis_;
 }
 void GatherAlongAxisLayerParams::set_axis(::google::protobuf::int64 value) {
-  
+
   axis_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.GatherAlongAxisLayerParams.axis)
 }
@@ -56354,7 +56354,7 @@ void ScatterAlongAxisLayerParams::clear_axis() {
   return axis_;
 }
 void ScatterAlongAxisLayerParams::set_axis(::google::protobuf::int64 value) {
-  
+
   axis_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ScatterAlongAxisLayerParams.axis)
 }
@@ -56368,7 +56368,7 @@ void ScatterAlongAxisLayerParams::clear_mode() {
   return static_cast< ::CoreML::Specification::ScatterMode >(mode_);
 }
 void ScatterAlongAxisLayerParams::set_mode(::CoreML::Specification::ScatterMode value) {
-  
+
   mode_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ScatterAlongAxisLayerParams.mode)
 }
@@ -56564,7 +56564,7 @@ void StackLayerParams::clear_axis() {
   return axis_;
 }
 void StackLayerParams::set_axis(::google::protobuf::int64 value) {
-  
+
   axis_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.StackLayerParams.axis)
 }
@@ -57065,7 +57065,7 @@ float ConstantPaddingLayerParams::value() const {
   return value_;
 }
 void ConstantPaddingLayerParams::set_value(float value) {
-  
+
   value_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ConstantPaddingLayerParams.value)
 }
@@ -57109,7 +57109,7 @@ bool ConstantPaddingLayerParams::padtogivenoutputsizemode() const {
   return padtogivenoutputsizemode_;
 }
 void ConstantPaddingLayerParams::set_padtogivenoutputsizemode(bool value) {
-  
+
   padtogivenoutputsizemode_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ConstantPaddingLayerParams.padToGivenOutputSizeMode)
 }
@@ -57367,7 +57367,7 @@ void RandomNormalLikeLayerParams::clear_seed() {
   return seed_;
 }
 void RandomNormalLikeLayerParams::set_seed(::google::protobuf::int64 value) {
-  
+
   seed_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomNormalLikeLayerParams.seed)
 }
@@ -57381,7 +57381,7 @@ float RandomNormalLikeLayerParams::mean() const {
   return mean_;
 }
 void RandomNormalLikeLayerParams::set_mean(float value) {
-  
+
   mean_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomNormalLikeLayerParams.mean)
 }
@@ -57395,7 +57395,7 @@ float RandomNormalLikeLayerParams::stddev() const {
   return stddev_;
 }
 void RandomNormalLikeLayerParams::set_stddev(float value) {
-  
+
   stddev_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomNormalLikeLayerParams.stdDev)
 }
@@ -57701,7 +57701,7 @@ void RandomNormalStaticLayerParams::clear_seed() {
   return seed_;
 }
 void RandomNormalStaticLayerParams::set_seed(::google::protobuf::int64 value) {
-  
+
   seed_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomNormalStaticLayerParams.seed)
 }
@@ -57715,7 +57715,7 @@ float RandomNormalStaticLayerParams::mean() const {
   return mean_;
 }
 void RandomNormalStaticLayerParams::set_mean(float value) {
-  
+
   mean_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomNormalStaticLayerParams.mean)
 }
@@ -57729,7 +57729,7 @@ float RandomNormalStaticLayerParams::stddev() const {
   return stddev_;
 }
 void RandomNormalStaticLayerParams::set_stddev(float value) {
-  
+
   stddev_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomNormalStaticLayerParams.stdDev)
 }
@@ -58017,7 +58017,7 @@ void RandomNormalDynamicLayerParams::clear_seed() {
   return seed_;
 }
 void RandomNormalDynamicLayerParams::set_seed(::google::protobuf::int64 value) {
-  
+
   seed_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomNormalDynamicLayerParams.seed)
 }
@@ -58031,7 +58031,7 @@ float RandomNormalDynamicLayerParams::mean() const {
   return mean_;
 }
 void RandomNormalDynamicLayerParams::set_mean(float value) {
-  
+
   mean_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomNormalDynamicLayerParams.mean)
 }
@@ -58045,7 +58045,7 @@ float RandomNormalDynamicLayerParams::stddev() const {
   return stddev_;
 }
 void RandomNormalDynamicLayerParams::set_stddev(float value) {
-  
+
   stddev_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomNormalDynamicLayerParams.stdDev)
 }
@@ -58303,7 +58303,7 @@ void RandomUniformLikeLayerParams::clear_seed() {
   return seed_;
 }
 void RandomUniformLikeLayerParams::set_seed(::google::protobuf::int64 value) {
-  
+
   seed_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomUniformLikeLayerParams.seed)
 }
@@ -58317,7 +58317,7 @@ float RandomUniformLikeLayerParams::minval() const {
   return minval_;
 }
 void RandomUniformLikeLayerParams::set_minval(float value) {
-  
+
   minval_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomUniformLikeLayerParams.minVal)
 }
@@ -58331,7 +58331,7 @@ float RandomUniformLikeLayerParams::maxval() const {
   return maxval_;
 }
 void RandomUniformLikeLayerParams::set_maxval(float value) {
-  
+
   maxval_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomUniformLikeLayerParams.maxVal)
 }
@@ -58637,7 +58637,7 @@ void RandomUniformStaticLayerParams::clear_seed() {
   return seed_;
 }
 void RandomUniformStaticLayerParams::set_seed(::google::protobuf::int64 value) {
-  
+
   seed_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomUniformStaticLayerParams.seed)
 }
@@ -58651,7 +58651,7 @@ float RandomUniformStaticLayerParams::minval() const {
   return minval_;
 }
 void RandomUniformStaticLayerParams::set_minval(float value) {
-  
+
   minval_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomUniformStaticLayerParams.minVal)
 }
@@ -58665,7 +58665,7 @@ float RandomUniformStaticLayerParams::maxval() const {
   return maxval_;
 }
 void RandomUniformStaticLayerParams::set_maxval(float value) {
-  
+
   maxval_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomUniformStaticLayerParams.maxVal)
 }
@@ -58953,7 +58953,7 @@ void RandomUniformDynamicLayerParams::clear_seed() {
   return seed_;
 }
 void RandomUniformDynamicLayerParams::set_seed(::google::protobuf::int64 value) {
-  
+
   seed_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomUniformDynamicLayerParams.seed)
 }
@@ -58967,7 +58967,7 @@ float RandomUniformDynamicLayerParams::minval() const {
   return minval_;
 }
 void RandomUniformDynamicLayerParams::set_minval(float value) {
-  
+
   minval_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomUniformDynamicLayerParams.minVal)
 }
@@ -58981,7 +58981,7 @@ float RandomUniformDynamicLayerParams::maxval() const {
   return maxval_;
 }
 void RandomUniformDynamicLayerParams::set_maxval(float value) {
-  
+
   maxval_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomUniformDynamicLayerParams.maxVal)
 }
@@ -59210,7 +59210,7 @@ void RandomBernoulliLikeLayerParams::clear_seed() {
   return seed_;
 }
 void RandomBernoulliLikeLayerParams::set_seed(::google::protobuf::int64 value) {
-  
+
   seed_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomBernoulliLikeLayerParams.seed)
 }
@@ -59224,7 +59224,7 @@ float RandomBernoulliLikeLayerParams::prob() const {
   return prob_;
 }
 void RandomBernoulliLikeLayerParams::set_prob(float value) {
-  
+
   prob_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomBernoulliLikeLayerParams.prob)
 }
@@ -59501,7 +59501,7 @@ void RandomBernoulliStaticLayerParams::clear_seed() {
   return seed_;
 }
 void RandomBernoulliStaticLayerParams::set_seed(::google::protobuf::int64 value) {
-  
+
   seed_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomBernoulliStaticLayerParams.seed)
 }
@@ -59515,7 +59515,7 @@ float RandomBernoulliStaticLayerParams::prob() const {
   return prob_;
 }
 void RandomBernoulliStaticLayerParams::set_prob(float value) {
-  
+
   prob_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomBernoulliStaticLayerParams.prob)
 }
@@ -59774,7 +59774,7 @@ void RandomBernoulliDynamicLayerParams::clear_seed() {
   return seed_;
 }
 void RandomBernoulliDynamicLayerParams::set_seed(::google::protobuf::int64 value) {
-  
+
   seed_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomBernoulliDynamicLayerParams.seed)
 }
@@ -59788,7 +59788,7 @@ float RandomBernoulliDynamicLayerParams::prob() const {
   return prob_;
 }
 void RandomBernoulliDynamicLayerParams::set_prob(float value) {
-  
+
   prob_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RandomBernoulliDynamicLayerParams.prob)
 }
@@ -60106,7 +60106,7 @@ void CategoricalDistributionLayerParams::clear_seed() {
   return seed_;
 }
 void CategoricalDistributionLayerParams::set_seed(::google::protobuf::int64 value) {
-  
+
   seed_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.CategoricalDistributionLayerParams.seed)
 }
@@ -60120,7 +60120,7 @@ void CategoricalDistributionLayerParams::clear_numsamples() {
   return numsamples_;
 }
 void CategoricalDistributionLayerParams::set_numsamples(::google::protobuf::int64 value) {
-  
+
   numsamples_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.CategoricalDistributionLayerParams.numSamples)
 }
@@ -60134,7 +60134,7 @@ bool CategoricalDistributionLayerParams::islogits() const {
   return islogits_;
 }
 void CategoricalDistributionLayerParams::set_islogits(bool value) {
-  
+
   islogits_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.CategoricalDistributionLayerParams.isLogits)
 }
@@ -60148,7 +60148,7 @@ float CategoricalDistributionLayerParams::eps() const {
   return eps_;
 }
 void CategoricalDistributionLayerParams::set_eps(float value) {
-  
+
   eps_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.CategoricalDistributionLayerParams.eps)
 }
@@ -60162,7 +60162,7 @@ float CategoricalDistributionLayerParams::temperature() const {
   return temperature_;
 }
 void CategoricalDistributionLayerParams::set_temperature(float value) {
-  
+
   temperature_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.CategoricalDistributionLayerParams.temperature)
 }
@@ -60467,7 +60467,7 @@ bool ReduceL1LayerParams::keepdims() const {
   return keepdims_;
 }
 void ReduceL1LayerParams::set_keepdims(bool value) {
-  
+
   keepdims_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReduceL1LayerParams.keepDims)
 }
@@ -60481,7 +60481,7 @@ bool ReduceL1LayerParams::reduceall() const {
   return reduceall_;
 }
 void ReduceL1LayerParams::set_reduceall(bool value) {
-  
+
   reduceall_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReduceL1LayerParams.reduceAll)
 }
@@ -60786,7 +60786,7 @@ bool ReduceL2LayerParams::keepdims() const {
   return keepdims_;
 }
 void ReduceL2LayerParams::set_keepdims(bool value) {
-  
+
   keepdims_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReduceL2LayerParams.keepDims)
 }
@@ -60800,7 +60800,7 @@ bool ReduceL2LayerParams::reduceall() const {
   return reduceall_;
 }
 void ReduceL2LayerParams::set_reduceall(bool value) {
-  
+
   reduceall_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReduceL2LayerParams.reduceAll)
 }
@@ -61105,7 +61105,7 @@ bool ReduceMaxLayerParams::keepdims() const {
   return keepdims_;
 }
 void ReduceMaxLayerParams::set_keepdims(bool value) {
-  
+
   keepdims_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReduceMaxLayerParams.keepDims)
 }
@@ -61119,7 +61119,7 @@ bool ReduceMaxLayerParams::reduceall() const {
   return reduceall_;
 }
 void ReduceMaxLayerParams::set_reduceall(bool value) {
-  
+
   reduceall_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReduceMaxLayerParams.reduceAll)
 }
@@ -61424,7 +61424,7 @@ bool ReduceMinLayerParams::keepdims() const {
   return keepdims_;
 }
 void ReduceMinLayerParams::set_keepdims(bool value) {
-  
+
   keepdims_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReduceMinLayerParams.keepDims)
 }
@@ -61438,7 +61438,7 @@ bool ReduceMinLayerParams::reduceall() const {
   return reduceall_;
 }
 void ReduceMinLayerParams::set_reduceall(bool value) {
-  
+
   reduceall_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReduceMinLayerParams.reduceAll)
 }
@@ -61743,7 +61743,7 @@ bool ReduceSumLayerParams::keepdims() const {
   return keepdims_;
 }
 void ReduceSumLayerParams::set_keepdims(bool value) {
-  
+
   keepdims_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReduceSumLayerParams.keepDims)
 }
@@ -61757,7 +61757,7 @@ bool ReduceSumLayerParams::reduceall() const {
   return reduceall_;
 }
 void ReduceSumLayerParams::set_reduceall(bool value) {
-  
+
   reduceall_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReduceSumLayerParams.reduceAll)
 }
@@ -62062,7 +62062,7 @@ bool ReduceProdLayerParams::keepdims() const {
   return keepdims_;
 }
 void ReduceProdLayerParams::set_keepdims(bool value) {
-  
+
   keepdims_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReduceProdLayerParams.keepDims)
 }
@@ -62076,7 +62076,7 @@ bool ReduceProdLayerParams::reduceall() const {
   return reduceall_;
 }
 void ReduceProdLayerParams::set_reduceall(bool value) {
-  
+
   reduceall_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReduceProdLayerParams.reduceAll)
 }
@@ -62381,7 +62381,7 @@ bool ReduceMeanLayerParams::keepdims() const {
   return keepdims_;
 }
 void ReduceMeanLayerParams::set_keepdims(bool value) {
-  
+
   keepdims_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReduceMeanLayerParams.keepDims)
 }
@@ -62395,7 +62395,7 @@ bool ReduceMeanLayerParams::reduceall() const {
   return reduceall_;
 }
 void ReduceMeanLayerParams::set_reduceall(bool value) {
-  
+
   reduceall_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReduceMeanLayerParams.reduceAll)
 }
@@ -62700,7 +62700,7 @@ bool ReduceLogSumLayerParams::keepdims() const {
   return keepdims_;
 }
 void ReduceLogSumLayerParams::set_keepdims(bool value) {
-  
+
   keepdims_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReduceLogSumLayerParams.keepDims)
 }
@@ -62714,7 +62714,7 @@ bool ReduceLogSumLayerParams::reduceall() const {
   return reduceall_;
 }
 void ReduceLogSumLayerParams::set_reduceall(bool value) {
-  
+
   reduceall_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReduceLogSumLayerParams.reduceAll)
 }
@@ -63019,7 +63019,7 @@ bool ReduceSumSquareLayerParams::keepdims() const {
   return keepdims_;
 }
 void ReduceSumSquareLayerParams::set_keepdims(bool value) {
-  
+
   keepdims_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReduceSumSquareLayerParams.keepDims)
 }
@@ -63033,7 +63033,7 @@ bool ReduceSumSquareLayerParams::reduceall() const {
   return reduceall_;
 }
 void ReduceSumSquareLayerParams::set_reduceall(bool value) {
-  
+
   reduceall_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReduceSumSquareLayerParams.reduceAll)
 }
@@ -63338,7 +63338,7 @@ bool ReduceLogSumExpLayerParams::keepdims() const {
   return keepdims_;
 }
 void ReduceLogSumExpLayerParams::set_keepdims(bool value) {
-  
+
   keepdims_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReduceLogSumExpLayerParams.keepDims)
 }
@@ -63352,7 +63352,7 @@ bool ReduceLogSumExpLayerParams::reduceall() const {
   return reduceall_;
 }
 void ReduceLogSumExpLayerParams::set_reduceall(bool value) {
-  
+
   reduceall_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ReduceLogSumExpLayerParams.reduceAll)
 }
@@ -63774,7 +63774,7 @@ void FlattenTo2DLayerParams::clear_axis() {
   return axis_;
 }
 void FlattenTo2DLayerParams::set_axis(::google::protobuf::int64 value) {
-  
+
   axis_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.FlattenTo2DLayerParams.axis)
 }
@@ -64558,7 +64558,7 @@ bool SqueezeLayerParams::squeezeall() const {
   return squeezeall_;
 }
 void SqueezeLayerParams::set_squeezeall(bool value) {
-  
+
   squeezeall_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SqueezeLayerParams.squeezeAll)
 }
@@ -64818,7 +64818,7 @@ void TopKLayerParams::clear_axis() {
   return axis_;
 }
 void TopKLayerParams::set_axis(::google::protobuf::int64 value) {
-  
+
   axis_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.TopKLayerParams.axis)
 }
@@ -64832,7 +64832,7 @@ void TopKLayerParams::clear_k() {
   return k_;
 }
 void TopKLayerParams::set_k(::google::protobuf::uint64 value) {
-  
+
   k_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.TopKLayerParams.K)
 }
@@ -64846,7 +64846,7 @@ bool TopKLayerParams::usebottomk() const {
   return usebottomk_;
 }
 void TopKLayerParams::set_usebottomk(bool value) {
-  
+
   usebottomk_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.TopKLayerParams.useBottomK)
 }
@@ -65075,7 +65075,7 @@ void ArgMaxLayerParams::clear_axis() {
   return axis_;
 }
 void ArgMaxLayerParams::set_axis(::google::protobuf::int64 value) {
-  
+
   axis_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ArgMaxLayerParams.axis)
 }
@@ -65089,7 +65089,7 @@ bool ArgMaxLayerParams::removedim() const {
   return removedim_;
 }
 void ArgMaxLayerParams::set_removedim(bool value) {
-  
+
   removedim_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ArgMaxLayerParams.removeDim)
 }
@@ -65318,7 +65318,7 @@ void ArgMinLayerParams::clear_axis() {
   return axis_;
 }
 void ArgMinLayerParams::set_axis(::google::protobuf::int64 value) {
-  
+
   axis_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ArgMinLayerParams.axis)
 }
@@ -65332,7 +65332,7 @@ bool ArgMinLayerParams::removedim() const {
   return removedim_;
 }
 void ArgMinLayerParams::set_removedim(bool value) {
-  
+
   removedim_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ArgMinLayerParams.removeDim)
 }
@@ -65611,7 +65611,7 @@ void SplitNDLayerParams::clear_axis() {
   return axis_;
 }
 void SplitNDLayerParams::set_axis(::google::protobuf::int64 value) {
-  
+
   axis_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SplitNDLayerParams.axis)
 }
@@ -65625,7 +65625,7 @@ void SplitNDLayerParams::clear_numsplits() {
   return numsplits_;
 }
 void SplitNDLayerParams::set_numsplits(::google::protobuf::uint64 value) {
-  
+
   numsplits_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SplitNDLayerParams.numSplits)
 }
@@ -66454,7 +66454,7 @@ float ClipLayerParams::minval() const {
   return minval_;
 }
 void ClipLayerParams::set_minval(float value) {
-  
+
   minval_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ClipLayerParams.minVal)
 }
@@ -66468,7 +66468,7 @@ float ClipLayerParams::maxval() const {
   return maxval_;
 }
 void ClipLayerParams::set_maxval(float value) {
-  
+
   maxval_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ClipLayerParams.maxVal)
 }
@@ -68319,7 +68319,7 @@ void GeluLayerParams::clear_mode() {
   return static_cast< ::CoreML::Specification::GeluLayerParams_GeluMode >(mode_);
 }
 void GeluLayerParams::set_mode(::CoreML::Specification::GeluLayerParams_GeluMode value) {
-  
+
   mode_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.GeluLayerParams.mode)
 }
@@ -68575,7 +68575,7 @@ float RangeStaticLayerParams::endvalue() const {
   return endvalue_;
 }
 void RangeStaticLayerParams::set_endvalue(float value) {
-  
+
   endvalue_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RangeStaticLayerParams.endValue)
 }
@@ -68589,7 +68589,7 @@ float RangeStaticLayerParams::startvalue() const {
   return startvalue_;
 }
 void RangeStaticLayerParams::set_startvalue(float value) {
-  
+
   startvalue_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RangeStaticLayerParams.startValue)
 }
@@ -68603,7 +68603,7 @@ float RangeStaticLayerParams::stepsizevalue() const {
   return stepsizevalue_;
 }
 void RangeStaticLayerParams::set_stepsizevalue(float value) {
-  
+
   stepsizevalue_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RangeStaticLayerParams.stepSizeValue)
 }
@@ -68830,7 +68830,7 @@ float RangeDynamicLayerParams::startvalue() const {
   return startvalue_;
 }
 void RangeDynamicLayerParams::set_startvalue(float value) {
-  
+
   startvalue_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RangeDynamicLayerParams.startValue)
 }
@@ -68844,7 +68844,7 @@ float RangeDynamicLayerParams::stepsizevalue() const {
   return stepsizevalue_;
 }
 void RangeDynamicLayerParams::set_stepsizevalue(float value) {
-  
+
   stepsizevalue_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.RangeDynamicLayerParams.stepSizeValue)
 }
@@ -69106,7 +69106,7 @@ void SlidingWindowsLayerParams::clear_axis() {
   return axis_;
 }
 void SlidingWindowsLayerParams::set_axis(::google::protobuf::int64 value) {
-  
+
   axis_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SlidingWindowsLayerParams.axis)
 }
@@ -69120,7 +69120,7 @@ void SlidingWindowsLayerParams::clear_windowsize() {
   return windowsize_;
 }
 void SlidingWindowsLayerParams::set_windowsize(::google::protobuf::uint64 value) {
-  
+
   windowsize_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SlidingWindowsLayerParams.windowSize)
 }
@@ -69134,7 +69134,7 @@ void SlidingWindowsLayerParams::clear_step() {
   return step_;
 }
 void SlidingWindowsLayerParams::set_step(::google::protobuf::uint64 value) {
-  
+
   step_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SlidingWindowsLayerParams.step)
 }
@@ -69491,7 +69491,7 @@ float LayerNormalizationLayerParams::eps() const {
   return eps_;
 }
 void LayerNormalizationLayerParams::set_eps(float value) {
-  
+
   eps_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.LayerNormalizationLayerParams.eps)
 }
@@ -69510,7 +69510,7 @@ const ::CoreML::Specification::WeightParams& LayerNormalizationLayerParams::gamm
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* LayerNormalizationLayerParams::mutable_gamma() {
-  
+
   if (gamma_ == NULL) {
     gamma_ = new ::CoreML::Specification::WeightParams;
   }
@@ -69519,7 +69519,7 @@ const ::CoreML::Specification::WeightParams& LayerNormalizationLayerParams::gamm
 }
 ::CoreML::Specification::WeightParams* LayerNormalizationLayerParams::release_gamma() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LayerNormalizationLayerParams.gamma)
-  
+
   ::CoreML::Specification::WeightParams* temp = gamma_;
   gamma_ = NULL;
   return temp;
@@ -69528,9 +69528,9 @@ void LayerNormalizationLayerParams::set_allocated_gamma(::CoreML::Specification:
   delete gamma_;
   gamma_ = gamma;
   if (gamma) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LayerNormalizationLayerParams.gamma)
 }
@@ -69549,7 +69549,7 @@ const ::CoreML::Specification::WeightParams& LayerNormalizationLayerParams::beta
                          : *::CoreML::Specification::WeightParams::internal_default_instance();
 }
 ::CoreML::Specification::WeightParams* LayerNormalizationLayerParams::mutable_beta() {
-  
+
   if (beta_ == NULL) {
     beta_ = new ::CoreML::Specification::WeightParams;
   }
@@ -69558,7 +69558,7 @@ const ::CoreML::Specification::WeightParams& LayerNormalizationLayerParams::beta
 }
 ::CoreML::Specification::WeightParams* LayerNormalizationLayerParams::release_beta() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LayerNormalizationLayerParams.beta)
-  
+
   ::CoreML::Specification::WeightParams* temp = beta_;
   beta_ = NULL;
   return temp;
@@ -69567,9 +69567,9 @@ void LayerNormalizationLayerParams::set_allocated_beta(::CoreML::Specification::
   delete beta_;
   beta_ = beta;
   if (beta) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LayerNormalizationLayerParams.beta)
 }
@@ -69856,7 +69856,7 @@ float NonMaximumSuppressionLayerParams::iouthreshold() const {
   return iouthreshold_;
 }
 void NonMaximumSuppressionLayerParams::set_iouthreshold(float value) {
-  
+
   iouthreshold_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.NonMaximumSuppressionLayerParams.iouThreshold)
 }
@@ -69870,7 +69870,7 @@ float NonMaximumSuppressionLayerParams::scorethreshold() const {
   return scorethreshold_;
 }
 void NonMaximumSuppressionLayerParams::set_scorethreshold(float value) {
-  
+
   scorethreshold_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.NonMaximumSuppressionLayerParams.scoreThreshold)
 }
@@ -69884,7 +69884,7 @@ void NonMaximumSuppressionLayerParams::clear_maxboxes() {
   return maxboxes_;
 }
 void NonMaximumSuppressionLayerParams::set_maxboxes(::google::protobuf::uint64 value) {
-  
+
   maxboxes_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.NonMaximumSuppressionLayerParams.maxBoxes)
 }
@@ -69898,7 +69898,7 @@ bool NonMaximumSuppressionLayerParams::perclasssuppression() const {
   return perclasssuppression_;
 }
 void NonMaximumSuppressionLayerParams::set_perclasssuppression(bool value) {
-  
+
   perclasssuppression_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.NonMaximumSuppressionLayerParams.perClassSuppression)
 }
@@ -70125,7 +70125,7 @@ float ClampedReLULayerParams::alpha() const {
   return alpha_;
 }
 void ClampedReLULayerParams::set_alpha(float value) {
-  
+
   alpha_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ClampedReLULayerParams.alpha)
 }
@@ -70139,7 +70139,7 @@ float ClampedReLULayerParams::beta() const {
   return beta_;
 }
 void ClampedReLULayerParams::set_beta(float value) {
-  
+
   beta_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ClampedReLULayerParams.beta)
 }
@@ -70368,7 +70368,7 @@ void ArgSortLayerParams::clear_axis() {
   return axis_;
 }
 void ArgSortLayerParams::set_axis(::google::protobuf::int64 value) {
-  
+
   axis_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ArgSortLayerParams.axis)
 }
@@ -70382,7 +70382,7 @@ bool ArgSortLayerParams::descending() const {
   return descending_;
 }
 void ArgSortLayerParams::set_descending(bool value) {
-  
+
   descending_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.ArgSortLayerParams.descending)
 }
@@ -70613,7 +70613,7 @@ void SliceBySizeLayerParams::clear_size() {
   return size_;
 }
 void SliceBySizeLayerParams::set_size(::google::protobuf::int64 value) {
-  
+
   size_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SliceBySizeLayerParams.size)
 }
@@ -70627,7 +70627,7 @@ void SliceBySizeLayerParams::clear_axis() {
   return axis_;
 }
 void SliceBySizeLayerParams::set_axis(::google::protobuf::int64 value) {
-  
+
   axis_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SliceBySizeLayerParams.axis)
 }
@@ -71186,7 +71186,7 @@ void NeuralNetworkClassifier::clear_arrayinputshapemapping() {
   return static_cast< ::CoreML::Specification::NeuralNetworkMultiArrayShapeMapping >(arrayinputshapemapping_);
 }
 void NeuralNetworkClassifier::set_arrayinputshapemapping(::CoreML::Specification::NeuralNetworkMultiArrayShapeMapping value) {
-  
+
   arrayinputshapemapping_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.NeuralNetworkClassifier.arrayInputShapeMapping)
 }
@@ -71200,7 +71200,7 @@ void NeuralNetworkClassifier::clear_imageinputshapemapping() {
   return static_cast< ::CoreML::Specification::NeuralNetworkImageShapeMapping >(imageinputshapemapping_);
 }
 void NeuralNetworkClassifier::set_imageinputshapemapping(::CoreML::Specification::NeuralNetworkImageShapeMapping value) {
-  
+
   imageinputshapemapping_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.NeuralNetworkClassifier.imageInputShapeMapping)
 }
@@ -71219,7 +71219,7 @@ const ::CoreML::Specification::NetworkUpdateParameters& NeuralNetworkClassifier:
                          : *::CoreML::Specification::NetworkUpdateParameters::internal_default_instance();
 }
 ::CoreML::Specification::NetworkUpdateParameters* NeuralNetworkClassifier::mutable_updateparams() {
-  
+
   if (updateparams_ == NULL) {
     updateparams_ = new ::CoreML::Specification::NetworkUpdateParameters;
   }
@@ -71228,7 +71228,7 @@ const ::CoreML::Specification::NetworkUpdateParameters& NeuralNetworkClassifier:
 }
 ::CoreML::Specification::NetworkUpdateParameters* NeuralNetworkClassifier::release_updateparams() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.NeuralNetworkClassifier.updateParams)
-  
+
   ::CoreML::Specification::NetworkUpdateParameters* temp = updateparams_;
   updateparams_ = NULL;
   return temp;
@@ -71237,9 +71237,9 @@ void NeuralNetworkClassifier::set_allocated_updateparams(::CoreML::Specification
   delete updateparams_;
   updateparams_ = updateparams;
   if (updateparams) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.NeuralNetworkClassifier.updateParams)
 }
@@ -71349,13 +71349,13 @@ const ::std::string& NeuralNetworkClassifier::labelprobabilitylayername() const 
   return labelprobabilitylayername_.GetNoArena();
 }
 void NeuralNetworkClassifier::set_labelprobabilitylayername(const ::std::string& value) {
-  
+
   labelprobabilitylayername_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:CoreML.Specification.NeuralNetworkClassifier.labelProbabilityLayerName)
 }
 #if LANG_CXX11
 void NeuralNetworkClassifier::set_labelprobabilitylayername(::std::string&& value) {
-  
+
   labelprobabilitylayername_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:CoreML.Specification.NeuralNetworkClassifier.labelProbabilityLayerName)
@@ -71363,31 +71363,31 @@ void NeuralNetworkClassifier::set_labelprobabilitylayername(::std::string&& valu
 #endif
 void NeuralNetworkClassifier::set_labelprobabilitylayername(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+
   labelprobabilitylayername_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:CoreML.Specification.NeuralNetworkClassifier.labelProbabilityLayerName)
 }
 void NeuralNetworkClassifier::set_labelprobabilitylayername(const char* value, size_t size) {
-  
+
   labelprobabilitylayername_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:CoreML.Specification.NeuralNetworkClassifier.labelProbabilityLayerName)
 }
 ::std::string* NeuralNetworkClassifier::mutable_labelprobabilitylayername() {
-  
+
   // @@protoc_insertion_point(field_mutable:CoreML.Specification.NeuralNetworkClassifier.labelProbabilityLayerName)
   return labelprobabilitylayername_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 ::std::string* NeuralNetworkClassifier::release_labelprobabilitylayername() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.NeuralNetworkClassifier.labelProbabilityLayerName)
-  
+
   return labelprobabilitylayername_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 void NeuralNetworkClassifier::set_allocated_labelprobabilitylayername(::std::string* labelprobabilitylayername) {
   if (labelprobabilitylayername != NULL) {
-    
+
   } else {
-    
+
   }
   labelprobabilitylayername_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), labelprobabilitylayername);
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.NeuralNetworkClassifier.labelProbabilityLayerName)
@@ -71686,7 +71686,7 @@ void OneHotLayerParams::clear_onehotvectorsize() {
   return onehotvectorsize_;
 }
 void OneHotLayerParams::set_onehotvectorsize(::google::protobuf::uint64 value) {
-  
+
   onehotvectorsize_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.OneHotLayerParams.oneHotVectorSize)
 }
@@ -71700,7 +71700,7 @@ void OneHotLayerParams::clear_axis() {
   return axis_;
 }
 void OneHotLayerParams::set_axis(::google::protobuf::int64 value) {
-  
+
   axis_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.OneHotLayerParams.axis)
 }
@@ -71714,7 +71714,7 @@ float OneHotLayerParams::onvalue() const {
   return onvalue_;
 }
 void OneHotLayerParams::set_onvalue(float value) {
-  
+
   onvalue_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.OneHotLayerParams.onValue)
 }
@@ -71728,7 +71728,7 @@ float OneHotLayerParams::offvalue() const {
   return offvalue_;
 }
 void OneHotLayerParams::set_offvalue(float value) {
-  
+
   offvalue_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.OneHotLayerParams.offValue)
 }
@@ -71986,7 +71986,7 @@ void CumSumLayerParams::clear_axis() {
   return axis_;
 }
 void CumSumLayerParams::set_axis(::google::protobuf::int64 value) {
-  
+
   axis_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.CumSumLayerParams.axis)
 }
@@ -72000,7 +72000,7 @@ bool CumSumLayerParams::excludefinalsum() const {
   return excludefinalsum_;
 }
 void CumSumLayerParams::set_excludefinalsum(bool value) {
-  
+
   excludefinalsum_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.CumSumLayerParams.excludeFinalSum)
 }
@@ -72014,7 +72014,7 @@ bool CumSumLayerParams::reverse() const {
   return reverse_;
 }
 void CumSumLayerParams::set_reverse(bool value) {
-  
+
   reverse_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.CumSumLayerParams.reverse)
 }
@@ -72417,7 +72417,7 @@ void NeuralNetworkRegressor::clear_arrayinputshapemapping() {
   return static_cast< ::CoreML::Specification::NeuralNetworkMultiArrayShapeMapping >(arrayinputshapemapping_);
 }
 void NeuralNetworkRegressor::set_arrayinputshapemapping(::CoreML::Specification::NeuralNetworkMultiArrayShapeMapping value) {
-  
+
   arrayinputshapemapping_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.NeuralNetworkRegressor.arrayInputShapeMapping)
 }
@@ -72431,7 +72431,7 @@ void NeuralNetworkRegressor::clear_imageinputshapemapping() {
   return static_cast< ::CoreML::Specification::NeuralNetworkImageShapeMapping >(imageinputshapemapping_);
 }
 void NeuralNetworkRegressor::set_imageinputshapemapping(::CoreML::Specification::NeuralNetworkImageShapeMapping value) {
-  
+
   imageinputshapemapping_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.NeuralNetworkRegressor.imageInputShapeMapping)
 }
@@ -72450,7 +72450,7 @@ const ::CoreML::Specification::NetworkUpdateParameters& NeuralNetworkRegressor::
                          : *::CoreML::Specification::NetworkUpdateParameters::internal_default_instance();
 }
 ::CoreML::Specification::NetworkUpdateParameters* NeuralNetworkRegressor::mutable_updateparams() {
-  
+
   if (updateparams_ == NULL) {
     updateparams_ = new ::CoreML::Specification::NetworkUpdateParameters;
   }
@@ -72459,7 +72459,7 @@ const ::CoreML::Specification::NetworkUpdateParameters& NeuralNetworkRegressor::
 }
 ::CoreML::Specification::NetworkUpdateParameters* NeuralNetworkRegressor::release_updateparams() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.NeuralNetworkRegressor.updateParams)
-  
+
   ::CoreML::Specification::NetworkUpdateParameters* temp = updateparams_;
   updateparams_ = NULL;
   return temp;
@@ -72468,9 +72468,9 @@ void NeuralNetworkRegressor::set_allocated_updateparams(::CoreML::Specification:
   delete updateparams_;
   updateparams_ = updateparams;
   if (updateparams) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.NeuralNetworkRegressor.updateParams)
 }
@@ -72871,7 +72871,7 @@ const ::CoreML::Specification::Optimizer& NetworkUpdateParameters::optimizer() c
                          : *::CoreML::Specification::Optimizer::internal_default_instance();
 }
 ::CoreML::Specification::Optimizer* NetworkUpdateParameters::mutable_optimizer() {
-  
+
   if (optimizer_ == NULL) {
     optimizer_ = new ::CoreML::Specification::Optimizer;
   }
@@ -72880,7 +72880,7 @@ const ::CoreML::Specification::Optimizer& NetworkUpdateParameters::optimizer() c
 }
 ::CoreML::Specification::Optimizer* NetworkUpdateParameters::release_optimizer() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.NetworkUpdateParameters.optimizer)
-  
+
   ::CoreML::Specification::Optimizer* temp = optimizer_;
   optimizer_ = NULL;
   return temp;
@@ -72889,9 +72889,9 @@ void NetworkUpdateParameters::set_allocated_optimizer(::CoreML::Specification::O
   delete optimizer_;
   optimizer_ = optimizer;
   if (optimizer) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.NetworkUpdateParameters.optimizer)
 }
@@ -72910,7 +72910,7 @@ const ::CoreML::Specification::Int64Parameter& NetworkUpdateParameters::epochs()
                          : *::CoreML::Specification::Int64Parameter::internal_default_instance();
 }
 ::CoreML::Specification::Int64Parameter* NetworkUpdateParameters::mutable_epochs() {
-  
+
   if (epochs_ == NULL) {
     epochs_ = new ::CoreML::Specification::Int64Parameter;
   }
@@ -72919,7 +72919,7 @@ const ::CoreML::Specification::Int64Parameter& NetworkUpdateParameters::epochs()
 }
 ::CoreML::Specification::Int64Parameter* NetworkUpdateParameters::release_epochs() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.NetworkUpdateParameters.epochs)
-  
+
   ::CoreML::Specification::Int64Parameter* temp = epochs_;
   epochs_ = NULL;
   return temp;
@@ -72928,9 +72928,9 @@ void NetworkUpdateParameters::set_allocated_epochs(::CoreML::Specification::Int6
   delete epochs_;
   epochs_ = epochs;
   if (epochs) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.NetworkUpdateParameters.epochs)
 }
@@ -72949,7 +72949,7 @@ const ::CoreML::Specification::BoolParameter& NetworkUpdateParameters::shuffle()
                          : *::CoreML::Specification::BoolParameter::internal_default_instance();
 }
 ::CoreML::Specification::BoolParameter* NetworkUpdateParameters::mutable_shuffle() {
-  
+
   if (shuffle_ == NULL) {
     shuffle_ = new ::CoreML::Specification::BoolParameter;
   }
@@ -72958,7 +72958,7 @@ const ::CoreML::Specification::BoolParameter& NetworkUpdateParameters::shuffle()
 }
 ::CoreML::Specification::BoolParameter* NetworkUpdateParameters::release_shuffle() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.NetworkUpdateParameters.shuffle)
-  
+
   ::CoreML::Specification::BoolParameter* temp = shuffle_;
   shuffle_ = NULL;
   return temp;
@@ -72967,9 +72967,9 @@ void NetworkUpdateParameters::set_allocated_shuffle(::CoreML::Specification::Boo
   delete shuffle_;
   shuffle_ = shuffle;
   if (shuffle) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.NetworkUpdateParameters.shuffle)
 }
@@ -72988,7 +72988,7 @@ const ::CoreML::Specification::Int64Parameter& NetworkUpdateParameters::seed() c
                          : *::CoreML::Specification::Int64Parameter::internal_default_instance();
 }
 ::CoreML::Specification::Int64Parameter* NetworkUpdateParameters::mutable_seed() {
-  
+
   if (seed_ == NULL) {
     seed_ = new ::CoreML::Specification::Int64Parameter;
   }
@@ -72997,7 +72997,7 @@ const ::CoreML::Specification::Int64Parameter& NetworkUpdateParameters::seed() c
 }
 ::CoreML::Specification::Int64Parameter* NetworkUpdateParameters::release_seed() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.NetworkUpdateParameters.seed)
-  
+
   ::CoreML::Specification::Int64Parameter* temp = seed_;
   seed_ = NULL;
   return temp;
@@ -73006,9 +73006,9 @@ void NetworkUpdateParameters::set_allocated_seed(::CoreML::Specification::Int64P
   delete seed_;
   seed_ = seed;
   if (seed) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.NetworkUpdateParameters.seed)
 }
@@ -73326,13 +73326,13 @@ const ::std::string& LossLayer::name() const {
   return name_.GetNoArena();
 }
 void LossLayer::set_name(const ::std::string& value) {
-  
+
   name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:CoreML.Specification.LossLayer.name)
 }
 #if LANG_CXX11
 void LossLayer::set_name(::std::string&& value) {
-  
+
   name_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:CoreML.Specification.LossLayer.name)
@@ -73340,31 +73340,31 @@ void LossLayer::set_name(::std::string&& value) {
 #endif
 void LossLayer::set_name(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+
   name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:CoreML.Specification.LossLayer.name)
 }
 void LossLayer::set_name(const char* value, size_t size) {
-  
+
   name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:CoreML.Specification.LossLayer.name)
 }
 ::std::string* LossLayer::mutable_name() {
-  
+
   // @@protoc_insertion_point(field_mutable:CoreML.Specification.LossLayer.name)
   return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 ::std::string* LossLayer::release_name() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.LossLayer.name)
-  
+
   return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 void LossLayer::set_allocated_name(::std::string* name) {
   if (name != NULL) {
-    
+
   } else {
-    
+
   }
   name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.LossLayer.name)
@@ -73724,13 +73724,13 @@ const ::std::string& CategoricalCrossEntropyLossLayer::input() const {
   return input_.GetNoArena();
 }
 void CategoricalCrossEntropyLossLayer::set_input(const ::std::string& value) {
-  
+
   input_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:CoreML.Specification.CategoricalCrossEntropyLossLayer.input)
 }
 #if LANG_CXX11
 void CategoricalCrossEntropyLossLayer::set_input(::std::string&& value) {
-  
+
   input_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:CoreML.Specification.CategoricalCrossEntropyLossLayer.input)
@@ -73738,31 +73738,31 @@ void CategoricalCrossEntropyLossLayer::set_input(::std::string&& value) {
 #endif
 void CategoricalCrossEntropyLossLayer::set_input(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+
   input_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:CoreML.Specification.CategoricalCrossEntropyLossLayer.input)
 }
 void CategoricalCrossEntropyLossLayer::set_input(const char* value, size_t size) {
-  
+
   input_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:CoreML.Specification.CategoricalCrossEntropyLossLayer.input)
 }
 ::std::string* CategoricalCrossEntropyLossLayer::mutable_input() {
-  
+
   // @@protoc_insertion_point(field_mutable:CoreML.Specification.CategoricalCrossEntropyLossLayer.input)
   return input_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 ::std::string* CategoricalCrossEntropyLossLayer::release_input() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.CategoricalCrossEntropyLossLayer.input)
-  
+
   return input_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 void CategoricalCrossEntropyLossLayer::set_allocated_input(::std::string* input) {
   if (input != NULL) {
-    
+
   } else {
-    
+
   }
   input_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), input);
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.CategoricalCrossEntropyLossLayer.input)
@@ -73777,13 +73777,13 @@ const ::std::string& CategoricalCrossEntropyLossLayer::target() const {
   return target_.GetNoArena();
 }
 void CategoricalCrossEntropyLossLayer::set_target(const ::std::string& value) {
-  
+
   target_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:CoreML.Specification.CategoricalCrossEntropyLossLayer.target)
 }
 #if LANG_CXX11
 void CategoricalCrossEntropyLossLayer::set_target(::std::string&& value) {
-  
+
   target_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:CoreML.Specification.CategoricalCrossEntropyLossLayer.target)
@@ -73791,31 +73791,31 @@ void CategoricalCrossEntropyLossLayer::set_target(::std::string&& value) {
 #endif
 void CategoricalCrossEntropyLossLayer::set_target(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+
   target_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:CoreML.Specification.CategoricalCrossEntropyLossLayer.target)
 }
 void CategoricalCrossEntropyLossLayer::set_target(const char* value, size_t size) {
-  
+
   target_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:CoreML.Specification.CategoricalCrossEntropyLossLayer.target)
 }
 ::std::string* CategoricalCrossEntropyLossLayer::mutable_target() {
-  
+
   // @@protoc_insertion_point(field_mutable:CoreML.Specification.CategoricalCrossEntropyLossLayer.target)
   return target_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 ::std::string* CategoricalCrossEntropyLossLayer::release_target() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.CategoricalCrossEntropyLossLayer.target)
-  
+
   return target_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 void CategoricalCrossEntropyLossLayer::set_allocated_target(::std::string* target) {
   if (target != NULL) {
-    
+
   } else {
-    
+
   }
   target_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), target);
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.CategoricalCrossEntropyLossLayer.target)
@@ -74070,13 +74070,13 @@ const ::std::string& MeanSquaredErrorLossLayer::input() const {
   return input_.GetNoArena();
 }
 void MeanSquaredErrorLossLayer::set_input(const ::std::string& value) {
-  
+
   input_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:CoreML.Specification.MeanSquaredErrorLossLayer.input)
 }
 #if LANG_CXX11
 void MeanSquaredErrorLossLayer::set_input(::std::string&& value) {
-  
+
   input_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:CoreML.Specification.MeanSquaredErrorLossLayer.input)
@@ -74084,31 +74084,31 @@ void MeanSquaredErrorLossLayer::set_input(::std::string&& value) {
 #endif
 void MeanSquaredErrorLossLayer::set_input(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+
   input_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:CoreML.Specification.MeanSquaredErrorLossLayer.input)
 }
 void MeanSquaredErrorLossLayer::set_input(const char* value, size_t size) {
-  
+
   input_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:CoreML.Specification.MeanSquaredErrorLossLayer.input)
 }
 ::std::string* MeanSquaredErrorLossLayer::mutable_input() {
-  
+
   // @@protoc_insertion_point(field_mutable:CoreML.Specification.MeanSquaredErrorLossLayer.input)
   return input_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 ::std::string* MeanSquaredErrorLossLayer::release_input() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.MeanSquaredErrorLossLayer.input)
-  
+
   return input_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 void MeanSquaredErrorLossLayer::set_allocated_input(::std::string* input) {
   if (input != NULL) {
-    
+
   } else {
-    
+
   }
   input_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), input);
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.MeanSquaredErrorLossLayer.input)
@@ -74123,13 +74123,13 @@ const ::std::string& MeanSquaredErrorLossLayer::target() const {
   return target_.GetNoArena();
 }
 void MeanSquaredErrorLossLayer::set_target(const ::std::string& value) {
-  
+
   target_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:CoreML.Specification.MeanSquaredErrorLossLayer.target)
 }
 #if LANG_CXX11
 void MeanSquaredErrorLossLayer::set_target(::std::string&& value) {
-  
+
   target_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:CoreML.Specification.MeanSquaredErrorLossLayer.target)
@@ -74137,31 +74137,31 @@ void MeanSquaredErrorLossLayer::set_target(::std::string&& value) {
 #endif
 void MeanSquaredErrorLossLayer::set_target(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+
   target_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:CoreML.Specification.MeanSquaredErrorLossLayer.target)
 }
 void MeanSquaredErrorLossLayer::set_target(const char* value, size_t size) {
-  
+
   target_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:CoreML.Specification.MeanSquaredErrorLossLayer.target)
 }
 ::std::string* MeanSquaredErrorLossLayer::mutable_target() {
-  
+
   // @@protoc_insertion_point(field_mutable:CoreML.Specification.MeanSquaredErrorLossLayer.target)
   return target_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 ::std::string* MeanSquaredErrorLossLayer::release_target() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.MeanSquaredErrorLossLayer.target)
-  
+
   return target_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 void MeanSquaredErrorLossLayer::set_allocated_target(::std::string* target) {
   if (target != NULL) {
-    
+
   } else {
-    
+
   }
   target_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), target);
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.MeanSquaredErrorLossLayer.target)
@@ -74820,7 +74820,7 @@ const ::CoreML::Specification::DoubleParameter& SGDOptimizer::learningrate() con
                          : *::CoreML::Specification::DoubleParameter::internal_default_instance();
 }
 ::CoreML::Specification::DoubleParameter* SGDOptimizer::mutable_learningrate() {
-  
+
   if (learningrate_ == NULL) {
     learningrate_ = new ::CoreML::Specification::DoubleParameter;
   }
@@ -74829,7 +74829,7 @@ const ::CoreML::Specification::DoubleParameter& SGDOptimizer::learningrate() con
 }
 ::CoreML::Specification::DoubleParameter* SGDOptimizer::release_learningrate() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.SGDOptimizer.learningRate)
-  
+
   ::CoreML::Specification::DoubleParameter* temp = learningrate_;
   learningrate_ = NULL;
   return temp;
@@ -74838,9 +74838,9 @@ void SGDOptimizer::set_allocated_learningrate(::CoreML::Specification::DoublePar
   delete learningrate_;
   learningrate_ = learningrate;
   if (learningrate) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.SGDOptimizer.learningRate)
 }
@@ -74859,7 +74859,7 @@ const ::CoreML::Specification::Int64Parameter& SGDOptimizer::minibatchsize() con
                          : *::CoreML::Specification::Int64Parameter::internal_default_instance();
 }
 ::CoreML::Specification::Int64Parameter* SGDOptimizer::mutable_minibatchsize() {
-  
+
   if (minibatchsize_ == NULL) {
     minibatchsize_ = new ::CoreML::Specification::Int64Parameter;
   }
@@ -74868,7 +74868,7 @@ const ::CoreML::Specification::Int64Parameter& SGDOptimizer::minibatchsize() con
 }
 ::CoreML::Specification::Int64Parameter* SGDOptimizer::release_minibatchsize() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.SGDOptimizer.miniBatchSize)
-  
+
   ::CoreML::Specification::Int64Parameter* temp = minibatchsize_;
   minibatchsize_ = NULL;
   return temp;
@@ -74877,9 +74877,9 @@ void SGDOptimizer::set_allocated_minibatchsize(::CoreML::Specification::Int64Par
   delete minibatchsize_;
   minibatchsize_ = minibatchsize;
   if (minibatchsize) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.SGDOptimizer.miniBatchSize)
 }
@@ -74898,7 +74898,7 @@ const ::CoreML::Specification::DoubleParameter& SGDOptimizer::momentum() const {
                          : *::CoreML::Specification::DoubleParameter::internal_default_instance();
 }
 ::CoreML::Specification::DoubleParameter* SGDOptimizer::mutable_momentum() {
-  
+
   if (momentum_ == NULL) {
     momentum_ = new ::CoreML::Specification::DoubleParameter;
   }
@@ -74907,7 +74907,7 @@ const ::CoreML::Specification::DoubleParameter& SGDOptimizer::momentum() const {
 }
 ::CoreML::Specification::DoubleParameter* SGDOptimizer::release_momentum() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.SGDOptimizer.momentum)
-  
+
   ::CoreML::Specification::DoubleParameter* temp = momentum_;
   momentum_ = NULL;
   return temp;
@@ -74916,9 +74916,9 @@ void SGDOptimizer::set_allocated_momentum(::CoreML::Specification::DoubleParamet
   delete momentum_;
   momentum_ = momentum;
   if (momentum) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.SGDOptimizer.momentum)
 }
@@ -75297,7 +75297,7 @@ const ::CoreML::Specification::DoubleParameter& AdamOptimizer::learningrate() co
                          : *::CoreML::Specification::DoubleParameter::internal_default_instance();
 }
 ::CoreML::Specification::DoubleParameter* AdamOptimizer::mutable_learningrate() {
-  
+
   if (learningrate_ == NULL) {
     learningrate_ = new ::CoreML::Specification::DoubleParameter;
   }
@@ -75306,7 +75306,7 @@ const ::CoreML::Specification::DoubleParameter& AdamOptimizer::learningrate() co
 }
 ::CoreML::Specification::DoubleParameter* AdamOptimizer::release_learningrate() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.AdamOptimizer.learningRate)
-  
+
   ::CoreML::Specification::DoubleParameter* temp = learningrate_;
   learningrate_ = NULL;
   return temp;
@@ -75315,9 +75315,9 @@ void AdamOptimizer::set_allocated_learningrate(::CoreML::Specification::DoublePa
   delete learningrate_;
   learningrate_ = learningrate;
   if (learningrate) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.AdamOptimizer.learningRate)
 }
@@ -75336,7 +75336,7 @@ const ::CoreML::Specification::Int64Parameter& AdamOptimizer::minibatchsize() co
                          : *::CoreML::Specification::Int64Parameter::internal_default_instance();
 }
 ::CoreML::Specification::Int64Parameter* AdamOptimizer::mutable_minibatchsize() {
-  
+
   if (minibatchsize_ == NULL) {
     minibatchsize_ = new ::CoreML::Specification::Int64Parameter;
   }
@@ -75345,7 +75345,7 @@ const ::CoreML::Specification::Int64Parameter& AdamOptimizer::minibatchsize() co
 }
 ::CoreML::Specification::Int64Parameter* AdamOptimizer::release_minibatchsize() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.AdamOptimizer.miniBatchSize)
-  
+
   ::CoreML::Specification::Int64Parameter* temp = minibatchsize_;
   minibatchsize_ = NULL;
   return temp;
@@ -75354,9 +75354,9 @@ void AdamOptimizer::set_allocated_minibatchsize(::CoreML::Specification::Int64Pa
   delete minibatchsize_;
   minibatchsize_ = minibatchsize;
   if (minibatchsize) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.AdamOptimizer.miniBatchSize)
 }
@@ -75375,7 +75375,7 @@ const ::CoreML::Specification::DoubleParameter& AdamOptimizer::beta1() const {
                          : *::CoreML::Specification::DoubleParameter::internal_default_instance();
 }
 ::CoreML::Specification::DoubleParameter* AdamOptimizer::mutable_beta1() {
-  
+
   if (beta1_ == NULL) {
     beta1_ = new ::CoreML::Specification::DoubleParameter;
   }
@@ -75384,7 +75384,7 @@ const ::CoreML::Specification::DoubleParameter& AdamOptimizer::beta1() const {
 }
 ::CoreML::Specification::DoubleParameter* AdamOptimizer::release_beta1() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.AdamOptimizer.beta1)
-  
+
   ::CoreML::Specification::DoubleParameter* temp = beta1_;
   beta1_ = NULL;
   return temp;
@@ -75393,9 +75393,9 @@ void AdamOptimizer::set_allocated_beta1(::CoreML::Specification::DoubleParameter
   delete beta1_;
   beta1_ = beta1;
   if (beta1) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.AdamOptimizer.beta1)
 }
@@ -75414,7 +75414,7 @@ const ::CoreML::Specification::DoubleParameter& AdamOptimizer::beta2() const {
                          : *::CoreML::Specification::DoubleParameter::internal_default_instance();
 }
 ::CoreML::Specification::DoubleParameter* AdamOptimizer::mutable_beta2() {
-  
+
   if (beta2_ == NULL) {
     beta2_ = new ::CoreML::Specification::DoubleParameter;
   }
@@ -75423,7 +75423,7 @@ const ::CoreML::Specification::DoubleParameter& AdamOptimizer::beta2() const {
 }
 ::CoreML::Specification::DoubleParameter* AdamOptimizer::release_beta2() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.AdamOptimizer.beta2)
-  
+
   ::CoreML::Specification::DoubleParameter* temp = beta2_;
   beta2_ = NULL;
   return temp;
@@ -75432,9 +75432,9 @@ void AdamOptimizer::set_allocated_beta2(::CoreML::Specification::DoubleParameter
   delete beta2_;
   beta2_ = beta2;
   if (beta2) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.AdamOptimizer.beta2)
 }
@@ -75453,7 +75453,7 @@ const ::CoreML::Specification::DoubleParameter& AdamOptimizer::eps() const {
                          : *::CoreML::Specification::DoubleParameter::internal_default_instance();
 }
 ::CoreML::Specification::DoubleParameter* AdamOptimizer::mutable_eps() {
-  
+
   if (eps_ == NULL) {
     eps_ = new ::CoreML::Specification::DoubleParameter;
   }
@@ -75462,7 +75462,7 @@ const ::CoreML::Specification::DoubleParameter& AdamOptimizer::eps() const {
 }
 ::CoreML::Specification::DoubleParameter* AdamOptimizer::release_eps() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.AdamOptimizer.eps)
-  
+
   ::CoreML::Specification::DoubleParameter* temp = eps_;
   eps_ = NULL;
   return temp;
@@ -75471,9 +75471,9 @@ void AdamOptimizer::set_allocated_eps(::CoreML::Specification::DoubleParameter* 
   delete eps_;
   eps_ = eps;
   if (eps) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.AdamOptimizer.eps)
 }

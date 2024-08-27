@@ -52,7 +52,7 @@ int nn_efd_init (struct nn_efd *self)
         goto wsafail;
 
     one = 1;
-    rc = setsockopt (listener, SOL_SOCKET, SO_EXCLUSIVEADDRUSE, 
+    rc = setsockopt (listener, SOL_SOCKET, SO_EXCLUSIVEADDRUSE,
         (char*) &one, sizeof (one));
     if (rc == SOCKET_ERROR)
         goto wsafail;
@@ -190,4 +190,3 @@ void nn_efd_unsignal (struct nn_efd *self)
             break;
     }
 }
-

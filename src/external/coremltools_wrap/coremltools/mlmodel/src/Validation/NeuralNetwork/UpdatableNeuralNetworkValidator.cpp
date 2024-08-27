@@ -18,7 +18,7 @@ using namespace CoreML;
 static Result validateLossLayer(const Specification::LossLayer *lossLayer, const NeuralNetworkValidatorGraph *graph) {
     Result r;
     std::string err;
-    
+
     switch (lossLayer->LossLayerType_case()) {
         case CoreML::Specification::LossLayer::kCategoricalCrossEntropyLossLayer:
         {
@@ -31,7 +31,7 @@ static Result validateLossLayer(const Specification::LossLayer *lossLayer, const
                 err = "Failed to look up node for '" + lossLayerName + "'.";
                 return Result(ResultType::INVALID_UPDATABLE_MODEL_CONFIGURATION, err);
             }
-            
+
             bool lossInputValidated = false;
             const auto &parents = lossNode->parents;
             for (const auto *node : parents) {
@@ -56,7 +56,7 @@ static Result validateLossLayer(const Specification::LossLayer *lossLayer, const
                 err = "For the cross entropy loss layer named '" + lossLayer->name() + "', target is generated within the graph.";
                 return Result(ResultType::INVALID_UPDATABLE_MODEL_CONFIGURATION, err);
             }
-            
+
             break;
         }
         case CoreML::Specification::LossLayer::kMeanSquaredErrorLossLayer:
@@ -66,20 +66,20 @@ static Result validateLossLayer(const Specification::LossLayer *lossLayer, const
                 err = "For the MSE loss layer named '" + lossLayer->name() + "', input is not generated within the graph.";
                 return Result(ResultType::INVALID_UPDATABLE_MODEL_CONFIGURATION, err);
             }
-            
+
             std::string targetName = lossLayer->meansquarederrorlosslayer().target();
             if (graph->blobNameToProducingNode.find(targetName) != graph->blobNameToProducingNode.end()) {
                 err = "For the MSE loss layer named '" + lossLayer->name() + "', target is generated within the graph.";
                 return Result(ResultType::INVALID_UPDATABLE_MODEL_CONFIGURATION, err);
             }
-            
+
             break;
         }
         default:
             err = "Loss function is not recognized in the loss layer named '" + lossLayer->name() + "', only cross entropy loss and MSE are supported.";
             return Result(ResultType::INVALID_UPDATABLE_MODEL_CONFIGURATION, err);
     }
-    
+
     return r;
 }
 
@@ -187,93 +187,93 @@ template Result validateTrainingInputs<CoreML::Specification::NeuralNetworkClass
 static Result validateOptimizer(const Specification::Optimizer& optimizer) {
     Result r;
     std::string err;
-    
+
     switch (optimizer.OptimizerType_case()) {
         case Specification::Optimizer::kSgdOptimizer:
         {
             const Specification::SGDOptimizer &sgdOptimizer = optimizer.sgdoptimizer();
-            
+
             if (false == sgdOptimizer.has_learningrate()) {
                 err = "SGD optimizer should include learningRate parameter.";
                 return Result(ResultType::INVALID_UPDATABLE_MODEL_CONFIGURATION, err);
             }
-            
+
             r = validateDoubleParameter("learningRate", sgdOptimizer.learningrate());
             if (!r.good()) {return r;}
-            
+
             if (false == sgdOptimizer.has_minibatchsize()) {
                 err = "SGD optimizer should include miniBatchSize parameter.";
                 return Result(ResultType::INVALID_UPDATABLE_MODEL_CONFIGURATION, err);
             }
-            
+
             r = validateInt64Parameter("miniBatchSize", sgdOptimizer.minibatchsize(), true);
             if (!r.good()) {return r;}
-            
+
             break;
         }
         case Specification::Optimizer::kAdamOptimizer:
         {
             const Specification::AdamOptimizer &adamOptimizer = optimizer.adamoptimizer();
-            
+
             if (false == adamOptimizer.has_learningrate()) {
                 err = "ADAM optimizer should include learningRate parameter.";
                 return Result(ResultType::INVALID_UPDATABLE_MODEL_CONFIGURATION, err);
             }
-            
+
             r = validateDoubleParameter("learningRate", adamOptimizer.learningrate());
             if (!r.good()) {return r;}
-            
+
             if (false == adamOptimizer.has_minibatchsize()) {
                 err = "ADAM optimizer should include miniBatchSize parameter.";
                 return Result(ResultType::INVALID_UPDATABLE_MODEL_CONFIGURATION, err);
             }
-            
+
             r = validateInt64Parameter("miniBatchSize", adamOptimizer.minibatchsize(), true);
             if (!r.good()) {return r;}
-            
+
             if (false == adamOptimizer.has_beta1()) {
                 err = "ADAM optimizer should include beta1 parameter.";
                 return Result(ResultType::INVALID_UPDATABLE_MODEL_CONFIGURATION, err);
             }
-            
+
             r = validateDoubleParameter("beta1", adamOptimizer.beta1());
             if (!r.good()) {return r;}
-            
+
             if (false == adamOptimizer.has_beta2()) {
                 err = "ADAM optimizer should include beta2 parameter.";
                 return Result(ResultType::INVALID_UPDATABLE_MODEL_CONFIGURATION, err);
             }
-            
+
             r = validateDoubleParameter("beta2", adamOptimizer.beta2());
             if (!r.good()) {return r;}
-            
+
             if (false == adamOptimizer.has_eps()) {
                 err = "ADAM optimizer should include eps (epslion) parameter.";
                 return Result(ResultType::INVALID_UPDATABLE_MODEL_CONFIGURATION, err);
             }
-            
+
             r = validateDoubleParameter("eps", adamOptimizer.eps());
             if (!r.good()) {return r;}
-    
+
             break;
         }
         default:
             err = "Optimizer is not recognized.";
             return Result(ResultType::INVALID_UPDATABLE_MODEL_CONFIGURATION, err);
     }
-    
+
     return r;
 }
 
 static Result validateOtherTopLevelUpdateParameters(const Specification::NetworkUpdateParameters& updateParameters) {
     Result r;
     std::string err;
-    
+
     if (false == updateParameters.has_epochs()) {
         err = "Epochs should be included in neural network update parameters.";
         return Result(ResultType::INVALID_UPDATABLE_MODEL_CONFIGURATION, err);
     }
-    
+
     r = validateInt64Parameter("epochs", updateParameters.epochs(), true);
     if (!r.good()) {return r;}
 
@@ -287,20 +287,20 @@ static Result validateOtherTopLevelUpdateParameters(const Specification::Network
 
 template<typename T> static Result isTrainingConfigurationSupported(const T& nn) {
     Result r;
-    
+
     if (nn.updateparams().losslayers_size() > 1) {
         std::string err;
         err = "This model has more than one loss layers specified, which is not supported at the moment.";
         return Result(ResultType::INVALID_UPDATABLE_MODEL_CONFIGURATION, err);
     }
-    
+
     NeuralNetworkValidatorGraph graph;
     std::vector<LayerNode> layerNodes;  // Holds on to all the nodes until the validation is over.
-    
+
     // Make sure the layerNodes is large enough to hold all the elements
     size_t numberOfLayers = (size_t)nn.layers_size() + (size_t)nn.updateparams().losslayers_size();
     layerNodes.resize(numberOfLayers);
-    
+
     /* first traverse "nn" and build the graph object
      */
     for (int i = 0; i < nn.layers_size(); i++) {
@@ -317,31 +317,31 @@ template<typename T> static Result isTrainingConfigurationSupported(const T& nn)
         r = validateLossLayer(lossLayer, &graph);
         if (!r.good()) {return r;}
     }
-    
+
     r = validateOptimizer(nn.updateparams().optimizer());
     if (!r.good()) {return r;}
 
     r = validateOtherTopLevelUpdateParameters(nn.updateparams());
     if (!r.good()) {return r;}
-    
+
     /* Now we check the following, by doing a BFS starting from the loss layers:
      - All the layers on the route from the loss layers to the updatable layers must support back-propagation
      */
-    
+
     std::set<std::string> visitedLayersSet;
-    
+
     for (int i = 0; i < nn.updateparams().losslayers_size(); i++) {
         const Specification::LossLayer& lossLayer = nn.updateparams().losslayers(i);
         std::string lossLayerName = lossLayer.name();
-        
+
         // queue for BFS
         std::queue<std::string> BFSQueue;
         BFSQueue.push(lossLayerName);
-        
+
         bool nonBackPropagableLayerSeen = false;
-        
+
         std::string firstNonBackpropogabaleLayerSeen;
-        
+
         while(!BFSQueue.empty()) {
             std::string currentNodeName = BFSQueue.front();
             BFSQueue.pop();
@@ -350,7 +350,7 @@ template<typename T> static Result isTrainingConfigurationSupported(const T& nn)
                 std::string err = "Failed to look up node for '" + currentNodeName + "'.";
                 return Result(ResultType::INVALID_UPDATABLE_MODEL_CONFIGURATION, err);
             }
-            
+
             // we are traversing the graph in reverse
             for (const auto *parentNode: currentNode->parents) {
                 std::string parentName = parentNode->name;
@@ -359,7 +359,7 @@ template<typename T> static Result isTrainingConfigurationSupported(const T& nn)
                 }
                 visitedLayersSet.insert(parentName);
                 BFSQueue.push(parentName);
-                
+
                 // check if this "parentNode" is marked as updatable
                 if (parentNode->isUpdatable) {
                     if (nonBackPropagableLayerSeen) {
@@ -369,7 +369,7 @@ template<typename T> static Result isTrainingConfigurationSupported(const T& nn)
                         return Result(ResultType::INVALID_UPDATABLE_MODEL_CONFIGURATION, err);
                     }
                 }
-                
+
                 // check if this "parentNode" is a non-backpropagable layer
                 if (!parentNode->isBackPropagable) {
                     // softmax is a nonBackPropagableLayer. However, It is valid config if it is attached to a kCategoricalCrossEntropyLossLayer layer.
@@ -382,22 +382,22 @@ template<typename T> static Result isTrainingConfigurationSupported(const T& nn)
             }
         }
     }
-    
+
     return r;
-    
+
 }
 
 static Result validateWeightParamsUpdatable(const Specification::NeuralNetworkLayer& layer) {
     Result r;
-    
+
     bool weight_update_flag = false;
     bool bias_update_flag = false;
     bool has_bias = false;
     bool weights_are_quantized = false;
     bool bias_is_quantized = false;
-    
+
     std::string err;
-    
+
     switch (layer.layer_case()) {
         case Specification::NeuralNetworkLayer::kConvolution:
             has_bias = layer.convolution().hasbias();
@@ -425,12 +425,12 @@ static Result validateWeightParamsUpdatable(const Specification::NeuralNetworkLa
         err = "An updatable layer, named '" + layer.name() + "', has quantized weights/bias param. Quantized weights/bias not supported for update.";
         return Result(ResultType::INVALID_UPDATABLE_MODEL_PARAMETERS, err);
     }
-    
+
     if (!weight_update_flag || ((has_bias) && (!bias_update_flag))) {
         err = "An updatable layer, named '" + layer.name() + "', has a weight/bias param which is not marked as updatable.";
         return Result(ResultType::INVALID_UPDATABLE_MODEL_PARAMETERS, err);
     }
-    
+
     return r;
 }
 
@@ -438,7 +438,7 @@ template<typename T> static Result validateLayerAndLossLayerNamesCollisions(cons
     Result r;
     std::set<std::string> setOfNames;
     std::string err;
-    
+
     for (int i = 0; i < nn.layers_size(); i++) {
         std::string layerName = nn.layers(i).name();
         if (setOfNames.count(layerName)) {
@@ -447,7 +447,7 @@ template<typename T> static Result validateLayerAndLossLayerNamesCollisions(cons
         }
         setOfNames.insert(layerName);
     }
-    
+
     const Specification::NetworkUpdateParameters& updateParams = nn.updateparams();
     for (int j = 0; j < updateParams.losslayers_size(); j++) {
         std::string lossLayerName = updateParams.losslayers(j).name();
@@ -457,7 +457,7 @@ template<typename T> static Result validateLayerAndLossLayerNamesCollisions(cons
         }
         setOfNames.insert(lossLayerName);
     }
-    
+
     return r;
 }
 
@@ -469,7 +469,7 @@ template<typename T> static Result validateLayerAndLossLayerNamesCollisions(cons
  * Checks if the biases (if any) on the updatable layers are marked as updatable.
  */
 template<typename T> static Result validateUpdatableLayerSupport(const T& nn) {
-    
+
     Result r;
     bool isAtleastOneLayerUpdatable = false;
 
@@ -491,13 +491,13 @@ template<typename T> static Result validateUpdatableLayerSupport(const T& nn) {
             }
         }
     }
-    
+
     if (!isAtleastOneLayerUpdatable) {
         std::string err;
         err = "The model is marked as updatable, but none of the layers are updatable.";
         return Result(ResultType::INVALID_UPDATABLE_MODEL_PARAMETERS, err);
     }
-    
+
     return r;
 }
 
@@ -507,18 +507,18 @@ template<typename T> static Result validateUpdatableLayerSupport(const T& nn) {
  */
 
 template<typename T> Result validateUpdatableNeuralNetwork(const T& nn) {
-    
+
     Result r;
 
     r = validateUpdatableLayerSupport(nn);
     if (!r.good()) {return r;}
-    
+
     r = validateLayerAndLossLayerNamesCollisions(nn);
     if (!r.good()) {return r;}
 
     r = isTrainingConfigurationSupported(nn);
     if (!r.good()) {return r;}
-    
+
     return r;
 }
 

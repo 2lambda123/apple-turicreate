@@ -41,7 +41,7 @@ namespace CoreML { namespace KNNValidatorTests {
         outputType->mutable_stringtype();
         output->set_name("output");
         output->set_allocated_type(outputType);
-        
+
         interface->set_predictedfeaturename("output");
 
     }
@@ -265,7 +265,7 @@ int testKNNValidatorSingleKdTreeIndex() {
     auto *knnClassifier = m1.mutable_knearestneighborsclassifier();
     KNNValidatorTests::setNumberOfNeighbors(knnClassifier, 3, true);
     knnClassifier->mutable_uniformweighting();
-    
+
     auto *nnIndex = knnClassifier->mutable_nearestneighborsindex();
     auto *kdTree = nnIndex->mutable_singlekdtreeindex();
     nnIndex->mutable_squaredeuclideandistance();
@@ -362,72 +362,72 @@ int testKNNValidatorGood() {
 }
 
 int testEmptyKNNValidationGood() {
-    
+
     Specification::Model m1;
-    
+
     KNNValidatorTests::generateInterface(m1);
-    
+
     auto *knnClassifier = m1.mutable_knearestneighborsclassifier();
     KNNValidatorTests::setNumberOfNeighbors(knnClassifier, 3, true);
     knnClassifier->mutable_uniformweighting();
-    
+
     auto *nnIndex = knnClassifier->mutable_nearestneighborsindex();
     nnIndex->mutable_squaredeuclideandistance();
     auto *kdTree = nnIndex->mutable_singlekdtreeindex();
     kdTree->set_leafsize(30);
-    
+
     // Validation should fail since we are not telling the label type.
     Result res = validate<MLModelType_kNearestNeighborsClassifier>(m1);
     ML_ASSERT_BAD(res);
-    
+
     knnClassifier->set_defaultstringlabel("Default");
-    
+
     // Validation should pass now.
     res = validate<MLModelType_kNearestNeighborsClassifier>(m1);
     ML_ASSERT_GOOD(res);
-    
+
     knnClassifier->clear_defaultstringlabel();
-    
+
     // Validation should fail since we are not telling the label type.
     res = validate<MLModelType_kNearestNeighborsClassifier>(m1);
     ML_ASSERT_BAD(res);
 
-    return 0;    
+    return 0;
 }
 
 int testLabelTypeMismatchTest() {
-    
+
     Specification::Model m1;
-    
+
     KNNValidatorTests::generateInterface(m1);
-    
+
     auto *knnClassifier = m1.mutable_knearestneighborsclassifier();
     KNNValidatorTests::setNumberOfNeighbors(knnClassifier, 3, true);
     knnClassifier->mutable_uniformweighting();
-    
+
     auto *nnIndex = knnClassifier->mutable_nearestneighborsindex();
     nnIndex->mutable_squaredeuclideandistance();
     auto *kdTree = nnIndex->mutable_singlekdtreeindex();
     kdTree->set_leafsize(30);
-    
+
     // Validation should fail since we are not telling the label type.
     Result res = validate<MLModelType_kNearestNeighborsClassifier>(m1);
     ML_ASSERT_BAD(res);
-    
+
     knnClassifier->set_defaultstringlabel("Default");
-    
+
     // Validation should pass now.
     res = validate<MLModelType_kNearestNeighborsClassifier>(m1);
     ML_ASSERT_GOOD(res);
-    
+
     knnClassifier->mutable_int64classlabels();
-    
+
     // Validation should fail due to mismatch in type
     res = validate<MLModelType_kNearestNeighborsClassifier>(m1);
     ML_ASSERT_BAD(res);
-    
+
     return 0;
-    
+
 }
 
 int testNumberOfNeighborsWithDefaultValueInRange() {

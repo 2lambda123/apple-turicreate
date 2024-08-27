@@ -705,7 +705,7 @@ const ::CoreML::Specification::NearestNeighborsIndex& KNearestNeighborsClassifie
                          : *::CoreML::Specification::NearestNeighborsIndex::internal_default_instance();
 }
 ::CoreML::Specification::NearestNeighborsIndex* KNearestNeighborsClassifier::mutable_nearestneighborsindex() {
-  
+
   if (nearestneighborsindex_ == NULL) {
     nearestneighborsindex_ = new ::CoreML::Specification::NearestNeighborsIndex;
   }
@@ -714,7 +714,7 @@ const ::CoreML::Specification::NearestNeighborsIndex& KNearestNeighborsClassifie
 }
 ::CoreML::Specification::NearestNeighborsIndex* KNearestNeighborsClassifier::release_nearestneighborsindex() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.KNearestNeighborsClassifier.nearestNeighborsIndex)
-  
+
   ::CoreML::Specification::NearestNeighborsIndex* temp = nearestneighborsindex_;
   nearestneighborsindex_ = NULL;
   return temp;
@@ -723,9 +723,9 @@ void KNearestNeighborsClassifier::set_allocated_nearestneighborsindex(::CoreML::
   delete nearestneighborsindex_;
   nearestneighborsindex_ = nearestneighborsindex;
   if (nearestneighborsindex) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.KNearestNeighborsClassifier.nearestNeighborsIndex)
 }
@@ -744,7 +744,7 @@ const ::CoreML::Specification::Int64Parameter& KNearestNeighborsClassifier::numb
                          : *::CoreML::Specification::Int64Parameter::internal_default_instance();
 }
 ::CoreML::Specification::Int64Parameter* KNearestNeighborsClassifier::mutable_numberofneighbors() {
-  
+
   if (numberofneighbors_ == NULL) {
     numberofneighbors_ = new ::CoreML::Specification::Int64Parameter;
   }
@@ -753,7 +753,7 @@ const ::CoreML::Specification::Int64Parameter& KNearestNeighborsClassifier::numb
 }
 ::CoreML::Specification::Int64Parameter* KNearestNeighborsClassifier::release_numberofneighbors() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.KNearestNeighborsClassifier.numberOfNeighbors)
-  
+
   ::CoreML::Specification::Int64Parameter* temp = numberofneighbors_;
   numberofneighbors_ = NULL;
   return temp;
@@ -762,9 +762,9 @@ void KNearestNeighborsClassifier::set_allocated_numberofneighbors(::CoreML::Spec
   delete numberofneighbors_;
   numberofneighbors_ = numberofneighbors;
   if (numberofneighbors) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.KNearestNeighborsClassifier.numberOfNeighbors)
 }
@@ -1518,7 +1518,7 @@ void NearestNeighborsIndex::clear_numberofdimensions() {
   return numberofdimensions_;
 }
 void NearestNeighborsIndex::set_numberofdimensions(::google::protobuf::int32 value) {
-  
+
   numberofdimensions_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.NearestNeighborsIndex.numberOfDimensions)
 }
@@ -2335,7 +2335,7 @@ void SingleKdTreeIndex::clear_leafsize() {
   return leafsize_;
 }
 void SingleKdTreeIndex::set_leafsize(::google::protobuf::int32 value) {
-  
+
   leafsize_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.SingleKdTreeIndex.leafSize)
 }

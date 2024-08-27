@@ -90,4 +90,3 @@ int nn_literal_resolve (const char *addr, size_t addrlen,
     /*  The supplied string is not a valid literal address. */
     return -EINVAL;
 }
-

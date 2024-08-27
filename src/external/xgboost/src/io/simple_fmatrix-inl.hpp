@@ -18,7 +18,7 @@
 #include <xgboost/src/utils/group_data.h>
 #include "./sparse_batch_page.h"
 
-// GLC parallel lambda premitive 
+// GLC parallel lambda premitive
 #include <core/parallel/lambda_omp.hpp>
 #include <core/parallel/pthread_tools.hpp>
 

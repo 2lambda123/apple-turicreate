@@ -46,6 +46,5 @@ GetBucketLocationResult& GetBucketLocationResult::operator =(const AmazonWebServ
         m_locationConstraint = BucketLocationConstraintMapper::GetBucketLocationConstraintForName(StringUtils::Trim(resultNode.GetText().c_str()).c_str());
     }
 
-    return *this; 
+    return *this;
 }
-

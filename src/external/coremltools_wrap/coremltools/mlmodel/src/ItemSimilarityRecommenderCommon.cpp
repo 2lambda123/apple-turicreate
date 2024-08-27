@@ -51,7 +51,7 @@ namespace CoreML { namespace Recommender {
       if(isr.has_itemstringids() && isr.itemstringids().vector_size() != 0) {
         throw std::invalid_argument("Only integer item ids or string item ids can be specified in the same model.");
       }
-      
+
       num_items = uint64_t(isr.itemint64ids().vector_size());
 
       if(num_items <= max_item) {
@@ -72,7 +72,7 @@ namespace CoreML { namespace Recommender {
       }
 
     } else if(isr.has_itemstringids() && isr.itemstringids().vector_size() != 0) {
-      
+
       num_items = size_t(isr.itemstringids().vector_size());
 
       if(size_t(isr.itemstringids().vector_size()) < max_item) {

@@ -59,4 +59,3 @@ test_initializer alias_initialization([](py::module &m) {
     m.def("call_f", [](A2 *a2) { a2->f(); });
 
 });
-

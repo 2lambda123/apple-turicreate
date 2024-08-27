@@ -113,7 +113,7 @@
          </list>
       </t>
 
-      <t>It is intended that if the protocol must be revised, that 
+      <t>It is intended that if the protocol must be revised, that
          additional op codes can be assigned, obviating the need for an
          explicit version field.</t>
 
@@ -122,7 +122,7 @@
          below.</t>
 
       </section>
-       
+
       <section title="SP Type">
       <t>The fifth and sixth bytes of the header
          form a 16-bit unsigned integer
@@ -164,7 +164,7 @@
 
     <section title="Logical Connections">
         <t>This mapping of the SP protocols is layered on top of a
-           connectionless transport layer.  However the SP protocols require 
+           connectionless transport layer.  However the SP protocols require
            use of logical connections in order to pass "connection IDs" in some
            of the fields (such as the backtrace information used for the
            Request/Reply Scalability Protocol.</t>
@@ -209,7 +209,7 @@
         <t>An accepter MUST NOT send a CACK message.</t>
 
         <t>The initiator MUST send CREQ messages every T1 seconds.</t>
-  
+
         <t>An accepter that has not received a CREQ message for at least T2
         seconds, or an initiator that has not received a CACK message for
         at least T2 seconds, SHOULD assume the connection has failed, and
@@ -282,7 +282,7 @@
            allows the remote partner to either terminate an existing connection,
            such as when it is shutting down, or to reject a connection attempt
            made with CREQ.</t>
- 
+
            <t>DISC messages carry in their payload, a single byte indicating
            a reason for the disconnect, along with a human readable reason
            as an ASCII byte array. (This MAY not be present, and SHOULD NOT
@@ -315,7 +315,7 @@
       of these protocols are for long-lived use cases, there does not seem
       to be any particular urgency in doing this.</t>
     </section>
-     
+
     <section anchor="IANA" title="IANA Considerations">
       <t>This memo includes no request to IANA.</t>
     </section>
@@ -330,4 +330,3 @@
   </middle>
 
 </rfc>
-

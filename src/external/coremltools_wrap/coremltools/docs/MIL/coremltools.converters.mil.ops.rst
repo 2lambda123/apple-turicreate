@@ -42,7 +42,7 @@ The list of operators supported by MIL.
   .. autoclass:: conv_transpose
 
 .. automodule:: coremltools.converters.mil.mil.ops.defs.elementwise_binary
-  
+
   .. autoclass:: add
   .. autoclass:: equal
   .. autoclass:: floor_div
@@ -98,7 +98,7 @@ The list of operators supported by MIL.
   .. autoclass:: resize_bilinear
   .. autoclass:: crop_resize
   .. autoclass:: crop
-  
+
 .. automodule:: coremltools.converters.mil.mil.ops.defs.linear
 
   .. autoclass:: linear
@@ -116,7 +116,7 @@ The list of operators supported by MIL.
   .. autoclass:: avg_pool
   .. autoclass:: l2_pool
   .. autoclass:: max_pool
-  
+
 .. automodule:: coremltools.converters.mil.mil.ops.defs.random
 
   .. autoclass:: random_bernoulli
@@ -143,7 +143,7 @@ The list of operators supported by MIL.
   .. autoclass:: reduce_prod
   .. autoclass:: reduce_sum
   .. autoclass:: reduce_sum_square
-  
+
 .. automodule:: coremltools.converters.mil.mil.ops.defs.scatter_gather
 
   .. autoclass:: gather
@@ -156,7 +156,7 @@ The list of operators supported by MIL.
 .. automodule:: coremltools.converters.mil.mil.ops.defs.slicend
 
   .. autoclass:: slice_by_index
-  
+
 .. automodule:: coremltools.converters.mil.mil.ops.defs.tensor_operation
 
   .. autoclass:: band_part

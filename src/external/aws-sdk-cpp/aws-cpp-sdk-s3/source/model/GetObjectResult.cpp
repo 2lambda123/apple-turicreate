@@ -26,7 +26,7 @@ using namespace Aws::Utils::Stream;
 using namespace Aws::Utils;
 using namespace Aws;
 
-GetObjectResult::GetObjectResult() : 
+GetObjectResult::GetObjectResult() :
     m_deleteMarker(false),
     m_contentLength(0),
     m_missingMeta(0),
@@ -41,7 +41,7 @@ GetObjectResult::GetObjectResult() :
 {
 }
 
-GetObjectResult::GetObjectResult(GetObjectResult&& toMove) : 
+GetObjectResult::GetObjectResult(GetObjectResult&& toMove) :
     m_body(std::move(toMove.m_body)),
     m_deleteMarker(toMove.m_deleteMarker),
     m_acceptRanges(std::move(toMove.m_acceptRanges)),
@@ -122,7 +122,7 @@ GetObjectResult& GetObjectResult::operator=(GetObjectResult&& toMove)
    return *this;
 }
 
-GetObjectResult::GetObjectResult(Aws::AmazonWebServiceResult<ResponseStream>&& result) : 
+GetObjectResult::GetObjectResult(Aws::AmazonWebServiceResult<ResponseStream>&& result) :
     m_deleteMarker(false),
     m_contentLength(0),
     m_missingMeta(0),

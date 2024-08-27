@@ -26,12 +26,12 @@ using namespace Aws::Utils::Xml;
 using namespace Aws::Utils;
 using namespace Aws;
 
-PutObjectAclResult::PutObjectAclResult() : 
+PutObjectAclResult::PutObjectAclResult() :
     m_requestCharged(RequestCharged::NOT_SET)
 {
 }
 
-PutObjectAclResult::PutObjectAclResult(const Aws::AmazonWebServiceResult<XmlDocument>& result) : 
+PutObjectAclResult::PutObjectAclResult(const Aws::AmazonWebServiceResult<XmlDocument>& result) :
     m_requestCharged(RequestCharged::NOT_SET)
 {
   *this = result;

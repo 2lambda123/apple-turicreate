@@ -25,7 +25,7 @@ struct test_string_constructors  {
 
   void test_alloc() {
     gl_string s;
-    
+
     TS_ASSERT(s.size() == 0);
     TS_ASSERT(s.capacity() >= s.size());
   }
@@ -49,7 +49,7 @@ struct test_string_constructors  {
     TS_ASSERT(s2 == s1);
     TS_ASSERT(s2.capacity() >= s2.size());
   }
-  
+
   void _test_copy_assignment(gl_string s1, const gl_string& s2) {
     s1 = s2;
     TS_ASSERT(s1 == s2);
@@ -79,7 +79,7 @@ struct test_string_constructors  {
     TS_ASSERT(s == "abc");
   }
 
-  
+
   void _test_move_assignment(gl_string s1, gl_string s2) {
     gl_string s0 = s2;
     s1 = std::move(s2);
@@ -104,7 +104,7 @@ struct test_string_constructors  {
                                     "1234567890123456789012345678901234567890123456789012345678901234567890"),
                           gl_string("abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"));
   }
-  
+
   void _test_pointer_assignment(gl_string s1, const char* s2) {
     s1 = s2;
     TS_ASSERT(s1.size() == std::strlen(s2));
@@ -131,7 +131,7 @@ struct test_string_constructors  {
   }
 
   void _test_string_substr_substr(const gl_string& s, size_t pos, size_t n) {
-#ifndef NDEBUG    
+#ifndef NDEBUG
     try {
       gl_string str = s.substr(pos, n);
       TS_ASSERT(pos <= s.size());
@@ -141,7 +141,7 @@ struct test_string_constructors  {
     } catch (...) {
       TS_ASSERT(pos > s.size());
     }
-#endif    
+#endif
   }
 
   void test_substr() {
@@ -204,8 +204,8 @@ struct test_string_constructors  {
     _test_string_substr_substr(gl_string("lsaijeqhtrbgcdmpfkno"), 20, 0);
     _test_string_substr_substr(gl_string("dplqartnfgejichmoskb"), 21, 0);
   }
-  
-  
+
+
 };
 
 BOOST_FIXTURE_TEST_SUITE(_test_string_constructors, test_string_constructors)

@@ -69,7 +69,7 @@ uint64_t milliseconds (void)
 
 void *worker (void *arg)
 {
-    int fd = (intptr_t)arg; 
+    int fd = (intptr_t)arg;
 
     /*  Main processing loop. */
 
@@ -134,7 +134,7 @@ void *worker (void *arg)
 /*  The server runs forever. */
 int server(const char *url)
 {
-    int fd; 
+    int fd;
     int i;
     pthread_t tids [MAXWORKERS];
     int rc;
@@ -199,7 +199,7 @@ int client (const char *url, const char *msecstr)
     if (nn_connect (fd, url) < 0) {
         fprintf (stderr, "nn_socket: %s\n", nn_strerror (nn_errno ()));
         nn_close (fd);
-        return (-1);        
+        return (-1);
     }
 
     msec = htonl(msec);

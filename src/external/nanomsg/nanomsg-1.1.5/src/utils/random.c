@@ -70,4 +70,3 @@ void nn_random_generate (void *buf, size_t len)
         pos += 8;
     }
 }
-

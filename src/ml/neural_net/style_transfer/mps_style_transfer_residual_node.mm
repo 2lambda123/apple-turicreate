@@ -85,7 +85,7 @@
                                                                          beta:weights[[NSString stringWithFormat:@"%@%@", name, @"inst_2_beta_weight"]]
                                                                         label:descriptor.inst2.label
                                                                        device:dev
-                                                                     cmdQueue:cmdQ]; 
+                                                                     cmdQueue:cmdQ];
 
     _add = [MPSNNAdditionNode nodeWithSources:@[inputNode, [_instNorm2 resultImage]]];
 
@@ -155,10 +155,10 @@
   NSString* instNorm1BetaKeys = [NSString stringWithFormat:@"%@%@", prefix, @"inst_1_beta_weight"];
 
   NSUInteger instNorm1Size = (NSUInteger)([_instNorm1.tc_weightsData styles] * [_instNorm1.tc_weightsData numberOfFeatureChannels] * sizeof(float));
-  
+
   NSMutableData* instNorm1DataGamma = [NSMutableData dataWithLength:instNorm1Size];
   NSMutableData* instNorm1DataBeta = [NSMutableData dataWithLength:instNorm1Size];
-  
+
   memcpy(instNorm1DataGamma.mutableBytes, [_instNorm1.tc_weightsData gammaWeights], instNorm1Size);
   memcpy(instNorm1DataBeta.mutableBytes, [_instNorm1.tc_weightsData betaWeights], instNorm1Size);
 
@@ -203,7 +203,7 @@
 
   weights[instNorm2GammaKeys] = inst2NormGammaWrapper;
   weights[instNorm2BetaKeys] = inst2NormBetaWrapper;
-  
+
   return weights;
 }
 

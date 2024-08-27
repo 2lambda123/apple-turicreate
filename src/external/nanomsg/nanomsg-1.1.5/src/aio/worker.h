@@ -66,4 +66,3 @@ void nn_worker_rm_timer (struct nn_worker *self,
     struct nn_worker_timer *timer);
 
 #endif
-

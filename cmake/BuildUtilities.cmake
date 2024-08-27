@@ -108,4 +108,3 @@ macro (make_copy_target NAME)
   message(STATUS "Adding Copy Target ${NAME} is copying:  ${all_target_locations}")
   set_property(TARGET ${NAME} PROPERTY COPY_FILES "${all_target_locations}")
 endmacro()
-

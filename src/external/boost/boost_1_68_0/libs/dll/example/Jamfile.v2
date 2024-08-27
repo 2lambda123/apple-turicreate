@@ -46,4 +46,3 @@ exe load_self
 exe smart_test
    : mangled/smart_lib.cpp
    ;
-

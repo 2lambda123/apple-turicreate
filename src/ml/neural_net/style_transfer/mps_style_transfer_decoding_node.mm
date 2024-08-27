@@ -26,7 +26,7 @@
                          descriptor:(TCMPSDecodingDescriptor *)descriptor
                         initWeights:(NSDictionary<NSString *, NSData *> *) weights {
   self = [super init];
-  
+
   if (self) {
     _upsample = [MPSCNNUpsamplingNearestNode nodeWithSource:inputNode
                                        integerScaleFactorX:descriptor.upsample.scale

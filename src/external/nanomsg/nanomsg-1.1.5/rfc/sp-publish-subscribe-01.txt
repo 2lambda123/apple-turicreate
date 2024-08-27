@@ -54,7 +54,7 @@ Copyright Notice
 
 
 Sustrik                 Expires November 5, 2014                [Page 1]
-
+
 Internet-Draft            Publish/Subscribe SP                  May 2014
 
 
@@ -109,7 +109,7 @@ Internet-Draft            Publish/Subscribe SP                  May 2014
 
 
 Sustrik                 Expires November 5, 2014                [Page 2]
-
+
 Internet-Draft            Publish/Subscribe SP                  May 2014
 
 
@@ -165,4 +165,3 @@ Author's Address
 
 
 Sustrik                 Expires November 5, 2014                [Page 3]
-

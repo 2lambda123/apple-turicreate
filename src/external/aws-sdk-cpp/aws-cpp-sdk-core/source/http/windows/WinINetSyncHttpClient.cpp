@@ -1,12 +1,12 @@
 /*
   * Copyright 2010-2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-  * 
+  *
   * Licensed under the Apache License, Version 2.0 (the "License").
   * You may not use this file except in compliance with the License.
   * A copy of the License is located at
-  * 
+  *
   *  http://aws.amazon.com/apache2.0
-  * 
+  *
   * or in the "license" file accompanying this file. This file is distributed
   * on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
   * express or implied. See the License for the specific language governing
@@ -44,7 +44,7 @@ static void WinINetEnableHttp2(void* handle)
 {
 #ifdef WININET_HAS_H2
     DWORD http2 = HTTP_PROTOCOL_FLAG_HTTP2;
-    if (!InternetSetOptionA(handle, INTERNET_OPTION_ENABLE_HTTP_PROTOCOL, &http2, sizeof(http2))) 
+    if (!InternetSetOptionA(handle, INTERNET_OPTION_ENABLE_HTTP_PROTOCOL, &http2, sizeof(http2)))
     {
         AWS_LOGSTREAM_ERROR("WinINetHttp2", "Failed to enable HTTP/2 on WinInet handle: " << handle << ". Falling back to HTTP/1.1.");
     }
@@ -61,7 +61,7 @@ WinINetSyncHttpClient::WinINetSyncHttpClient(const ClientConfiguration& config) 
     Base()
 {
     AWS_LOGSTREAM_INFO(GetLogTag(), "Creating http client with user agent " << config.userAgent << " with max connections " <<
-         config.maxConnections << ", request timeout " << config.requestTimeoutMs << ",and connect timeout " << config.connectTimeoutMs);       
+         config.maxConnections << ", request timeout " << config.requestTimeoutMs << ",and connect timeout " << config.connectTimeoutMs);
 
     m_allowRedirects = config.followRedirects;
 
@@ -119,9 +119,9 @@ WinINetSyncHttpClient::~WinINetSyncHttpClient()
 void* WinINetSyncHttpClient::OpenRequest(const Aws::Http::HttpRequest& request, void* connection, const Aws::StringStream& ss) const
 {
     DWORD requestFlags =
-        INTERNET_FLAG_NO_AUTH | 
-        INTERNET_FLAG_RELOAD | 
-        INTERNET_FLAG_KEEP_CONNECTION | 
+        INTERNET_FLAG_NO_AUTH |
+        INTERNET_FLAG_RELOAD |
+        INTERNET_FLAG_KEEP_CONNECTION |
         (request.GetUri().GetScheme() == Scheme::HTTPS ? INTERNET_FLAG_SECURE : 0) |
         INTERNET_FLAG_NO_CACHE_WRITE |
         (m_allowRedirects ? 0 : INTERNET_FLAG_NO_AUTO_REDIRECT);
@@ -214,7 +214,7 @@ bool WinINetSyncHttpClient::DoReceiveResponse(void* hHttpRequest) const
 {
     return (HttpEndRequest(hHttpRequest, nullptr, 0, 0) != 0);
 }
-   
+
 bool WinINetSyncHttpClient::DoQueryHeaders(void* hHttpRequest, std::shared_ptr<HttpResponse>& response, Aws::StringStream& ss, uint64_t& read) const
 {
 

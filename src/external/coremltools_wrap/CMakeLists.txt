@@ -18,5 +18,3 @@ make_library(coremltools_mlmodel
   )
 
 target_compile_options(coremltools_mlmodel INTERFACE "-w -DCoreML=__tc_coreml")
-
-

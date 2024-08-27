@@ -765,4 +765,3 @@ CURLcode tool_real_error(CURLcode result, CURLoption tag)
 #endif
   return result;
 }
-

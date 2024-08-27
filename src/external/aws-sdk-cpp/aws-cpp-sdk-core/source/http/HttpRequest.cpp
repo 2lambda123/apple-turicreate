@@ -43,6 +43,3 @@ const char CHUNKED_VALUE[] = "chunked";
 
 } // Http
 } // Aws
-
-
-

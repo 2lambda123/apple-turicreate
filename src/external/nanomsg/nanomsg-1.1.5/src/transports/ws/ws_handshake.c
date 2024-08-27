@@ -336,7 +336,7 @@ static int nn_ws_match_value (const char* termseq, const char **subj,
     else {
         return NN_WS_HANDSHAKE_NOMATCH;
     }
-        
+
     if (ignore_leading_sp) {
         while (*start == '\x20' && start < end) {
             start++;
@@ -1292,7 +1292,7 @@ static void nn_ws_handshake_server_reply (struct nn_ws_handshake *self)
 
     if (self->response_code == NN_WS_HANDSHAKE_RESPONSE_OK) {
         /*  Upgrade connection as per RFC 6455 section 4.2.2. */
-        
+
         rc = nn_ws_handshake_hash_key (self->key, self->key_len,
             accept_key, sizeof (accept_key));
         nn_assert (rc >= 0);
@@ -1383,4 +1383,3 @@ static int nn_ws_handshake_hash_key (const char *key, size_t key_len,
 
     return rc;
 }
-

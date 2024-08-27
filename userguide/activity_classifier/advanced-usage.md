@@ -89,4 +89,3 @@ turicreate.config.set_num_gpus(1)
 # Use CPU
 turicreate.config.set_num_gpus(0)
 ```
-

@@ -43,27 +43,27 @@ Item Similarity Recommender
 .. code-block:: proto
 
 	message ItemSimilarityRecommender {
-	
+
 	    message ConnectedItem {
 	        uint64 itemId = 1;
 	        double similarityScore = 2;
 	    }
-	
+
 	    message SimilarItems {
 	        uint64 itemId = 1;
 	        repeated ConnectedItem similarItemList = 2;
 	        double itemScoreAdjustment = 3;
 	    }
-	
+
 	    repeated SimilarItems itemItemSimilarities = 1;
-	
+
 	    StringVector itemStringIds = 2;
 	    Int64Vector itemInt64Ids = 3;
-	
-	
+
+
 	    string recommendedItemListOutputFeatureName = 20;
 	    string recommendedItemScoreOutputFeatureName = 21;
-	
+
 	}
 
 

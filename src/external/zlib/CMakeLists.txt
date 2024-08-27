@@ -23,4 +23,3 @@ set(ZLIB_SRCS
 make_library(z SOURCES ${ZLIB_SRCS})
 
 target_include_directories(z SYSTEM PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/zlib-1.2.11/)
-

@@ -188,4 +188,3 @@ class SourceCodeInfo extends \Google\Protobuf\Internal\Message
     }
 
 }
-

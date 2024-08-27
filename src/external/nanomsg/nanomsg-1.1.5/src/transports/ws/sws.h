@@ -199,4 +199,3 @@ void nn_sws_start (struct nn_sws *self, struct nn_usock *usock, int mode,
 void nn_sws_stop (struct nn_sws *self);
 
 #endif
-

@@ -97,4 +97,3 @@ test_initializer stl_binder_noncopyable([](py::module &m) {
     py::bind_map<std::unordered_map<int, E_nc>>(m, "UmapENC");
     m.def("get_umnc", &times_ten<std::unordered_map<int, E_nc>>, py::return_value_policy::reference);
 });
-

@@ -26,7 +26,7 @@ using namespace Aws::Utils::Xml;
 using namespace Aws::Utils;
 using namespace Aws::Http;
 
-HeadObjectRequest::HeadObjectRequest() : 
+HeadObjectRequest::HeadObjectRequest() :
     m_bucketHasBeenSet(false),
     m_ifMatchHasBeenSet(false),
     m_ifModifiedSinceHasBeenSet(false),

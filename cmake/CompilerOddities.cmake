@@ -34,7 +34,7 @@ macro(Set_Compiler_Specific_Flags)
                              };
                              int main(int argc, char** argv) { return 0; }"
                             COMPILER_HAS_NOEXCEPT_WHAT_ON_EXCEPTIONS_V1)
-  
+
   check_cxx_source_compiles("#include <ios>
                              #include <system_error>
 
@@ -56,10 +56,10 @@ macro(Set_Compiler_Specific_Flags)
                              COMPILER_NO_NOEXCEPT_WHAT_ON_EXCEPTIONS)
   if(NOT COMPILER_HAS_NOEXCEPT_WHAT_ON_EXCEPTIONS_V1
      AND NOT COMPILER_HAS_NOEXCEPT_WHAT_ON_EXCEPTIONS_V2
-     AND NOT COMPILER_NO_NOEXCEPT_WHAT_ON_EXCEPTIONS) 
+     AND NOT COMPILER_NO_NOEXCEPT_WHAT_ON_EXCEPTIONS)
 
     message(FATAL_ERROR "Cannot determine noexcept fladg on std::ios_base::failure.  See log.")
-  elseif(COMPILER_HAS_NOEXCEPT_WHAT_ON_EXCEPTIONS_V1) 
+  elseif(COMPILER_HAS_NOEXCEPT_WHAT_ON_EXCEPTIONS_V1)
     add_definitions(-DCOMPILER_MODIFIER_ON_EXCEPTION_WHAT=noexcept)
   elseif(COMPILER_HAS_NOEXCEPT_WHAT_ON_EXCEPTIONS_V2)
     add_definitions(-DCOMPILER_MODIFIER_ON_EXCEPTION_WHAT=_NOEXCEPT)

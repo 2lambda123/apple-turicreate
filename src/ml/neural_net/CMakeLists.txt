@@ -123,7 +123,7 @@ make_library(tctensorflow SHARED
   unity_shared
 )
 
-set_target_properties(tctensorflow 
+set_target_properties(tctensorflow
   PROPERTIES
     SUFFIX ".so"
     LIBRARY_OUTPUT_DIRECTORY ${TF_BUILD_DIR}

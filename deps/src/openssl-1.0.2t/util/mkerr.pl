@@ -83,7 +83,7 @@ Options:
                 Default: keep previously assigned numbers. (You are warned
                          when collisions are detected.)
 
-  -nostatic     Generates a different source code, where these additional 
+  -nostatic     Generates a different source code, where these additional
                 functions are generated for each library specified in the
                 config file:
                   void ERR_load_<LIB>_strings(void);
@@ -91,15 +91,15 @@ Options:
                   void ERR_<LIB>_error(int f, int r, char *fn, int ln);
                   #define <LIB>err(f,r) ERR_<LIB>_error(f,r,__FILE__,__LINE__)
                 while the code facilitates the use of these in an environment
-                where the error support routines are dynamically loaded at 
+                where the error support routines are dynamically loaded at
                 runtime.
                 Default: 'static' code generation.
 
   -staticloader Prefix generated functions with the 'static' scope modifier.
                 Default: don't write any scope modifier prefix.
 
-  -write        Actually (over)write the generated code to the header and C 
-                source files as assigned to each library through the config 
+  -write        Actually (over)write the generated code to the header and C
+                source files as assigned to each library through the config
                 file.
                 Default: don't write.
 
@@ -180,7 +180,7 @@ while (($hdr, $lib) = each %libinc)
 		if(/\/\*/) {
 		    if (not /\*\//) {		# multiline comment...
 			$line = $_;		# ... just accumulate
-			next; 
+			next;
 		    } else {
 			s/\/\*.*?\*\///gs;	# wipe it
 		    }
@@ -341,7 +341,7 @@ foreach $file (@source) {
 				$fnew{$2}++;
 			}
 			$notrans{$1} = 1 unless exists $ftrans{$3};
-			print STDERR "Function: $1\t= $fcodes{$1} (lib: $2, name: $3)\n" if $debug; 
+			print STDERR "Function: $1\t= $fcodes{$1} (lib: $2, name: $3)\n" if $debug;
 		}
 		if(/(([A-Z0-9]+)_R_[A-Z0-9_]+)/) {
 			next unless exists $csrc{$2};
@@ -350,8 +350,8 @@ foreach $file (@source) {
 				$rcodes{$1} = "X";
 				$rnew{$2}++;
 			}
-			print STDERR "Reason: $1\t= $rcodes{$1} (lib: $2)\n" if $debug; 
-		} 
+			print STDERR "Reason: $1\t= $rcodes{$1} (lib: $2)\n" if $debug;
+		}
 	}
 	close IN;
 }
@@ -830,4 +830,3 @@ if($errcount) {
 	print STDERR "There were errors, failing...\n\n";
 	exit $errcount;
 }
-

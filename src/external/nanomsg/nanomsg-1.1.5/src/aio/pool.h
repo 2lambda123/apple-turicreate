@@ -36,4 +36,3 @@ void nn_pool_term (struct nn_pool *self);
 struct nn_worker *nn_pool_choose_worker (struct nn_pool *self);
 
 #endif
-

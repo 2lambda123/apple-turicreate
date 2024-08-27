@@ -189,7 +189,7 @@ namespace CoreML {
                     default:
                         break;
                 }
-                
+
                 break;
 
             }
@@ -392,12 +392,12 @@ namespace CoreML {
 
 
     Result validateRegressorInterface(const Specification::ModelDescription& description, int modelVersion) {
-        
+
         if (description.predictedfeaturename() == "") {
             return Result(ResultType::INVALID_MODEL_INTERFACE,
                           "Specification is missing regressor predictedFeatureName.");
         }
-        
+
         // Validate feature descriptions
         Result result = validateFeatureDescriptions(description, modelVersion);
         if (!result.good()) {
@@ -473,7 +473,7 @@ namespace CoreML {
         }
         return validateOptionalOutputs(interface);
     }
-    
+
     inline Result validateOptionalTree(const Specification::ModelDescription& interface) {
         return validateOptionalOutputs(interface);
     }
@@ -569,7 +569,7 @@ namespace CoreML {
 
         return validateOptionalOutputs(format.description());
     }
-    
+
     Result validateCanModelBeUpdatable(const Specification::Model& format) {
         Result r;
         switch (format.Type_case()) {
@@ -589,4 +589,3 @@ namespace CoreML {
         }
     }
 }
-

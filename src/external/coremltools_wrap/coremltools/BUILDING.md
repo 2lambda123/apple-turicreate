@@ -37,4 +37,3 @@ creation. However, provided scripts & makefiles do not currently support custom
 development environments; rather, they will always auto-activate the managed
 environment. Environments are generated and stored at
 `envs/coremltools-py<version string>`
-

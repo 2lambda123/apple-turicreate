@@ -109,4 +109,3 @@ class DescriptorProto_ReservedRange extends \Google\Protobuf\Internal\Message
     }
 
 }
-

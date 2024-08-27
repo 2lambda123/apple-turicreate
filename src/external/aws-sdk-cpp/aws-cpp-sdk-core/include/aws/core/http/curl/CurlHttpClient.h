@@ -84,4 +84,3 @@ using PlatformHttpClient = CurlHttpClient;
 
 } // namespace Http
 } // namespace Aws
-

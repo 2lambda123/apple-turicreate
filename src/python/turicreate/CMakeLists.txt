@@ -30,7 +30,7 @@ if(APPLE AND HAS_COREML_CUSTOM_MODEL)
   )
 
   add_dependencies(copy_coreml_dylibs Recommender AudioPreprocessing)
-endif() 
+endif()
 
 make_copy_target(release_binaries
         TARGETS

@@ -98,7 +98,7 @@
          protocols -- ASCII representation of these bytes is 'SP'. Finally,
          the fourth byte rules out any incompatible versions of this
          protocol.</t>
-      
+
       <t>Fifth and sixth bytes of the header form a 16-bit unsigned integer in
          network byte order representing the type of SP endpoint on the layer
          above. The value SHOULD NOT be interpreted by the mapping, rather
@@ -144,7 +144,7 @@
         <artwork>
 +-----------+------------+-----------------+
 | type (8b) | size (64b) |     payload     |
-+-----------+------------+-----------------+ 
++-----------+------------+-----------------+
         </artwork>
       </figure>
 

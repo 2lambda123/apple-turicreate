@@ -30,14 +30,14 @@ namespace S3
 namespace Model
 {
 
-FilterRule::FilterRule() : 
+FilterRule::FilterRule() :
     m_name(FilterRuleName::NOT_SET),
     m_nameHasBeenSet(false),
     m_valueHasBeenSet(false)
 {
 }
 
-FilterRule::FilterRule(const XmlNode& xmlNode) : 
+FilterRule::FilterRule(const XmlNode& xmlNode) :
     m_name(FilterRuleName::NOT_SET),
     m_nameHasBeenSet(false),
     m_valueHasBeenSet(false)

@@ -47,4 +47,3 @@ size_t nn_chunk_size (void *p);
 void *nn_chunk_trim (void *p, size_t n);
 
 #endif
-

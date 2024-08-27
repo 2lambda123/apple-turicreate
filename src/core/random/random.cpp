@@ -29,23 +29,23 @@
 namespace turi {
   namespace random {
 
-    /** Get as close to a true source of randomness as possible. 
+    /** Get as close to a true source of randomness as possible.
      *
      *  nanoseconds clock from program start.  This should be pretty good.
      *
-     *  In case subsequent calls on a platform that does not support nanosecond resolution 
-     *  happen, also increment a base count to make sure that subsequent seeds 
-     *  are never the same. 
+     *  In case subsequent calls on a platform that does not support nanosecond resolution
+     *  happen, also increment a base count to make sure that subsequent seeds
+     *  are never the same.
      *
      *  hash all these together to get a final seed hash.
      */
-    uint64_t pure_random_seed() { 
+    uint64_t pure_random_seed() {
       static auto base_start_time = std::chrono::high_resolution_clock::now();
       static uint64_t base_seed = hash64(time(NULL));
       static atomic<uint64_t> base_count = 0;
 
 
-      ++base_count; 
+      ++base_count;
 
       auto now = std::chrono::high_resolution_clock::now();
 
@@ -53,7 +53,7 @@ namespace turi {
 
       return hash64(base_seed, hash64(cur_seed, base_count));
     }
-    
+
     /**
      * A truely nondeterministic generator
      */
