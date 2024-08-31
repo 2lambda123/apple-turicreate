@@ -125,4 +125,3 @@ int nn_list_item_isinlist (struct nn_list_item *self)
 {
     return self->prev == NN_LIST_NOTINLIST ? 0 : 1;
 }
-

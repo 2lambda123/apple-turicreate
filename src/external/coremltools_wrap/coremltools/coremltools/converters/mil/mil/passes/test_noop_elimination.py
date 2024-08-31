@@ -39,7 +39,7 @@ def test_reshape_elimination():
 def test_oneway_split_elimination():
     @mb.program(input_specs=[mb.TensorSpec(shape=(2, 4))])
     def prog(x):
-        r1 = mb.split(x=x, num_splits=1, axis=-1) 
+        r1 = mb.split(x=x, num_splits=1, axis=-1)
         return mb.relu(x=r1)
 
     prev_prog, prev_block, block = apply_pass_and_basic_check(
@@ -57,7 +57,7 @@ def test_oneway_split_elimination():
 def test_full_split_elimination():
     @mb.program(input_specs=[mb.TensorSpec(shape=(2, 4))])
     def prog(x):
-        r1 = mb.split(x=x, split_sizes=[4], axis=-1) 
+        r1 = mb.split(x=x, split_sizes=[4], axis=-1)
         return mb.relu(x=r1)
 
     prev_prog, prev_block, block = apply_pass_and_basic_check(
@@ -75,7 +75,7 @@ def test_full_split_elimination():
 def test_slicebysize_full_elimination():
     @mb.program(input_specs=[mb.TensorSpec(shape=(2, 4))])
     def prog(x):
-        r1 = mb.slice_by_size(x=x, begin=[0, 0], size=[2, 4]) 
+        r1 = mb.slice_by_size(x=x, begin=[0, 0], size=[2, 4])
         return mb.relu(x=r1)
 
     prev_prog, prev_block, block = apply_pass_and_basic_check(
@@ -93,7 +93,7 @@ def test_slicebysize_full_elimination():
 def test_slicebysize_to_end_elimination():
     @mb.program(input_specs=[mb.TensorSpec(shape=(2, 4))])
     def prog(x):
-        r1 = mb.slice_by_size(x=x, begin=[0, 0], size=[-1, -1]) 
+        r1 = mb.slice_by_size(x=x, begin=[0, 0], size=[-1, -1])
         return mb.relu(x=r1)
 
     prev_prog, prev_block, block = apply_pass_and_basic_check(
@@ -111,7 +111,7 @@ def test_slicebysize_to_end_elimination():
 def test_slicebyindex_full_elimination():
     @mb.program(input_specs=[mb.TensorSpec(shape=(2, 4))])
     def prog(x):
-        r1 = mb.slice_by_index(x=x, begin=[0, 0], end=[2, 4]) 
+        r1 = mb.slice_by_index(x=x, begin=[0, 0], end=[2, 4])
         return mb.relu(x=r1)
 
     prev_prog, prev_block, block = apply_pass_and_basic_check(
@@ -139,7 +139,7 @@ def test_slicebyindex_mask_elimination(begin_mask, end_mask):
                 begin[i] = 0
             if not end_mask[i]:
                 end[i] = 4
-        r1 = mb.slice_by_index(x=x, begin=begin, end=end, begin_mask=begin_mask, end_mask=end_mask) 
+        r1 = mb.slice_by_index(x=x, begin=begin, end=end, begin_mask=begin_mask, end_mask=end_mask)
         return mb.relu(x=r1)
 
     prev_prog, prev_block, block = apply_pass_and_basic_check(
@@ -152,5 +152,3 @@ def test_slicebyindex_mask_elimination(begin_mask, end_mask):
         {"x": (4, 4)},
         expected_output_shapes={block.outputs[0].name: (4, 4)},
     )
-
-

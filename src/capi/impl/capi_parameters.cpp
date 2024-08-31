@@ -28,8 +28,8 @@ EXPORT tc_parameters* tc_parameters_create_empty(tc_error** error) {
 
   return new_tc_parameters();
 
-  ERROR_HANDLE_END(error, NULL); 
-} 
+  ERROR_HANDLE_END(error, NULL);
+}
 
 // Add a new value to the set of parameters
 EXPORT void tc_parameters_add(tc_parameters* params, const char* name, const tc_variant* variant, tc_error** error) {
@@ -44,7 +44,7 @@ EXPORT void tc_parameters_add(tc_parameters* params, const char* name, const tc_
   ERROR_HANDLE_END(error);
 }
 
-// Returns true if an entry exists, false otherwise   
+// Returns true if an entry exists, false otherwise
 EXPORT bool tc_parameters_entry_exists(const tc_parameters* params, const char* name, tc_error** error) {
   ERROR_HANDLE_START();
   turi::ensure_server_initialized();
@@ -53,8 +53,8 @@ EXPORT bool tc_parameters_entry_exists(const tc_parameters* params, const char* 
 
   return (params->value.find(name) != params->value.end());
 
-  ERROR_HANDLE_END(error, false); 
-} 
+  ERROR_HANDLE_END(error, false);
+}
 
 // Retrieves a variant from the set of parameters
 EXPORT tc_variant* tc_parameters_retrieve(const tc_parameters* params, const char* name, tc_error** error) {
@@ -79,7 +79,7 @@ EXPORT void tc_parameters_add_int64(tc_parameters* params, const char* name, int
 
   params->value[name] = turi::to_variant(value);
 
-  ERROR_HANDLE_END(error); 
+  ERROR_HANDLE_END(error);
 }
 
 EXPORT void tc_parameters_add_double(tc_parameters* params, const char* name, double value, tc_error** error) {
@@ -90,7 +90,7 @@ EXPORT void tc_parameters_add_double(tc_parameters* params, const char* name, do
 
   params->value[name] = turi::to_variant(value);
 
-  ERROR_HANDLE_END(error); 
+  ERROR_HANDLE_END(error);
 }
 
 EXPORT void tc_parameters_add_cstring(tc_parameters* params, const char* name, const char* str, tc_error** error) {
@@ -102,7 +102,7 @@ EXPORT void tc_parameters_add_cstring(tc_parameters* params, const char* name, c
 
   params->value[name] = turi::to_variant(turi::flex_string(str));
 
-  ERROR_HANDLE_END(error); 
+  ERROR_HANDLE_END(error);
 }
 
 EXPORT void tc_parameters_add_string(tc_parameters* params, const char* name, const char* str, uint64_t n, tc_error** error) {
@@ -114,7 +114,7 @@ EXPORT void tc_parameters_add_string(tc_parameters* params, const char* name, co
 
   params->value[name] = turi::to_variant(turi::flex_string(str, n));
 
-  ERROR_HANDLE_END(error); 
+  ERROR_HANDLE_END(error);
 }
 
 EXPORT void tc_parameters_add_double_array(tc_parameters* params, const char* name, const double* data, uint64_t n, tc_error** error) {
@@ -126,7 +126,7 @@ EXPORT void tc_parameters_add_double_array(tc_parameters* params, const char* na
 
   params->value[name] = turi::to_variant(turi::flex_vec(data, data + n));
 
-  ERROR_HANDLE_END(error); 
+  ERROR_HANDLE_END(error);
 }
 
 EXPORT void tc_parameters_add_flex_list(tc_parameters* params, const char* name, const tc_flex_list* fl, tc_error** error) {
@@ -138,7 +138,7 @@ EXPORT void tc_parameters_add_flex_list(tc_parameters* params, const char* name,
 
   params->value[name] = turi::to_variant(fl->value);
 
-  ERROR_HANDLE_END(error); 
+  ERROR_HANDLE_END(error);
 }
 
 EXPORT void tc_parameters_add_flex_dict(tc_parameters* params, const char* name, const tc_flex_dict* fd, tc_error** error) {
@@ -150,7 +150,7 @@ EXPORT void tc_parameters_add_flex_dict(tc_parameters* params, const char* name,
 
   params->value[name] = turi::to_variant(fd->value);
 
-  ERROR_HANDLE_END(error); 
+  ERROR_HANDLE_END(error);
 }
 
 EXPORT void tc_parameters_add_datetime(tc_parameters* params, const char* name, const tc_datetime* dt, tc_error** error) {
@@ -162,7 +162,7 @@ EXPORT void tc_parameters_add_datetime(tc_parameters* params, const char* name, 
 
   params->value[name] = turi::to_variant(dt->value);
 
-  ERROR_HANDLE_END(error); 
+  ERROR_HANDLE_END(error);
 }
 
 EXPORT void tc_parameters_add_image(tc_parameters* params, const char* name, const tc_flex_image* fi, tc_error** error) {
@@ -174,7 +174,7 @@ EXPORT void tc_parameters_add_image(tc_parameters* params, const char* name, con
 
   params->value[name] = turi::to_variant(turi::flexible_type(fi->value));
 
-  ERROR_HANDLE_END(error); 
+  ERROR_HANDLE_END(error);
 }
 
 EXPORT void tc_parameters_add_flexible_type(tc_parameters* params, const char* name, const tc_flexible_type* ft, tc_error** error) {
@@ -186,7 +186,7 @@ EXPORT void tc_parameters_add_flexible_type(tc_parameters* params, const char* n
 
   params->value[name] = ft->value;
 
-  ERROR_HANDLE_END(error); 
+  ERROR_HANDLE_END(error);
 }
 
 EXPORT void tc_parameters_add_sarray(tc_parameters* params, const char* name, const tc_sarray* sa, tc_error** error) {
@@ -198,7 +198,7 @@ EXPORT void tc_parameters_add_sarray(tc_parameters* params, const char* name, co
 
   params->value[name] = turi::to_variant(sa->value.get_proxy());
 
-  ERROR_HANDLE_END(error); 
+  ERROR_HANDLE_END(error);
 }
 
 EXPORT void tc_parameters_add_sframe(tc_parameters* params, const char* name, const tc_sframe* sf, tc_error** error) {
@@ -210,7 +210,7 @@ EXPORT void tc_parameters_add_sframe(tc_parameters* params, const char* name, co
 
   params->value[name] = turi::to_variant(sf->value.get_proxy());
 
-  ERROR_HANDLE_END(error); 
+  ERROR_HANDLE_END(error);
 }
 
 EXPORT void tc_parameters_add_parameters(tc_parameters* params, const char* name, const tc_parameters* p, tc_error** error) {
@@ -222,7 +222,7 @@ EXPORT void tc_parameters_add_parameters(tc_parameters* params, const char* name
 
   params->value[name] = turi::to_variant(p->value);
 
-  ERROR_HANDLE_END(error); 
+  ERROR_HANDLE_END(error);
 }
 
 EXPORT void tc_parameters_add_model(tc_parameters* params, const char* name, const tc_model* m, tc_error** error) {
@@ -234,7 +234,7 @@ EXPORT void tc_parameters_add_model(tc_parameters* params, const char* name, con
 
   params->value[name] = turi::to_variant(m->value);
 
-  ERROR_HANDLE_END(error); 
+  ERROR_HANDLE_END(error);
 }
 
 EXPORT bool tc_parameters_is_int64(const tc_parameters* params, const char* name, tc_error** error) {
@@ -247,7 +247,7 @@ EXPORT bool tc_parameters_is_int64(const tc_parameters* params, const char* name
   const turi::variant_type& v = params->value.at(name);
   return v.which() == 0 && turi::variant_get_ref<turi::flexible_type>(v).get_type() == turi::flex_type_enum::INTEGER;
 
-  ERROR_HANDLE_END(error, false); 
+  ERROR_HANDLE_END(error, false);
 }
 
 
@@ -261,7 +261,7 @@ EXPORT bool tc_parameters_is_double(const tc_parameters* params, const char* nam
   const turi::variant_type& v = params->value.at(name);
   return v.which() == 0 && turi::variant_get_ref<turi::flexible_type>(v).get_type() == turi::flex_type_enum::FLOAT;
 
-  ERROR_HANDLE_END(error, false); 
+  ERROR_HANDLE_END(error, false);
 }
 
 
@@ -275,7 +275,7 @@ EXPORT bool tc_parameters_is_cstring(const tc_parameters* params, const char* na
   const turi::variant_type& v = params->value.at(name);
   return v.which() == 0 && turi::variant_get_ref<turi::flexible_type>(v).get_type() == turi::flex_type_enum::STRING;
 
-  ERROR_HANDLE_END(error, false); 
+  ERROR_HANDLE_END(error, false);
 }
 
 
@@ -289,7 +289,7 @@ EXPORT bool tc_parameters_is_string(const tc_parameters* params, const char* nam
   const turi::variant_type& v = params->value.at(name);
   return v.which() == 0 && turi::variant_get_ref<turi::flexible_type>(v).get_type() == turi::flex_type_enum::STRING;
 
-  ERROR_HANDLE_END(error, false); 
+  ERROR_HANDLE_END(error, false);
 }
 
 
@@ -303,7 +303,7 @@ EXPORT bool tc_parameters_is_double_array(const tc_parameters* params, const cha
   const turi::variant_type& v = params->value.at(name);
   return v.which() == 0 && turi::variant_get_ref<turi::flexible_type>(v).get_type() == turi::flex_type_enum::VECTOR;
 
-  ERROR_HANDLE_END(error, false); 
+  ERROR_HANDLE_END(error, false);
 }
 
 
@@ -317,7 +317,7 @@ EXPORT bool tc_parameters_is_flex_list(const tc_parameters* params, const char* 
   const turi::variant_type& v = params->value.at(name);
   return v.which() == 0 && turi::variant_get_ref<turi::flexible_type>(v).get_type() == turi::flex_type_enum::LIST;
 
-  ERROR_HANDLE_END(error, false); 
+  ERROR_HANDLE_END(error, false);
 }
 
 
@@ -331,7 +331,7 @@ EXPORT bool tc_parameters_is_flex_dict(const tc_parameters* params, const char* 
   const turi::variant_type& v = params->value.at(name);
   return v.which() == 0 && turi::variant_get_ref<turi::flexible_type>(v).get_type() == turi::flex_type_enum::DICT;
 
-  ERROR_HANDLE_END(error, false); 
+  ERROR_HANDLE_END(error, false);
 }
 
 
@@ -345,7 +345,7 @@ EXPORT bool tc_parameters_is_datetime(const tc_parameters* params, const char* n
   const turi::variant_type& v = params->value.at(name);
   return v.which() == 0 && turi::variant_get_ref<turi::flexible_type>(v).get_type() == turi::flex_type_enum::DATETIME;
 
-  ERROR_HANDLE_END(error, false); 
+  ERROR_HANDLE_END(error, false);
 }
 
 
@@ -359,25 +359,25 @@ EXPORT bool tc_parameters_is_image(const tc_parameters* params, const char* name
   const turi::variant_type& v = params->value.at(name);
   return v.which() == 0 && turi::variant_get_ref<turi::flexible_type>(v).get_type() == turi::flex_type_enum::IMAGE;
 
-  ERROR_HANDLE_END(error, false); 
+  ERROR_HANDLE_END(error, false);
 }
 
 
-// Query the type of the parameter 
+// Query the type of the parameter
 EXPORT bool tc_parameters_is_flexible_type(const tc_parameters* params,
-    const char* name, tc_error** error) {  
+    const char* name, tc_error** error) {
   ERROR_HANDLE_START();
   turi::ensure_server_initialized();
 
   CHECK_NOT_NULL(error, params, "tc_parameters", false);
 
   // TODO: Make less ugly!
-  return params->value.at(name).which() == 0; 
+  return params->value.at(name).which() == 0;
 
-  ERROR_HANDLE_END(error, false); 
-} 
+  ERROR_HANDLE_END(error, false);
+}
 
-// Query the type of the parameter 
+// Query the type of the parameter
 EXPORT bool tc_parameters_is_sarray(const tc_parameters* params,
       const char* name, tc_error** error) {
   ERROR_HANDLE_START();
@@ -386,9 +386,9 @@ EXPORT bool tc_parameters_is_sarray(const tc_parameters* params,
   CHECK_NOT_NULL(error, params, "tc_parameters", false);
 
   // TODO: Make less ugly!
-  return params->value.at(name).which() == 5; 
+  return params->value.at(name).which() == 5;
 
-  ERROR_HANDLE_END(error, false); 
+  ERROR_HANDLE_END(error, false);
 }
 
 
@@ -400,10 +400,10 @@ EXPORT bool tc_parameters_is_sframe(const tc_parameters* params, const char* nam
   CHECK_NOT_NULL(error, params, "tc_parameters", false);
 
   // TODO: Make less ugly!
-  return params->value.at(name).which() == 4; 
+  return params->value.at(name).which() == 4;
 
-  ERROR_HANDLE_END(error, false); 
-} 
+  ERROR_HANDLE_END(error, false);
+}
 
 
 EXPORT bool tc_parameters_is_parameters(const tc_parameters* params, const char* name, tc_error** error) {
@@ -415,7 +415,7 @@ EXPORT bool tc_parameters_is_parameters(const tc_parameters* params, const char*
   // TODO: Make less ugly!
   return params->value.at(name).which() == 6;
 
-  ERROR_HANDLE_END(error, false); 
+  ERROR_HANDLE_END(error, false);
 }
 
 
@@ -428,7 +428,7 @@ EXPORT bool tc_parameters_is_model(const tc_parameters* params, const char* name
   // TODO: Make less ugly!
   return params->value.at(name).which() == 3;
 
-  ERROR_HANDLE_END(error, false); 
+  ERROR_HANDLE_END(error, false);
 }
 
 
@@ -441,9 +441,9 @@ EXPORT int64_t tc_parameters_retrieve_int64(const tc_parameters* params, const c
   const turi::variant_type& v = params->value.at(name);
   return turi::variant_get_ref<turi::flexible_type>(v).get<turi::flex_int>();
 
-  ERROR_HANDLE_END(error, NULL); 
+  ERROR_HANDLE_END(error, NULL);
 }
- 
+
 EXPORT double tc_parameters_retrieve_double(const tc_parameters* params, const char* name, tc_error** error) {
   ERROR_HANDLE_START();
   turi::ensure_server_initialized();
@@ -453,9 +453,9 @@ EXPORT double tc_parameters_retrieve_double(const tc_parameters* params, const c
   const turi::variant_type& v = params->value.at(name);
   return turi::variant_get_ref<turi::flexible_type>(v).get<turi::flex_float>();
 
-  ERROR_HANDLE_END(error, NULL); 
+  ERROR_HANDLE_END(error, NULL);
 }
- 
+
 EXPORT tc_flexible_type* tc_parameters_retrieve_string(const tc_parameters* params, const char* name, tc_error** error) {
   ERROR_HANDLE_START();
   turi::ensure_server_initialized();
@@ -465,7 +465,7 @@ EXPORT tc_flexible_type* tc_parameters_retrieve_string(const tc_parameters* para
   const turi::variant_type& v = params->value.at(name);
   return new_tc_flexible_type(turi::variant_get_ref<turi::flexible_type>(v).get<turi::flex_string>());
 
-  ERROR_HANDLE_END(error, NULL); 
+  ERROR_HANDLE_END(error, NULL);
 }
 
 EXPORT tc_flexible_type* tc_parameters_retrieve_array(const tc_parameters* params, const char* name, tc_error** error) {
@@ -477,9 +477,9 @@ EXPORT tc_flexible_type* tc_parameters_retrieve_array(const tc_parameters* param
   const turi::variant_type& v = params->value.at(name);
   return new_tc_flexible_type(turi::variant_get_ref<turi::flexible_type>(v).get<turi::flex_vec>());
 
-  ERROR_HANDLE_END(error, NULL); 
+  ERROR_HANDLE_END(error, NULL);
 }
- 
+
 EXPORT tc_flex_list* tc_parameters_retrieve_flex_list(const tc_parameters* params, const char* name, tc_error** error) {
   ERROR_HANDLE_START();
   turi::ensure_server_initialized();
@@ -489,7 +489,7 @@ EXPORT tc_flex_list* tc_parameters_retrieve_flex_list(const tc_parameters* param
   const turi::variant_type& v = params->value.at(name);
   return new_tc_flex_list(turi::variant_get_ref<turi::flexible_type>(v).get<turi::flex_list>());
 
-  ERROR_HANDLE_END(error, NULL); 
+  ERROR_HANDLE_END(error, NULL);
 }
 
 EXPORT tc_flex_dict* tc_parameters_retrieve_flex_dict(const tc_parameters* params, const char* name, tc_error** error) {
@@ -501,7 +501,7 @@ EXPORT tc_flex_dict* tc_parameters_retrieve_flex_dict(const tc_parameters* param
   const turi::variant_type& v = params->value.at(name);
   return new_tc_flex_dict(turi::variant_get_ref<turi::flexible_type>(v).get<turi::flex_dict>());
 
-  ERROR_HANDLE_END(error, NULL); 
+  ERROR_HANDLE_END(error, NULL);
 }
 
 EXPORT tc_datetime* tc_parameters_retrieve_datetime(const tc_parameters* params, const char* name, tc_error** error) {
@@ -513,7 +513,7 @@ EXPORT tc_datetime* tc_parameters_retrieve_datetime(const tc_parameters* params,
   const turi::variant_type& v = params->value.at(name);
   return new_tc_datetime(turi::variant_get_ref<turi::flexible_type>(v).get<turi::flex_date_time>());
 
-  ERROR_HANDLE_END(error, NULL); 
+  ERROR_HANDLE_END(error, NULL);
 }
 
 EXPORT tc_flex_image* tc_parameters_retrieve_image(const tc_parameters* params, const char* name, tc_error** error) {
@@ -525,9 +525,9 @@ EXPORT tc_flex_image* tc_parameters_retrieve_image(const tc_parameters* params, 
   const turi::variant_type& v = params->value.at(name);
   return new_tc_flex_image(turi::variant_get_ref<turi::flexible_type>(v).get<turi::flex_image>());
 
-  ERROR_HANDLE_END(error, NULL); 
+  ERROR_HANDLE_END(error, NULL);
 }
- 
+
 // Retrieve the value of an sframe as returned parameter.
 EXPORT tc_flexible_type* tc_parameters_retrieve_flexible_type(
     const tc_parameters* params, const char* name, tc_error** error) {
@@ -539,27 +539,27 @@ EXPORT tc_flexible_type* tc_parameters_retrieve_flexible_type(
   const turi::variant_type& v = params->value.at(name);
   return new_tc_flexible_type(turi::variant_get_ref<turi::flexible_type>(v));
 
-  ERROR_HANDLE_END(error, NULL); 
+  ERROR_HANDLE_END(error, NULL);
 }
 
 // Retrieve the value of an sframe as returned parameter.
-EXPORT tc_sarray* tc_parameters_retrieve_sarray(const tc_parameters* params, 
+EXPORT tc_sarray* tc_parameters_retrieve_sarray(const tc_parameters* params,
     const char* name, tc_error** error) {
 
   ERROR_HANDLE_START();
   turi::ensure_server_initialized();
-    
+
   CHECK_NOT_NULL(error, params, "tc_parameters", NULL);
 
   const turi::variant_type& v = params->value.at(name);
   return new_tc_sarray(turi::variant_get_ref<std::shared_ptr<turi::unity_sarray_base> >(v));
 
-  ERROR_HANDLE_END(error, NULL); 
+  ERROR_HANDLE_END(error, NULL);
 }
 
 // Retrieve the value of an sframe as returned parameter.
 EXPORT tc_sframe* tc_parameters_retrieve_sframe(
-    const tc_parameters* params, 
+    const tc_parameters* params,
     const char* name, tc_error** error) {
 
   ERROR_HANDLE_START();
@@ -570,7 +570,7 @@ EXPORT tc_sframe* tc_parameters_retrieve_sframe(
   const turi::variant_type& v = params->value.at(name);
   return new_tc_sframe(turi::variant_get_ref<std::shared_ptr<turi::unity_sframe_base> >(v));
 
-  ERROR_HANDLE_END(error, NULL); 
+  ERROR_HANDLE_END(error, NULL);
 }
 
 EXPORT tc_parameters* tc_parameters_retrieve_parameters(const tc_parameters* params, const char* name, tc_error** error) {
@@ -582,9 +582,9 @@ EXPORT tc_parameters* tc_parameters_retrieve_parameters(const tc_parameters* par
   const turi::variant_type& v = params->value.at(name);
   return new_tc_parameters(turi::variant_get_ref<turi::variant_map_type>(v));
 
-  ERROR_HANDLE_END(error, NULL); 
+  ERROR_HANDLE_END(error, NULL);
 }
- 
+
 EXPORT tc_model* tc_parameters_retrieve_model(const tc_parameters* params, const char* name, tc_error** error) {
   ERROR_HANDLE_START();
   turi::ensure_server_initialized();
@@ -595,7 +595,7 @@ EXPORT tc_model* tc_parameters_retrieve_model(const tc_parameters* params, const
   const std::shared_ptr<turi::model_base>& model = turi::variant_get_ref<std::shared_ptr<turi::model_base>>(v);
   return new_tc_model(model);
 
-  ERROR_HANDLE_END(error, NULL); 
+  ERROR_HANDLE_END(error, NULL);
 }
 
 }

@@ -92,4 +92,3 @@ void Curl_amiga_X509_free(X509 *a)
 }
 #endif /* USE_AMISSL */
 #endif /* __AMIGA__ */
-

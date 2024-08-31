@@ -33,8 +33,8 @@ JSExportAs(removeChild,
 JSExportAs(appendChild,
             - (NSObject<TCVegaHTMLElementInterface>*)appendWithChild:(NSObject<TCVegaHTMLElementInterface>*)child
            );
-JSExportAs(setAttribute, 
-           - (void)setAttributeWithName:(NSString*)name 
+JSExportAs(setAttribute,
+           - (void)setAttributeWithName:(NSString*)name
            value:(NSString*)value
            );
 JSExportAs(addEventListener,

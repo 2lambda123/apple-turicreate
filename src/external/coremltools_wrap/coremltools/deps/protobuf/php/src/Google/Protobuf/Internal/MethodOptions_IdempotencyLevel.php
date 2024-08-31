@@ -36,4 +36,3 @@ class MethodOptions_IdempotencyLevel
      */
     const IDEMPOTENT = 2;
 }
-

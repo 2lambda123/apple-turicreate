@@ -92,7 +92,7 @@ EXPORT tc_flexible_type* tc_ft_create_from_flex_list(const tc_flex_list* fl, tc_
 EXPORT tc_flexible_type* tc_ft_create_from_datetime(const tc_datetime* dt, tc_error** error) {
   ERROR_HANDLE_START();
   turi::ensure_server_initialized();
-  
+
   CHECK_NOT_NULL(error, dt, "tc_datetime", NULL);
 
   return new_tc_flexible_type(dt->value);
@@ -192,7 +192,7 @@ EXPORT double tc_ft_double(const tc_flexible_type* ft, tc_error** error) {
   turi::ensure_server_initialized();
 
   CHECK_NOT_NULL(error, ft, "Flexible type", NULL);
-  return ft->value.to<double>(); 
+  return ft->value.to<double>();
 
   ERROR_HANDLE_END(error, NULL);
 }

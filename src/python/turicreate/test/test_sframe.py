@@ -658,13 +658,13 @@ class SFrameTest(unittest.TestCase):
             self.assertRaises(expected_error, lambda: pickle.dumps(X))
 
             serialization.enable_sframe_serialization(f)
-             
+
             s = pickle.dumps(X)
 
             Y = pickle.loads(s)
 
             _assert_sframe_equal(X, Y)
-            
+
             serialization.enable_sframe_serialization(None) # Disables it
 
 

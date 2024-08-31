@@ -30,7 +30,7 @@ namespace S3
 namespace Model
 {
 
-Destination::Destination() : 
+Destination::Destination() :
     m_bucketHasBeenSet(false),
     m_accountHasBeenSet(false),
     m_storageClass(StorageClass::NOT_SET),
@@ -42,7 +42,7 @@ Destination::Destination() :
 {
 }
 
-Destination::Destination(const XmlNode& xmlNode) : 
+Destination::Destination(const XmlNode& xmlNode) :
     m_bucketHasBeenSet(false),
     m_accountHasBeenSet(false),
     m_storageClass(StorageClass::NOT_SET),

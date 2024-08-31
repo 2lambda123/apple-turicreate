@@ -26,7 +26,7 @@ using namespace Aws::Utils::Xml;
 using namespace Aws::Utils;
 using namespace Aws::Http;
 
-GetObjectTorrentRequest::GetObjectTorrentRequest() : 
+GetObjectTorrentRequest::GetObjectTorrentRequest() :
     m_bucketHasBeenSet(false),
     m_keyHasBeenSet(false),
     m_requestPayer(RequestPayer::NOT_SET),

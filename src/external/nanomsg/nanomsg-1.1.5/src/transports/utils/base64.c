@@ -72,16 +72,16 @@ int nn_base64_decode (const char *in, size_t in_len,
     for (io = 0, ii = 0, v = 0, rem = 0; ii < in_len; ii++) {
         if (isspace (in [ii]))
             continue;
-        
+
         if (in [ii] == '=')
             break;
-        
+
         ch = DECODEMAP [(int)(in [ii])];
-        
+
         /*  Discard invalid characters as per RFC 2045. */
         if (ch == 0xFF)
-            break; 
-        
+            break;
+
         v = (v << 6) | ch;
         rem += 6;
 
@@ -143,9 +143,8 @@ int nn_base64_encode (const uint8_t *in, size_t in_len,
 
     if (io >= out_len)
         return -ENOBUFS;
-    
+
     out [io] = '\0';
 
     return io;
 }
-

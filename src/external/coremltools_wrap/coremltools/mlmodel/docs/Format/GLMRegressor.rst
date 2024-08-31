@@ -10,13 +10,13 @@ A generalized linear model regressor.
 	    message DoubleArray {
 	        repeated double value = 1;
 	    }
-	
+
 	    enum PostEvaluationTransform {
 	        NoTransform = 0;
 	        Logit = 1;
 	        Probit = 2;
 	    }
-	
+
 	    repeated DoubleArray weights = 1;
 	    repeated double offset = 2;
 	    PostEvaluationTransform postEvaluationTransform = 3;

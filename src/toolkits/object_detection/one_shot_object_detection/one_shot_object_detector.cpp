@@ -129,7 +129,7 @@ create_synthetic_image_from_background_and_starter(ParameterSampler &parameter_s
 
   // construct annotation dictionary from parameters
   flex_dict annotation =
-      build_annotation(parameter_sampler, label, 
+      build_annotation(parameter_sampler, label,
                        starter.m_width, starter.m_height,
                        background.m_width, background.m_height,
                        seed, row_number);
@@ -227,7 +227,7 @@ gl_sframe augment_data(const gl_sframe &data,
         row_number++;
         flex_image flex_background =
             image_util::decode_image(background_ft.to<flex_image>());
-        
+
         std::pair<flex_image, flex_dict> synthetic_row =
             create_synthetic_image_from_background_and_starter(
                 parameter_sampler, object, flex_background,

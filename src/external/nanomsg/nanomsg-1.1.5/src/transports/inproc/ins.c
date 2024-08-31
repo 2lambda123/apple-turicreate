@@ -166,4 +166,3 @@ void nn_ins_unbind (struct nn_ins_item *item)
     nn_list_erase (&self.bound, &item->item);
     nn_mutex_unlock (&self.sync);
 }
-

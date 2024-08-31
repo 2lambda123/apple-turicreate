@@ -74,7 +74,7 @@
          commences as detailed in <xref target='SPoverTCP'>SPoverTCP</xref>.
          This includes the exchange of the initial protocol headers identifying
          the version of SP in use, and the specific protocol type, as well as
-         requirements to disconnect upon receipt of an invalid 
+         requirements to disconnect upon receipt of an invalid
          protocol header or an unrecognized SP version.</t>
 
     </section>
@@ -150,4 +150,3 @@
   </back>
 
 </rfc>
-

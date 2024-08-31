@@ -73,4 +73,3 @@ void nn_msg_bulkcopy_cp (struct nn_msg *dst, struct nn_msg *src);
 void nn_msg_replace_body(struct nn_msg *self, struct nn_chunkref newBody);
 
 #endif
-

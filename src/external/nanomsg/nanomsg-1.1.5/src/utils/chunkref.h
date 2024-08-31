@@ -87,4 +87,3 @@ void nn_chunkref_bulkcopy_start (struct nn_chunkref *self, uint32_t copies);
 void nn_chunkref_bulkcopy_cp (struct nn_chunkref *dst, struct nn_chunkref *src);
 
 #endif
-

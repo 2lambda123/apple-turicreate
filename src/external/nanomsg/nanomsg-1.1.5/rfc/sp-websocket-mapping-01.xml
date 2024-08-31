@@ -69,7 +69,7 @@
       <t>If the server supports the requested SP protocol as indicated
          by the Sec-WebSocket-Protocol header, then it MUST respond with
          the same Sec-WebSocket-Protocol value sent by the client.</t>
-     
+
       <t>If the server does support the requested SP protocol, then it MUST
          fail the WebSocket connection using the Close code of 1002, as
          specified in RFC 6455.</t>
@@ -79,7 +79,7 @@
          the Sec-WebSocket-Protocol field.  The NN_REP socket on the
          server would then include the same rep.sp.nanomsg.org in its
          response.</t>
-  
+
     </section>
 
     <section title = "Message">

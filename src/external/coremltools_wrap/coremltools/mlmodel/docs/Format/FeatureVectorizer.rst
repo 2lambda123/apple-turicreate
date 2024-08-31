@@ -16,7 +16,7 @@ The ordering of features in the output array is determined by
 	        string inputColumn = 1;
 	        uint64 inputDimensions = 2;
 	    }
-	
+
 	    repeated InputColumn inputList = 1;
 	}
 

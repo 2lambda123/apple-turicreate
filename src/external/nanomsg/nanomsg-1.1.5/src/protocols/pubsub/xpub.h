@@ -29,4 +29,3 @@ int nn_xpub_create (void *hint, struct nn_sockbase **sockbase);
 int nn_xpub_ispeer (int socktype);
 
 #endif
-

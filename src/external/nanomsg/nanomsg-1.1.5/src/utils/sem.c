@@ -168,4 +168,3 @@ int nn_sem_wait (struct nn_sem *self)
 
 
 #endif
-

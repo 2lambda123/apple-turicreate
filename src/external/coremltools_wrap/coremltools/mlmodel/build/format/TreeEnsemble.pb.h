@@ -784,7 +784,7 @@ inline ::google::protobuf::uint64 TreeEnsembleParameters_TreeNode_EvaluationInfo
   return evaluationindex_;
 }
 inline void TreeEnsembleParameters_TreeNode_EvaluationInfo::set_evaluationindex(::google::protobuf::uint64 value) {
-  
+
   evaluationindex_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.TreeEnsembleParameters.TreeNode.EvaluationInfo.evaluationIndex)
 }
@@ -798,7 +798,7 @@ inline double TreeEnsembleParameters_TreeNode_EvaluationInfo::evaluationvalue() 
   return evaluationvalue_;
 }
 inline void TreeEnsembleParameters_TreeNode_EvaluationInfo::set_evaluationvalue(double value) {
-  
+
   evaluationvalue_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.TreeEnsembleParameters.TreeNode.EvaluationInfo.evaluationValue)
 }
@@ -816,7 +816,7 @@ inline ::google::protobuf::uint64 TreeEnsembleParameters_TreeNode::treeid() cons
   return treeid_;
 }
 inline void TreeEnsembleParameters_TreeNode::set_treeid(::google::protobuf::uint64 value) {
-  
+
   treeid_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.TreeEnsembleParameters.TreeNode.treeId)
 }
@@ -830,7 +830,7 @@ inline ::google::protobuf::uint64 TreeEnsembleParameters_TreeNode::nodeid() cons
   return nodeid_;
 }
 inline void TreeEnsembleParameters_TreeNode::set_nodeid(::google::protobuf::uint64 value) {
-  
+
   nodeid_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.TreeEnsembleParameters.TreeNode.nodeId)
 }
@@ -844,7 +844,7 @@ inline ::CoreML::Specification::TreeEnsembleParameters_TreeNode_TreeNodeBehavior
   return static_cast< ::CoreML::Specification::TreeEnsembleParameters_TreeNode_TreeNodeBehavior >(nodebehavior_);
 }
 inline void TreeEnsembleParameters_TreeNode::set_nodebehavior(::CoreML::Specification::TreeEnsembleParameters_TreeNode_TreeNodeBehavior value) {
-  
+
   nodebehavior_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.TreeEnsembleParameters.TreeNode.nodeBehavior)
 }
@@ -858,7 +858,7 @@ inline ::google::protobuf::uint64 TreeEnsembleParameters_TreeNode::branchfeature
   return branchfeatureindex_;
 }
 inline void TreeEnsembleParameters_TreeNode::set_branchfeatureindex(::google::protobuf::uint64 value) {
-  
+
   branchfeatureindex_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.TreeEnsembleParameters.TreeNode.branchFeatureIndex)
 }
@@ -872,7 +872,7 @@ inline double TreeEnsembleParameters_TreeNode::branchfeaturevalue() const {
   return branchfeaturevalue_;
 }
 inline void TreeEnsembleParameters_TreeNode::set_branchfeaturevalue(double value) {
-  
+
   branchfeaturevalue_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.TreeEnsembleParameters.TreeNode.branchFeatureValue)
 }
@@ -886,7 +886,7 @@ inline ::google::protobuf::uint64 TreeEnsembleParameters_TreeNode::truechildnode
   return truechildnodeid_;
 }
 inline void TreeEnsembleParameters_TreeNode::set_truechildnodeid(::google::protobuf::uint64 value) {
-  
+
   truechildnodeid_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.TreeEnsembleParameters.TreeNode.trueChildNodeId)
 }
@@ -900,7 +900,7 @@ inline ::google::protobuf::uint64 TreeEnsembleParameters_TreeNode::falsechildnod
   return falsechildnodeid_;
 }
 inline void TreeEnsembleParameters_TreeNode::set_falsechildnodeid(::google::protobuf::uint64 value) {
-  
+
   falsechildnodeid_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.TreeEnsembleParameters.TreeNode.falseChildNodeId)
 }
@@ -914,7 +914,7 @@ inline bool TreeEnsembleParameters_TreeNode::missingvaluetrackstruechild() const
   return missingvaluetrackstruechild_;
 }
 inline void TreeEnsembleParameters_TreeNode::set_missingvaluetrackstruechild(bool value) {
-  
+
   missingvaluetrackstruechild_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.TreeEnsembleParameters.TreeNode.missingValueTracksTrueChild)
 }
@@ -958,7 +958,7 @@ inline double TreeEnsembleParameters_TreeNode::relativehitrate() const {
   return relativehitrate_;
 }
 inline void TreeEnsembleParameters_TreeNode::set_relativehitrate(double value) {
-  
+
   relativehitrate_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.TreeEnsembleParameters.TreeNode.relativeHitRate)
 }
@@ -1006,7 +1006,7 @@ inline ::google::protobuf::uint64 TreeEnsembleParameters::numpredictiondimension
   return numpredictiondimensions_;
 }
 inline void TreeEnsembleParameters::set_numpredictiondimensions(::google::protobuf::uint64 value) {
-  
+
   numpredictiondimensions_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.TreeEnsembleParameters.numPredictionDimensions)
 }
@@ -1059,7 +1059,7 @@ inline const ::CoreML::Specification::TreeEnsembleParameters& TreeEnsembleClassi
                          : *::CoreML::Specification::TreeEnsembleParameters::internal_default_instance();
 }
 inline ::CoreML::Specification::TreeEnsembleParameters* TreeEnsembleClassifier::mutable_treeensemble() {
-  
+
   if (treeensemble_ == NULL) {
     treeensemble_ = new ::CoreML::Specification::TreeEnsembleParameters;
   }
@@ -1068,7 +1068,7 @@ inline ::CoreML::Specification::TreeEnsembleParameters* TreeEnsembleClassifier::
 }
 inline ::CoreML::Specification::TreeEnsembleParameters* TreeEnsembleClassifier::release_treeensemble() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.TreeEnsembleClassifier.treeEnsemble)
-  
+
   ::CoreML::Specification::TreeEnsembleParameters* temp = treeensemble_;
   treeensemble_ = NULL;
   return temp;
@@ -1077,9 +1077,9 @@ inline void TreeEnsembleClassifier::set_allocated_treeensemble(::CoreML::Specifi
   delete treeensemble_;
   treeensemble_ = treeensemble;
   if (treeensemble) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.TreeEnsembleClassifier.treeEnsemble)
 }
@@ -1093,7 +1093,7 @@ inline ::CoreML::Specification::TreeEnsemblePostEvaluationTransform TreeEnsemble
   return static_cast< ::CoreML::Specification::TreeEnsemblePostEvaluationTransform >(postevaluationtransform_);
 }
 inline void TreeEnsembleClassifier::set_postevaluationtransform(::CoreML::Specification::TreeEnsemblePostEvaluationTransform value) {
-  
+
   postevaluationtransform_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.TreeEnsembleClassifier.postEvaluationTransform)
 }
@@ -1221,7 +1221,7 @@ inline const ::CoreML::Specification::TreeEnsembleParameters& TreeEnsembleRegres
                          : *::CoreML::Specification::TreeEnsembleParameters::internal_default_instance();
 }
 inline ::CoreML::Specification::TreeEnsembleParameters* TreeEnsembleRegressor::mutable_treeensemble() {
-  
+
   if (treeensemble_ == NULL) {
     treeensemble_ = new ::CoreML::Specification::TreeEnsembleParameters;
   }
@@ -1230,7 +1230,7 @@ inline ::CoreML::Specification::TreeEnsembleParameters* TreeEnsembleRegressor::m
 }
 inline ::CoreML::Specification::TreeEnsembleParameters* TreeEnsembleRegressor::release_treeensemble() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.TreeEnsembleRegressor.treeEnsemble)
-  
+
   ::CoreML::Specification::TreeEnsembleParameters* temp = treeensemble_;
   treeensemble_ = NULL;
   return temp;
@@ -1239,9 +1239,9 @@ inline void TreeEnsembleRegressor::set_allocated_treeensemble(::CoreML::Specific
   delete treeensemble_;
   treeensemble_ = treeensemble;
   if (treeensemble) {
-    
+
   } else {
-    
+
   }
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.TreeEnsembleRegressor.treeEnsemble)
 }
@@ -1255,7 +1255,7 @@ inline ::CoreML::Specification::TreeEnsemblePostEvaluationTransform TreeEnsemble
   return static_cast< ::CoreML::Specification::TreeEnsemblePostEvaluationTransform >(postevaluationtransform_);
 }
 inline void TreeEnsembleRegressor::set_postevaluationtransform(::CoreML::Specification::TreeEnsemblePostEvaluationTransform value) {
-  
+
   postevaluationtransform_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.TreeEnsembleRegressor.postEvaluationTransform)
 }

@@ -6,7 +6,7 @@
 #include <shmipc/shmipc.hpp>
 #include <core/parallel/pthread_tools.hpp>
 using namespace turi;
-// 16 byte buffer 
+// 16 byte buffer
 const size_t BUFFER_SIZE = 16;
 struct shmipc_test {
  public:
@@ -35,7 +35,7 @@ struct shmipc_test {
       }
       if (receivelen >= 3) {
         if (strncmp(c, "end", 3) == 0) break;
-      } 
+      }
       auto sendret = server.send(c, receivelen);
       TS_ASSERT(sendret);
     }
@@ -51,7 +51,7 @@ struct shmipc_test {
       auto sendret = client.send(message.c_str(), message.length());
       TS_ASSERT(sendret);
       char *c = nullptr;
-      size_t len = 0;  
+      size_t len = 0;
       size_t receivelen = 0;
       auto recvret = client.receive_direct(&c, &len, receivelen, 10);
       TS_ASSERT(recvret);
@@ -71,7 +71,7 @@ struct shmipc_test {
     auto ret = server.bind("", BUFFER_SIZE);
     TS_ASSERT(ret);
     server_address = server.get_shared_memory_name();
-    
+
     thread_group group;
     group.launch([=](){ this->server_process();});
     group.launch([=](){ this->client_process();});
@@ -94,7 +94,7 @@ struct shmipc_test {
       }
       if (receivelen >= 3) {
         if (strncmp(c, "end", 3) == 0) break;
-      } 
+      }
       auto sendret = large_send(large_server, c, receivelen);
       TS_ASSERT(sendret);
       free(c);
@@ -118,7 +118,7 @@ struct shmipc_test {
       auto sendret = large_send(large_client, message.c_str(),message.length());
       TS_ASSERT(sendret);
       char *c = nullptr;
-      size_t len = 0;  
+      size_t len = 0;
       size_t receivelen = 0;
       auto recvret = large_receive(large_client, &c, &len, receivelen, 10);
       TS_ASSERT(recvret);
@@ -135,7 +135,7 @@ struct shmipc_test {
     auto ret = large_server.bind("", BUFFER_SIZE);
     TS_ASSERT(ret);
     large_server_address = large_server.get_shared_memory_name();
-    
+
     thread_group group;
     group.launch([=](){ this->large_server_process();});
     group.launch([=](){ this->large_client_process();});

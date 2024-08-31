@@ -42,7 +42,7 @@ void nn_thread_init (struct nn_thread *self,
     int rc;
     sigset_t new_sigmask;
     sigset_t old_sigmask;
- 
+
     /*  No signals should be processed by this thread. The library doesn't
         use signals and thus all the signals should be delivered to application
         threads, not to worker threads. */

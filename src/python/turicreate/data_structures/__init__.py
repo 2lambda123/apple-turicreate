@@ -20,4 +20,3 @@ from . import sarray
 from . import sgraph
 from . import sketch
 from . import serialization
-

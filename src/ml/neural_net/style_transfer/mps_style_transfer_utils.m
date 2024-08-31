@@ -64,7 +64,7 @@
   transformerDesc.encode2.inst.channels = 64;
   transformerDesc.encode2.inst.styles = numStyles;
   transformerDesc.encode2.inst.label = @"transformer_encode_2_inst";
-  
+
   // Encoding 3 Convolution
 
   transformerDesc.encode3.conv.kernelWidth = 3;

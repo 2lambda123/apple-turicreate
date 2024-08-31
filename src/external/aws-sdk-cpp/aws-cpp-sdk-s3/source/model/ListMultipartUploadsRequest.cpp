@@ -26,7 +26,7 @@ using namespace Aws::Utils::Xml;
 using namespace Aws::Utils;
 using namespace Aws::Http;
 
-ListMultipartUploadsRequest::ListMultipartUploadsRequest() : 
+ListMultipartUploadsRequest::ListMultipartUploadsRequest() :
     m_bucketHasBeenSet(false),
     m_delimiterHasBeenSet(false),
     m_encodingType(EncodingType::NOT_SET),
@@ -108,4 +108,3 @@ void ListMultipartUploadsRequest::AddQueryStringParameters(URI& uri) const
         }
     }
 }
-

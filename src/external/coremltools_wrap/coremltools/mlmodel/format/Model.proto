@@ -228,7 +228,7 @@ message SerializedModel {
 message Model {
     int32 specificationVersion = 1;
     ModelDescription description = 2;
-    
+
     /*
      * Following model types support on-device update:
      *
@@ -238,7 +238,7 @@ message Model {
      * - KNearestNeighborsClassifier
      */
     bool isUpdatable = 10;
-    
+
     // start at 200 here
     // model specific parameters:
     oneof Type {
@@ -293,7 +293,7 @@ message Model {
         CoreMLModels.SoundAnalysisPreprocessing soundAnalysisPreprocessing = 2003;
         CoreMLModels.Gazetteer gazetteer = 2004;
         CoreMLModels.WordEmbedding wordEmbedding = 2005;
-        
+
         // Reserved private messages start at 3000
         // These messages are subject to change with no notice or support.
         SerializedModel serializedModel = 3000;

@@ -116,9 +116,9 @@ void test_init_training(bool with_bitmap_based_data) {
     /* is_bitmap_based     */ with_bitmap_based_data,
     /* num_rows            */ test_num_rows,
     /* class_labels        */ test_class_labels,
-    /* target_column_name  */ test_target_name, 
+    /* target_column_name  */ test_target_name,
     /* feature_column_name */ test_feature_name);
-  
+
   gl_sframe data = data_generator.get_data();
   TS_ASSERT_EQUALS(data.size(), test_num_rows);
 
@@ -127,7 +127,7 @@ void test_init_training(bool with_bitmap_based_data) {
   TS_ASSERT_EQUALS(feature_column_name, test_feature_name);
   TS_ASSERT_EQUALS(target_column_name, test_target_name);
 
-  
+
   if (!with_bitmap_based_data) {
     TS_ASSERT_EQUALS(data[feature_column_name].dtype(), flex_type_enum::LIST);
   }

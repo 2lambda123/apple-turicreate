@@ -74,13 +74,13 @@ int main ()
     nn_assert (list.last == NULL);
 
     nn_list_term (&list);
-    
+
     /*  Empty list. */
-    
+
     nn_list_init (&list);
 
     rc = nn_list_empty (&list);
-    nn_assert (rc == 1); 
+    nn_assert (rc == 1);
 
     list_item = nn_list_begin (&list);
     nn_assert (list_item == NULL);
@@ -122,12 +122,12 @@ int main ()
     nn_list_term (&list);
 
     /*  Iterating items. */
-    
+
     nn_list_init (&list);
     nn_list_item_init (&that.item);
 
     nn_list_insert (&list, &that.item, nn_list_end (&list));
-    
+
     list_item = nn_list_begin (&list);
     nn_assert (list_item == &that.item);
 
@@ -194,4 +194,3 @@ int main ()
 
     return 0;
 }
-

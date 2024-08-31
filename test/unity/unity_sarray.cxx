@@ -1206,10 +1206,10 @@ struct unity_sarray_test {
     // empty
     auto sc = unity_sarray::make_exact_uniform_boolean_array(100, 0, 2);
     TS_ASSERT_EQUALS(sc->sum().get<flex_int>(), 0);
-    // full 
+    // full
     auto sd = unity_sarray::make_exact_uniform_boolean_array(100, 100, 3);
     TS_ASSERT_EQUALS(sd->sum().get<flex_int>(), 100);
-    // more than full 
+    // more than full
     auto se = unity_sarray::make_exact_uniform_boolean_array(100, 200, 3);
     TS_ASSERT_EQUALS(se->sum().get<flex_int>(), 100);
 

@@ -61,7 +61,7 @@ void normal_weight_initializer::operator()(float* first_weight,
   }
 }
 
-scalar_weight_initializer::scalar_weight_initializer(float scalar) 
+scalar_weight_initializer::scalar_weight_initializer(float scalar)
     : scalar_(scalar) {}
 
 void scalar_weight_initializer::operator()(float* first_weight,

@@ -30,7 +30,7 @@ namespace S3
 namespace Model
 {
 
-NoncurrentVersionTransition::NoncurrentVersionTransition() : 
+NoncurrentVersionTransition::NoncurrentVersionTransition() :
     m_noncurrentDays(0),
     m_noncurrentDaysHasBeenSet(false),
     m_storageClass(TransitionStorageClass::NOT_SET),
@@ -38,7 +38,7 @@ NoncurrentVersionTransition::NoncurrentVersionTransition() :
 {
 }
 
-NoncurrentVersionTransition::NoncurrentVersionTransition(const XmlNode& xmlNode) : 
+NoncurrentVersionTransition::NoncurrentVersionTransition(const XmlNode& xmlNode) :
     m_noncurrentDays(0),
     m_noncurrentDaysHasBeenSet(false),
     m_storageClass(TransitionStorageClass::NOT_SET),

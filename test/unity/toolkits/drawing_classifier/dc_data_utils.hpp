@@ -77,9 +77,9 @@ class drawing_data_generator {
  private:
 
   /** Builds an SFrame with feature and target columns.
-   *  Creates an SFrame with num_rows number of rows where each row has 
+   *  Creates an SFrame with num_rows number of rows where each row has
    *  a drawing (a grayscale 28x28 image)
-   *  and a corresponding target, which is the row index modulo 
+   *  and a corresponding target, which is the row index modulo
    *  unique_labels.size().
    */
   void generate_bitmap_based_data() {
@@ -112,7 +112,7 @@ class drawing_data_generator {
   }
 
   flex_list create_stroke_based_drawing(size_t num_strokes_in_drawing) {
-    
+
     flex_list drawing;
     size_t delta_x = 4;
     size_t delta_y = 8;
@@ -138,20 +138,20 @@ class drawing_data_generator {
       }
       drawing.push_back(stroke);
     }
-    return drawing; 
+    return drawing;
   }
 
 
   /** Builds an SFrame with feature and target columns.
    *  Creates an SFrame with num_rows number of rows where each row has a
    *  stroke-based drawing.
-   *  Every drawing is a sequence of strokes, 
-   *  Every stroke is a collection of (x,y) points represented as a flex_dict. 
+   *  Every drawing is a sequence of strokes,
+   *  Every stroke is a collection of (x,y) points represented as a flex_dict.
    */
   void generate_stroke_based_data() {
     flex_list drawings(num_rows_);
     flex_list labels(num_rows_);
-    
+
     for (size_t ii = 0; ii < num_rows_; ++ii) {
 
       /** Easy optimization here in case we want to reduce test time:

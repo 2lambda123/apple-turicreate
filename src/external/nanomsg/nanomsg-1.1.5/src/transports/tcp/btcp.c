@@ -274,7 +274,7 @@ static void nn_btcp_handler (struct nn_fsm *self, int src, int type,
 /*  The execution is yielded to the atcp state machine in this state.         */
 /******************************************************************************/
     case NN_BTCP_STATE_ACTIVE:
-        if (src == NN_BTCP_SRC_BTCP) {   
+        if (src == NN_BTCP_SRC_BTCP) {
             nn_assert (type == NN_BTCP_TYPE_LISTEN_ERR);
             nn_free (btcp);
             return;

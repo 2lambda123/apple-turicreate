@@ -46,7 +46,7 @@ request MOOO
 <protocol>
 MOOO /that.site.com/17 HTTP/1.1
 Host: %HOSTIP:%HTTPPORT
-User-Agent: agent007 license to drill	
+User-Agent: agent007 license to drill
 Accept: */*
 
 </protocol>

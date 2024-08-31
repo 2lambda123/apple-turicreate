@@ -283,7 +283,7 @@ void unity_sarray::construct_from_json_record_files(std::string url) {
                 const auto& element = *it;
                 flex_type_enum element_type = element.get_type();
                 // convert the array type to float if one of the element is float
-                if (element_type != flex_type_enum::UNDEFINED && 
+                if (element_type != flex_type_enum::UNDEFINED &&
                     sarray_type == flex_type_enum::UNDEFINED) {
                   sarray_type = element_type;
                 }
@@ -300,7 +300,7 @@ void unity_sarray::construct_from_json_record_files(std::string url) {
                 // throw an error if the type doesn't match
                 if (element_type != sarray_type) {
                   std::stringstream error_msg;
-                  error_msg << "sequence item " << it - elements.begin() 
+                  error_msg << "sequence item " << it - elements.begin()
                             << ": expected " << flex_type_enum_to_name(sarray_type)
                             << ", but get " << flex_type_enum_to_name(element_type)
                             << std::endl;
@@ -315,7 +315,7 @@ void unity_sarray::construct_from_json_record_files(std::string url) {
                 sarray_ptr->set_type(sarray_type);
               }
             }
-            
+
             logstream(LOG_PROGRESS)
                 << "Successfully parsed " << num_elems_parsed
                 << " elements from the JSON file " << sanitize_url(p.first);

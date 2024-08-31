@@ -30,7 +30,7 @@ namespace turi {
 
     /** A function that returns a new random seed value every time it's called.
      *
-     */ 
+     */
     uint64_t pure_random_seed();
 
 
@@ -118,7 +118,7 @@ namespace turi {
       //! Seed the random number generator based on a number
       void seed(size_t number) {
         uint32_t _seed = static_cast<uint32_t>(number);
-        if(size_t(_seed) != number) { 
+        if(size_t(_seed) != number) {
           _seed = static_cast<uint32_t>(std::hash<size_t>{}(number));
         }
 

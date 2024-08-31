@@ -254,4 +254,3 @@ Aws::UniquePtr<Directory> OpenDirectory(const Aws::String& path, const Aws::Stri
 
 } // namespace FileSystem
 } // namespace Aws
-

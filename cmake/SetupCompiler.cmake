@@ -55,8 +55,8 @@ endif()
 #**************************************************************************/
 
 
-if(APPLE)  
-  if(NOT TC_BASE_SDK) 
+if(APPLE)
+  if(NOT TC_BASE_SDK)
     # Assume that we're building for macOSX
     set(TC_BASE_SDK macosx)
   endif()
@@ -74,17 +74,17 @@ if(APPLE)
       message(FATAL_ERROR "Must be using Clang compiler system to target ios.")
     endif()
 
-    # Add compiler flags 
+    # Add compiler flags
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -target arm64-apple-darwin-eabi")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -target arm64-apple-darwin-eabi")
 
   elseif(${TC_BASE_SDK} MATCHES "macos.*")
   else()
-    message(FATAL_ERROR "Platform ${TC_BASE_SDK} not recognized.") 
+    message(FATAL_ERROR "Platform ${TC_BASE_SDK} not recognized.")
   endif()
 
   # Find and set the SDK path.
-  EXEC_PROGRAM(xcrun ARGS --sdk ${TC_BASE_SDK} 
+  EXEC_PROGRAM(xcrun ARGS --sdk ${TC_BASE_SDK}
     --show-sdk-path OUTPUT_VARIABLE TC_BASE_SDK_PATH RETURN_VALUE _xcrun_ret)
 
   if(NOT ${_xcrun_ret} EQUAL 0)
@@ -93,15 +93,15 @@ if(APPLE)
 
   # Set the base root.
   SET(CMAKE_OSX_SYSROOT "${TC_BASE_SDK_PATH}")
-  
+
   message("Using SDK ${CMAKE_OSX_SYSROOT}.")
-  
+
   # Get the sdk version.
   EXEC_PROGRAM(xcrun ARGS --sdk ${TC_BASE_SDK} --show-sdk-version OUTPUT_VARIABLE TC_BASE_SDK_VERSION RETURN_VALUE _xcrun_ret)
   if(NOT ${_xcrun_ret} EQUAL 0)
     message(FATAL_ERROR "xcrun command failed with return code ${_xcrun_ret}.")
   endif()
-  
+
   # TODO: replace all these with in-build macros based on standard macros in Availability.h
 
   # Core ML is only present on macOS 10.13 or higher.
@@ -110,7 +110,7 @@ if(APPLE)
     add_definitions(-DHAS_CORE_ML)
     set(HAS_CORE_ML TRUE)
   endif()
-  
+
   # MLCompute is only present on macOS 10.16 or higher.
   if(TC_BASE_SDK_VERSION VERSION_GREATER_EQUAL 10.16)
     add_definitions(-DHAS_ML_COMPUTE)
@@ -130,11 +130,11 @@ if(APPLE)
     add_definitions(-DHAS_MLCUSTOM_MODEL)
     set(HAS_COREML_CUSTOM_MODEL TRUE)
   endif()
- 
+
   if(NOT TC_BASE_SDK_VERSION VERSION_LESS 10.15)
     add_definitions(-DHAS_MACOS_10_15)
   endif()
 
-endif() 
+endif()
 
 endmacro()

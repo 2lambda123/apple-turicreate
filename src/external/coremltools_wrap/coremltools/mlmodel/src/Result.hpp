@@ -18,9 +18,9 @@ class Result {
     std::string m_message;
 
   public:
-    Result(); 
+    Result();
     bool good() const;
-    Result(ResultType type, const std::string& message); 
+    Result(ResultType type, const std::string& message);
     Result(ResultType type, ResultReason reason, const std::string& message);
     const std::string& message() const;
     ResultReason reason() const;
@@ -35,16 +35,16 @@ class Result {
         const std::vector<FeatureType>& allowed,
         const FeatureType& actual);
 
-    
+
     bool operator==(const Result& other) const;
     bool operator!=(const Result& other) const;
 };
 }
 
-/* 
+/*
  * A convenience macro to pass results onto the caller. Useful when a function
  * both returns a Result and calls other functions that return a Result, and
- * the desired behavior is an early exit in the case of a failure. 
+ * the desired behavior is an early exit in the case of a failure.
 */
 #define HANDLE_RESULT_AND_RETURN_ON_ERROR(EXPR)                                \
   {                                                                            \

@@ -32,4 +32,3 @@ void nn_task_init (struct nn_task *self, uint32_t id)
 void nn_task_term (NN_UNUSED struct nn_task *self)
 {
 }
-

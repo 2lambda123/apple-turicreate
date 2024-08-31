@@ -41,7 +41,7 @@ int nn_poller_init (struct nn_poller *self)
     self->ep = epoll_create (1);
     rc = fcntl (self->ep, F_SETFD, FD_CLOEXEC);
     errno_assert (rc != -1);
-#endif 
+#endif
     if (self->ep == -1) {
         if (errno == ENFILE || errno == EMFILE)
             return -EMFILE;
@@ -215,4 +215,3 @@ int nn_poller_event (struct nn_poller *self, int *event,
         return 0;
     }
 }
-

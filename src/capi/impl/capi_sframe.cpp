@@ -178,7 +178,7 @@ EXPORT tc_sframe* tc_sframe_join_on_multiple_columns(
     }
     join_columns_transform.push_back(elem.get<turi::flex_string>());
   }
-  
+
   return new_tc_sframe(
       left->value.join(right->value, join_columns_transform, how));
 
@@ -222,7 +222,7 @@ EXPORT tc_sframe* tc_sframe_read_csv(const char* url,
 
   tc_sframe* ret = new_tc_sframe();
   std::map<std::string, turi::flexible_type> config;
-  std::map<std::string, turi::flex_type_enum> column_type_hints; 
+  std::map<std::string, turi::flex_type_enum> column_type_hints;
 
   turi::variant_map_type params_copy;
 
@@ -438,7 +438,7 @@ EXPORT tc_sframe* tc_sframe_read_csv(const char* url,
     }
   }
 
-  std::cout << "column_type_hints = " << column_type_hints << std::endl; 
+  std::cout << "column_type_hints = " << column_type_hints << std::endl;
   ret->value.construct_from_csvs(url, config, column_type_hints);
 
   return ret;

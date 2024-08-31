@@ -97,7 +97,7 @@ static struct nn_optset *nn_tcp_optset ()
     /*  Default values for TCP socket options. */
     optset->nodelay = 0;
 
-    return &optset->base;   
+    return &optset->base;
 }
 
 static void nn_tcp_optset_destroy (struct nn_optset *self)
@@ -152,4 +152,3 @@ static int nn_tcp_optset_getopt (struct nn_optset *self, int option,
     *optvallen = sizeof (int);
     return 0;
 }
-

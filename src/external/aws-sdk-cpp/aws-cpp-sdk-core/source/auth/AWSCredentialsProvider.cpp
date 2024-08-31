@@ -473,4 +473,3 @@ AWSCredentials Aws::Auth::GetCredentialsFromProcess(const Aws::String& process)
     AWS_LOGSTREAM_DEBUG(PROFILE_LOG_TAG, "Successfully pulled credentials from process credential with AccessKey: " << accessKey << ", Expiration:" << credentialsView.GetString("Expiration"));
     return credentials;
 }
-

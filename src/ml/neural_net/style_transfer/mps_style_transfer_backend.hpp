@@ -29,7 +29,7 @@ public:
   mps_style_transfer(const turi::neural_net::float_array_map &config,
                      const turi::neural_net::float_array_map &weights,
                      const turi::neural_net::mps_command_queue& command_queue);
-  
+
   ~mps_style_transfer();
 
   turi::neural_net::float_array_map export_weights() const override;

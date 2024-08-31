@@ -26,7 +26,7 @@ using namespace Aws::Utils::Xml;
 using namespace Aws::Utils;
 using namespace Aws;
 
-HeadObjectResult::HeadObjectResult() : 
+HeadObjectResult::HeadObjectResult() :
     m_deleteMarker(false),
     m_contentLength(0),
     m_missingMeta(0),
@@ -40,7 +40,7 @@ HeadObjectResult::HeadObjectResult() :
 {
 }
 
-HeadObjectResult::HeadObjectResult(const Aws::AmazonWebServiceResult<XmlDocument>& result) : 
+HeadObjectResult::HeadObjectResult(const Aws::AmazonWebServiceResult<XmlDocument>& result) :
     m_deleteMarker(false),
     m_contentLength(0),
     m_missingMeta(0),

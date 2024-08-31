@@ -109,7 +109,7 @@ void ParameterSampler::sample(size_t _background_width, size_t _background_heigh
   std::seed_seq seed_seq = {static_cast<int>(seed),
                             static_cast<int>(row_number)};
   std::mt19937 engine(seed_seq);
-  
+
   int background_width = static_cast<int>(_background_width);
   int background_height = static_cast<int>(_background_height);
 

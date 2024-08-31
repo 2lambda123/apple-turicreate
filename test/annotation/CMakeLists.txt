@@ -38,4 +38,3 @@ make_boost_test(object_detector_tests.cxx
     -Wno-unknown-pragmas  # NOTE: used for auto-generated protobuf source files
     -Wno-unused-function  # NOTE: used for auto-generated protobuf source files
 )
-

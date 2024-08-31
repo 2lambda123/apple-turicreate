@@ -105,4 +105,3 @@ int nn_dist_send (struct nn_dist *self, struct nn_msg *msg,
 
     return 0;
 }
-

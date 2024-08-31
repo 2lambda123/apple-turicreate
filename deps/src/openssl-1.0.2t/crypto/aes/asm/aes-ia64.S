@@ -107,7 +107,7 @@ _ia64_AES_encrypt:
 { .mmi;	xor	s2=s2,t2
 	xor	s3=s3,t3
 	add	te3=TE3,te0	};;
-
+
 .align	32
 .Le_top:
 { .mmi;	(p0)	LDKEY	t0=[rk0],2*KSZ		// 0/0:rk[0]
@@ -168,7 +168,7 @@ _ia64_AES_encrypt:
 { .mmi;	(p0)	ld4	te13=[te13]		// 9/2:te1[s3>>16]
 	(p0)	ld4	te10=[te10]		// 9/3:te1[s0>>16]
 	(p0)	xor	t0=t0,te00	};;	// 9/0:		!L2 scheduling
-{ .mmi;	(p0)	xor	t1=t1,te23		// 10[9]/1:	
+{ .mmi;	(p0)	xor	t1=t1,te23		// 10[9]/1:
 	(p0)	xor	t2=t2,te20		// 10[9]/2:
 	(p0)	xor	t3=t3,te21	};;	// 10[9]/3:
 { .mmi;	(p0)	xor	t0=t0,te11		// 11[10]/0:done!
@@ -187,7 +187,7 @@ _ia64_AES_encrypt:
 	(p17)	add	te3=2048+192-TE3,te3	// 14[12]/
 	br.ctop.sptk	.Le_top		};;
 .Le_end:
-
+
 
 { .mmi;	ld8	te12=[te0]		// prefetch Te4
 	ld8	te31=[te1]	}
@@ -484,7 +484,7 @@ _ia64_AES_decrypt:
 { .mmi;	xor	s2=s2,t2
 	xor	s3=s3,t3
 	add	te3=TE3,te0	};;
-
+
 .align	32
 .Ld_top:
 { .mmi;	(p0)	LDKEY	t0=[rk0],2*KSZ		// 0/0:rk[0]
@@ -545,7 +545,7 @@ _ia64_AES_decrypt:
 { .mmi;	(p0)	ld4	te11=[te11]		// 9/2:te1[s3>>16]
 	(p0)	ld4	te12=[te12]		// 9/3:te1[s0>>16]
 	(p0)	xor	t0=t0,te00	};;	// 9/0:		!L2 scheduling
-{ .mmi;	(p0)	xor	t1=t1,te23		// 10[9]/1:	
+{ .mmi;	(p0)	xor	t1=t1,te23		// 10[9]/1:
 	(p0)	xor	t2=t2,te20		// 10[9]/2:
 	(p0)	xor	t3=t3,te21	};;	// 10[9]/3:
 { .mmi;	(p0)	xor	t0=t0,te13		// 11[10]/0:done!
@@ -564,7 +564,7 @@ _ia64_AES_decrypt:
 	(p17)	add	te3=2048+192-TE3,te3	// 14[12]/
 	br.ctop.sptk	.Ld_top		};;
 .Ld_end:
-
+
 
 { .mmi;	ld8	te10=[te0]		// prefetch Td4
 	ld8	te33=[te1]	}

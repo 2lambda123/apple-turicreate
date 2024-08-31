@@ -26,7 +26,7 @@ using namespace Aws::Utils::Xml;
 using namespace Aws::Utils;
 using namespace Aws::Http;
 
-DeleteBucketCorsRequest::DeleteBucketCorsRequest() : 
+DeleteBucketCorsRequest::DeleteBucketCorsRequest() :
     m_bucketHasBeenSet(false),
     m_customizedAccessLogTagHasBeenSet(false)
 {
@@ -58,4 +58,3 @@ void DeleteBucketCorsRequest::AddQueryStringParameters(URI& uri) const
         }
     }
 }
-

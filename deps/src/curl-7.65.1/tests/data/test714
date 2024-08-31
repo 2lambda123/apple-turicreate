@@ -46,7 +46,7 @@ http
 FTP fetch with --proxy set to http:// and with --connect-to
  </name>
  <command>
-ftp://ftp.example.com.714/714 --connect-to ::connect.example.com.714:%FTPPORT --proxytunnel --proxy http://%HOSTIP:%PROXYPORT 
+ftp://ftp.example.com.714/714 --connect-to ::connect.example.com.714:%FTPPORT --proxytunnel --proxy http://%HOSTIP:%PROXYPORT
 </command>
 </client>
 

@@ -47,4 +47,3 @@ struct nn_poller {
     /*  Events being processed at the moment. */
     struct epoll_event events [NN_POLLER_MAX_EVENTS];
 };
-

@@ -9,7 +9,7 @@
 #include <core/storage/sframe_data/csv_writer.hpp>
 
 #include <core/data/flexible_type/flexible_type.hpp>
-#include <capi/TuriCreate.h> 
+#include <capi/TuriCreate.h>
 #include <capi/impl/capi_wrapper_structs.hpp>
 
 
@@ -708,8 +708,8 @@ struct sframe_test  {
      global_logger().set_log_level(LOG_INFO);
 
      // Test the C-API interface.
-     std::cout << "File: " << filename << std::endl; 
-       
+     std::cout << "File: " << filename << std::endl;
+
      std::map<std::string, flex_type_enum> typelist(data.types.begin(),
                                                     data.types.end());
 
@@ -744,59 +744,59 @@ struct sframe_test  {
        }
      }
 
-     tc_error* error = NULL; 
-     tc_parameters* p = tc_parameters_create_empty(&error); 
+     tc_error* error = NULL;
+     tc_parameters* p = tc_parameters_create_empty(&error);
      CAPI_CHECK_ERROR(error);
-     
+
      // Need a header?
      tc_parameters_add_int64(p, "header", data.header, &error);
      CAPI_CHECK_ERROR(error);
 
-     if(data.skip_rows) { 
-      tc_parameters_add_int64(p, "skip_rows", data.skip_rows, &error); 
+     if(data.skip_rows) {
+      tc_parameters_add_int64(p, "skip_rows", data.skip_rows, &error);
       CAPI_CHECK_ERROR(error);
      }
-    
-     if(data.tokenizer.has_comment_char) { 
-       tc_parameters_add_string(p, "comment_char", &(data.tokenizer.comment_char), 1, &error); 
-       CAPI_CHECK_ERROR(error);
-     } 
 
-     if(data.tokenizer.delimiter != ",") { 
-       tc_parameters_add_cstring(p, "delimiter", data.tokenizer.delimiter.c_str(), &error); 
+     if(data.tokenizer.has_comment_char) {
+       tc_parameters_add_string(p, "comment_char", &(data.tokenizer.comment_char), 1, &error);
        CAPI_CHECK_ERROR(error);
      }
 
-     if(data.tokenizer.escape_char != '\\') { 
-       tc_parameters_add_string(p, "escape_char", &(data.tokenizer.escape_char), 1, &error); 
+     if(data.tokenizer.delimiter != ",") {
+       tc_parameters_add_cstring(p, "delimiter", data.tokenizer.delimiter.c_str(), &error);
        CAPI_CHECK_ERROR(error);
-     } 
+     }
 
-     if(data.tokenizer.quote_char != '\"') { 
-       tc_parameters_add_string(p, "quote_char", &(data.tokenizer.quote_char), 1, &error); 
+     if(data.tokenizer.escape_char != '\\') {
+       tc_parameters_add_string(p, "escape_char", &(data.tokenizer.escape_char), 1, &error);
        CAPI_CHECK_ERROR(error);
-     } 
+     }
+
+     if(data.tokenizer.quote_char != '\"') {
+       tc_parameters_add_string(p, "quote_char", &(data.tokenizer.quote_char), 1, &error);
+       CAPI_CHECK_ERROR(error);
+     }
 
      if(!data.tokenizer.double_quote) {
        tc_parameters_add_int64(p, "double_quote", 0, &error);
        CAPI_CHECK_ERROR(error);
      }
-     
-     // For these, we continue on errors. 
+
+     // For these, we continue on errors.
      tc_parameters_add_int64(p, "error_bad_lines", 1, &error);
      CAPI_CHECK_ERROR(error);
-     
-     
+
+
      tc_parameters_add_int64(p, "skip_initial_space", data.tokenizer.skip_initial_space, &error);
      CAPI_CHECK_ERROR(error);
-       
+
      if(!data.tokenizer.na_values.empty()) {
        tc_flex_list* fl = new_tc_flex_list(data.tokenizer.na_values.begin(),
                                            data.tokenizer.na_values.end());
 
        tc_parameters_add_flex_list(p, "na_values", fl, &error);
        CAPI_CHECK_ERROR(error);
-       tc_release(fl); 
+       tc_release(fl);
      }
 
        tc_parameters_add_cstring(p, "line_terminator",
@@ -807,10 +807,10 @@ struct sframe_test  {
      if(!data.parse_column_subset.empty()) {
        tc_flex_list* fl = new_tc_flex_list(data.parse_column_subset.begin(),
                                            data.parse_column_subset.end());
-       
+
        tc_parameters_add_flex_list(p, "output_columns", fl, &error);
        CAPI_CHECK_ERROR(error);
-       tc_release(fl); 
+       tc_release(fl);
      }
 
      if (!typelist.empty()) {
@@ -840,7 +840,7 @@ struct sframe_test  {
        std::cout << p.first << ", " << flex_type_enum_to_name(p.second) << "; ";
      }
      std::cout << std::endl;
-     
+
      std::cout << "Requested Columns = ";
      for(const auto& p : data.parse_column_subset) {
        std::cout << p << ", " << std::endl;
@@ -854,7 +854,7 @@ struct sframe_test  {
      CAPI_CHECK_ERROR(error);
 
      sframe frame = sf->value.materialize_to_sframe();
- 
+
      std::cout << "Loaded Columns = ";
      for(const auto& s : frame.column_names()) {
        std::cout << s << ", " << frame.column_type(s) << "; " << std::endl;

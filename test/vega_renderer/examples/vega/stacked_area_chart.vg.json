@@ -3,7 +3,7 @@
     "width": 500,
     "height": 200,
     "padding": 5,
-    
+
     "data": [
         {
             "name": "table",
@@ -29,7 +29,7 @@
             ]
         }
     ],
-    
+
     "scales": [
         {
             "name": "x",
@@ -51,12 +51,12 @@
             "domain": {"data": "table", "field": "c"}
         }
     ],
-    
+
     "axes": [
         {"orient": "bottom", "scale": "x", "zindex": 1},
         {"orient": "left", "scale": "y", "zindex": 1}
     ],
-    
+
     "marks": [
         {
             "type": "group",
@@ -91,4 +91,3 @@
         }
     ]
 }
-

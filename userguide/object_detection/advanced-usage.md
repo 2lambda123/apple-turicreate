@@ -105,4 +105,3 @@ then convert it to unstacked. The option `num_rows` is optional and is only
 necessary if you have true negative images that are not represented in the
 stacked format. The returned SArray `unstacked_predictions` will be identical
 to `predictions`.
-

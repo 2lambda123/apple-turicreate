@@ -31,4 +31,3 @@
 int nn_ctcp_create (struct nn_ep *);
 
 #endif
-

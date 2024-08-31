@@ -9,12 +9,12 @@ if(HAS_CORE_ML)
   set(additional_unity_requirements image_deep_feature_extractor)
 endif()
 
-if(NOT TC_DISABLE_OBJECT_BUILDS) 
+if(NOT TC_DISABLE_OBJECT_BUILDS)
   set(unity_shared_object_deps
   "$<TARGET_OBJECTS:pylambda_worker>"
   "$<TARGET_OBJECTS:python_callbacks>"
   )
-  
+
 if(APPLE AND HAS_COREML_CUSTOM_MODEL)
     set(unity_shared_object_deps
       ${unity_shared_object_deps}
@@ -23,8 +23,8 @@ if(APPLE AND HAS_COREML_CUSTOM_MODEL)
 endif()
 
 else()
-  set(unity_shared_deps 
-    pylambda_worker 
+  set(unity_shared_deps
+    pylambda_worker
     python_callbacks)
 
   if(APPLE AND HAS_MLCUSTOMMODEL)
@@ -54,7 +54,7 @@ make_library(unity OBJECT
 )
 
 # Pull in all the libraries in the extensions directory.
-get_property(EXTENSIONS_LIST DIRECTORY 
+get_property(EXTENSIONS_LIST DIRECTORY
   "${CMAKE_SOURCE_DIR}/src/model_server/extensions" PROPERTY EXTENSIONS_LIST)
 
 foreach(loop_var ${EXTENSIONS_LIST})
@@ -76,7 +76,7 @@ make_library(unity_shared
 )
 
 make_library(unity_shared_for_testing
-  SOURCES 
+  SOURCES
     ${unity_shared_objcet_deps}
     ${_TC_DEFAULT_SERVER_INITIALIZER}
     ${_TC_COMMON_OBJECTS}
@@ -86,8 +86,8 @@ make_library(unity_shared_for_testing
     ${unity_shared_deps}
     libbz2
     visualization
-  SHARED 
-  SHARED_ALL_DEFINED 
+  SHARED
+  SHARED_ALL_DEFINED
   EXTERNAL_VISIBILITY
 )
 
@@ -95,4 +95,3 @@ make_library(unity_shared_for_testing
 # targets are very expensive to link (in terms of RAM usage).
 # Let's make sure they don't link at the same time.
 add_dependencies(unity_shared_for_testing unity_shared)
-

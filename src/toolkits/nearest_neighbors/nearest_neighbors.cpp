@@ -322,12 +322,12 @@ void nearest_neighbors_model::populate_distance_for_summary_struct(
     const std::vector<dist_component_type>& composite_distance_params) {
   DASSERT_GT(composite_distance_params.size(), 0);
   /* Each element in composite_distance_params is a dist_component_type,
-   * which is std::tuple<std::vector<std::string>, function_closure_info, double> 
-   * where the first element is a list of features, the second element is the 
+   * which is std::tuple<std::vector<std::string>, function_closure_info, double>
+   * where the first element is a list of features, the second element is the
    * distance function to apply, and the third element is the weight.
    */
   if (composite_distance_params.size() > 1) {
-    /* There are multiple elements in composite_distance_params, which means 
+    /* There are multiple elements in composite_distance_params, which means
      * there are multiple distance functions used across a variety of features,
      * which confirms that this is a composite distance function
      */
@@ -335,7 +335,7 @@ void nearest_neighbors_model::populate_distance_for_summary_struct(
       {"distance_for_summary_struct", "composite"}
     });
   } else {
-    /* There is one element in composite_distance_params with one distance 
+    /* There is one element in composite_distance_params with one distance
      * function applied across some number of features, so we extract that one
      * distance function name and report it.
      */

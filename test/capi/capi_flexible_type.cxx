@@ -67,4 +67,3 @@ BOOST_AUTO_TEST_CASE(test_flex_list_double) {
     tc_release(ft);
   }
 }
-

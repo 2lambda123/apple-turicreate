@@ -37,7 +37,7 @@ EVP digest routines
  #define EVP_MAX_MD_SIZE 64	/* SHA512 */
 
  int EVP_MD_type(const EVP_MD *md);
- int EVP_MD_pkey_type(const EVP_MD *md);	
+ int EVP_MD_pkey_type(const EVP_MD *md);
  int EVP_MD_size(const EVP_MD *md);
  int EVP_MD_block_size(const EVP_MD *md);
 

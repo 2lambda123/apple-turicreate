@@ -188,7 +188,7 @@ void test_string_size1()
     _test_string_size(gl_string("abcdeabcdeabcdeabcde"), gl_string("abcdeabcdeabcdeabcde"), 0);
 }
 
-  
+
 void
 _test_pointer_size(const gl_string& s, const char* str, size_t pos,
      size_t x)
@@ -319,7 +319,7 @@ void test_pointer_size1()
     _test_pointer_size(gl_string("abcdeabcdeabcdeabcde"), "abcdeabcdeabcdeabcde", 0);
 }
 
-  
+
 
 void
 _test_pointer_size_size(const gl_string& s, const char* str, size_t pos,
@@ -670,7 +670,7 @@ void test_pointer_size_size3()
   _test_pointer_size_size(gl_string("abcdeabcdeabcdeabcde"), "abcdeabcdeabcdeabcde", 21, 20, gl_string::npos);
 }
 
-  
+
 void _test_string_find_first_not_of_char_size(const gl_string& s, char c, size_t pos, size_t x) {
   TS_ASSERT(s.find_first_not_of(c, pos) == x);
   if (x != gl_string::npos)
@@ -685,7 +685,7 @@ void _test_string_find_first_not_of_char_size(const gl_string& s, char c, size_t
     TS_ASSERT(x < s.size());
 }
 
-void test_string_find_first_not_of_char_size() { 
+void test_string_find_first_not_of_char_size() {
   _test_string_find_first_not_of_char_size(gl_string(""), 'q', 0, gl_string::npos);
   _test_string_find_first_not_of_char_size(gl_string(""), 'q', 1, gl_string::npos);
   _test_string_find_first_not_of_char_size(gl_string("kitcj"), 'q', 0, 0);
@@ -1332,7 +1332,7 @@ _test_string_find_first_of_char_size(const gl_string& s, char c, size_t x)
         TS_ASSERT(x < s.size());
 }
 
-  void test_string_find_first_of_char_size() 
+  void test_string_find_first_of_char_size()
     {
     _test_string_find_first_of_char_size(gl_string(""), 'e', 0, gl_string::npos);
     _test_string_find_first_of_char_size(gl_string(""), 'e', 1, gl_string::npos);
@@ -1977,7 +1977,7 @@ _test_string_find_last_not_of_char_size(const gl_string& s, char c, size_t x)
         TS_ASSERT(x < s.size());
 }
 
-void test_string_find_last_not_of_char_size() 
+void test_string_find_last_not_of_char_size()
     {
     _test_string_find_last_not_of_char_size(gl_string(""), 'i', 0, gl_string::npos);
     _test_string_find_last_not_of_char_size(gl_string(""), 'i', 1, gl_string::npos);

@@ -194,7 +194,7 @@ BOOST_AUTO_TEST_CASE(test_odd_stride) {
  {
    ndarray<int> dim1(std::vector<int>{0,1,2},
                      {1,1,3},
-                     {0,0,1}); 
+                     {0,0,1});
    BOOST_TEST(dim1.is_valid() == true);
    BOOST_TEST(dim1.is_full() == true);
    BOOST_TEST(dim1.is_canonical() == false);
@@ -211,7 +211,7 @@ BOOST_AUTO_TEST_CASE(test_odd_stride) {
  {
    ndarray<int> dim1({0,2,4,1,3,5},
                      {3,1,1,2},
-                     {1,0,0,3}); 
+                     {1,0,0,3});
    std::cout << dim1 << "\n";
    BOOST_TEST(dim1.is_valid() == true);
    BOOST_TEST(dim1.is_full() == true);
@@ -510,7 +510,7 @@ BOOST_AUTO_TEST_CASE(test_image_conversion) {
  BOOST_TEST(nd2.shape() == rt2.shape(), tt::per_element());
  BOOST_TEST(nd2.stride() == rt2.stride(), tt::per_element());
 
- flex_nd_vec nd3({1, 2, 3, 
+ flex_nd_vec nd3({1, 2, 3,
                  1, 2, 3,
                  1, 2, 3,
                  1, 2, 3,},
@@ -571,7 +571,7 @@ BOOST_AUTO_TEST_CASE(test_equality_fail) {
  flexible_type f2(array2);
  BOOST_TEST(array1 != array2);
  BOOST_TEST(f1 != f2);
- // check both == and != 
+ // check both == and !=
  bool t = f1 == f2;
  BOOST_TEST(t == false);
 }

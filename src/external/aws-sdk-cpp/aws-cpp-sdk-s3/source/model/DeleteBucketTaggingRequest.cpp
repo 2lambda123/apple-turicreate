@@ -26,7 +26,7 @@ using namespace Aws::Utils::Xml;
 using namespace Aws::Utils;
 using namespace Aws::Http;
 
-DeleteBucketTaggingRequest::DeleteBucketTaggingRequest() : 
+DeleteBucketTaggingRequest::DeleteBucketTaggingRequest() :
     m_bucketHasBeenSet(false),
     m_customizedAccessLogTagHasBeenSet(false)
 {
@@ -58,4 +58,3 @@ void DeleteBucketTaggingRequest::AddQueryStringParameters(URI& uri) const
         }
     }
 }
-

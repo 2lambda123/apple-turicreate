@@ -7,7 +7,7 @@
 #import <Accelerate/Accelerate.h>
 #import <Foundation/Foundation.h>
 #import <Metal/Metal.h>
-#import <MetalPerformanceShaders/MetalPerformanceShaders.h> 
+#import <MetalPerformanceShaders/MetalPerformanceShaders.h>
 
 #import <ml/neural_net/mps_descriptor_utils.h>
 #import <ml/neural_net/style_transfer/mps_style_transfer_weights.h>
@@ -15,7 +15,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 API_AVAILABLE(macos(10.14))
-@interface TCMPSStyleTransferResidualNode : NSObject 
+@interface TCMPSStyleTransferResidualNode : NSObject
 
 @property (nonatomic) MPSNNImageNode *output;
 

@@ -30,12 +30,12 @@ namespace S3
 namespace Model
 {
 
-LifecycleConfiguration::LifecycleConfiguration() : 
+LifecycleConfiguration::LifecycleConfiguration() :
     m_rulesHasBeenSet(false)
 {
 }
 
-LifecycleConfiguration::LifecycleConfiguration(const XmlNode& xmlNode) : 
+LifecycleConfiguration::LifecycleConfiguration(const XmlNode& xmlNode) :
     m_rulesHasBeenSet(false)
 {
   *this = xmlNode;

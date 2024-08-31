@@ -169,7 +169,7 @@ And the output from C++ looks like:
 ```
 Loaded model: boosted_trees_classifier
 Input to model: {"bruises?":"t", "cap-color":"n", "cap-shape":"x", "cap-surface":"s", "gill-attachment":"f", "gill-color":"k", "gill-size":"n", "gill-spacing":"c", "habitat":"u", "odor":"p", "population":"s", "ring-number":"o", "ring-type":"p", "spore-print-color":"k", "stalk-color-above-ring":"w", "stalk-color-below-ring":"w", "stalk-root":"e", "stalk-shape":"e", "stalk-surface-above-ring":"s", "stalk-surface-below-ring":"s", "veil-color":"w", "veil-type":"p"}
-Predicted: 
+Predicted:
 Columns:
     id	integer
     class	integer

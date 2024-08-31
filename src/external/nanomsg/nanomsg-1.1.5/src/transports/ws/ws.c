@@ -98,7 +98,7 @@ static struct nn_optset *nn_ws_optset ()
     /*  Default values for WebSocket options. */
     optset->msg_type = NN_WS_MSG_TYPE_BINARY;
 
-    return &optset->base;   
+    return &optset->base;
 }
 
 static void nn_ws_optset_destroy (struct nn_optset *self)

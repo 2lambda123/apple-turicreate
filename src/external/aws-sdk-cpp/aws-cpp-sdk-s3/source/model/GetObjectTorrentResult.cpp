@@ -26,12 +26,12 @@ using namespace Aws::Utils::Stream;
 using namespace Aws::Utils;
 using namespace Aws;
 
-GetObjectTorrentResult::GetObjectTorrentResult() : 
+GetObjectTorrentResult::GetObjectTorrentResult() :
     m_requestCharged(RequestCharged::NOT_SET)
 {
 }
 
-GetObjectTorrentResult::GetObjectTorrentResult(GetObjectTorrentResult&& toMove) : 
+GetObjectTorrentResult::GetObjectTorrentResult(GetObjectTorrentResult&& toMove) :
     m_body(std::move(toMove.m_body)),
     m_requestCharged(toMove.m_requestCharged)
 {
@@ -50,7 +50,7 @@ GetObjectTorrentResult& GetObjectTorrentResult::operator=(GetObjectTorrentResult
    return *this;
 }
 
-GetObjectTorrentResult::GetObjectTorrentResult(Aws::AmazonWebServiceResult<ResponseStream>&& result) : 
+GetObjectTorrentResult::GetObjectTorrentResult(Aws::AmazonWebServiceResult<ResponseStream>&& result) :
     m_requestCharged(RequestCharged::NOT_SET)
 {
   *this = std::move(result);

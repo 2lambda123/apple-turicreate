@@ -41,7 +41,7 @@
         self.events = [[NSMutableDictionary alloc] init];
         self.tagName = tag;
     }
-    return self; 
+    return self;
 }
 
 - (TCVegaHTMLElement*) parentNode {

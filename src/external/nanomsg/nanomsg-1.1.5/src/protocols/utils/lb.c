@@ -85,4 +85,3 @@ int nn_lb_send (struct nn_lb *self, struct nn_msg *msg, struct nn_pipe **to)
 
     return rc & ~NN_PIPE_RELEASE;
 }
-

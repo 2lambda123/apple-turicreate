@@ -38,12 +38,12 @@ There are three primary visualization methods in Turi Create:
   and
   [SArray.explore](https://apple.github.io/turicreate/docs/api/generated/turicreate.SArray.explore.html).
 
-Turi Create also enables you to create independent plots including 
-[scatter plots](https://apple.github.io/turicreate/docs/api/generated/turicreate.visualization.scatter.html), 
-[heatmaps](https://apple.github.io/turicreate/docs/api/generated/turicreate.visualization.heatmap.html), 
-[categorical heatmaps](https://apple.github.io/turicreate/docs/api/generated/turicreate.visualization.categorical_heatmap.html), 
-[histograms](https://apple.github.io/turicreate/docs/api/generated/turicreate.visualization.histogram.html), 
-[columnwise summaries](https://apple.github.io/turicreate/docs/api/generated/turicreate.visualization.columnwise_summary.html), and 
+Turi Create also enables you to create independent plots including
+[scatter plots](https://apple.github.io/turicreate/docs/api/generated/turicreate.visualization.scatter.html),
+[heatmaps](https://apple.github.io/turicreate/docs/api/generated/turicreate.visualization.heatmap.html),
+[categorical heatmaps](https://apple.github.io/turicreate/docs/api/generated/turicreate.visualization.categorical_heatmap.html),
+[histograms](https://apple.github.io/turicreate/docs/api/generated/turicreate.visualization.histogram.html),
+[columnwise summaries](https://apple.github.io/turicreate/docs/api/generated/turicreate.visualization.columnwise_summary.html), and
 [item frequency plots](https://apple.github.io/turicreate/docs/api/generated/turicreate.visualization.item_frequency.html).
 
 #### Show
@@ -143,8 +143,8 @@ You can find these options in the `File` menu as shown below:
 
 ![Turi Create Visualization File Menu](images/show_file_menu.png)
 
-Turi Create also lets you save plots as PNG, SVG, or JSON as part of the 
-Python Plot API. You can save a Plot object by invoking the `save` method, as 
+Turi Create also lets you save plots as PNG, SVG, or JSON as part of the
+Python Plot API. You can save a Plot object by invoking the `save` method, as
 shown in the example below:
 
 ```

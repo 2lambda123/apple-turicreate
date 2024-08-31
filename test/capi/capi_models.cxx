@@ -31,7 +31,7 @@ BOOST_AUTO_TEST_CASE(test_boosted_trees_double) {
        {"boosted_trees_regression", "decision_tree_regression",
         "regression_linear_regression", "auto"}) {
 
-    bool is_auto = std::string(model_name) == "auto"; 
+    bool is_auto = std::string(model_name) == "auto";
 
     tc_error* error = NULL;
 
@@ -89,7 +89,7 @@ BOOST_AUTO_TEST_CASE(test_boosted_trees_double) {
 
     // Set the options
     {
-      tc_flex_dict* fd = tc_flex_dict_create(&error); 
+      tc_flex_dict* fd = tc_flex_dict_create(&error);
       CAPI_CHECK_ERROR(error);
 
       tc_parameters_add_flex_dict(args, "options", fd, &error);
@@ -99,7 +99,7 @@ BOOST_AUTO_TEST_CASE(test_boosted_trees_double) {
       tc_release(fd);
     }
 
-    tc_model* model; 
+    tc_model* model;
 
     if(is_auto) {
       tc_variant* var_m =
@@ -299,19 +299,19 @@ BOOST_AUTO_TEST_CASE(test_recommender) {
     CAPI_CHECK_ERROR(error);
 
     // Add in the sframe; then destroy it when we're done with it.
-    
+
     tc_parameters_add_sframe(args, "dataset", sf, &error);
     CAPI_CHECK_ERROR(error);
-    
+
     tc_parameters_add_sframe(args, "user_data", sf, &error);
     CAPI_CHECK_ERROR(error);
-    
+
     tc_parameters_add_sframe(args, "item_data", sf, &error);
     CAPI_CHECK_ERROR(error);
 
     // Set the options
     {
-      tc_flex_dict* fd = tc_flex_dict_create(&error); 
+      tc_flex_dict* fd = tc_flex_dict_create(&error);
       CAPI_CHECK_ERROR(error);
 
       tc_parameters_add_flex_dict(args, "opts", fd, &error);
@@ -322,7 +322,7 @@ BOOST_AUTO_TEST_CASE(test_recommender) {
     }
 
     {
-      tc_flex_dict* fd = tc_flex_dict_create(&error); 
+      tc_flex_dict* fd = tc_flex_dict_create(&error);
       CAPI_CHECK_ERROR(error);
 
       tc_parameters_add_flex_dict(args, "extra_data", fd, &error);
@@ -332,7 +332,7 @@ BOOST_AUTO_TEST_CASE(test_recommender) {
       tc_release(fd);
     }
 
-    tc_model* model; 
+    tc_model* model;
 
     // We now have enough to create the model.
     model = tc_model_new(model_name, &error);
@@ -343,7 +343,7 @@ BOOST_AUTO_TEST_CASE(test_recommender) {
     TS_ASSERT(ret != NULL);
 
     tc_release(ret);
-    
+
 
     tc_release(args);
 
@@ -352,7 +352,7 @@ BOOST_AUTO_TEST_CASE(test_recommender) {
     std::string ret_name = tc_model_name(model, &error);
 
     TS_ASSERT(ret_name == model_name);
-    
+
 
     // Test predictions on the same data.  Should be almost completely
     // accurate...
@@ -449,7 +449,7 @@ BOOST_AUTO_TEST_CASE(test_recommender) {
       std::string model_path;
       std::string error_message;
       std::string expected_substr;
-      
+
       model_path =
         turi::fs_util::system_temp_directory_unique_path("", "_save_test_1_tmp_model");
 
@@ -462,7 +462,7 @@ BOOST_AUTO_TEST_CASE(test_recommender) {
 
       std::string ret_name = tc_model_name(loaded_model, &error);
       CAPI_CHECK_ERROR(error);
-    
+
       tc_release(loaded_model);
     }
 

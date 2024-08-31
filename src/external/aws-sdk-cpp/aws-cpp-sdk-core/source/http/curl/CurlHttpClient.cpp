@@ -719,4 +719,3 @@ std::shared_ptr<HttpResponse> CurlHttpClient::MakeRequest(const std::shared_ptr<
     MakeRequestInternal(*request, response, readLimiter, writeLimiter);
     return response;
 }
-

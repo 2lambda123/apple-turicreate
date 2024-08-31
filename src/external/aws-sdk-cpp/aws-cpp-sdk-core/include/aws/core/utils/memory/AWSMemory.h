@@ -78,7 +78,7 @@ namespace Aws
     }
 /*
  * dynamic_cast of all sorts do not work on MSVC if RTTI is turned off.
- * This means that deleting an object via a pointer to one of its polymorphic base types that do not point to the 
+ * This means that deleting an object via a pointer to one of its polymorphic base types that do not point to the
  * address of their concrete class will result in undefined behavior.
  * Example:
  * struct Foo : InterfaceA, InterfaceB {};
@@ -298,4 +298,3 @@ namespace Aws
     }
 
 } // namespace Aws
-

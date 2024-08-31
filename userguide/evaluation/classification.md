@@ -56,7 +56,7 @@ them are:
   each class was correctly predicted and incorrectly predicted.
 * **macro**: Calculate metrics for each "class" independently, and find their
   unweighted mean. This does not take label imbalance into account.
-* **None**: Return a metric corresponding to each class, which is the 
+* **None**: Return a metric corresponding to each class, which is the
   precision for each class.
 
 ```python

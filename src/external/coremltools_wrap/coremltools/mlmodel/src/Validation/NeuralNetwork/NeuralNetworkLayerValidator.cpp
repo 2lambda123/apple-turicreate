@@ -594,10 +594,10 @@ Result NeuralNetworkSpecValidator::validatePooling3dLayer(const Specification::N
     Result r;
     r = validateInputCount(layer, 1, 1);
     if (!r.good()) { return r; }
-    
+
     r = validateOutputCount(layer, 1, 1);
     if (!r.good()) { return r; }
-    
+
     if (ndArrayInterpretation) {
         r = validateInputOutputRankEquality(layer, "Pooling3d", blobNameToRank);
         if (!r.good()) { return r; }
@@ -605,10 +605,10 @@ Result NeuralNetworkSpecValidator::validatePooling3dLayer(const Specification::N
         r = validateRankCount(layer, "Pooling3d", 5, -1, blobNameToRank);
         if (!r.good()) { return r; }
     }
-    
+
     // Kernel
     const auto pooling3d = layer.pooling3d();
-   
+
     r = validatePositive(pooling3d.kerneldepth(), "Kernel Depth");
     if (!r.good()) { return r; }
 
@@ -621,13 +621,13 @@ Result NeuralNetworkSpecValidator::validatePooling3dLayer(const Specification::N
     // Stride
     r = validatePositive(pooling3d.stridedepth(), "Stride Depth");
     if (!r.good()) { return r; }
-    
+
     r = validatePositive(pooling3d.strideheight(), "Stride Height");
     if (!r.good()) { return r; }
-    
+
     r = validatePositive(pooling3d.stridewidth(), "Stride Width");
     if (!r.good()) { return r; }
-    
+
     // Custom Padding
     auto paddingType = pooling3d.paddingtype();
     r = validatePooling3dPadding(paddingType, pooling3d.custompaddingfront(), "Front");
@@ -647,7 +647,7 @@ Result NeuralNetworkSpecValidator::validatePooling3dLayer(const Specification::N
 
     r = validatePooling3dPadding(paddingType, pooling3d.custompaddingright(), "Right");
     if (!r.good()) { return r; }
-    
+
     return r;
 }
 
@@ -2199,7 +2199,7 @@ Result NeuralNetworkSpecValidator::validateBatchedMatmulLayer(const Specificatio
                                 "However, bias is only supported when the layer has 1 input.";
         return Result(ResultType::INVALID_MODEL_PARAMETERS, err);
     }
-    
+
     if (layer.input_size() > 1 && layer.batchedmatmul().int8dynamicquantize()) {
         std::string err = "BatchedMatMul layer '" + layer.name() + "': cannot use dynamic quantization with 2 inputs.";
         return Result(ResultType::INVALID_MODEL_PARAMETERS, err);

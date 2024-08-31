@@ -16,15 +16,15 @@ parameter.
 	        ErrorOnUnknown = 0;
 	        IgnoreUnknown = 1;   // Output will be all zeros for unknown values.
 	    }
-	
+
 	    oneof CategoryType {
 	        StringVector stringCategories = 1;
 	        Int64Vector int64Categories = 2;
 	    }
-	
+
 	    // Output can be a dictionary with only one entry, instead of an array.
 	    bool outputSparse = 10;
-	
+
 	    HandleUnknown handleUnknown = 11;
 	}
 

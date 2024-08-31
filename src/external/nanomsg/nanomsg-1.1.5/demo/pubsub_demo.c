@@ -56,7 +56,7 @@
 /*  The server runs forever. */
 int server(const char *url)
 {
-    int fd; 
+    int fd;
 
     /*  Create the socket. */
     fd = nn_socket (AF_SP, NN_PUB);
@@ -123,14 +123,14 @@ int client (const char *url)
     if (nn_connect (fd, url) < 0) {
         fprintf (stderr, "nn_socket: %s\n", nn_strerror (nn_errno ()));
         nn_close (fd);
-        return (-1);        
+        return (-1);
     }
 
     /*  We want all messages, so just subscribe to the empty value. */
     if (nn_setsockopt (fd, NN_SUB, NN_SUB_SUBSCRIBE, "", 0) < 0) {
         fprintf (stderr, "nn_setsockopt: %s\n", nn_strerror (nn_errno ()));
         nn_close (fd);
-        return (-1);        
+        return (-1);
     }
 
     for (;;) {

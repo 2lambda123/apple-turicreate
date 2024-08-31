@@ -164,7 +164,7 @@ int nn_poll (struct nn_pollfd *fds, int nfds, int timeout)
             pfd [pos].events = POLLIN;
             ++pos;
         }
-    }    
+    }
 
     /*  Do the polling itself. */
     rc = poll (pfd, pos, timeout);

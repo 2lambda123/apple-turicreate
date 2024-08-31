@@ -909,4 +909,3 @@ std::ostream& operator<<(std::ostream& out, const ShapeConstraint& shape) {
     out << shape.widthRange() << std::endl;
     return out;
 }
-

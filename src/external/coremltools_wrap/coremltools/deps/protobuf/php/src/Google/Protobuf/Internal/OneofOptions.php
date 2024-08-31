@@ -63,4 +63,3 @@ class OneofOptions extends \Google\Protobuf\Internal\Message
     }
 
 }
-

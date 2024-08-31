@@ -153,4 +153,3 @@ void nn_chunkref_bulkcopy_cp (struct nn_chunkref *dst, struct nn_chunkref *src)
 {
     memcpy (dst, src, sizeof (struct nn_chunkref));
 }
-

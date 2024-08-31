@@ -113,7 +113,7 @@ static int nn_bus_recv (struct nn_sockbase *self, struct nn_msg *msg)
     /*  Discard the header. */
     nn_chunkref_term (&msg->sphdr);
     nn_chunkref_init (&msg->sphdr, 0);
-    
+
     return 0;
 }
 

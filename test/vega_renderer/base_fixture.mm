@@ -32,11 +32,11 @@ void base_fixture::replace_url_with_values_in_data_entry(CFMutableDictionaryRef 
         NSString *dataUrl = dataEntry[@"url"];
         TS_ASSERT_DIFFERS(dataUrl, nil);
         [dataEntry removeObjectForKey:@"url"];
-        
+
         // Assumes a base URL of https://vega.github.io/editor/
         // since that's where the examples all come from
         NSURL *fullUrl = [NSURL URLWithString:dataUrl relativeToURL:[NSURL URLWithString:@"https://vega.github.io/editor/"]];
-        
+
         if ([[dataUrl substringFromIndex:(dataUrl.length - 4)] isEqualToString:@".csv"]) {
             NSString *valuesStr = [NSString stringWithContentsOfURL:fullUrl encoding:NSUTF8StringEncoding error:&error];
             TS_ASSERT_EQUALS(error, nil);
@@ -62,7 +62,7 @@ std::string base_fixture::replace_urls_with_values_in_spec(const std::string& sp
     NSMutableDictionary *dict = [NSJSONSerialization JSONObjectWithData:specData options:(NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves) error:&error];
     TS_ASSERT_EQUALS(error, nil);
     TS_ASSERT_DIFFERS(dict, nil);
-    
+
     id dataEntries = dict[@"data"];
     TS_ASSERT_DIFFERS(dataEntries, nil);
     if ([dataEntries isKindOfClass:NSMutableArray.class]) {
@@ -121,49 +121,49 @@ double base_fixture::count_all_pixels(CGImageRef cgimg) {
 double base_fixture::compare_expected_with_actual(CGImageRef expected,
                                                   CGImageRef actual,
                                                   double acceptable_diff) {
-    
+
     if (CGImageGetWidth(actual) != CGImageGetWidth(expected)) {
         TS_ASSERT(false);
         return 100.0;
     }
-    
+
     if (CGImageGetHeight(actual) != CGImageGetHeight(expected)) {
         TS_ASSERT(false);
         return 100.0;
     }
-    
-    
+
+
     CGRect imageRect = CGRectMake(0, 0,
                                   CGImageGetWidth(actual),
                                   CGImageGetHeight(actual));
     double width = imageRect.size.width;
     double height = imageRect.size.height;
-    
+
     // Get a new context to draw both onto
     CGContextRef ctx = create_cgcontext(width, height);
-    
+
     // Draw the expected image on white background
     CGContextDrawImage(ctx, imageRect, expected);
-    
+
     // Change the blend mode for the remaining drawing operations
     CGContextSetBlendMode(ctx, kCGBlendModeDifference);
-    
+
     // Draw the actual image on white background
     CGContextRef ctxActual = create_cgcontext(width, height);
     CGContextDrawImage(ctxActual, imageRect, actual);
     CGImageRef actualNoAlpha = CGBitmapContextCreateImage(ctxActual);
-    
+
     // Draw the actual image inverted(ish) on top
     CGContextDrawImage(ctx, imageRect, actualNoAlpha);
-    
+
     // Grab the composed CGImage
     CGImageRef diffed = CGBitmapContextCreateImage(ctx);
-    
+
     double totalCount = imageRect.size.width * imageRect.size.height;
     double diffCount = this->count_all_pixels(diffed);
     double diffPct = (diffCount / totalCount) * 100.0;
     TS_ASSERT_LESS_THAN(diffPct, acceptable_diff);
-    
+
     CGImageRelease(actualNoAlpha);
     CGImageRelease(diffed);
     CGContextRelease(ctx);

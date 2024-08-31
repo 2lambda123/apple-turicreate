@@ -140,4 +140,3 @@ uint8_t* nn_sha1_result (struct nn_sha1 *self)
     /* 20-octet pointer to hash. */
     return (uint8_t*) self->state;
 }
-

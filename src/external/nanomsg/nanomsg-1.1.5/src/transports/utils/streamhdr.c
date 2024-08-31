@@ -328,4 +328,3 @@ invalidhdr:
         nn_fsm_bad_state (streamhdr->state, src, type);
     }
 }
-

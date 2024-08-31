@@ -26,4 +26,3 @@ class FieldOptions_CType
      */
     const STRING_PIECE = 2;
 }
-

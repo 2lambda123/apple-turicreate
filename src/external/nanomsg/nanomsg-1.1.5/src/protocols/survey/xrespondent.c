@@ -135,7 +135,7 @@ void nn_xrespondent_in (struct nn_sockbase *self, struct nn_pipe *pipe)
     nn_fq_in (&xrespondent->inpipes, &data->initem);
 }
 
-void nn_xrespondent_out (NN_UNUSED struct nn_sockbase *self, 
+void nn_xrespondent_out (NN_UNUSED struct nn_sockbase *self,
     struct nn_pipe *pipe)
 {
     struct nn_xrespondent_data *data;
@@ -231,7 +231,7 @@ int nn_xrespondent_recv (struct nn_sockbase *self, struct nn_msg *msg)
             ++i;
         }
         ++i;
-    
+
         /*  Ignore messages with too many hops. */
         if (i > maxttl) {
             nn_msg_term (msg);

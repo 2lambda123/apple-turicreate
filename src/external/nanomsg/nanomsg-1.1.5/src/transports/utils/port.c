@@ -46,4 +46,3 @@ int nn_port_resolve (const char *port, size_t portlen)
 
     return res;
 }
-

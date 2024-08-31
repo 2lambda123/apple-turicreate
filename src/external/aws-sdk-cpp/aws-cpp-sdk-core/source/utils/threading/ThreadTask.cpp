@@ -32,17 +32,17 @@ ThreadTask::~ThreadTask()
 void ThreadTask::MainTaskRunner()
 {
     while (m_continue)
-    {        
+    {
         while (m_continue && m_executor.HasTasks())
-        {      
+        {
             auto fn = m_executor.PopTask();
             if(fn)
             {
                 (*fn)();
-                Aws::Delete(fn);               
+                Aws::Delete(fn);
             }
         }
-     
+
         if(m_continue)
         {
             m_executor.m_sync.WaitOne();

@@ -166,7 +166,7 @@ $fname:
 	add	$car0,$car1,$car1
 	st	$car1,[$tp+8]
 	srlx	$car1,32,$car2
-
+
 	mov	4,$i			! i++
 	ld	[$bp+4],$mul0		! bp[1]
 .Louter:
@@ -251,7 +251,7 @@ $fname:
 !.Louter
 
 	add	$tp,12,$tp
-
+
 .Ltail:
 	add	$np,$num,$np
 	add	$rp,$num,$rp
@@ -283,7 +283,7 @@ $fname:
 	ret
 	restore
 ___
-
+
 ########
 ######## .Lbn_sqr_mont gives up to 20% *overall* improvement over
 ######## code without following dedicated squaring procedure.
@@ -367,7 +367,7 @@ $code.=<<___;
 	add	$car0,$car1,$car1
 	st	$car1,[$tp+8]
 	srlx	$car1,32,$car2
-
+
 	ld	[%sp+$bias+$frame],$tmp0	! tp[0]
 	ld	[%sp+$bias+$frame+4],$tmp1	! tp[1]
 	ld	[%sp+$bias+$frame+8],$tpj	! tp[2]
@@ -442,7 +442,7 @@ $code.=<<___;
 	add	$car2,$car1,$car1
 	st	$car1,[$tp+4]
 	srlx	$car1,32,$car2
-
+
 	ld	[%sp+$bias+$frame],$tmp1	! tp[0]
 	ld	[%sp+$bias+$frame+4],$tpj	! tp[1]
 	ld	[$ap+8],$mul0			! ap[2]
@@ -542,7 +542,7 @@ $code.=<<___;
 	add	$car2,$car1,$car1
 	st	$car1,[$tp+4]
 	srlx	$car1,32,$car2
-
+
 	add	$i,4,$i				! i++
 	ld	[%sp+$bias+$frame],$tmp1	! tp[0]
 	ld	[%sp+$bias+$frame+4],$tpj	! tp[1]
@@ -566,7 +566,7 @@ $code.=<<___;
 	cmp	$tmp0,$num			! i<num-1
 	bl	%icc,.Lsqr_outer
 	mov	4,$j
-
+
 .Lsqr_last:
 	mulx	$npj,$mul1,$acc1
 	add	$tpj,$car1,$car1

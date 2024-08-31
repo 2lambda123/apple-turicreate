@@ -221,4 +221,3 @@ message FeatureType {
 
     bool isOptional = 1000;
 }
-

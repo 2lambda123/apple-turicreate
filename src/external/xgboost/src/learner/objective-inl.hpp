@@ -18,7 +18,7 @@
 #include "./objective.h"
 #include "./helper_utils.h"
 
-// GLC parallel lambda premitive 
+// GLC parallel lambda premitive
 #include <core/parallel/lambda_omp.hpp>
 #include <core/parallel/pthread_tools.hpp>
 

@@ -378,7 +378,7 @@ struct recsys_itemcf_test  {
 
   ans << 1. ,  a_b , a_c , a_d
       ,0.0 , 1. ,  b_c , b_d
-      ,0.0 , 0.0 , 1. ,  c_d 
+      ,0.0 , 0.0 , 1. ,  c_d
       ,0.0 , 0.0 , 0.0 , 1.;
 
     // test getting item neighbors

@@ -30,7 +30,7 @@ namespace S3
 namespace Model
 {
 
-Redirect::Redirect() : 
+Redirect::Redirect() :
     m_hostNameHasBeenSet(false),
     m_httpRedirectCodeHasBeenSet(false),
     m_protocol(Protocol::NOT_SET),
@@ -40,7 +40,7 @@ Redirect::Redirect() :
 {
 }
 
-Redirect::Redirect(const XmlNode& xmlNode) : 
+Redirect::Redirect(const XmlNode& xmlNode) :
     m_hostNameHasBeenSet(false),
     m_httpRedirectCodeHasBeenSet(false),
     m_protocol(Protocol::NOT_SET),

@@ -71,7 +71,7 @@ $code=<<___;
 
 // int bn_mul_mont (BN_ULONG *rp,const BN_ULONG *ap,
 //		    const BN_ULONG *bp,const BN_ULONG *np,
-//		    const BN_ULONG *n0p,int num);			
+//		    const BN_ULONG *n0p,int num);
 .align	64
 .global	bn_mul_mont#
 .proc	bn_mul_mont#
@@ -86,7 +86,7 @@ bn_mul_mont:
 (p8)	br.cond.dpnt.many	bn_mul_mont_general
 (p7)	br.ret.spnt.many	b0	};;
 .endp	bn_mul_mont#
-
+
 prevfs=r2;	prevpr=r3;	prevlc=r10;	prevsp=r11;
 
 rptr=r8;	aptr=r9;	bptr=r14;	nptr=r15;
@@ -194,11 +194,11 @@ bn_mul_mont_general:
 { .mmi;	.pred.rel	"mutex",p39,p41
 (p39)	add		topbit=r0,r0
 (p41)	add		topbit=r0,r0,1
-	nop.i		0		}	
+	nop.i		0		}
 { .mmi;	st8		[tp_1]=n[0]
 	add		tptr=16,sp
 	add		tp_1=8,sp	};;
-
+
 .Louter:
 { .mmi;	ldf8		bi=[bptr],8		// (*bp++)
 	ldf8		ahi[3]=[tptr]		// tp[0]
@@ -296,7 +296,7 @@ bn_mul_mont_general:
 { .mmb;	add		tp_1=8,sp
 	add		num=-1,num		// num--
 (p6)	br.cond.sptk.many	.Louter	};;
-
+
 { .mbb;	add		lc=4,lc
 	brp.loop.imp	.Lsub_ctop,.Lsub_cend-16
 	clrrrb.pr			};;
@@ -356,7 +356,7 @@ bn_mul_mont_general:
 	mov		pr=prevpr,0x1ffff
 	br.ret.sptk.many	b0	};;
 .endp	bn_mul_mont_general#
-
+
 a1=r16;  a2=r17;  a3=r18;  a4=r19;  a5=r20;  a6=r21;  a7=r22;  a8=r23;
 n1=r24;  n2=r25;  n3=r26;  n4=r27;  n5=r28;  n6=r29;  n7=r30;  n8=r31;
 t0=r15;
@@ -401,7 +401,7 @@ bn_mul_mont_8:
 	.save.gf	0,0x800
 	stf.spill	[r17]=f23
 	$ADDP		rptr=0,in0	};;
-
+
 	.body
 	.rotf		bj[8],mj[2],tf[2],alo[10],ahi[10],nlo[10],nhi[10]
 	.rotr		t[8]
@@ -481,7 +481,7 @@ bn_mul_mont_8:
 	(p15)fcvt.fxu	ni7=f0
 	brp.loop.imp	.Louter_8_ctop,.Louter_8_cend-16
 					};;
-
+
 // The loop is scheduled for 32*n ticks on Itanium 2. Actual attempt
 // to measure with help of Interval Time Counter indicated that the
 // factor is a tad higher: 33 or 34, if not 35. Exact measurement and
@@ -651,7 +651,7 @@ bn_mul_mont_8:
 	(p16)	nop.f		0
 	br.ctop.sptk.many	.Louter_8_ctop	};;
 .Louter_8_cend:
-
+
 // above loop has to execute one more time, without (p16), which is
 // replaced with merged move of np[8] to GPR bank
 	.pred.rel		"mutex",p40,p42
@@ -747,7 +747,7 @@ bn_mul_mont_8:
 { .mmi;	(p42)	add		t[0]=t[0],r0,1
 	(p0)	add		r16=-7*16,prevsp
 	(p0)	add		r17=-6*16,prevsp	};;
-
+
 // subtract np[8] from carrybit|tmp[8]
 // carrybit|tmp[8] layout upon exit from above loop is:
 //	t[0]|t[1]|t[2]|t[3]|t[4]|t[5]|t[6]|t[7]|t0 (least significant)
@@ -795,7 +795,7 @@ bn_mul_mont_8:
 { .mmi;	(p35)sub	a8=t[0],r0,1;;
 	(p33)cmp.gtu	p34,p32=a8,t[0]
 	(p35)cmp.geu	p34,p32=a8,t[0]	};;
-
+
 // save the result, either tmp[num] or tmp[num]-np[num]
 	.pred.rel	"mutex",p32,p34
 { .mmi;	(p32)st8	[rptr]=n1,8

@@ -58,19 +58,19 @@ namespace Model
     inline void ReplaceBody(Aws::IOStream* body) { m_body = Aws::Utils::Stream::ResponseStream(body); }
 
 
-    
+
     inline const RequestCharged& GetRequestCharged() const{ return m_requestCharged; }
 
-    
+
     inline void SetRequestCharged(const RequestCharged& value) { m_requestCharged = value; }
 
-    
+
     inline void SetRequestCharged(RequestCharged&& value) { m_requestCharged = std::move(value); }
 
-    
+
     inline GetObjectTorrentResult& WithRequestCharged(const RequestCharged& value) { SetRequestCharged(value); return *this;}
 
-    
+
     inline GetObjectTorrentResult& WithRequestCharged(RequestCharged&& value) { SetRequestCharged(std::move(value)); return *this;}
 
   private:

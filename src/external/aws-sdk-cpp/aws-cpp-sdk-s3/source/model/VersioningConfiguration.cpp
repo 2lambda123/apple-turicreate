@@ -30,7 +30,7 @@ namespace S3
 namespace Model
 {
 
-VersioningConfiguration::VersioningConfiguration() : 
+VersioningConfiguration::VersioningConfiguration() :
     m_mFADelete(MFADelete::NOT_SET),
     m_mFADeleteHasBeenSet(false),
     m_status(BucketVersioningStatus::NOT_SET),
@@ -38,7 +38,7 @@ VersioningConfiguration::VersioningConfiguration() :
 {
 }
 
-VersioningConfiguration::VersioningConfiguration(const XmlNode& xmlNode) : 
+VersioningConfiguration::VersioningConfiguration(const XmlNode& xmlNode) :
     m_mFADelete(MFADelete::NOT_SET),
     m_mFADeleteHasBeenSet(false),
     m_status(BucketVersioningStatus::NOT_SET),

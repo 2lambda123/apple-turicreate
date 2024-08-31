@@ -36,7 +36,7 @@ namespace Model
    * For more information, see <a
    * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config">
    * Aborting Incomplete Multipart Uploads Using a Bucket Lifecycle Policy</a> in the
-   * <i>Amazon Simple Storage Service Developer Guide</i>.</p><p><h3>See Also:</h3>  
+   * <i>Amazon Simple Storage Service Developer Guide</i>.</p><p><h3>See Also:</h3>
    * <a
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/AbortIncompleteMultipartUpload">AWS
    * API Reference</a></p>

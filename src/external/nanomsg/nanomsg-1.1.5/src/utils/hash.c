@@ -161,4 +161,3 @@ void nn_hash_item_term (struct nn_hash_item *self)
 {
     nn_list_item_term (&self->list);
 }
-

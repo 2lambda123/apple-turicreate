@@ -26,7 +26,7 @@ using namespace Aws::Utils::Xml;
 using namespace Aws::Utils;
 using namespace Aws;
 
-ListPartsResult::ListPartsResult() : 
+ListPartsResult::ListPartsResult() :
     m_partNumberMarker(0),
     m_nextPartNumberMarker(0),
     m_maxParts(0),
@@ -36,7 +36,7 @@ ListPartsResult::ListPartsResult() :
 {
 }
 
-ListPartsResult::ListPartsResult(const Aws::AmazonWebServiceResult<XmlDocument>& result) : 
+ListPartsResult::ListPartsResult(const Aws::AmazonWebServiceResult<XmlDocument>& result) :
     m_partNumberMarker(0),
     m_nextPartNumberMarker(0),
     m_maxParts(0),

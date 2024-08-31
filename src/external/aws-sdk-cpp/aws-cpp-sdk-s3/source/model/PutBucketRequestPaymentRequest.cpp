@@ -26,7 +26,7 @@ using namespace Aws::Utils::Xml;
 using namespace Aws::Utils;
 using namespace Aws::Http;
 
-PutBucketRequestPaymentRequest::PutBucketRequestPaymentRequest() : 
+PutBucketRequestPaymentRequest::PutBucketRequestPaymentRequest() :
     m_bucketHasBeenSet(false),
     m_contentMD5HasBeenSet(false),
     m_requestPaymentConfigurationHasBeenSet(false),

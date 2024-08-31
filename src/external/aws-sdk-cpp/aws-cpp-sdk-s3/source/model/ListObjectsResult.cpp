@@ -25,14 +25,14 @@ using namespace Aws::Utils::Xml;
 using namespace Aws::Utils;
 using namespace Aws;
 
-ListObjectsResult::ListObjectsResult() : 
+ListObjectsResult::ListObjectsResult() :
     m_isTruncated(false),
     m_maxKeys(0),
     m_encodingType(EncodingType::NOT_SET)
 {
 }
 
-ListObjectsResult::ListObjectsResult(const Aws::AmazonWebServiceResult<XmlDocument>& result) : 
+ListObjectsResult::ListObjectsResult(const Aws::AmazonWebServiceResult<XmlDocument>& result) :
     m_isTruncated(false),
     m_maxKeys(0),
     m_encodingType(EncodingType::NOT_SET)

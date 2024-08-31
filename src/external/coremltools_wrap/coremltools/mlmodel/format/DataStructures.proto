@@ -92,4 +92,3 @@ message DoubleRange {
     double minValue = 1;
     double maxValue = 2;
 }
-

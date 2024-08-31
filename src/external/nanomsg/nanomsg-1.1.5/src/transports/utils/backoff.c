@@ -64,4 +64,3 @@ void nn_backoff_reset (struct nn_backoff *self)
 {
     self->n = 1;
 }
-

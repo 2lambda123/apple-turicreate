@@ -77,7 +77,7 @@
         self.context[@"window"] = self.context.globalObject;
         self.context[@"window"][@"devicePixelRatio"] = [NSNumber numberWithDouble:self.scaleFactor];
         self.context[@"HTMLElement"] = TCVegaHTMLElement.class;
-        
+
         // set up logging
         [TCVegaJSConsole attachToJavaScriptContext:self.context];
 
@@ -86,7 +86,7 @@
         TCVegaJSDocument* document = [[TCVegaJSDocument alloc] initWithCanvas:self.vegaCanvas];
         self.vegaJSDocument = document;
         self.context[@"document"] = document;
-        
+
         // set up an element to contain Vega's canvas, referenced in vg2canvasJS
         self.context[@"container"] = [[TCVegaHTMLElement alloc] initWithTagName:@"div"];
 

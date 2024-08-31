@@ -16,4 +16,3 @@ function (target_optional_compile_flag NAME FLAG)
     target_compile_options(${NAME} PRIVATE ${FLAG})
   endif()
 endfunction()
-
