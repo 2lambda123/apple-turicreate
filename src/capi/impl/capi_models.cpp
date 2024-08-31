@@ -14,16 +14,16 @@
 /*                                                                            */
 /******************************************************************************/
 
-struct tc_model_struct; 
+struct tc_model_struct;
 typedef struct tc_model_struct tc_model;
 
-EXPORT tc_model* tc_model_new(const char* model_name, tc_error** error) { 
+EXPORT tc_model* tc_model_new(const char* model_name, tc_error** error) {
   ERROR_HANDLE_START();
   turi::ensure_server_initialized();
   turi::ensure_server_initialized();
 
-  std::shared_ptr<turi::model_base> model 
-    = turi::get_unity_global_singleton()->create_toolkit_class(model_name); 
+  std::shared_ptr<turi::model_base> model
+    = turi::get_unity_global_singleton()->create_toolkit_class(model_name);
 
   return new_tc_model(std::move(model));
 
@@ -109,7 +109,7 @@ EXPORT tc_flexible_type* tc_model_save_to_data(const tc_model* model, tc_error**
   ERROR_HANDLE_END(error, nullptr);
 }
 
-EXPORT const char* tc_model_name(const tc_model* model, tc_error **error) { 
+EXPORT const char* tc_model_name(const tc_model* model, tc_error **error) {
   ERROR_HANDLE_START();
   turi::ensure_server_initialized();
 
@@ -117,21 +117,20 @@ EXPORT const char* tc_model_name(const tc_model* model, tc_error **error) {
   static std::string last_name;
   last_name =  model->value->name();
   return last_name.c_str();
-  
+
   ERROR_HANDLE_END(error, "");
 }
 
 // Will be changed to
 EXPORT tc_variant* tc_model_call_method(const tc_model* model, const char* method,
                                         const tc_parameters* arguments, tc_error** error) {
-  
+
   ERROR_HANDLE_START();
   turi::ensure_server_initialized();
 
-  turi::variant_type result = model->value->call_function(method, arguments->value); 
+  turi::variant_type result = model->value->call_function(method, arguments->value);
 
   return new_tc_variant(result);
-  
+
   ERROR_HANDLE_END(error, NULL);
 }
-

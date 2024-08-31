@@ -7,16 +7,16 @@
 CFG=curl - Win32 LIB Debug
 !MESSAGE This is not a valid makefile. To build this project using NMAKE,
 !MESSAGE use the Export Makefile command and run
-!MESSAGE 
+!MESSAGE
 !MESSAGE NMAKE /f "curl.mak".
-!MESSAGE 
+!MESSAGE
 !MESSAGE You can specify a configuration when running NMAKE
 !MESSAGE by defining the macro CFG on the command line. For example:
-!MESSAGE 
+!MESSAGE
 !MESSAGE NMAKE /f "curl.mak" CFG="curl - Win32 LIB Debug"
-!MESSAGE 
+!MESSAGE
 !MESSAGE Possible choices for configuration are:
-!MESSAGE 
+!MESSAGE
 !MESSAGE "curl - Win32 DLL Debug" (based on "Win32 (x86) Console Application")
 !MESSAGE "curl - Win32 DLL Debug DLL OpenSSL" (based on "Win32 (x86) Console Application")
 !MESSAGE "curl - Win32 DLL Debug DLL OpenSSL DLL LibSSH2" (based on "Win32 (x86) Console Application")
@@ -41,7 +41,7 @@ CFG=curl - Win32 LIB Debug
 !MESSAGE "curl - Win32 LIB Release DLL Windows SSPI DLL WinIDN" (based on "Win32 (x86) Console Application")
 !MESSAGE "curl - Win32 LIB Release LIB OpenSSL" (based on "Win32 (x86) Console Application")
 !MESSAGE "curl - Win32 LIB Release LIB OpenSSL LIB LibSSH2" (based on "Win32 (x86) Console Application")
-!MESSAGE 
+!MESSAGE
 
 # Begin Project
 # PROP AllowPerConfigDependencies 0
@@ -646,7 +646,7 @@ LINK32=link.exe
 # ADD BASE LINK32 advapi32.lib crypt32.lib gdi32.lib user32.lib wldap32.lib ws2_32.lib libcurl.lib libeay32.lib ssleay32.lib libssh2.lib /nologo /subsystem:console /pdb:none /machine:I386 /out:"..\..\..\..\build\Win32\VC6\LIB Release - LIB OpenSSL - LIB LibSSH2\curl.exe" /libpath:"..\..\..\..\build\Win32\VC6\LIB Release - LIB OpenSSL" /libpath:"..\..\..\..\..\openssl\build\Win32\VC6\LIB Release" /libpath:"..\..\..\..\..\libssh2\build\Win32\VC6\LIB Release" /fixed:no
 # ADD LINK32 advapi32.lib crypt32.lib gdi32.lib user32.lib wldap32.lib ws2_32.lib libcurl.lib libeay32.lib ssleay32.lib libssh2.lib /nologo /subsystem:console /pdb:none /machine:I386 /out:"..\..\..\..\build\Win32\VC6\LIB Release - LIB OpenSSL - LIB LibSSH2\curl.exe" /libpath:"..\..\..\..\build\Win32\VC6\LIB Release - LIB OpenSSL" /libpath:"..\..\..\..\..\openssl\build\Win32\VC6\LIB Release" /libpath:"..\..\..\..\..\libssh2\build\Win32\VC6\LIB Release" /fixed:no
 
-!ENDIF 
+!ENDIF
 
 # Begin Target
 

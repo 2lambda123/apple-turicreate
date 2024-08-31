@@ -30,7 +30,7 @@ namespace S3
 namespace Model
 {
 
-ReplicationRule::ReplicationRule() : 
+ReplicationRule::ReplicationRule() :
     m_iDHasBeenSet(false),
     m_priority(0),
     m_priorityHasBeenSet(false),
@@ -44,7 +44,7 @@ ReplicationRule::ReplicationRule() :
 {
 }
 
-ReplicationRule::ReplicationRule(const XmlNode& xmlNode) : 
+ReplicationRule::ReplicationRule(const XmlNode& xmlNode) :
     m_iDHasBeenSet(false),
     m_priority(0),
     m_priorityHasBeenSet(false),

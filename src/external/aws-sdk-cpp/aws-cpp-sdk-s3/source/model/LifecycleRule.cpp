@@ -30,7 +30,7 @@ namespace S3
 namespace Model
 {
 
-LifecycleRule::LifecycleRule() : 
+LifecycleRule::LifecycleRule() :
     m_expirationHasBeenSet(false),
     m_iDHasBeenSet(false),
     m_filterHasBeenSet(false),
@@ -43,7 +43,7 @@ LifecycleRule::LifecycleRule() :
 {
 }
 
-LifecycleRule::LifecycleRule(const XmlNode& xmlNode) : 
+LifecycleRule::LifecycleRule(const XmlNode& xmlNode) :
     m_expirationHasBeenSet(false),
     m_iDHasBeenSet(false),
     m_filterHasBeenSet(false),

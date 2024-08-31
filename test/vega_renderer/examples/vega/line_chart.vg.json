@@ -3,7 +3,7 @@
     "width": 500,
     "height": 200,
     "padding": 5,
-    
+
     "signals": [
         {
             "name": "interpolate",
@@ -24,7 +24,7 @@
             }
         }
     ],
-    
+
     "data": [
         {
             "name": "table",
@@ -42,7 +42,7 @@
             ]
         }
     ],
-    
+
     "scales": [
         {
             "name": "x",
@@ -65,12 +65,12 @@
             "domain": {"data": "table", "field": "c"}
         }
     ],
-    
+
     "axes": [
         {"orient": "bottom", "scale": "x"},
         {"orient": "left", "scale": "y"}
     ],
-    
+
     "marks": [
         {
             "type": "group",
@@ -105,4 +105,3 @@
         }
     ]
 }
-

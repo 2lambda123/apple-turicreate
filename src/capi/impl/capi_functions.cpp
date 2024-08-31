@@ -34,7 +34,3 @@ EXPORT tc_variant* tc_function_call(
 
   ERROR_HANDLE_END(error, nullptr);
 }
-
-
-
-

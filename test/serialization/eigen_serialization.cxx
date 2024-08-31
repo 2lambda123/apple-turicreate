@@ -199,4 +199,3 @@ BOOST_AUTO_TEST_CASE(test_matrix_fix_col_int) {
 BOOST_AUTO_TEST_CASE(test_matrix_fix_row_col_int) {
     check_array_save_load<Eigen::Matrix, int, 8, 8>();
   }
-

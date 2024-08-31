@@ -6,7 +6,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TCMPSStyleTransferWeights : NSObject 
+@interface TCMPSStyleTransferWeights : NSObject
 @property (nonatomic) NSData *data;
 @property (nonatomic) NSArray<NSNumber *> *shape;
 @end

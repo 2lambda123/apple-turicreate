@@ -108,4 +108,3 @@ static struct nn_device_recipe nn_ordinary_device = {
     nn_device_mvmsg,
     nn_device_rewritemsg
 };
-

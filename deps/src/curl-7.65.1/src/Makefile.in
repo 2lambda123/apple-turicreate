@@ -188,7 +188,7 @@ libcurltool_la_OBJECTS = $(am_libcurltool_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
 am__v_lt_0 = --silent
-am__v_lt_1 = 
+am__v_lt_1 =
 libcurltool_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
 	$(libcurltool_la_CFLAGS) $(CFLAGS) $(libcurltool_la_LDFLAGS) \
@@ -234,12 +234,12 @@ am__v_P_1 = :
 AM_V_GEN = $(am__v_GEN_@AM_V@)
 am__v_GEN_ = $(am__v_GEN_@AM_DEFAULT_V@)
 am__v_GEN_0 = @echo "  GEN     " $@;
-am__v_GEN_1 = 
+am__v_GEN_1 =
 AM_V_at = $(am__v_at_@AM_V@)
 am__v_at_ = $(am__v_at_@AM_DEFAULT_V@)
 am__v_at_0 = @
-am__v_at_1 = 
-DEFAULT_INCLUDES = 
+am__v_at_1 =
+DEFAULT_INCLUDES =
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__maybe_remake_depfiles = depfiles
 am__depfiles_remade = ../lib/$(DEPDIR)/curl-curl_ctype.Po \
@@ -330,7 +330,7 @@ LTCOMPILE = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 AM_V_CC = $(am__v_CC_@AM_V@)
 am__v_CC_ = $(am__v_CC_@AM_DEFAULT_V@)
 am__v_CC_0 = @echo "  CC      " $@;
-am__v_CC_1 = 
+am__v_CC_1 =
 CCLD = $(CC)
 LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
@@ -338,7 +338,7 @@ LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 AM_V_CCLD = $(am__v_CCLD_@AM_V@)
 am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
 am__v_CCLD_0 = @echo "  CCLD    " $@;
-am__v_CCLD_1 = 
+am__v_CCLD_1 =
 SOURCES = $(libcurltool_la_SOURCES) $(curl_SOURCES)
 DIST_SOURCES = $(am__libcurltool_la_SOURCES_DIST) $(curl_SOURCES)
 RECURSIVE_TARGETS = all-recursive check-recursive cscopelist-recursive \
@@ -771,7 +771,7 @@ curl_CPPFLAGS = $(AM_CPPFLAGS) $(LIBMETALINK_CPPFLAGS)
 @BUILD_UNITTESTS_TRUE@libcurltool_la_CPPFLAGS = $(LIBMETALINK_CPPFLAGS) $(AM_CPPFLAGS) \
 @BUILD_UNITTESTS_TRUE@                          -DCURL_STATICLIB -DUNITTESTS
 
-@BUILD_UNITTESTS_TRUE@libcurltool_la_CFLAGS = 
+@BUILD_UNITTESTS_TRUE@libcurltool_la_CFLAGS =
 @BUILD_UNITTESTS_TRUE@libcurltool_la_LDFLAGS = -static $(LINKFLAGS)
 @BUILD_UNITTESTS_TRUE@libcurltool_la_SOURCES = $(curl_SOURCES)
 CLEANFILES = tool_hugehelp.c
@@ -787,11 +787,11 @@ MKHELP = $(top_srcdir)/src/mkhelp.pl
 HUGE = tool_hugehelp.c
 HUGECMD = $(HUGEIT_$(V))
 HUGEIT_0 = @echo "  HUGE    " $@;
-HUGEIT_1 = 
+HUGEIT_1 =
 HUGEIT_ = $(HUGEIT_0)
 CHECKSRC = $(CS_$(V))
 CS_0 = @echo "  RUN     " $@;
-CS_1 = 
+CS_1 =
 CS_ = $(CS_0)
 
 # disable the tests that are mostly causing false positives
@@ -906,7 +906,7 @@ clean-noinstLTLIBRARIES:
 ../lib/libcurltool_la-curl_ctype.lo: ../lib/$(am__dirstamp) \
 	../lib/$(DEPDIR)/$(am__dirstamp)
 
-libcurltool.la: $(libcurltool_la_OBJECTS) $(libcurltool_la_DEPENDENCIES) $(EXTRA_libcurltool_la_DEPENDENCIES) 
+libcurltool.la: $(libcurltool_la_OBJECTS) $(libcurltool_la_DEPENDENCIES) $(EXTRA_libcurltool_la_DEPENDENCIES)
 	$(AM_V_CCLD)$(libcurltool_la_LINK) $(am_libcurltool_la_rpath) $(libcurltool_la_OBJECTS) $(libcurltool_la_LIBADD) $(LIBS)
 ../lib/curl-strtoofft.$(OBJEXT): ../lib/$(am__dirstamp) \
 	../lib/$(DEPDIR)/$(am__dirstamp)
@@ -917,7 +917,7 @@ libcurltool.la: $(libcurltool_la_OBJECTS) $(libcurltool_la_DEPENDENCIES) $(EXTRA
 ../lib/curl-curl_ctype.$(OBJEXT): ../lib/$(am__dirstamp) \
 	../lib/$(DEPDIR)/$(am__dirstamp)
 
-curl$(EXEEXT): $(curl_OBJECTS) $(curl_DEPENDENCIES) $(EXTRA_curl_DEPENDENCIES) 
+curl$(EXEEXT): $(curl_OBJECTS) $(curl_DEPENDENCIES) $(EXTRA_curl_DEPENDENCIES)
 	@rm -f curl$(EXEEXT)
 	$(AM_V_CCLD)$(curl_LINK) $(curl_OBJECTS) $(curl_LDADD) $(LIBS)
 

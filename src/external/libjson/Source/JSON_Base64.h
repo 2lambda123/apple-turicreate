@@ -10,7 +10,7 @@ class JSONBase64 {
 public:
     inline static json_string json_encode64(const unsigned char * binary, size_t bytes) json_nothrow json_cold;
     inline static std::string json_decode64(const json_string & encoded) json_nothrow json_cold;
-private: 
+private:
     JSONBase64(void);
 };
 

@@ -1397,7 +1397,7 @@ gl_sframe activity_classifier::perform_inference(data_iterator *data) const {
           size_t num_samples = std::min<size_t>(prediction_window,
                                                 info.num_samples - cumulative_samples);
           cumulative_samples += prediction_window ;
-          
+
           // Add a row to the output SFrame.
           flex_int prediction_id = info.chunk_index;
           writer.write({info.session_id, prediction_id, preds, num_samples},

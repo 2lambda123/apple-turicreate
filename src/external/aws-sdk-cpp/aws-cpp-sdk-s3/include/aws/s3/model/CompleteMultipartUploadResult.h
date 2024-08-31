@@ -400,19 +400,19 @@ namespace Model
     inline CompleteMultipartUploadResult& WithSSEKMSKeyId(const char* value) { SetSSEKMSKeyId(value); return *this;}
 
 
-    
+
     inline const RequestCharged& GetRequestCharged() const{ return m_requestCharged; }
 
-    
+
     inline void SetRequestCharged(const RequestCharged& value) { m_requestCharged = value; }
 
-    
+
     inline void SetRequestCharged(RequestCharged&& value) { m_requestCharged = std::move(value); }
 
-    
+
     inline CompleteMultipartUploadResult& WithRequestCharged(const RequestCharged& value) { SetRequestCharged(value); return *this;}
 
-    
+
     inline CompleteMultipartUploadResult& WithRequestCharged(RequestCharged&& value) { SetRequestCharged(std::move(value)); return *this;}
 
   private:

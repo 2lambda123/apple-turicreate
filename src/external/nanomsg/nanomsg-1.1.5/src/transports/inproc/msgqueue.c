@@ -144,4 +144,3 @@ int nn_msgqueue_recv (struct nn_msgqueue *self, struct nn_msg *msg)
 
     return 0;
 }
-

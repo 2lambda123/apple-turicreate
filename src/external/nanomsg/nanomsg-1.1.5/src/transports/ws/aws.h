@@ -79,4 +79,3 @@ void nn_aws_start (struct nn_aws *self, struct nn_usock *listener);
 void nn_aws_stop (struct nn_aws *self);
 
 #endif
-

@@ -107,19 +107,19 @@ namespace Model
     inline GetObjectAclResult& AddGrants(Grant&& value) { m_grants.push_back(std::move(value)); return *this; }
 
 
-    
+
     inline const RequestCharged& GetRequestCharged() const{ return m_requestCharged; }
 
-    
+
     inline void SetRequestCharged(const RequestCharged& value) { m_requestCharged = value; }
 
-    
+
     inline void SetRequestCharged(RequestCharged&& value) { m_requestCharged = std::move(value); }
 
-    
+
     inline GetObjectAclResult& WithRequestCharged(const RequestCharged& value) { SetRequestCharged(value); return *this;}
 
-    
+
     inline GetObjectAclResult& WithRequestCharged(RequestCharged&& value) { SetRequestCharged(std::move(value)); return *this;}
 
   private:

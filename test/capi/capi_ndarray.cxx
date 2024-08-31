@@ -44,23 +44,23 @@ void nd_assert_equal(const ndarray<T>& a, const ndarray<T>& b) {
   }
 }
 
-static void test_array_path(const ndarray<double>& a) { 
+static void test_array_path(const ndarray<double>& a) {
 
-  // Construct an ndarray through the C-API with these. 
-  tc_error* error = nullptr; 
+  // Construct an ndarray through the C-API with these.
+  tc_error* error = nullptr;
 
-  std::vector<uint64_t> _shape(a.shape().begin(), a.shape().end()); 
-  std::vector<int64_t> _stride(a.stride().begin(), a.stride().end()); 
+  std::vector<uint64_t> _shape(a.shape().begin(), a.shape().end());
+  std::vector<int64_t> _stride(a.stride().begin(), a.stride().end());
 
 
   tc_ndarray* X = tc_ndarray_create_from_data(
       a.shape().size(),
       _shape.data(),
       _stride.data(),
-      (a.empty() ? nullptr : &(a[0])), 
-      &error); 
+      (a.empty() ? nullptr : &(a[0])),
+      &error);
 
-  BOOST_TEST(error == nullptr); 
+  BOOST_TEST(error == nullptr);
 
   nd_assert_equal(a, X->value);
 
@@ -147,7 +147,7 @@ BOOST_AUTO_TEST_CASE(test_odd_stride) {
  {
    ndarray<double> dim1(std::vector<double>{0,1,2},
                      {1,1,3},
-                     {0,0,1}); 
+                     {0,0,1});
    BOOST_TEST(dim1.is_valid() == true);
    BOOST_TEST(dim1.is_full() == true);
    BOOST_TEST(dim1.is_canonical() == false);
@@ -159,7 +159,7 @@ BOOST_AUTO_TEST_CASE(test_odd_stride) {
  {
    ndarray<double> dim1({0,2,4,1,3,5},
                      {3,1,1,2},
-                     {1,0,0,3}); 
+                     {1,0,0,3});
    BOOST_TEST(dim1.is_valid() == true);
    BOOST_TEST(dim1.is_full() == true);
    BOOST_TEST(dim1.is_canonical() == false);
@@ -168,4 +168,3 @@ BOOST_AUTO_TEST_CASE(test_odd_stride) {
    test_array_path(dim1_c);
  }
 }
-

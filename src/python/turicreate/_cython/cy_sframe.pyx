@@ -32,7 +32,7 @@ from .cy_model cimport create_model_from_proxy
 from .cy_cpp_utils cimport str_to_cpp, cpp_to_str
 from .cy_cpp_utils cimport to_vector_of_strings, from_vector_of_strings
 from .cy_cpp_utils cimport to_nested_vectors_of_strings, dict_to_string_string_map
-        
+
 from ..data_structures.serialization import _safe_serialization_directory
 import os
 
@@ -388,7 +388,7 @@ cdef class UnitySFrameProxy:
 
         save_dir = _safe_serialization_directory()
         sframe_id = str(uuid.uuid4())
-        
+
         self.save(os.path.join(save_dir, sframe_id))
         return (_UnitySFrame_unpickler, (sframe_id,) )
 
@@ -400,4 +400,3 @@ def _UnitySFrame_unpickler(sframe_id):
     proxy.load_from_sframe_index(os.path.join(load_dir, sframe_id))
 
     return proxy
-

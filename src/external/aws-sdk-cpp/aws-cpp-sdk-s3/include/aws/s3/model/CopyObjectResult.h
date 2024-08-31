@@ -391,19 +391,19 @@ namespace Model
     inline CopyObjectResult& WithSSEKMSEncryptionContext(const char* value) { SetSSEKMSEncryptionContext(value); return *this;}
 
 
-    
+
     inline const RequestCharged& GetRequestCharged() const{ return m_requestCharged; }
 
-    
+
     inline void SetRequestCharged(const RequestCharged& value) { m_requestCharged = value; }
 
-    
+
     inline void SetRequestCharged(RequestCharged&& value) { m_requestCharged = std::move(value); }
 
-    
+
     inline CopyObjectResult& WithRequestCharged(const RequestCharged& value) { SetRequestCharged(value); return *this;}
 
-    
+
     inline CopyObjectResult& WithRequestCharged(RequestCharged&& value) { SetRequestCharged(std::move(value)); return *this;}
 
 

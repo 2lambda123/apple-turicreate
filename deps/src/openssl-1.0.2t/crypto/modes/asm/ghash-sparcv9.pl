@@ -335,7 +335,7 @@ gcm_gmult_4bit:
 .type	gcm_gmult_4bit,#function
 .size	gcm_gmult_4bit,(.-gcm_gmult_4bit)
 ___
-
+
 {{{
 # Straightforward 128x128-bit multiplication using Karatsuba algorithm
 # followed by pair of 64-bit reductions [with a shortcut in first one,
@@ -529,7 +529,7 @@ $code.=<<___;
 .align	4
 ___
 
-
+
 # Purpose of these subroutines is to explicitly encode VIS instructions,
 # so that one can compile the module without having to specify VIS
 # extentions on compiler command line, e.g. -xarch=v9 vs. -xarch=v9a.

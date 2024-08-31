@@ -43,4 +43,3 @@ void nn_closefd (int fd)
 }
 
 #endif
-

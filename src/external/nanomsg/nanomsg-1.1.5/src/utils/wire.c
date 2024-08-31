@@ -79,4 +79,3 @@ void nn_putll (uint8_t *buf, uint64_t val)
     buf [6] = (uint8_t) ((val >> 8) & 0xff);
     buf [7] = (uint8_t) (val & 0xff);
 }
-

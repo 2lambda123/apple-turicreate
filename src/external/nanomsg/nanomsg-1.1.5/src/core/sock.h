@@ -199,4 +199,3 @@ int nn_sock_hold (struct nn_sock *self);
 void nn_sock_rele (struct nn_sock *self);
 
 #endif
-

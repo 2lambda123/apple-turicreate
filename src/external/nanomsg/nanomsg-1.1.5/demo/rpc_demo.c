@@ -52,7 +52,7 @@
 /*  The server runs forever. */
 int server(const char *url)
 {
-    int fd; 
+    int fd;
 
     /*  Create the socket. */
     fd = nn_socket (AF_SP, NN_REP);
@@ -159,7 +159,7 @@ int client (const char *url, const char *username)
     if (nn_connect (fd, url) < 0) {
         fprintf (stderr, "nn_socket: %s\n", nn_strerror (nn_errno ()));
         nn_close (fd);
-        return (-1);        
+        return (-1);
     }
 
     if (nn_send (fd, username, strlen (username), 0) < 0) {
@@ -188,7 +188,7 @@ int client (const char *url, const char *username)
     greeting[rc] = '\0';
 
     nn_freemsg (msg);
-    printf ("%s\n", greeting); 
+    printf ("%s\n", greeting);
     free(greeting);
 
     return (0);

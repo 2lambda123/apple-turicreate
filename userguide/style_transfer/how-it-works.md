@@ -24,6 +24,6 @@ There are three aspects about this technique that are worth noting:
   the same size.
 
 During training, we employ [Transfer
-Learning](../image_classifier/how-it-works.md#transfer-learning). The 
+Learning](../image_classifier/how-it-works.md#transfer-learning). The
 model uses the visual semantics of an already trained VGG-16 network to
 understand and mimic stylistic elements.

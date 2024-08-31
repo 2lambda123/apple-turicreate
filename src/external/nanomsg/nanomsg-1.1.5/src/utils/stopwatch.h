@@ -36,7 +36,7 @@
     a timeout should be a little more pessimistic (at least 10ms) then they
     might otherwise think they need to be. */
 #define time_assert(actual,expected) \
-    nn_assert (actual > ((expected) - 10000) && actual < ((expected) + 50000)); 
+    nn_assert (actual > ((expected) - 10000) && actual < ((expected) + 50000));
 
 /*  Measures time interval in microseconds. */
 

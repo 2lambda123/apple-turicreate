@@ -7,21 +7,21 @@ A k-Nearest-Neighbor classifier
 .. code-block:: proto
 
 	message KNearestNeighborsClassifier {
-	
+
 	    NearestNeighborsIndex nearestNeighborsIndex = 1;
-	
+
 	    Int64Parameter numberOfNeighbors = 3;
-	
+
 	    oneof ClassLabels {
 	        StringVector stringClassLabels = 100;
 	        Int64Vector int64ClassLabels = 101;
 	    }
-	
+
 	    oneof DefaultClassLabel {
 	        string defaultStringLabel = 110;
 	        int64 defaultInt64Label = 111;
 	    }
-	
+
 	    oneof WeightingScheme {
 	        UniformWeighting uniformWeighting = 200;
 	        InverseDistanceWeighting inverseDistanceWeighting = 210;
@@ -42,20 +42,20 @@ The "core" attributes of a Nearest Neighbors model.
 .. code-block:: proto
 
 	message NearestNeighborsIndex {
-	
+
 	    int32 numberOfDimensions = 1;
-	
+
 	    repeated FloatVector floatSamples = 2;
-	
+
 	    oneof IndexType {
 	        LinearIndex linearIndex = 100;
 	        SingleKdTreeIndex singleKdTreeIndex = 110;
 	    }
-	
+
 	    oneof DistanceFunction {
 	        SquaredEuclideanDistance squaredEuclideanDistance = 200;
 	    }
-	
+
 	}
 
 
@@ -122,9 +122,9 @@ Specifies a kd-tree backend for the nearest neighbors model.
 .. code-block:: proto
 
 	message SingleKdTreeIndex {
-	
+
 	    int32 leafSize = 1;
-	
+
 	}
 
 

@@ -125,4 +125,3 @@ int nn_timerset_hndl_isactive (struct nn_timerset_hndl *self)
 {
     return nn_list_item_isinlist (&self->list);
 }
-

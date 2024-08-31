@@ -26,7 +26,7 @@ using namespace Aws::Utils;
 using namespace Aws::Http;
 using namespace Aws;
 
-PutBucketPolicyRequest::PutBucketPolicyRequest() : 
+PutBucketPolicyRequest::PutBucketPolicyRequest() :
     m_bucketHasBeenSet(false),
     m_contentMD5HasBeenSet(false),
     m_confirmRemoveSelfBucketAccess(false),

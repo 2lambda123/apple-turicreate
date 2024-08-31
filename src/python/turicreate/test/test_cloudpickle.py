@@ -26,7 +26,7 @@ class CloudPickleTest(unittest.TestCase):
         m = tc.pagerank.create(g)
 
         expected_error = TypeError if (version_info[0] == 3) else PicklingError
-        
+
         for obj in [sa, sf, g, sk, m]:
             self.assertRaises(expected_error, lambda: cloudpickle.dumps(obj))
 

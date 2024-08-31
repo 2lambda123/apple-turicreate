@@ -178,12 +178,12 @@ RUN rm -rf /src/get-pip.py
 
 ENV LD="/usr/local/lib64"
 
-# So this is where the real magic happens. Clang has a flag to specify the 
+# So this is where the real magic happens. Clang has a flag to specify the
 # version of libstdc++ `--gcc-toolchain`. In turicreate we don't necessarily
 # have a flag to take care of this so we can re-create the expected directory
 # structure using the script below. This is effectively creating the structure
 # you'd expect when calling yum install gcc-4.*
-# 
+#
 # Using `clang -v` you can see the version of gcc that clang picks up
 # automatically from `/usr`. If all goes well, this should be the `libstdc++`
 # from gcc-4.8.5 and turicreate can build.

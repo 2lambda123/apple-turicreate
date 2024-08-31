@@ -104,7 +104,7 @@ namespace Aws
                     if (cryptoBuffer.GetLength() && m_cipher)
                     {
                         CryptoBuffer putBackArea(m_putBack);
-                                                
+
                         m_isBuf = CryptoBuffer({&putBackArea, &cryptoBuffer});
                         //in the very unlikely case that the cipher had less output than the source stream.
                         assert(seekTo <= index);
@@ -304,7 +304,7 @@ namespace Aws
                         if(cryptoBuf.GetLength())
                         {
                             //allow mid block decryption. We have to decrypt it, but we don't have to write it to the stream.
-                            //the assumption here is that tellp() will always be 0 or >= 16 bytes. The block offset should only 
+                            //the assumption here is that tellp() will always be 0 or >= 16 bytes. The block offset should only
                             //be the offset of the first block read.
                             auto blockOffset = m_stream.tellp() > m_blockOffset ? 0 : m_blockOffset;
                             m_stream.write(reinterpret_cast<char*>(cryptoBuf.GetUnderlyingData() + blockOffset), cryptoBuf.GetLength() - blockOffset);

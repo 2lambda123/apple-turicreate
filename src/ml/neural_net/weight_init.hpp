@@ -103,7 +103,7 @@ struct scalar_weight_initializer {
   /**
    * Creates a weight initializer that initializes all of the weights to a
    * constant scalar value.
-   * 
+   *
    * \param scalar The scalar value to initialize the weights to.
    */
   scalar_weight_initializer(float scalar);

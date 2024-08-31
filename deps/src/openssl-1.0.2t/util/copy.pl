@@ -34,7 +34,7 @@ if ($fnum <= 1)
 	}
 
 $dest = pop @filelist;
-	
+
 if ($fnum > 2 && ! -d $dest)
 	{
 	die "Destination must be a directory";
@@ -67,5 +67,3 @@ foreach (@filelist)
 	close(OUT);
 	print "Copying: $_ to $dfile\n";
 	}
-		
-

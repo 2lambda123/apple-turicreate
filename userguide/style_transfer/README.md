@@ -3,7 +3,7 @@
 Style Transfer is a task wherein the stylistic elements of a style image
 are imitated onto a new image while preserving the content of the new
 image. As an example, a style transfer model that uses these [style
-images](#style-images) when applied to this [content image](#content-image) 
+images](#style-images) when applied to this [content image](#content-image)
 results in:
 
 ![Photo of cat in different styles](images/cat-stylized.png)
@@ -74,7 +74,7 @@ model works and some more details on advanced options available to you.
 
 #### Using GPUs
 
-Style transfer model training can be accelerated on Linux using NVIDIA GPUs. To setup GPU training, 
+Style transfer model training can be accelerated on Linux using NVIDIA GPUs. To setup GPU training,
 [see instructions here](https://github.com/apple/turicreate/blob/master/LinuxGPU.md). Training on Mac GPUs is currently not supported.
 
 

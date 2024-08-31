@@ -27,7 +27,7 @@ using namespace Aws::Utils;
 using namespace Aws::Http;
 using namespace Aws;
 
-PutObjectRequest::PutObjectRequest() : 
+PutObjectRequest::PutObjectRequest() :
     m_aCL(ObjectCannedACL::NOT_SET),
     m_aCLHasBeenSet(false),
     m_bucketHasBeenSet(false),

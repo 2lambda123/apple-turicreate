@@ -30,9 +30,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (MPSNNPaddingMethod)paddingMethod;
 - (void)encodeWithCoder:(NSCoder *)coder;
-- (MPSImageDescriptor *)destinationImageDescriptorForSourceImages:(NSArray<MPSImage *> *)sourceImages 
-                                                     sourceStates:(NSArray<MPSState *> * __nullable)sourceStates 
-                                                        forKernel:(MPSKernel *)kernel 
+- (MPSImageDescriptor *)destinationImageDescriptorForSourceImages:(NSArray<MPSImage *> *)sourceImages
+                                                     sourceStates:(NSArray<MPSState *> * __nullable)sourceStates
+                                                        forKernel:(MPSKernel *)kernel
                                               suggestedDescriptor:(MPSImageDescriptor *)inDescriptor;
 
 NS_ASSUME_NONNULL_END

@@ -31,4 +31,3 @@
 int nn_btcp_create (struct nn_ep *);
 
 #endif
-

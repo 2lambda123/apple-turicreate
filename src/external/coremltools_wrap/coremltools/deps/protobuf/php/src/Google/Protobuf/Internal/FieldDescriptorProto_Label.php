@@ -26,4 +26,3 @@ class FieldDescriptorProto_Label
      */
     const LABEL_REPEATED = 3;
 }
-

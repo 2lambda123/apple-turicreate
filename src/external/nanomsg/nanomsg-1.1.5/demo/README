@@ -1,4 +1,4 @@
-The programs here are intended to demonstrate how to use the nanomsg API.  
+The programs here are intended to demonstrate how to use the nanomsg API.
 The intention is that you can use these programs (or parts thereof) in
 your own code.
 

@@ -77,7 +77,7 @@ int main (int argc, const char *argv[])
     end0 = test_socket (AF_SP, NN_SURVEYOR);
     end1 = test_socket (AF_SP, NN_RESPONDENT);
 
-    /*  Test the bi-directional device TTL */ 
+    /*  Test the bi-directional device TTL */
     test_connect (end0, socket_address_a);
     test_connect (end1, socket_address_b);
 

@@ -67,7 +67,7 @@ namespace Aws
                 SymmetricCipher(CryptoBuffer&& key, CryptoBuffer&& initializationVector, CryptoBuffer&& tag = CryptoBuffer(0)) :
                         m_key(std::move(key)),
                         m_initializationVector(std::move(initializationVector)),
-                        m_tag(std::move(tag)),  
+                        m_tag(std::move(tag)),
                         m_failure(false)
                 {
                     Validate();
@@ -116,7 +116,7 @@ namespace Aws
                 virtual operator bool() const { return Good(); }
 
                 /**
-                 * Encrypt a buffer of data. Part of the contract for this interface is that intention that 
+                 * Encrypt a buffer of data. Part of the contract for this interface is that intention that
                  * a user call this function multiple times for a large stream. As such, multiple calls to this function
                  * on the same instance should produce valid sequential output for an encrypted stream.
                  */
@@ -165,7 +165,7 @@ namespace Aws
                 /**
                  * Generates a non-deterministic random symmetric key. Default (and minimum bar for security) is 256 bits.
                  */
-                static CryptoBuffer GenerateKey(size_t keyLengthBytes = SYMMETRIC_KEY_LENGTH);                
+                static CryptoBuffer GenerateKey(size_t keyLengthBytes = SYMMETRIC_KEY_LENGTH);
 
             protected:
                 SymmetricCipher() : m_failure(false) {}

@@ -26,7 +26,7 @@ using namespace Aws::Utils::Xml;
 using namespace Aws::Utils;
 using namespace Aws::Http;
 
-GetBucketAccelerateConfigurationRequest::GetBucketAccelerateConfigurationRequest() : 
+GetBucketAccelerateConfigurationRequest::GetBucketAccelerateConfigurationRequest() :
     m_bucketHasBeenSet(false),
     m_customizedAccessLogTagHasBeenSet(false)
 {
@@ -58,4 +58,3 @@ void GetBucketAccelerateConfigurationRequest::AddQueryStringParameters(URI& uri)
         }
     }
 }
-

@@ -30,13 +30,13 @@ void testJSON_Base64__json_encode64::testReverseEachOther(void){
  */
 void testJSON_Base64__json_encode64::testAllChars(void){
 	#if defined(JSON_BINARY) || defined(JSON_EXPOSE_BASE64)
-	
+
 		//create a binary chunk of data to use with every char
 		unsigned char temp[255];
 		for(unsigned int i = 0; i < 255; ++i){
 			temp[i] = (unsigned char)i;
 		}
-		
+
 		//loop through all of the lengths
 		for(unsigned int length = 1; length < 255; ++length){
 			json_string ts = JSONBase64::json_encode64(temp, length);

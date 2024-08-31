@@ -159,7 +159,7 @@ int main ()
     nn_assert (rc == 0);
     rc = nn_trie_match (&trie, (const uint8_t*) "A", 1);
     nn_assert (rc == 0);
-    nn_trie_term (&trie);  
+    nn_trie_term (&trie);
 
     /*  Check converting from sparse node to dense node and vice versa. */
     nn_trie_init (&trie);
@@ -207,4 +207,3 @@ int main ()
 
     return 0;
 }
-

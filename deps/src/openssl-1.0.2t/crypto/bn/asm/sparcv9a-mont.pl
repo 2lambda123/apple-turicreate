@@ -168,7 +168,7 @@ $fname:
 	add	$np,$num,$np
 
 	stx	%o7,[%sp+$bias+$frame+48]	! save %asi
-
+
 	sub	%g0,$num,$i		! i=-num
 	sub	%g0,$num,$j		! j=-num
 
@@ -269,7 +269,7 @@ $fname:
 	std	$nloc,[%sp+$bias+$frame+16]
 	add	$np,$j,%o5
 	std	$nlod,[%sp+$bias+$frame+24]
-
+
 	ld	[%o4+0],$alo_	! load a[j] as pair of 32-bit words
 	fzeros	$alo
 	ld	[%o4+4],$ahi_
@@ -352,7 +352,7 @@ $fname:
 	std	$nloc,[%sp+$bias+$frame+16]
 	bz,pn	%icc,.L1stskip
 	std	$nlod,[%sp+$bias+$frame+24]
-
+
 .align	32			! incidentally already aligned !
 .L1st:
 	add	$ap,$j,%o4
@@ -445,7 +445,7 @@ $fname:
 	addcc	$j,8,$j
 	bnz,pt	%icc,.L1st
 	add	$tp,8,$tp
-
+
 .L1stskip:
 	fdtox	$dota,$dota
 	fdtox	$dotb,$dotb
@@ -494,7 +494,7 @@ $fname:
 
 	mov	%g1,$carry
 	stx	%o4,[$tp]		! tp[num-1]=
-
+
 	ba	.Louter
 	add	$i,8,$i
 .align	32
@@ -583,7 +583,7 @@ $fname:
 	std	$nloc,[%sp+$bias+$frame+16]
 	add	$j,8,$j
 	std	$nlod,[%sp+$bias+$frame+24]
-
+
 	ldd	[$ap_l+$j],$alo		! load a[j] in double format
 	ldd	[$ap_h+$j],$ahi
 	ldd	[$np_l+$j],$nlo		! load n[j] in double format
@@ -656,7 +656,7 @@ $fname:
 	std	$nloc,[%sp+$bias+$frame+16]
 	bz,pn	%icc,.Linnerskip
 	std	$nlod,[%sp+$bias+$frame+24]
-
+
 	ba	.Linner
 	nop
 .align	32
@@ -736,7 +736,7 @@ $fname:
 	std	$nlod,[%sp+$bias+$frame+24]
 	bnz,pt	%icc,.Linner
 	add	$tp,8,$tp
-
+
 .Linnerskip:
 	fdtox	$dota,$dota
 	fdtox	$dotb,$dotb
@@ -797,7 +797,7 @@ $fname:
 	addcc	$i,8,$i
 	bnz	%icc,.Louter
 	nop
-
+
 	add	$tp,8,$tp		! adjust tp to point at the end
 	orn	%g0,%g0,%g4
 	sub	%g0,$num,%o7		! n=-num

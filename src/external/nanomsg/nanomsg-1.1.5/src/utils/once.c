@@ -25,7 +25,7 @@
 
 /*  This craziness is required because Windows doesn't have the notion of
     static initializers for CriticalSections.  */
- 
+
 BOOL CALLBACK nn_do_once_cb (PINIT_ONCE InitOnce,
     PVOID Parameter, PVOID *Context)
 {

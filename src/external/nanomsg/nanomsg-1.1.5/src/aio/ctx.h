@@ -55,4 +55,3 @@ void nn_ctx_raise (struct nn_ctx *self, struct nn_fsm_event *event);
 void nn_ctx_raiseto (struct nn_ctx *self, struct nn_fsm_event *event);
 
 #endif
-

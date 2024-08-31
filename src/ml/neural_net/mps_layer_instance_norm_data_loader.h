@@ -7,7 +7,7 @@
 #import <Accelerate/Accelerate.h>
 #import <Foundation/Foundation.h>
 #import <Metal/Metal.h>
-#import <MetalPerformanceShaders/MetalPerformanceShaders.h> 
+#import <MetalPerformanceShaders/MetalPerformanceShaders.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
  * MPSCNNInstanceNormalizationNode node with data. There are a few key methods
  * on this class that the MPS api calls. These are listed below
  *
- * KEY METHODS 
+ * KEY METHODS
  * -----------
  *
  * - beta, gamma
@@ -69,7 +69,7 @@ API_AVAILABLE(macos(10.14))
 - (float *) gamma;
 - (float *) gammaWeights;
 
-- (MPSCNNNormalizationGammaAndBetaState *)updateGammaAndBetaWithCommandBuffer:(id<MTLCommandBuffer>)commandBuffer 
+- (MPSCNNNormalizationGammaAndBetaState *)updateGammaAndBetaWithCommandBuffer:(id<MTLCommandBuffer>)commandBuffer
                                               instanceNormalizationStateBatch:(MPSCNNInstanceNormalizationGradientStateBatch *)instanceNormalizationStateBatch;
 
 - (void)checkpoint;

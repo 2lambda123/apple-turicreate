@@ -42,7 +42,7 @@ Certificate:
                 CA:TRUE
             X509v3 Key Usage: critical
                 Certificate Sign, CRL Sign
-            X509v3 Subject Key Identifier: 
+            X509v3 Subject Key Identifier:
                 12:CA:BA:4B:46:04:A7:75:8A:2C:E8:0E:54:94:BC:12:65:A6:7B:CE
     Signature Algorithm: sha256WithRSAEncryption
          2c:82:a4:ff:21:f3:fc:ba:6a:7a:11:b1:56:d4:9a:8f:4d:bf:

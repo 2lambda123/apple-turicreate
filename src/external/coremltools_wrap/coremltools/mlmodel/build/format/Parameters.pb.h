@@ -555,7 +555,7 @@ inline ::google::protobuf::int64 Int64Parameter::defaultvalue() const {
   return defaultvalue_;
 }
 inline void Int64Parameter::set_defaultvalue(::google::protobuf::int64 value) {
-  
+
   defaultvalue_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.Int64Parameter.defaultValue)
 }
@@ -678,7 +678,7 @@ inline double DoubleParameter::defaultvalue() const {
   return defaultvalue_;
 }
 inline void DoubleParameter::set_defaultvalue(double value) {
-  
+
   defaultvalue_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.DoubleParameter.defaultValue)
 }
@@ -753,13 +753,13 @@ inline const ::std::string& StringParameter::defaultvalue() const {
   return defaultvalue_.GetNoArena();
 }
 inline void StringParameter::set_defaultvalue(const ::std::string& value) {
-  
+
   defaultvalue_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:CoreML.Specification.StringParameter.defaultValue)
 }
 #if LANG_CXX11
 inline void StringParameter::set_defaultvalue(::std::string&& value) {
-  
+
   defaultvalue_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:CoreML.Specification.StringParameter.defaultValue)
@@ -767,31 +767,31 @@ inline void StringParameter::set_defaultvalue(::std::string&& value) {
 #endif
 inline void StringParameter::set_defaultvalue(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  
+
   defaultvalue_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:CoreML.Specification.StringParameter.defaultValue)
 }
 inline void StringParameter::set_defaultvalue(const char* value, size_t size) {
-  
+
   defaultvalue_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:CoreML.Specification.StringParameter.defaultValue)
 }
 inline ::std::string* StringParameter::mutable_defaultvalue() {
-  
+
   // @@protoc_insertion_point(field_mutable:CoreML.Specification.StringParameter.defaultValue)
   return defaultvalue_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* StringParameter::release_defaultvalue() {
   // @@protoc_insertion_point(field_release:CoreML.Specification.StringParameter.defaultValue)
-  
+
   return defaultvalue_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void StringParameter::set_allocated_defaultvalue(::std::string* defaultvalue) {
   if (defaultvalue != NULL) {
-    
+
   } else {
-    
+
   }
   defaultvalue_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), defaultvalue);
   // @@protoc_insertion_point(field_set_allocated:CoreML.Specification.StringParameter.defaultValue)
@@ -810,7 +810,7 @@ inline bool BoolParameter::defaultvalue() const {
   return defaultvalue_;
 }
 inline void BoolParameter::set_defaultvalue(bool value) {
-  
+
   defaultvalue_ = value;
   // @@protoc_insertion_point(field_set:CoreML.Specification.BoolParameter.defaultValue)
 }

@@ -26,7 +26,7 @@ using namespace Aws::Utils::Xml;
 using namespace Aws::Utils;
 using namespace Aws::Http;
 
-PutBucketCorsRequest::PutBucketCorsRequest() : 
+PutBucketCorsRequest::PutBucketCorsRequest() :
     m_bucketHasBeenSet(false),
     m_cORSConfigurationHasBeenSet(false),
     m_contentMD5HasBeenSet(false),

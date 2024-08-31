@@ -427,7 +427,7 @@ BOOST_AUTO_TEST_CASE(test_pad) {
   TS_ASSERT_DELTA(res_image[128][128].data()[0], 0.f, kEpsilon);  // R
   TS_ASSERT_DELTA(res_image[128][128].data()[1], 0.f, kEpsilon);  // G
   TS_ASSERT_DELTA(res_image[128][128].data()[2], 0.f, kEpsilon);  // B
-  
+
   // The upper-right corner of the original image should still be red.
   TS_ASSERT_DELTA(res_image[128][255].data()[0], 1.f, kEpsilon);  // R
   TS_ASSERT_DELTA(res_image[128][255].data()[1], 0.f, kEpsilon);  // G

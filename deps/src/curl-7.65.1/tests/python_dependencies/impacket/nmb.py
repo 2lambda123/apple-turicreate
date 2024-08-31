@@ -13,20 +13,20 @@ from __future__ import absolute_import
 # Copyright (C) 2001 Michael Teo <michaelteo@bigfoot.com>
 # nmb.py - NetBIOS library
 #
-# This software is provided 'as-is', without any express or implied warranty. 
-# In no event will the author be held liable for any damages arising from the 
+# This software is provided 'as-is', without any express or implied warranty.
+# In no event will the author be held liable for any damages arising from the
 # use of this software.
 #
-# Permission is granted to anyone to use this software for any purpose, 
-# including commercial applications, and to alter it and redistribute it 
+# Permission is granted to anyone to use this software for any purpose,
+# including commercial applications, and to alter it and redistribute it
 # freely, subject to the following restrictions:
 #
-# 1. The origin of this software must not be misrepresented; you must not 
-#    claim that you wrote the original software. If you use this software 
+# 1. The origin of this software must not be misrepresented; you must not
+#    claim that you wrote the original software. If you use this software
 #    in a product, an acknowledgment in the product documentation would be
 #    appreciated but is not required.
 #
-# 2. Altered source versions must be plainly marked as such, and must not be 
+# 2. Altered source versions must be plainly marked as such, and must not be
 #    misrepresented as being the original software.
 #
 # 3. This notice cannot be removed or altered from any source distribution.
@@ -148,8 +148,8 @@ def strerror(errclass, errcode):
         return 'Session Error', SESSION_ERRORS.get(errcode, 'Unknown error')
     else:
         return 'Unknown Error Class', 'Unknown Error'
-    
-    
+
+
 
 class NetBIOSError(Exception): pass
 class NetBIOSTimeout(Exception):
@@ -267,16 +267,16 @@ class NBPositiveNameQueryResponse(NBResourceRecord):
                 while offset<len(self._data):
                     self.addr_entries.append('%d.%d.%d.%d' % unpack('4B', (self._data[offset:offset+4])))
                     offset += 4
-    
+
     def get_netbios_name(self):
         return self._netbios_name
-    
+
     def get_name_type(self):
         return self._name_type
-    
+
     def get_addr_entries(self):
         return self.addr_entries
-                
+
 class NetBIOSPacket:
     """ This is a packet as defined in RFC 1002 """
     def __init__(self, data = 0):
@@ -304,7 +304,7 @@ class NetBIOSPacket:
         else:
             try:
                 self._data = data
-                self.opcode = ord(data[2]) >> 3 
+                self.opcode = ord(data[2]) >> 3
                 self.nm_flags = ((ord(data[2]) & 0x3) << 4) | ((ord(data[3]) & 0xf0) >> 4)
                 self.name_trn_id = unpack('>H', self._data[:2])[0]
                 self.rcode = ord(data[3]) & 0x0f
@@ -315,7 +315,7 @@ class NetBIOSPacket:
                 self.answers = self._data[12:]
             except Exception:
                 raise NetBIOSError( 'Wrong packet format ' )
-            
+
     def set_opcode(self, opcode):
         self.opcode = opcode
     def set_trn_id(self, trn):
@@ -372,8 +372,8 @@ class NBHostEntry:
         return '<NBHostEntry instance: NBname="' + self.__nbname + '", IP="' + self.__ip + '">'
 
 class NBNodeEntry:
-    
-    def __init__(self, nbname, nametype, flags): 
+
+    def __init__(self, nbname, nametype, flags):
         self.__nbname = string.ljust(nbname,17)
         self.__nametype = nametype
         self.__flags = flags
@@ -416,7 +416,7 @@ class NBNodeEntry:
 
     def set_flags(self,flags):
         self.__flags = flags
-        
+
     def __repr__(self):
         s = '<NBNodeEntry instance: NBname="' + self.__nbname + '" NameType="' + NAME_TYPES[self.__nametype] + '"'
         if self.__isactive:
@@ -471,7 +471,7 @@ class NetBIOS:
     def set_broadcastaddr(self, broadcastaddr):
         self.__broadcastaddr = broadcastaddr
 
-    # Return the broadcast address to be used, or BROADCAST_ADDR if default broadcast address is used.   
+    # Return the broadcast address to be used, or BROADCAST_ADDR if default broadcast address is used.
     def get_broadcastaddr(self):
         return self.__broadcastaddr
 
@@ -510,9 +510,9 @@ class NetBIOS:
         p.set_nm_flags(NM_FLAGS_RD)
         if not destaddr:
             p.set_nm_flags(p.get_nm_flags() | NM_FLAGS_BROADCAST)
-            destaddr = self.__broadcastaddr            
+            destaddr = self.__broadcastaddr
         req = p.rawData()
-        
+
         tries = retries
         while 1:
             self.__sock.sendto(req, ( destaddr, self.__servport ))
@@ -526,7 +526,7 @@ class NetBIOS:
                         raise NetBIOSTimeout
                 else:
                     data, _ = self.__sock.recvfrom(65536, 0)
-                    
+
                     res = NetBIOSPacket(data)
                     if res.get_trn_id() == p.get_trn_id():
                         if res.get_rcode():
@@ -534,10 +534,10 @@ class NetBIOS:
                                 return None
                             else:
                                 raise NetBIOSError( 'Negative name query response', ERRCLASS_QUERY, res.get_rcode())
-                        
+
                         if res.get_ancount() != 1:
                             raise NetBIOSError( 'Malformed response')
-                        
+
                         return NBPositiveNameQueryResponse(res.get_answers())
             except select.error as ex:
                 if ex[0] != errno.EINTR and ex[0] != errno.EAGAIN:
@@ -556,7 +556,7 @@ class NetBIOS:
 
         if not destaddr:
             p.set_nm_flags(NM_FLAGS_BROADCAST)
-            destaddr = self.__broadcastaddr            
+            destaddr = self.__broadcastaddr
         req = p.rawData()
         tries = 3
         while 1:
@@ -600,7 +600,7 @@ def encode_name(name, type, scope):
         name = name[:15] + chr(type)
     else:
         name = string.ljust(name, 15) + chr(type)
-        
+
     encoded_name = chr(len(name) * 2) + re.sub('.', _do_first_level_encoding, name)
     if scope:
         encoded_scope = ''
@@ -641,7 +641,7 @@ def _do_first_level_decoding(m):
 
 class NetBIOSSessionPacket:
     def __init__(self, data = 0):
-        self.type = 0x0 
+        self.type = 0x0
         self.flags = 0x0
         self.length = 0x0
         if data == 0:
@@ -676,7 +676,7 @@ class NetBIOSSessionPacket:
         return self.length
     def get_trailer(self):
         return self._trailer
-        
+
 class NetBIOSSession:
     def __init__(self, myname, remote_name, remote_host, remote_type = TYPE_SERVER, sess_port = NETBIOS_SESSION_PORT, timeout = None, local_type = TYPE_WORKSTATION, sock = None):
         if len(myname) > 15:
@@ -689,17 +689,17 @@ class NetBIOSSession:
         # if destination port SMB_SESSION_PORT and remote name *SMBSERVER, we're changing it to its IP address
         # helping solving the client mistake ;)
         if remote_name == '*SMBSERVER' and sess_port == SMB_SESSION_PORT:
-            remote_name = remote_host 
+            remote_name = remote_host
         # If remote name is *SMBSERVER let's try to query its name.. if can't be guessed, continue and hope for the best
         if remote_name == '*SMBSERVER':
             nb = NetBIOS()
-            
+
             try:
                 res = nb.getnetbiosname(remote_host)
             except:
                 res = None
-                pass 
-            
+                pass
+
             if res is not None:
                 remote_name = res
 
@@ -835,7 +835,7 @@ class NetBIOSTCPSession(NetBIOSSession):
             self.read_function = self.polling_read
         else:
             self.read_function = self.non_polling_read
-        NetBIOSSession.__init__(self, myname, remote_name, remote_host, remote_type = remote_type, sess_port = sess_port, timeout = timeout, local_type = local_type, sock=sock)                
+        NetBIOSSession.__init__(self, myname, remote_name, remote_host, remote_type = remote_type, sess_port = sess_port, timeout = timeout, local_type = local_type, sock=sock)
 
 
     def _setup_connection(self, peer):
@@ -887,7 +887,7 @@ class NetBIOSTCPSession(NetBIOSSession):
         while bytes_left > 0:
             try:
                 ready, _, _ = select.select([self._sock.fileno() ], [ ], [ ], 0)
-                
+
                 if not ready:
                     if time_left <= 0:
                         raise NetBIOSTimeout
@@ -973,8 +973,8 @@ def main():
             else:
                 return addrs
         raise Exception("Host not found")
-                
-    
+
+
     n = get_netbios_host_by_name("some-host")
     print(n)
 

@@ -108,7 +108,7 @@ int main ()
 
     /*  Verify that the pipe has the same security descriptor that we set by
         comparing the ace of the kernel object to the one we created it with. */
-    pipeHandle = CreateFileA ("\\\\.\\\\pipe\\" PIPE_NAME, READ_CONTROL, 0, NULL, 
+    pipeHandle = CreateFileA ("\\\\.\\\\pipe\\" PIPE_NAME, READ_CONTROL, 0, NULL,
         OPEN_EXISTING, FILE_FLAG_OVERLAPPED, NULL);
 
     nn_assert (pipeHandle != INVALID_HANDLE_VALUE);
@@ -137,7 +137,7 @@ int main ()
     test_close (sb);
 
     LocalFree (pACL);
-    
+
     free (sec.lpSecurityDescriptor);
 
     return 0;

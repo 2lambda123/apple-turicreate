@@ -27,4 +27,3 @@ AmazonWebServiceRequest::AmazonWebServiceRequest() :
     m_requestRetryHandler(nullptr)
 {
 }
-

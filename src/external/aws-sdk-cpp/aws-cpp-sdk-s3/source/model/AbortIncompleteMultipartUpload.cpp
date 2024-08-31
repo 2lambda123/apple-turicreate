@@ -30,13 +30,13 @@ namespace S3
 namespace Model
 {
 
-AbortIncompleteMultipartUpload::AbortIncompleteMultipartUpload() : 
+AbortIncompleteMultipartUpload::AbortIncompleteMultipartUpload() :
     m_daysAfterInitiation(0),
     m_daysAfterInitiationHasBeenSet(false)
 {
 }
 
-AbortIncompleteMultipartUpload::AbortIncompleteMultipartUpload(const XmlNode& xmlNode) : 
+AbortIncompleteMultipartUpload::AbortIncompleteMultipartUpload(const XmlNode& xmlNode) :
     m_daysAfterInitiation(0),
     m_daysAfterInitiationHasBeenSet(false)
 {

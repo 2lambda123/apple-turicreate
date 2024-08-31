@@ -52,28 +52,28 @@ namespace Model
     void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
-    
+
     inline const Aws::String& GetId() const{ return m_id; }
 
-    
+
     inline bool IdHasBeenSet() const { return m_idHasBeenSet; }
 
-    
+
     inline void SetId(const Aws::String& value) { m_idHasBeenSet = true; m_id = value; }
 
-    
+
     inline void SetId(Aws::String&& value) { m_idHasBeenSet = true; m_id = std::move(value); }
 
-    
+
     inline void SetId(const char* value) { m_idHasBeenSet = true; m_id.assign(value); }
 
-    
+
     inline QueueConfigurationDeprecated& WithId(const Aws::String& value) { SetId(value); return *this;}
 
-    
+
     inline QueueConfigurationDeprecated& WithId(Aws::String&& value) { SetId(std::move(value)); return *this;}
 
-    
+
     inline QueueConfigurationDeprecated& WithId(const char* value) { SetId(value); return *this;}
 
 

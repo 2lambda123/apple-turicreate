@@ -49,7 +49,7 @@ class API_AVAILABLE(macos(10.16)) mlc_compute_context : public compute_context {
 
  protected:
   MLCDevice* GetDevice() const;
-  
+
  private:
   MLCDevice* device_ = nil;
 };

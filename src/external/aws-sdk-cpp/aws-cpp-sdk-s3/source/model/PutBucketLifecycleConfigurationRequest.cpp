@@ -26,7 +26,7 @@ using namespace Aws::Utils::Xml;
 using namespace Aws::Utils;
 using namespace Aws::Http;
 
-PutBucketLifecycleConfigurationRequest::PutBucketLifecycleConfigurationRequest() : 
+PutBucketLifecycleConfigurationRequest::PutBucketLifecycleConfigurationRequest() :
     m_bucketHasBeenSet(false),
     m_lifecycleConfigurationHasBeenSet(false),
     m_customizedAccessLogTagHasBeenSet(false)
@@ -70,4 +70,3 @@ void PutBucketLifecycleConfigurationRequest::AddQueryStringParameters(URI& uri) 
         }
     }
 }
-

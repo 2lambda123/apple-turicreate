@@ -30,13 +30,13 @@ namespace S3
 namespace Model
 {
 
-AccelerateConfiguration::AccelerateConfiguration() : 
+AccelerateConfiguration::AccelerateConfiguration() :
     m_status(BucketAccelerateStatus::NOT_SET),
     m_statusHasBeenSet(false)
 {
 }
 
-AccelerateConfiguration::AccelerateConfiguration(const XmlNode& xmlNode) : 
+AccelerateConfiguration::AccelerateConfiguration(const XmlNode& xmlNode) :
     m_status(BucketAccelerateStatus::NOT_SET),
     m_statusHasBeenSet(false)
 {

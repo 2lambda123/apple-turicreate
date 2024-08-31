@@ -79,7 +79,7 @@ namespace CoreML {
                               ("Type of pipeline output '" + output.name() + "' does not match type produced in pipeline input."));
             }
         }
-        
+
         if (spec.isupdatable()) {
             for (int modelIdx = 0; modelIdx < nModels - 1; modelIdx++) {
                 auto model = pipelineParams.models(modelIdx);

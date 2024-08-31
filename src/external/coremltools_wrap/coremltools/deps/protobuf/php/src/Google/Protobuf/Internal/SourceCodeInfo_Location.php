@@ -376,4 +376,3 @@ class SourceCodeInfo_Location extends \Google\Protobuf\Internal\Message
     }
 
 }
-

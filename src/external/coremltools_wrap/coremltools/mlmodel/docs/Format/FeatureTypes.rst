@@ -77,21 +77,21 @@ The image feature type.
 	        RGB = 20;       // 32 bits per pixel: RGBA with A channel ignored
 	        BGR = 30;       // 32 bits per pixel: BGRA with A channel ignored
 	    }
-	
+
 	    message ImageSize {
 	        uint64 width = 1;
 	        uint64 height = 2;
 	    }
-	
+
 	    message EnumeratedImageSizes {
 	        repeated ImageSize sizes = 1;
 	    }
-	
+
 	    message ImageSizeRange {
 	        SizeRange widthRange = 1;
 	        SizeRange heightRange = 2;
 	    }
-	
+
 	    // The required or default image size is width x height
 	    //
 	    // If specificationVersion <= 2 or SizeFlexibility is empty,
@@ -99,14 +99,14 @@ The image feature type.
 	    //
 	    // If SizeFlexibility is present, width x height indicate a "default"
 	    // image size which must be consistent with the flexibilty specified
-	
+
 	    int64 width = 1;
 	    int64 height = 2;
-	
+
 	    // For specification version >= 3 you can specify image size flexibility.
-	
+
 	    oneof SizeFlexibility {
-	
+
 	        // Use enumeratedSizes for a set of distinct fixed sizes
 	        // e.g. portrait or landscape: [80 x 100, 100 x 8]
 	        //
@@ -117,9 +117,9 @@ The image feature type.
 	        // and height will be enumeratedSizes[0]
 	        //
 	        // Must be non-empty
-	
+
 	        EnumeratedImageSizes enumeratedSizes = 21;
-	
+
 	        // Use imageSizeRange to allow for ranges of values
 	        // e.g. any image greater than 10 x 20: [10..<max] x [20..<max]
 	        //
@@ -128,10 +128,10 @@ The image feature type.
 	        //
 	        // If width and height are not specified above then the default width
 	        // and height will be imageSizeRange.widthRange.lowerBound x imageSizeRange.heightRange.lowerBound
-	
+
 	        ImageSizeRange imageSizeRange = 31;
 	    }
-	
+
 	    ColorSpace colorSpace = 3;
 	}
 
@@ -202,14 +202,14 @@ The array feature type.
 .. code-block:: proto
 
 	message ArrayFeatureType {
-	
+
 	    enum ArrayDataType {
 	        INVALID_ARRAY_DATA_TYPE = 0;
 	        FLOAT32 = 65568; // 0x10000 | 32
 	        DOUBLE = 65600;  // 0x10000 | 64
 	        INT32 = 131104;  // 0x20000 | 32
 	    }
-	
+
 	    // The required or default shape
 	    //
 	    // If specificationVersion <= 2 or ShapeFlexibility is empty,
@@ -217,29 +217,29 @@ The array feature type.
 	    //
 	    // If ShapeFlexibility is present, shape indicate a "default"
 	    // shape which must be consistent with the flexibilty specified
-	
+
 	    repeated int64 shape = 1;
-	
+
 	    ArrayDataType dataType = 2;
-	
+
 	    message Shape {
 	        repeated int64 shape = 1;
 	    }
-	
+
 	    message EnumeratedShapes {
 	        repeated Shape shapes = 1;
 	    }
-	
+
 	    message ShapeRange {
 	        // sizeRanges.size() must be length 1 or 3
 	        // sizeRanges[d] specifies the allowed range for dimension d
 	        repeated SizeRange sizeRanges = 1;
 	    }
-	
+
 	    // For specification version >= 3 you can specify image size flexibility.
-	
+
 	    oneof ShapeFlexibility {
-	
+
 	        // Use enumeratedShapes for a set of distinct fixed shapes
 	        //
 	        // If the shape field is specified then it must be
@@ -248,9 +248,9 @@ The array feature type.
 	        // enumeratedShapes[0]
 	        //
 	        // Must be non-empty
-	
+
 	        EnumeratedShapes enumeratedShapes = 21;
-	
+
 	        // Use shapeRange to allow the size of each dimension vary within
 	        // indpendently specified ranges
 	        //
@@ -259,17 +259,17 @@ The array feature type.
 	        //
 	        // If you don't specify shape above then the default shape will
 	        // have shape[d] = shapeRange.sizeRanges[d].lowerBound
-	
+
 	        ShapeRange shapeRange = 31;
-	
+
 	    }
-	
+
 	    oneof defaultOptionalValue {
 	        int32 intDefaultValue = 41;
 	        float floatDefaultValue = 51;
 	        double doubleDefaultValue = 61;
 	    }
-	
+
 	}
 
 
@@ -359,12 +359,12 @@ The Sequence feature type.
 .. code-block:: proto
 
 	message SequenceFeatureType {
-	
+
 	    oneof Type {
 	        Int64FeatureType int64Type = 1;
 	        StringFeatureType stringType = 3;
 	    }
-	
+
 	    // Range of allowed size/length/count of sequence
 	    SizeRange sizeRange = 101;
 	}
@@ -392,7 +392,7 @@ A feature, which may be optional.
 	        DictionaryFeatureType dictionaryType = 6;
 	        SequenceFeatureType sequenceType = 7;
 	    }
-	
+
 	    bool isOptional = 1000;
 	}
 

@@ -101,7 +101,7 @@ void brute_force_neighbors::train(const sframe& X,
   add_or_update_state({ {"method", "brute_force"},
                         {"training_time", t.current_time() - start_time} });
 
-  logprogress_stream << "Done." << std::endl;  
+  logprogress_stream << "Done." << std::endl;
 }
 
 

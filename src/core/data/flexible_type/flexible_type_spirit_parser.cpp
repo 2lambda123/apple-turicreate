@@ -212,9 +212,9 @@ flexible_type_parser::flexible_type_parser(std::string separator,
                                            const std::unordered_set<std::string>& true_val,
                                            const std::unordered_set<std::string>& false_val,
                                            bool only_raw_string_substitutions):
-    parser(new flexible_type_parser_impl<const char*, 
-           decltype(space)>(separator, use_escape_char, escape_char, na_val, true_val, false_val, only_raw_string_substitutions)), 
-    non_space_parser(new flexible_type_parser_impl<const char*, 
+    parser(new flexible_type_parser_impl<const char*,
+           decltype(space)>(separator, use_escape_char, escape_char, na_val, true_val, false_val, only_raw_string_substitutions)),
+    non_space_parser(new flexible_type_parser_impl<const char*,
                      decltype(!qi::eps)>(separator, use_escape_char, escape_char, na_val, true_val, false_val, only_raw_string_substitutions)),
     m_delimiter_has_space(delimiter_has_space(parser->delimiter))
     { }

@@ -105,19 +105,19 @@ namespace Model
     inline DeleteObjectResult& WithVersionId(const char* value) { SetVersionId(value); return *this;}
 
 
-    
+
     inline const RequestCharged& GetRequestCharged() const{ return m_requestCharged; }
 
-    
+
     inline void SetRequestCharged(const RequestCharged& value) { m_requestCharged = value; }
 
-    
+
     inline void SetRequestCharged(RequestCharged&& value) { m_requestCharged = std::move(value); }
 
-    
+
     inline DeleteObjectResult& WithRequestCharged(const RequestCharged& value) { SetRequestCharged(value); return *this;}
 
-    
+
     inline DeleteObjectResult& WithRequestCharged(RequestCharged&& value) { SetRequestCharged(std::move(value)); return *this;}
 
   private:

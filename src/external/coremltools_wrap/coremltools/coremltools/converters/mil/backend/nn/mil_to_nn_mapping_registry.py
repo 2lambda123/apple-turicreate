@@ -12,7 +12,7 @@ def register_mil_to_nn_mapping(func=None, override=False):
             raise ValueError("MIL to NN mapping for MIL op {} is already registered.".format(f_name))
         MIL_TO_NN_MAPPING_REGISTRY[f_name] = _func
         return _func
-    
+
     if func is None:
         # decorator called without argument
         return func_wrapper

@@ -569,7 +569,7 @@ rem
         if not exist "%OUTDIR%\DLL Release" (
           mkdir "%OUTDIR%\DLL Release" 1>nul
         )
-  
+
         move !build_dir!\lib\*.lib "%OUTDIR%\DLL Release" 1>nul
         move !build_dir!\bin\*.dll "%OUTDIR%\DLL Release" 1>nul
         move !build_dir!\bin\*.exe "%OUTDIR%\DLL Release" 1>nul

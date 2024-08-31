@@ -12,7 +12,7 @@ A normalization preprocessor.
 	        L1 = 1;
 	        L2 = 2;
 	    }
-	
+
 	    NormType normType = 1;
 	}
 

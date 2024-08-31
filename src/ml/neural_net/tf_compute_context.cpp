@@ -349,7 +349,7 @@ std::unique_ptr<model_backend> tf_compute_context::create_activity_classifier(
 std::unique_ptr<image_augmenter> tf_compute_context::create_image_augmenter(
     const image_augmenter::options& opts) {
   std::unique_ptr<tf_image_augmenter> result;
-  
+
   call_pybind_function([&]() {
 
     const size_t output_height = opts.output_height;

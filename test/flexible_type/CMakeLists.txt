@@ -6,4 +6,3 @@ make_boost_test(flexible_type_hashing.cxx REQUIRES unity_shared_for_testing)
 make_boost_test(ndarray_test.cxx REQUIRES unity_shared_for_testing)
 make_executable(flexible_datatype_bench SOURCES flexible_datatype_bench.cpp REQUIRES unity_shared_for_testing)
 make_executable(flexible_type_spirit SOURCES flexible_type_spirit REQUIRES unity_shared_for_testing)
-

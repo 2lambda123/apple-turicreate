@@ -256,7 +256,7 @@ def get_deep_features(images, model_name, batch_size=64, verbose=True):
     # Extract features
     feature_extractor = _image_feature_extractor._create_feature_extractor(model_name)
     images_sf = _tc.SFrame({"image":images})
-    return feature_extractor.extract_features(images_sf, "image", verbose=verbose, 
+    return feature_extractor.extract_features(images_sf, "image", verbose=verbose,
         batch_size=batch_size)
 
 

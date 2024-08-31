@@ -30,7 +30,7 @@ function unknown_target {
   echo "Unrecognized target: $1"
   echo "To get help, run ./configure --help"
   exit 1
-} 
+}
 
 function unknown_option {
   echo "Unrecognized option: $1"
@@ -86,7 +86,7 @@ while [ $# -gt 0 ]
 
     -D)                     configure_options="${configure_options} -D $2"; shift ;;
 
-    *)                      configure_options="${configure_options} $1";; 
+    *)                      configure_options="${configure_options} $1";;
   esac
   shift
 done
@@ -172,4 +172,3 @@ case $target in
   capi-framework)         build_capi_framework;;
   *)                      echo "NOT IMPLEMENTED" && exit 1;;
 esac
-

@@ -96,7 +96,7 @@ Content-Disposition: form-data; name="a"
 Content-Disposition: form-data; name="b"; filename="param_b"
 Content-Type: text/foo; charset=utf-8
 
- \value1;type="whatever" 
+ \value1;type="whatever"
 ------------------------------24e78000bd32--
 </protocol>
 </verify>

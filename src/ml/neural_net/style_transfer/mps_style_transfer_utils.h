@@ -7,7 +7,7 @@
 #import <Accelerate/Accelerate.h>
 #import <Foundation/Foundation.h>
 #import <Metal/Metal.h>
-#import <MetalPerformanceShaders/MetalPerformanceShaders.h> 
+#import <MetalPerformanceShaders/MetalPerformanceShaders.h>
 
 #import <ml/neural_net/style_transfer/mps_style_transfer.h>
 #import <ml/neural_net/mps_descriptor_utils.h>
@@ -23,7 +23,7 @@
  *
  * SUMMARY
  * -------
- * This function populates the MPSImage used in the pre-processing of the Neural 
+ * This function populates the MPSImage used in the pre-processing of the Neural
  * Network. Each channel in the Style Transfer network is weighted differently
  * and these channel weights take care of that.
  *
@@ -40,7 +40,7 @@
  * SUMMARY
  * -------
  * This function populates the MPSImage used in the pre-processing of the Neural
- * Network. The images coming out of the neural network are of values ranging 
+ * Network. The images coming out of the neural network are of values ranging
  * from 0-1. The preprocessor takes those values and scales them up to 0-255.
  */
 + (void) populateMultiplication:(NSMutableData *)data;

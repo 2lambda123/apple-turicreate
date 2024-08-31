@@ -66,7 +66,7 @@ class predict_constant : public supervised_learning_model_base {
   BEGIN_CLASS_MEMBER_REGISTRATION("predict_constant");
   IMPORT_BASE_CLASS_REGISTRATION(supervised_learning_model_base);
   END_CLASS_MEMBER_REGISTRATION
-  
+
   /**
    * Train a supervised_learning model.
    */

@@ -64,7 +64,7 @@ endif()
     file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/examples/vega_lite)
 
     include_directories(${CMAKE_CURRENT_BINARY_DIR})
-    
+
     foreach(SOURCE_FILE ${XXD_INPUT})
         string(
             REGEX REPLACE

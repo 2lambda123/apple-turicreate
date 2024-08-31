@@ -42,7 +42,7 @@ model.export_coreml('MyCustomObjectDetector.mlmodel')
 
 #### Data Acquisition
 
-The introductory example creates a model assuming the data already exists, but before we create our model, 
+The introductory example creates a model assuming the data already exists, but before we create our model,
 we require labeled data. This data should consist of images and *ground truth*
 annotations (correct class label and bounding box for each instance). The more data we
 have, the better our predictions will be. Ground truth data should look similar
@@ -254,5 +254,3 @@ turicreate.config.set_num_gpus(1)
 # Use CPU
 turicreate.config.set_num_gpus(0)
 ```
-
-

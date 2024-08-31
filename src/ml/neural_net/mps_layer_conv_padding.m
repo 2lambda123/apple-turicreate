@@ -16,7 +16,7 @@
                   paddingHeight:(NSUInteger)paddingHeight
                     strideWidth:(NSUInteger)strideWidth
                    strideHeight:(NSUInteger)strideHeight {
-  
+
   self = [self init];
 
   if (self) {
@@ -55,13 +55,13 @@
   pad.x = (int) ((layer.kernelWidth/2) - _paddingWidth);
   pad.y = (int) ((layer.kernelHeight/2) - _paddingHeight);
   pad.z = 0;
-  
+
   layer.offset = pad;
   layer.edgeMode = MPSImageEdgeModeZero;
-  
+
   inDescriptor.width += (_paddingWidth * 2)/_strideWidth;
   inDescriptor.height += (_paddingHeight * 2)/_strideHeight;
-  
+
   return inDescriptor;
 }
 

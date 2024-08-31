@@ -25,7 +25,7 @@
                          descriptor:(TCMPSEncodingDescriptor *)descriptor
                         initWeights:(NSDictionary<NSString *, NSData *> *) weights {
   self = [super init];
-  
+
   if (self) {
     // No bias
     NSMutableData* zeroedConvBiases = [NSMutableData dataWithLength:descriptor.conv.outputFeatureChannels*sizeof(float)];

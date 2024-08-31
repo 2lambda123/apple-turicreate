@@ -94,7 +94,7 @@ The attributes of all Turi Create models, which include training statistics, mod
 hyper-parameters, and model results can be accessed in the same way as python
 dictionaries.
 
-###### <a name="interpreting-results"></a>Interpreting results 
+###### <a name="interpreting-results"></a>Interpreting results
 
 Linear regression can provide valuable insight about the relationships between
 the target and feature columns in your data, revealing why your model returns
@@ -152,7 +152,7 @@ coefficients. If standard errors cannot be estimated, a column of `None` values
 are returned.
 
 
-######  <a name="categorical-features"></a>Categorical features 
+######  <a name="categorical-features"></a>Categorical features
 
 Categorical variables are features that can take one of a limited, and usually
 fixed, number of possible values. Each category is referred to as a level. As an

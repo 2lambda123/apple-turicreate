@@ -88,7 +88,7 @@ class ImageClassifierTest(unittest.TestCase):
     def setUpClass(
         self,
         model="resnet-50",
-        feature="awesome_image", 
+        feature="awesome_image",
         input_image_shape=(3, 224, 224),
         tol=0.02,
         num_examples=100,
@@ -174,7 +174,7 @@ class ImageClassifierTest(unittest.TestCase):
         if self.feature == "awesome_image":
             test_data = data.select_columns([self.feature, self.target])
             deep_features_col_name = self.pre_trained_model+"_WithDeepFeature"
-            test_data[deep_features_col_name] = get_deep_features(data["awesome_image"], 
+            test_data[deep_features_col_name] = get_deep_features(data["awesome_image"],
                 self.pre_trained_model)
             test_model = tc.image_classifier.create(test_data, target=self.target, model=self.pre_trained_model)
             self.assertTrue(test_model.feature == deep_features_col_name)

@@ -3,7 +3,7 @@
     "width": 300,
     "padding": 5,
     "autosize": "pad",
-    
+
     "signals": [
         {
             "name": "rangeStep", "value": 20,
@@ -22,7 +22,7 @@
             "update": "trellisExtent[1]"
         }
     ],
-    
+
     "data": [
         {
             "name": "tuples",
@@ -69,7 +69,7 @@
             ]
         }
     ],
-    
+
     "scales": [
         {
             "name": "xscale",
@@ -86,15 +86,15 @@
             "domain": {"data": "trellis", "field": "a"}
         }
     ],
-    
+
     "axes": [
         { "orient": "bottom", "scale": "xscale", "domain": true }
     ],
-    
+
     "marks": [
         {
             "type": "group",
-            
+
             "from": {
                 "data": "trellis",
                 "facet": {
@@ -103,7 +103,7 @@
                     "groupby": "a"
                 }
             },
-            
+
             "encode": {
                 "enter": {
                     "x": {"value": 0},
@@ -114,7 +114,7 @@
                     "y2": {"field": "y1"}
                 }
             },
-            
+
             "scales": [
                 {
                     "name": "yscale",
@@ -126,12 +126,12 @@
                     "range": {"step": {"signal": "rangeStep"}}
                 }
             ],
-            
+
             "axes": [
                 { "orient": "left", "scale": "yscale",
                     "ticks": false, "domain": false, "labelPadding": 4 }
             ],
-            
+
             "marks": [
                 {
                     "type": "rect",
@@ -159,4 +159,3 @@
         }
     ]
 }
-

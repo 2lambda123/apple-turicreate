@@ -58,7 +58,7 @@ w=16 ;(AP)	w	by value (input)
 
 	movl	r6,r0			; return c
 	ret
-
+
 	.title	vax_bn_mul_words  unsigned multiply & add, 32*32+32=>64
 ;
 ; w.j.m. 15-jan-1999
@@ -116,7 +116,7 @@ w=16 ;(AP)	w	by value (input)
 
 	movl	r6,r0			; return c
 	ret
-
+
 	.title	vax_bn_sqr_words  unsigned square, 32*32=>64
 ;
 ; w.j.m. 15-jan-1999
@@ -161,7 +161,7 @@ n=12 ;(AP)	n	by value (input)
 
 	movl	#1,r0			; return SS$_NORMAL
 	ret
-
+
 	.title	vax_bn_div_words  unsigned divide
 ;
 ; Richard Levitte 20-Nov-2000
@@ -265,12 +265,12 @@ d=12 ;(AP)	d	by value (input)
 
 	bicl3	#^XFFFFFFF8,r3,r6
 	bicl3	#^X00000007,r3,r3
-        
+
 	addl	r6,r2
 
 	rotl	#-3,r2,r2	; l = l >> 3
 	rotl	#-3,r3,r3	; h = h >> 3
-                
+
 	movl	r4,r7		; d' = d
 
 	movl	#0,r6		; r' = 0
@@ -283,13 +283,13 @@ d=12 ;(AP)	d	by value (input)
 	bicl2	#^X80000000,r4	; Since d is then a large number, the
 				; lowest bit is insignificant
 				; (contradict that, and I'll fix the problem!)
-1$:     
+1$:
 	ediv	r4,r2,r2,r3	; Do the actual division
 
 	tstl	r2
 	bgeq	3$
 	mnegl	r2,r2		; if q < 0, negate it
-3$:     
+3$:
 	tstl	r7
 	blss	4$
 	rotl	#3,r2,r2	;   q = q << 3
@@ -340,8 +340,8 @@ d=12 ;(AP)	d	by value (input)
 	sbwc	#0,r6
 	incl	r2		;   [q',q] = [q',q] + 1
 	adwc	#0,r8
-	brb	5$	
-
+	brb	5$
+
 	.title	vax_bn_add_words  unsigned add of two arrays
 ;
 ; Richard Levitte 20-Nov-2000
@@ -381,7 +381,7 @@ n=16 ;(AP)	n	by value (input)
 	adwc	#0,r0
 666$:
 	ret
-
+
 	.title	vax_bn_sub_words  unsigned add of two arrays
 ;
 ; Richard Levitte 20-Nov-2000
@@ -421,7 +421,7 @@ n=16 ;(AP)	n	by value (input)
 	adwc	#0,r0
 666$:
 	ret
-
+
 
 ;r=4 ;(AP)
 ;a=8 ;(AP)
@@ -3213,9 +3213,9 @@ noname.300:
 
 	movl	r9,60(r11)
 
-	ret	
+	ret
 
-
+
 
 ;r=4 ;(AP)
 ;a=8 ;(AP)
@@ -3959,9 +3959,9 @@ noname.366:
 
 	movl	r9,28(r11)
 
-	ret	
+	ret
 
-
+
 
 ;r=4 ;(AP)
 ;a=8 ;(AP)
@@ -5903,9 +5903,9 @@ noname.560:
 
 	movl	r9,60(r4)
 
-	ret	
+	ret
 
-
+
 
 ;r=4 ;(AP)
 ;a=8 ;(AP)
@@ -6434,7 +6434,7 @@ noname.610:
 
 	movl	r8,28(r4)
 
-	ret	
+	ret
 
 ; For now, the code below doesn't work, so I end this prematurely.
 .end

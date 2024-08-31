@@ -3,7 +3,7 @@
     "width": 300,
     "height": 240,
     "padding": 5,
-    
+
     "data": [
         {
             "name": "table",
@@ -23,7 +23,7 @@
             ]
         }
     ],
-    
+
     "scales": [
         {
             "name": "yscale",
@@ -48,16 +48,16 @@
             "range": {"scheme": "category20"}
         }
     ],
-    
+
     "axes": [
         {"orient": "left", "scale": "yscale", "tickSize": 0, "labelPadding": 4, "zindex": 1},
         {"orient": "bottom", "scale": "xscale"}
     ],
-    
+
     "marks": [
         {
             "type": "group",
-            
+
             "from": {
                 "facet": {
                     "data": "table",
@@ -65,17 +65,17 @@
                     "groupby": "category"
                 }
             },
-            
+
             "encode": {
                 "enter": {
                     "y": {"scale": "yscale", "field": "category"}
                 }
             },
-            
+
             "signals": [
                 {"name": "height", "update": "bandwidth('yscale')"}
             ],
-            
+
             "scales": [
                 {
                     "name": "pos",
@@ -84,7 +84,7 @@
                     "domain": {"data": "facet", "field": "position"}
                 }
             ],
-            
+
             "marks": [
                 {
                     "name": "bars",
@@ -118,4 +118,3 @@
         }
     ]
 }
-

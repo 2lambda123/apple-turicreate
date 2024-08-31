@@ -65,7 +65,7 @@
 
     _pooling = [[MPSCNNPoolingAverageNode alloc] initWithSource:[_relu2 resultImage]
                                                     kernelWidth:descriptor.pooling.kernelSize
-                                                   kernelHeight:descriptor.pooling.kernelSize 
+                                                   kernelHeight:descriptor.pooling.kernelSize
                                                 strideInPixelsX:descriptor.pooling.strideSize
                                                 strideInPixelsY:descriptor.pooling.strideSize];
 

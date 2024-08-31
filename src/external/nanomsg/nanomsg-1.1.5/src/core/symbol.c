@@ -209,4 +209,3 @@ int nn_symbol_info (int i, struct nn_symbol_properties *buf, int buflen)
     memcpy(buf, &sym_value_names [i], buflen);
     return buflen;
 }
-

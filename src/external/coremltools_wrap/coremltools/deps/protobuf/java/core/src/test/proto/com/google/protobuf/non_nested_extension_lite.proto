@@ -48,4 +48,3 @@ message MyNonNestedExtensionLite {
 extend MessageLiteToBeExtended {
   optional MyNonNestedExtensionLite nonNestedExtensionLite = 1;
 }
-

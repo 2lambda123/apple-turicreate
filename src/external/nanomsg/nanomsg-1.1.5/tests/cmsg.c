@@ -44,7 +44,7 @@ int main (int argc, const char *argv[])
 
     test_addr_from(socket_address, "tcp", "127.0.0.1",
             get_test_port(argc, argv));
-    
+
     rep = test_socket (AF_SP_RAW, NN_REP);
     test_bind (rep, socket_address);
     req = test_socket (AF_SP, NN_REQ);
@@ -113,4 +113,3 @@ int main (int argc, const char *argv[])
 
     return 0;
 }
-

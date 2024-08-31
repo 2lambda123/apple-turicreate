@@ -243,4 +243,3 @@ class UninterpretedOption extends \Google\Protobuf\Internal\Message
     }
 
 }
-

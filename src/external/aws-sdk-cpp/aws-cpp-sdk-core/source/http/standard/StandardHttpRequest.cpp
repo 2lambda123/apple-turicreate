@@ -1,12 +1,12 @@
 /*
   * Copyright 2010-2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-  * 
+  *
   * Licensed under the Apache License, Version 2.0 (the "License").
   * You may not use this file except in compliance with the License.
   * A copy of the License is located at
-  * 
+  *
   *  http://aws.amazon.com/apache2.0
-  * 
+  *
   * or in the "license" file accompanying this file. This file is distributed
   * on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
   * express or implied. See the License for the specific language governing
@@ -39,7 +39,7 @@ static bool IsDefaultPort(const URI& uri)
 }
 
 StandardHttpRequest::StandardHttpRequest(const URI& uri, HttpMethod method) :
-    HttpRequest(uri, method), 
+    HttpRequest(uri, method),
     bodyStream(nullptr),
     m_responseStreamFactory()
 {
@@ -103,12 +103,12 @@ int64_t StandardHttpRequest::GetSize() const
     return size;
 }
 
-const Aws::IOStreamFactory& StandardHttpRequest::GetResponseStreamFactory() const 
-{ 
-    return m_responseStreamFactory; 
+const Aws::IOStreamFactory& StandardHttpRequest::GetResponseStreamFactory() const
+{
+    return m_responseStreamFactory;
 }
 
-void StandardHttpRequest::SetResponseStreamFactory(const Aws::IOStreamFactory& factory) 
-{ 
-    m_responseStreamFactory = factory; 
+void StandardHttpRequest::SetResponseStreamFactory(const Aws::IOStreamFactory& factory)
+{
+    m_responseStreamFactory = factory;
 }

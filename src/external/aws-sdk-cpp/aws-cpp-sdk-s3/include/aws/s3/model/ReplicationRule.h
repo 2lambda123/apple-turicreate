@@ -152,22 +152,22 @@ namespace Model
     inline ReplicationRule& WithPriority(int value) { SetPriority(value); return *this;}
 
 
-    
+
     inline const ReplicationRuleFilter& GetFilter() const{ return m_filter; }
 
-    
+
     inline bool FilterHasBeenSet() const { return m_filterHasBeenSet; }
 
-    
+
     inline void SetFilter(const ReplicationRuleFilter& value) { m_filterHasBeenSet = true; m_filter = value; }
 
-    
+
     inline void SetFilter(ReplicationRuleFilter&& value) { m_filterHasBeenSet = true; m_filter = std::move(value); }
 
-    
+
     inline ReplicationRule& WithFilter(const ReplicationRuleFilter& value) { SetFilter(value); return *this;}
 
-    
+
     inline ReplicationRule& WithFilter(ReplicationRuleFilter&& value) { SetFilter(std::move(value)); return *this;}
 
 
@@ -325,22 +325,22 @@ namespace Model
     inline ReplicationRule& WithDestination(Destination&& value) { SetDestination(std::move(value)); return *this;}
 
 
-    
+
     inline const DeleteMarkerReplication& GetDeleteMarkerReplication() const{ return m_deleteMarkerReplication; }
 
-    
+
     inline bool DeleteMarkerReplicationHasBeenSet() const { return m_deleteMarkerReplicationHasBeenSet; }
 
-    
+
     inline void SetDeleteMarkerReplication(const DeleteMarkerReplication& value) { m_deleteMarkerReplicationHasBeenSet = true; m_deleteMarkerReplication = value; }
 
-    
+
     inline void SetDeleteMarkerReplication(DeleteMarkerReplication&& value) { m_deleteMarkerReplicationHasBeenSet = true; m_deleteMarkerReplication = std::move(value); }
 
-    
+
     inline ReplicationRule& WithDeleteMarkerReplication(const DeleteMarkerReplication& value) { SetDeleteMarkerReplication(value); return *this;}
 
-    
+
     inline ReplicationRule& WithDeleteMarkerReplication(DeleteMarkerReplication&& value) { SetDeleteMarkerReplication(std::move(value)); return *this;}
 
   private:

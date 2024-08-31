@@ -49,4 +49,3 @@ struct nn_cinproc {
 int nn_cinproc_create (struct nn_ep *);
 
 #endif
-

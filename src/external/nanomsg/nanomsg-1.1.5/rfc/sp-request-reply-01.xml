@@ -96,7 +96,7 @@
          state that's passed in the request, such as ID or path. The state
          itself can then be retrieved by the service from a shared database,
          a network file system or similar storage mechanism.</t>
-         
+
       <t>Requiring services to be stateless serves a specific purpose.
          It allows for using any number of service instances to handle
          the processing load. After all, the client won't be able to tell the
@@ -572,7 +572,7 @@
            receiving the replies.</t>
 
       </section>
-   
+
     </section>
 
     <section title = "End-to-end functionality">
@@ -742,4 +742,3 @@
   </back>
 
 </rfc>
-

@@ -140,7 +140,7 @@ sub AUTOLOAD()		# thunk [simplified] 32-bit style perlasm
     $arg = "\$$arg" if ($arg*1 eq $arg);
     $code .= "\t$opcode\t".join(',',$arg,reverse @_)."\n";
 }
-
+
 { my $N;
   sub loop() {
   my $inp = shift;
@@ -246,7 +246,7 @@ $code.=<<___;
 	ret
 .size	gcm_gmult_4bit,.-gcm_gmult_4bit
 ___
-
+
 # per-function register layout
 $inp="%rdx";
 $len="%rcx";
@@ -403,7 +403,7 @@ $code.=<<___;
 	ret
 .size	gcm_ghash_4bit,.-gcm_ghash_4bit
 ___
-
+
 ######################################################################
 # PCLMULQDQ version.
 
@@ -460,7 +460,7 @@ $code.=<<___;
 	psllq		\$57,$Xi		#
 	movdqa		$Xi,$T1			#
 	pslldq		\$8,$Xi
-	psrldq		\$8,$T1			#	
+	psrldq		\$8,$T1			#
 	pxor		$T2,$Xi
 	pxor		$T1,$Xhi		#
 
@@ -475,7 +475,7 @@ $code.=<<___;
 	pxor		$Xhi,$Xi		#
 ___
 }
-
+
 { my ($Htbl,$Xip)=@_4args;
   my $HK="%xmm6";
 
@@ -574,7 +574,7 @@ ___
 	&clmul64x64_T2	($Xhi,$Xi,$Hkey,$T2);
 $code.=<<___ if (0 || (&reduction_alg9($Xhi,$Xi)&&0));
 	# experimental alternative. special thing about is that there
-	# no dependency between the two multiplications... 
+	# no dependency between the two multiplications...
 	mov		\$`0xE1<<1`,%eax
 	mov		\$0xA040608020C0E000,%r10	# ((7..0)·0xE0)&0xff
 	mov		\$0x07,%r11d
@@ -603,7 +603,7 @@ $code.=<<___;
 .size	gcm_gmult_clmul,.-gcm_gmult_clmul
 ___
 }
-
+
 { my ($Xip,$Htbl,$inp,$len)=@_4args;
   my ($Xln,$Xmn,$Xhn,$Hkey2,$HK) = map("%xmm$_",(3..7));
   my ($T1,$T2,$T3)=map("%xmm$_",(8..10));
@@ -749,7 +749,7 @@ $code.=<<___;
 	movdqa		$T2,$T1			#
 	pslldq		\$8,$T2
 	 pclmulqdq	\$0x00,$Hkey2,$Xln
-	psrldq		\$8,$T1			#	
+	psrldq		\$8,$T1			#
 	pxor		$T2,$Xi
 	pxor		$T1,$Xhi		#
 	movdqu		0($inp),$T1
@@ -885,7 +885,7 @@ $code.=<<___;
 	  psllq		\$57,$Xi		#
 	  movdqa	$Xi,$T1			#
 	  pslldq	\$8,$Xi
-	  psrldq	\$8,$T1			#	
+	  psrldq	\$8,$T1			#
 	  pxor		$T2,$Xi
 	pshufd		\$0b01001110,$Xhn,$Xmn
 	  pxor		$T1,$Xhi		#
@@ -963,7 +963,7 @@ $code.=<<___;
 .size	gcm_ghash_clmul,.-gcm_ghash_clmul
 ___
 }
-
+
 $code.=<<___;
 .globl	gcm_init_avx
 .type	gcm_init_avx,\@abi-omnipotent
@@ -1114,7 +1114,7 @@ gcm_gmult_avx:
 	jmp	.L_gmult_clmul
 .size	gcm_gmult_avx,.-gcm_gmult_avx
 ___
-
+
 $code.=<<___;
 .globl	gcm_ghash_avx
 .type	gcm_ghash_avx,\@abi-omnipotent
@@ -1540,7 +1540,7 @@ $code.=<<___;
 .size	gcm_ghash_avx,.-gcm_ghash_avx
 ___
 }
-
+
 $code.=<<___;
 .align	64
 .Lbswap_mask:
@@ -1596,7 +1596,7 @@ $code.=<<___;
 .asciz	"GHASH for x86_64, CRYPTOGAMS by <appro\@openssl.org>"
 .align	64
 ___
-
+
 # EXCEPTION_DISPOSITION handler (EXCEPTION_RECORD *rec,ULONG64 frame,
 #		CONTEXT *context,DISPATCHER_CONTEXT *disp)
 if ($win64) {
@@ -1745,7 +1745,7 @@ $code.=<<___;
 	.byte	0x04,0x01,0x15,0x00	#sub	rsp,0xa8
 ___
 }
-
+
 $code =~ s/\`([^\`]*)\`/eval($1)/gem;
 
 print $code;

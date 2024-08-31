@@ -102,7 +102,7 @@ struct test_string_other_operators  {
     TS_ASSERT(out.good());
     TS_ASSERT(s == out.str());
   }
-  
+
   void _test_string_operator_eq__pointer_string(const char* lhs, const gl_string& rhs, bool x)
   {
     TS_ASSERT((lhs == rhs) == x);
@@ -135,7 +135,7 @@ struct test_string_other_operators  {
 
   void test_string_operator_eq__string_string()
   {
-    
+
     _test_string_operator_eq__string_string(gl_string(""), gl_string(""), true);
     _test_string_operator_eq__string_string(gl_string(""), gl_string("abcde"), false);
     _test_string_operator_eq__string_string(gl_string(""), gl_string("abcdefghij"), false);
@@ -161,7 +161,7 @@ struct test_string_other_operators  {
 
   void test_string_operator_eq__string_stdstring()
   {
-    
+
     _test_string_operator_eq__string_stdstring(gl_string(""), std::string(""), true);
     _test_string_operator_eq__string_stdstring(gl_string(""), std::string("abcde"), false);
     _test_string_operator_eq__string_stdstring(gl_string(""), std::string("abcdefghij"), false);
@@ -206,7 +206,7 @@ struct test_string_other_operators  {
     _test_string_operator_eq__string_string(std::string("abcdefghijklmnopqrst"), gl_string("abcdefghijklmnopqrst"), true);
   }
 
-  
+
   void _test_string_opgteq_pointer_string(const char* lhs, const gl_string& rhs, bool x)
   {
     TS_ASSERT((lhs >= rhs) == x);
@@ -232,7 +232,7 @@ struct test_string_other_operators  {
     _test_string_opgteq_pointer_string("abcdefghijklmnopqrst", gl_string("abcdefghijklmnopqrst"), true);
   }
 
-  
+
   void _test_string_opgteq_string_pointer(const gl_string& lhs, const char* rhs, bool x)
   {
     TS_ASSERT((lhs >= rhs) == x);
@@ -257,7 +257,7 @@ struct test_string_other_operators  {
     _test_string_opgteq_string_pointer(gl_string("abcdefghijklmnopqrst"), "abcdefghij", true);
     _test_string_opgteq_string_pointer(gl_string("abcdefghijklmnopqrst"), "abcdefghijklmnopqrst", true);
   }
-  
+
   void _test_string_opgteq_string_string(const gl_string& lhs, const gl_string& rhs, bool x)
   {
     TS_ASSERT((lhs >= rhs) == x);
@@ -267,7 +267,7 @@ struct test_string_other_operators  {
   {
     TS_ASSERT((lhs >= rhs) == x);
   }
-  
+
   void _test_string_opgteq_string_string(const std::string& lhs, const gl_string& rhs, bool x)
   {
     TS_ASSERT((lhs >= rhs) == x);
@@ -292,7 +292,7 @@ struct test_string_other_operators  {
     _test_string_opgteq_string_string(gl_string("abcdefghijklmnopqrst"), gl_string("abcdefghij"), true);
     _test_string_opgteq_string_string(gl_string("abcdefghijklmnopqrst"), gl_string("abcdefghijklmnopqrst"), true);
   }
-  
+
   void test_string_opgteq_string_string1() {
     _test_string_opgteq_string_string(gl_string(""), std::string(""), true);
     _test_string_opgteq_string_string(gl_string(""), std::string("abcde"), false);
@@ -356,7 +356,7 @@ struct test_string_other_operators  {
     _test_string_opgt_pointer_string("abcdefghijklmnopqrst", gl_string("abcdefghij"), true);
     _test_string_opgt_pointer_string("abcdefghijklmnopqrst", gl_string("abcdefghijklmnopqrst"), false);
   }
-  
+
   void _test_string_opgt_string_pointer(const gl_string& lhs, const char* rhs, bool x)
   {
     TS_ASSERT((lhs > rhs) == x);
@@ -381,7 +381,7 @@ struct test_string_other_operators  {
     _test_string_opgt_string_pointer(gl_string("abcdefghijklmnopqrst"), "abcdefghij", true);
     _test_string_opgt_string_pointer(gl_string("abcdefghijklmnopqrst"), "abcdefghijklmnopqrst", false);
   }
-  
+
   void _test_string_opgt_string_string(const gl_string& lhs, const gl_string& rhs, bool x)
   {
     TS_ASSERT((lhs > rhs) == x);
@@ -416,7 +416,7 @@ struct test_string_other_operators  {
     _test_string_opgt_string_string(gl_string("abcdefghijklmnopqrst"), gl_string("abcdefghij"), true);
     _test_string_opgt_string_string(gl_string("abcdefghijklmnopqrst"), gl_string("abcdefghijklmnopqrst"), false);
   }
-  
+
   void test_string_opgt_string_string1()
   {
     _test_string_opgt_string_string(gl_string(""), std::string(""), false);
@@ -456,8 +456,8 @@ struct test_string_other_operators  {
     _test_string_opgt_string_string(std::string("abcdefghijklmnopqrst"), gl_string("abcdefghij"), true);
     _test_string_opgt_string_string(std::string("abcdefghijklmnopqrst"), gl_string("abcdefghijklmnopqrst"), false);
   }
-  
-  
+
+
 
   void _test_string_oplteq_pointer_string(const char* lhs, const gl_string& rhs, bool x)
   {
@@ -520,7 +520,7 @@ struct test_string_other_operators  {
   {
     TS_ASSERT((lhs <= rhs) == x);
   }
-  
+
   void _test_string_oplteq_string_string(const std::string& lhs, const gl_string& rhs, bool x)
   {
     TS_ASSERT((lhs <= rhs) == x);
@@ -585,7 +585,7 @@ struct test_string_other_operators  {
     _test_string_oplteq_string_string(std::string("abcdefghijklmnopqrst"), gl_string("abcdefghij"), false);
     _test_string_oplteq_string_string(std::string("abcdefghijklmnopqrst"), gl_string("abcdefghijklmnopqrst"), true);
   }
-  
+
 
   void _test_string_oplt_pointer_string(const char* lhs, const gl_string& rhs, bool x)
   {
@@ -650,7 +650,7 @@ struct test_string_other_operators  {
   void _test_string_oplt_string_string(const std::string& lhs, const gl_string& rhs, bool x) {
     TS_ASSERT((lhs < rhs) == x);
   }
-  
+
   void test_string_oplt_string_string0()
   {
     _test_string_oplt_string_string(gl_string(""), gl_string(""), false);
@@ -710,7 +710,7 @@ struct test_string_other_operators  {
     _test_string_oplt_string_string(std::string("abcdefghijklmnopqrst"), gl_string("abcdefghij"), false);
     _test_string_oplt_string_string(std::string("abcdefghijklmnopqrst"), gl_string("abcdefghijklmnopqrst"), false);
   }
-  
+
 
   void _test_string_op_not_eq_pointer_string(const char* lhs, const gl_string& rhs, bool x) {
     TS_ASSERT((lhs != rhs) == x);
@@ -774,7 +774,7 @@ struct test_string_other_operators  {
   {
     TS_ASSERT((lhs != rhs) == x);
   }
-  
+
   void test_string_op_not_eq_string_string0()
   {
     _test_string_op_not_eq_string_string(gl_string(""), gl_string(""), false);
@@ -834,7 +834,7 @@ struct test_string_other_operators  {
     _test_string_op_not_eq_string_string(std::string("abcdefghijklmnopqrst"), gl_string("abcdefghij"), true);
     _test_string_op_not_eq_string_string(std::string("abcdefghijklmnopqrst"), gl_string("abcdefghijklmnopqrst"), false);
   }
-  
+
   void _test_string_op_plus__char_string0(char lhs, const gl_string& rhs, const gl_string& x) {
     TS_ASSERT(lhs + rhs == x);
   }
@@ -855,7 +855,7 @@ struct test_string_other_operators  {
     _test_string_op_plus__char_string1('a', gl_string("1234567890"), gl_string("a1234567890"));
     _test_string_op_plus__char_string1('a', gl_string("12345678901234567890"), gl_string("a12345678901234567890"));
   }
-  
+
   void _test_string_op_plus__pointer_string0(const char* lhs, const gl_string& rhs, const gl_string& x)
   {
     TS_ASSERT(lhs + rhs == x);
@@ -867,7 +867,7 @@ struct test_string_other_operators  {
   }
 
   void test_string_op_plus__pointer_string0() {
-    
+
     _test_string_op_plus__pointer_string0("", gl_string(""), gl_string(""));
     _test_string_op_plus__pointer_string0("", gl_string("12345"), gl_string("12345"));
     _test_string_op_plus__pointer_string0("", gl_string("1234567890"), gl_string("1234567890"));
@@ -905,7 +905,7 @@ struct test_string_other_operators  {
     _test_string_op_plus__pointer_string1("abcdefghijklmnopqrst", gl_string("1234567890"), gl_string("abcdefghijklmnopqrst1234567890"));
     _test_string_op_plus__pointer_string1("abcdefghijklmnopqrst", gl_string("12345678901234567890"), gl_string("abcdefghijklmnopqrst12345678901234567890"));
   }
-    
+
   void _test_string_op_plus__string_char0(const gl_string& lhs, char rhs, const gl_string& x) {
     TS_ASSERT(lhs + rhs == x);
   }
@@ -993,7 +993,7 @@ struct test_string_other_operators  {
   {
     TS_ASSERT(lhs + rhs == x);
   }
-  
+
   void test_string_op_plus__string_string0() {
     _test_string_op_plus__string_string0(gl_string(""), gl_string(""), gl_string(""));
     _test_string_op_plus__string_string0(gl_string(""), gl_string("12345"), gl_string("12345"));
@@ -1106,7 +1106,7 @@ struct test_string_other_operators  {
     _test_string_op_plus__string_string5(std::string("abcdefghijklmnopqrst"), gl_string("1234567890"), gl_string("abcdefghijklmnopqrst1234567890"));
     _test_string_op_plus__string_string5(std::string("abcdefghijklmnopqrst"), gl_string("12345678901234567890"), gl_string("abcdefghijklmnopqrst12345678901234567890"));
   }
-  
+
   void _test_string_special_swap(gl_string s1, gl_string s2) {
     gl_string s1_ = s1;
     gl_string s2_ = s2;

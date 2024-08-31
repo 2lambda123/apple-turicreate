@@ -29,4 +29,3 @@
 uint64_t nn_clock_ms (void);
 
 #endif
-

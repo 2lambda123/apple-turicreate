@@ -22,7 +22,7 @@ namespace CoreML {
             return Result(ResultType::INVALID_MODEL_PARAMETERS,
                           "LinkedModel cannot be marked as updatable");
         }
-        
+
         Result result;
 
         result = validateModelDescription(interface, format.specificationversion());
